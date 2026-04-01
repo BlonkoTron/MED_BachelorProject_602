@@ -21,6 +21,9 @@ public class Tile : MonoBehaviour
     [SerializeField] private float currentDegradation = 0f;
     [SerializeField] private float degradationThreshold = 100f;
     
+    // Event that broadcasts when money is earned
+    [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
+    
     private Renderer tileRenderer;
 
     // Tile Properties
@@ -111,8 +114,11 @@ public class Tile : MonoBehaviour
             currentDegradation = 0;
         }
         
-        // You could broadcast the money earned here if needed
-        Debug.Log($"Tile earned ${moneyEarned}");
+        // Broadcast the money earned to any listeners (like PointSystem)
+        if (moneyEarned > 0)
+        {
+            onMoneyEarned?.Invoke(moneyEarned);
+        }
     }
 
     private void ConvertToBarren()
