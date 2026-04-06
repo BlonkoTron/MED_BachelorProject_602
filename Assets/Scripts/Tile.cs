@@ -126,12 +126,11 @@ public class Tile : MonoBehaviour
     // Call this each turn/cycle to generate money and degrade the tile
     // This method is triggered by the Unity event from another script
     public void OnTick()
-    {
+    {   
         int moneyEarned = GetMoneyPerTick();
         
         // Apply degradation
         currentDegradation += GetDegradationRate();
-        
         // Check if tile should become barren
         if (currentDegradation >= degradationThreshold && tileType != TileType.Barren)
         {
