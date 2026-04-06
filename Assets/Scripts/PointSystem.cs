@@ -2,11 +2,22 @@ using UnityEngine;
 
 public class PointSystem : MonoBehaviour
 {
+    public static PointSystem Instance;
     [Header("Money Tracking")]
     [SerializeField] private int currentMoney = 0;
     
     public int CurrentMoney => currentMoney;
-    
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     void Start()
     {
         // Find all tiles and subscribe to their money events
