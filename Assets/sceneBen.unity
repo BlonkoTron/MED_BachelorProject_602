@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eventsystem
   Eventinfo: {fileID: 1005860934}
-  test: 0
+  Spawnevent: 0
   Panel: {fileID: 554944811}
   InGameEvents:
   - Info: Dead man

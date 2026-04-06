@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NUnit.Framework.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class Event_Manager : MonoBehaviour
     //Stores eventdata
     private Events selectedEvent;
 
-    public bool test;
+    public bool Spawnevent;
 
     //Enable/disable Panel
     public GameObject Panel;
@@ -33,16 +34,21 @@ public class Event_Manager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        Panel.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (test)
+        if (Spawnevent)
         {
-            //picks random event and display evnettext
+            Panel.SetActive(true);
             selectedEvent = InGameEvents[UnityEngine.Random.Range(0, InGameEvents.Count)];
             Eventinfo.text = selectedEvent.Info;
-            test = false;
+            Spawnevent = false;
         }
+
     }
 
     public void Buttonok()
