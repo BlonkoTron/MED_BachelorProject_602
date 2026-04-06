@@ -738,23 +738,23 @@ MonoBehaviour:
   Eventinfo: {fileID: 1005860934}
   test: 0
   Panel: {fileID: 554944811}
-  Eventer:
-  - Info: Miners are on a strike
+  InGameEvents:
+  - Info: Dead man
     Moneyloss: 0
     Moneygain: 0
     Tiledestuction: 0
     TileSpawn: 0
-  - Info: Cattles have escaped!
+  - Info: Forestloss
     Moneyloss: 0
     Moneygain: 0
     Tiledestuction: 0
     TileSpawn: 0
-  - Info: Donation!
+  - Info: forestgain
     Moneyloss: 0
     Moneygain: 0
     Tiledestuction: 0
     TileSpawn: 0
-  - Info: Drought
+  - Info: forestman
     Moneyloss: 0
     Moneygain: 0
     Tiledestuction: 0
