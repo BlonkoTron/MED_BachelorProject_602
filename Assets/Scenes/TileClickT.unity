@@ -596,6 +596,9 @@ PrefabInstance:
       addedObject: {fileID: 1819675946}
     - targetCorrespondingSourceObject: {fileID: 2764691526127629844, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1819675951}
+    - targetCorrespondingSourceObject: {fileID: 2764691526127629844, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1819675950}
   m_SourcePrefab: {fileID: 100100000, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
 --- !u!1 &1819675945 stripped
@@ -643,6 +646,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
+--- !u!114 &1819675951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819675945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
 --- !u!1 &1862752477
 GameObject:
   m_ObjectHideFlags: 0

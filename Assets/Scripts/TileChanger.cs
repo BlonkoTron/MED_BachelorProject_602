@@ -7,7 +7,7 @@ public class TileChanger : MonoBehaviour
     {
         Debug.Log(gameObject.name + "Im Clicked");
 
-
+        
 
 
     }
