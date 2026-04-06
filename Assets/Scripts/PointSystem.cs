@@ -19,6 +19,8 @@ public class PointSystem : MonoBehaviour
         
         foreach (Tile tile in allTiles)
         {
+            // Remove listener first to prevent duplicates
+            tile.onMoneyEarned.RemoveListener(AddMoney);
             tile.onMoneyEarned.AddListener(AddMoney);
         }
         

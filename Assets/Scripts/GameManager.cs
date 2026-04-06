@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
         RegisterAllTiles();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        tickTimer += Time.deltaTime;
+        tickTimer += Time.fixedDeltaTime;
         
         if (tickTimer >= tickInterval)
         {
@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
     // Automatically register all tiles in the scene
     private void RegisterAllTiles()
     {
+        // Clear any existing listeners to prevent duplicates
+        onGameTick.RemoveAllListeners();
+        
         Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         
         foreach (Tile tile in allTiles)
