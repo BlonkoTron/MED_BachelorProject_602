@@ -179,7 +179,7 @@ public class Tile : MonoBehaviour
         // Select material based on degradation level
         Material targetMaterial = null;
         
-        if (degradationPercent >= criticalThreshold / 100f)
+        if (degradationPercent >= criticalThreshold)
         {
             targetMaterial = criticalMaterial;
         }
