@@ -11,7 +11,6 @@ public class Event_Manager : MonoBehaviour
     //Stores eventdata
     private Events selectedEvent;
 
-
     public bool test;
 
     //Enable/disable Panel
@@ -40,7 +39,7 @@ public class Event_Manager : MonoBehaviour
         if (test)
         {
             //picks random event and display evnettext
-            selectedEvent = InGameEvents[Random.Range(0, InGameEvents.Count)];
+            selectedEvent = InGameEvents[UnityEngine.Random.Range(0, InGameEvents.Count)];
             Eventinfo.text = selectedEvent.Info;
             test = false;
         }
@@ -55,11 +54,13 @@ public class Event_Manager : MonoBehaviour
 
         if (selectedEvent.Tiledestuction)
         {
+            Debug.Log("Destorytile");
             //Destroy/replace tile here
         }
 
         if (selectedEvent.TileSpawn)
         {
+            Debug.Log("Spawntile");
             //Spawn tile here
         }
 
