@@ -7,6 +7,15 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private GameObject tileUI;
 
 
+    private void Start()
+    {
+        if (tileUI != null && tileUI.activeInHierarchy != true)
+        {
+            tileUI.SetActive(false);
+        }
+        
+    }
+
     public void OnClick()
     {
         //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
@@ -18,6 +27,9 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
+
+        tileUI.GetComponent<Animator>().SetTrigger("Reset");
+
         tileUI.SetActive(false);
 
         //Debug.Log(gameObject.name + " Is me and im closing my UI");
