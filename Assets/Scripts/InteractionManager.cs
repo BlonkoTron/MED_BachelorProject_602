@@ -1,6 +1,8 @@
 using System.Threading;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -14,10 +16,12 @@ public class InteractionManager : MonoBehaviour
 
     [SerializeField] private GameObject hoveredTile;
     [SerializeField] LayerMask interactionLayer;
+    [SerializeField] LayerMask UILayer;
     [SerializeField] float interactionDistance = 100f;
 
-    private GameObject hitObj;
+    private bool hoveringUI;
 
+    private GameObject hitObj;
     private GameObject lastClickedTile;
 
     private void Awake()
@@ -31,12 +35,13 @@ public class InteractionManager : MonoBehaviour
     private void Update()
     {
         hoveredTile = CheckMouseHover();
+        hoveringUI = CheckIfUI();
     }
 
     private GameObject CheckMouseHover()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance,interactionLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactionLayer))
         {
             //Debug.Log(hit.collider.gameObject.name);
             hitObj = hit.collider.gameObject;
@@ -87,13 +92,32 @@ public class InteractionManager : MonoBehaviour
             }
             else
             {
-                openUI = false;
 
-                closeUI.Invoke();
+                if (hoveringUI)
+                {
+                    Debug.Log("Hit the Button");
+                    openUI = false;
 
-                closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
+                    if (lastClickedTile != null)
+                    {
+                        closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
+                        lastClickedTile = null;
+                    }
+                }
+                else
+                {
+                    // Clicked on empty space (not UI)
+                    openUI = false;
 
-                lastClickedTile = null;
+                    closeUI.Invoke();
+
+                    if (lastClickedTile != null)
+                    {
+                        closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
+                        lastClickedTile = null;
+                    }
+
+                }
 
             }
 
@@ -102,5 +126,15 @@ public class InteractionManager : MonoBehaviour
 
 
     }
+
+    private bool CheckIfUI()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return true;
+        }
+        else { return false; }
+    }
+
 
 }

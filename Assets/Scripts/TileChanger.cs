@@ -9,7 +9,7 @@ public class TileChanger : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log(gameObject.name + " Says: 'Im Clicked'");
+        //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
 
         tileUI.SetActive(true);
 
@@ -20,14 +20,17 @@ public class TileChanger : MonoBehaviour
     {
         tileUI.SetActive(false);
 
-        Debug.Log(gameObject.name + " Is me and im closing my UI");
+        //Debug.Log(gameObject.name + " Is me and im closing my UI");
 
     }
 
     public void ChangeTile()
     {
 
+
         Debug.Log("Changing tile to ");
+
+        CloseUI();
 
     }
 
