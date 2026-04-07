@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0fc5cde0-1da9-482c-a035-4001fa9cacc1}">
+		<property name="assetPath">
+			<value>alien beats.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>253.13635416666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{18d36f65-e45a-4207-b85e-d62e83ad105d}</destination>
+		</relationship>
+	</object>
+</objects>
