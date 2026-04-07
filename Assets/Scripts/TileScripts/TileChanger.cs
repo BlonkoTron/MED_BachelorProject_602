@@ -6,6 +6,7 @@ public class TileChanger : MonoBehaviour
 
     [SerializeField] private GameObject tileUI;
 
+    private Tile tile;
 
     private void Start()
     {
@@ -13,6 +14,9 @@ public class TileChanger : MonoBehaviour
         {
             tileUI.SetActive(false);
         }
+
+        tile = GetComponent<Tile>();
+        
         
     }
 
@@ -36,11 +40,11 @@ public class TileChanger : MonoBehaviour
 
     }
 
-    public void ChangeTile()
+    public void ChangeTile(TileType type)
     {
+        Debug.Log("Changing tile to " + type);
 
-
-        Debug.Log("Changing tile to ");
+        tile.SetTileType(type);
 
         CloseUI();
 
