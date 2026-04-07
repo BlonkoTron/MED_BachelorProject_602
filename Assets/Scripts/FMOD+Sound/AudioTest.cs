@@ -16,7 +16,7 @@ public class AudioTest : MonoBehaviour
     private void Start()
     {
         //The sound does not follow because it takes the position one time and does not follow
-        //Soundtest = Audiomanager.instance.PlaySound(tester, transform.position);
+        Soundtest = Audiomanager.instance.PlaySound(tester, transform.position);
     }
 
 }
