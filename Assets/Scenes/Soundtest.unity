@@ -616,6 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101006919}
+  - component: {fileID: 101006920}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -632,15 +633,34 @@ Transform:
   m_GameObject: {fileID: 101006918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.67377, y: 0.81172, z: -7.40828}
+  m_LocalPosition: {x: -3.6, y: 0.81172, z: -7.40828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1608750339}
   - {fileID: 273646436}
   - {fileID: 564975738}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101006920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101006918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef30eab67bf59a479b672e868ee90d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  moveSpeed: 20
+  edgeSize: 20
+  smoothTime: 0.1
+  zoomSpeed: 200
+  minY: 10
+  maxY: 60
+  xLimits: {x: -100, y: 100}
+  zLimits: {x: -100, y: 100}
 --- !u!1001 &101059246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1870,7 +1890,6 @@ GameObject:
   - component: {fileID: 273646435}
   - component: {fileID: 273646434}
   - component: {fileID: 273646437}
-  - component: {fileID: 273646438}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1996,20 +2015,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &273646438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273646433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef30eab67bf59a479b672e868ee90d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
-  sensitivity: 100
-  playerBody: {fileID: 1608750339}
 --- !u!1001 &275865702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8554,37 +8559,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6463614015035302117, guid: c00d7fc4aca436140b536909af7f6a15, type: 3}
   m_PrefabInstance: {fileID: 1674134952}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1608750338
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1608750339}
-  m_Layer: 0
-  m_Name: playerbody
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1608750339
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608750338}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.67377, y: 0.18827999, z: -2.59172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 101006919}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1613970770
 PrefabInstance:
   m_ObjectHideFlags: 0
