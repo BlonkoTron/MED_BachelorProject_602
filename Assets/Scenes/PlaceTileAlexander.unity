@@ -330,6 +330,8 @@ MonoBehaviour:
   degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
   criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
   barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
+  placementHeight: 0.1
   degradedThreshold: 0.33
   criticalThreshold: 0.66
   onMoneyEarned:
@@ -359,68 +361,13 @@ MonoBehaviour:
   degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
   criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
   barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
+  placementHeight: 0.1
   degradedThreshold: 0.5
   criticalThreshold: 0.75
   onMoneyEarned:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &853110407
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5222544
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.255
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.249
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
-      propertyPath: m_Name
-      value: BarrenTireVersion
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ddb43652e3372348a1ac729df573ebb, type: 3}
 --- !u!1001 &861825252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -568,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a062097989d955488f9dcfa5e64aee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  tickInterval: 15
+  tickInterval: 5
   onGameTick:
     m_PersistentCalls:
       m_Calls: []
@@ -808,6 +755,8 @@ MonoBehaviour:
   degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
   criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
   barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
+  placementHeight: 0.1
   degradedThreshold: 0.33
   criticalThreshold: 0.66
   onMoneyEarned:
@@ -824,4 +773,3 @@ SceneRoots:
   - {fileID: 953971754}
   - {fileID: 472178588}
   - {fileID: 2007149263}
-  - {fileID: 853110407}
