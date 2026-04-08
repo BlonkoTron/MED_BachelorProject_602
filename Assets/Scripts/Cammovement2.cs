@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraMovement : MonoBehaviour
+public class Cammovement2 : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 20f;
@@ -10,8 +10,8 @@ public class CameraMovement : MonoBehaviour
 
     [Header("Zoom")]
     public float zoomSpeed = 20f;
-    public float minHeight = 10f;
-    public float maxHeight = 60f;
+    public float minDistance = -60f;
+    public float maxDistance = -10f;
     public float zoomSmoothTime = 0.2f;
 
     [Header("Map Bounds")]
@@ -20,14 +20,14 @@ public class CameraMovement : MonoBehaviour
 
     Vector3 moveVelocity;
 
-    float targetHeight;
-    float currentHeight;
+    float targetDistance;
+    float currentDistance;
     float zoomVelocity;
 
     void Start()
     {
-        currentHeight = transform.position.y;
-        targetHeight = currentHeight;
+        currentDistance = transform.position.z;
+        targetDistance = currentDistance;
     }
 
     void Update()
@@ -50,17 +50,17 @@ public class CameraMovement : MonoBehaviour
             move.x += 1;
 
         if (mousePos.y <= edgeSize)
-            move.z -= 1;
+            move.y -= 1;
 
         if (mousePos.y >= Screen.height - edgeSize)
-            move.z += 1;
+            move.y += 1;
 
         // WASD movement
         if (Keyboard.current.wKey.isPressed)
-            move.z += 1;
+            move.y += 1;
 
         if (Keyboard.current.sKey.isPressed)
-            move.z -= 1;
+            move.y -= 1;
 
         if (Keyboard.current.aKey.isPressed)
             move.x -= 1;
@@ -71,7 +71,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 target = transform.position + move * moveSpeed * Time.deltaTime;
 
         target.x = Mathf.Clamp(target.x, xLimits.x, xLimits.y);
-        target.z = Mathf.Clamp(target.z, zLimits.x, zLimits.y);
+        target.y = Mathf.Clamp(target.y, zLimits.x, zLimits.y);
 
         transform.position = Vector3.SmoothDamp(
             transform.position,
@@ -87,19 +87,19 @@ public class CameraMovement : MonoBehaviour
 
         if (scroll != 0)
         {
-            targetHeight -= scroll * zoomSpeed * Time.deltaTime;
-            targetHeight = Mathf.Clamp(targetHeight, minHeight, maxHeight);
+            targetDistance -= scroll * zoomSpeed * Time.deltaTime;
+            targetDistance = Mathf.Clamp(targetDistance, minDistance, maxDistance);
         }
 
-        currentHeight = Mathf.SmoothDamp(
-            currentHeight,
-            targetHeight,
+        currentDistance = Mathf.SmoothDamp(
+            currentDistance,
+            targetDistance,
             ref zoomVelocity,
             zoomSmoothTime
         );
 
         Vector3 pos = transform.position;
-        pos.y = currentHeight;
+        pos.z = currentDistance;
 
         transform.position = pos;
     }
