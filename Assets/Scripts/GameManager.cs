@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     [Header("Game Settings")]
     [SerializeField] private float tickInterval = 15f; // Time between ticks in seconds
     
@@ -11,14 +12,22 @@ public class GameManager : MonoBehaviour
     public UnityEvent onGameTick;
     
     private float tickTimer = 0f;
-    
-    void Start()
+
+    private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
         if (onGameTick == null)
         {
             onGameTick = new UnityEvent();
         }
-        
+
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
     }
