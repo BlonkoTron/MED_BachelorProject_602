@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6984940583999243508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2764691526127629844, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_Name
+      value: Tile Green Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5363708
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1519999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.0303726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248776377556462766, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422205237196036033, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2764691526127629844, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3666212811481002023}
+  m_SourcePrefab: {fileID: 100100000, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+--- !u!1 &5093947484366090976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2764691526127629844, guid: ce8d8546fd75db94683e83e095ad0f2a, type: 3}
+  m_PrefabInstance: {fileID: 6984940583999243508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3666212811481002023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5093947484366090976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  tileType: 0
+  currentDegradation: 0
+  degradationThreshold: 100
+  healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
+  degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
+  criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
+  barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
+  placementHeight: 0.1
+  degradedThreshold: 0.33
+  criticalThreshold: 0.66
+  onMoneyEarned:
+    m_PersistentCalls:
+      m_Calls: []
