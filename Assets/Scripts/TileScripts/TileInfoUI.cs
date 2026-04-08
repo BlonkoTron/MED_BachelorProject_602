@@ -6,17 +6,18 @@ public class TileInfoUI : MonoBehaviour
     [SerializeField] Tile tile;
     [SerializeField] TMP_Text info_text;
 
-    private void OnEnable()
+    private void Awake()
     {
-        if (tile != null)
-        {
-            UpdateUI(tile.GetTileInfo());   
-        }
-        
+        GameManager.Instance.onGameTick.AddListener(UpdateUI);
+    }
+    public void UpdateUI()
+    {
+        info_text.text = tile.GetTileInfo();
     }
 
-    public void UpdateUI(string text)
+    private void OnDestroy()
     {
-        info_text.text = text;
+        GameManager.Instance.onGameTick.RemoveListener(UpdateUI);
     }
+
 }

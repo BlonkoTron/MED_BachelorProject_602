@@ -136,5 +136,12 @@ public class InteractionManager : MonoBehaviour
         else { return false; }
     }
 
+    private void OnDestroy()
+    {
+        if (lastClickedTile != null)
+        {
+            closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
+        }
+    }
 
 }

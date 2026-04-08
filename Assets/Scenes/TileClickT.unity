@@ -616,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce74f167a16ea24aa13f1f783b87610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileInfoUI
+  tile: {fileID: 1928934523}
   info_text: {fileID: 1736366909}
 --- !u!1 &845013247
 GameObject:

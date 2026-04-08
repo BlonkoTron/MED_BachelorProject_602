@@ -70,7 +70,7 @@ public class TileChanger : MonoBehaviour
             case TileType.Agroforest:
                 tileUI = buildingUI;
 
-                tileUI.GetComponent<TileInfoUI>().UpdateUI(tile.GetTileInfo());
+                tileUI.GetComponent<TileInfoUI>().UpdateUI();
 
                 return;
             case TileType.Grass:
