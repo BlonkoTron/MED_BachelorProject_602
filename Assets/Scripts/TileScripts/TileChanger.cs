@@ -6,6 +6,19 @@ public class TileChanger : MonoBehaviour
 
     [SerializeField] private GameObject tileUI;
 
+    private Tile tile;
+
+    private void Start()
+    {
+        if (tileUI != null && tileUI.activeInHierarchy != true)
+        {
+            tileUI.SetActive(false);
+        }
+
+        tile = GetComponent<Tile>();
+        
+        
+    }
 
     public void OnClick()
     {
@@ -18,17 +31,20 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
+
+        tileUI.GetComponent<Animator>().SetTrigger("Reset");
+
         tileUI.SetActive(false);
 
         //Debug.Log(gameObject.name + " Is me and im closing my UI");
 
     }
 
-    public void ChangeTile()
+    public void ChangeTile(TileType type)
     {
+        Debug.Log("Changing tile to " + type);
 
-
-        Debug.Log("Changing tile to ");
+        tile.SetTileType(type);
 
         CloseUI();
 

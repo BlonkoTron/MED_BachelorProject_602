@@ -74,7 +74,7 @@ public class Tile : MonoBehaviour
     public void SetTileType(TileType newType)
     {
         tileType = newType;
-        currentDegradation = 0f;
+        
         UpdateMaterial();
     }
 
