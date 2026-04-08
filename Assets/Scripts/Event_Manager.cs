@@ -95,4 +95,22 @@ public class Event_Manager : MonoBehaviour
         //Remove panel
         Panel.SetActive(false);
     }
+
+    public void Option_1()
+    {
+        Debug.Log("Option 1 picked");
+        Panel.SetActive(false);
+    }
+
+    public void Option_2()
+    {
+        Debug.Log("Option 2 picked");
+        Panel.SetActive(false);
+    }
+
+    public void Option_3()
+    {
+        Debug.Log("Option 3 picked");
+        Panel.SetActive(false);
+    }
 }
