@@ -77,7 +77,7 @@ public class InteractionManager : MonoBehaviour
         {
             if (!openUI)
             {
-                if (hoveredTile != null)
+                if (hoveredTile != null && hoveredTile.GetComponent<Tile>().Type != TileType.Barren)
                 {
                     Debug.Log("Im Clickin on it: " + hoveredTile.name);
 
