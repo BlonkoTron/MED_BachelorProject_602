@@ -10,6 +10,12 @@ public class TileInfoUI : MonoBehaviour
     {
         GameManager.Instance.onGameTick.AddListener(UpdateUI);
     }
+
+    private void OnEnable()
+    {
+        UpdateUI();
+    }
+
     public void UpdateUI()
     {
         info_text.text = tile.GetTileInfo();
