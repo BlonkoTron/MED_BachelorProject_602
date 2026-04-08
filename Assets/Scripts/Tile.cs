@@ -27,6 +27,11 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material criticalMaterial;
     [SerializeField] private Material barrenMaterial;
     
+    [Header("Barren Prefab")]
+    [SerializeField] private GameObject barrenPrefab;
+
+    [SerializeField] private float placementHeight = 0.1f; // For grass/rainforest natural regeneration
+    
     [Header("Material Thresholds (% of max degradation)")]
     [Range(0f, 1f)]
     [SerializeField] private float degradedThreshold = 0.33f; // 33% degraded
@@ -156,6 +161,17 @@ public class Tile : MonoBehaviour
     {
         Debug.Log($"Tile at {transform.position} has become barren!");
         SetTileType(TileType.Barren);
+        
+        // Instantiate barren prefab on top of the tile
+        if (barrenPrefab != null)
+        {
+            Vector3 spawnPosition = transform.position + Vector3.up * placementHeight; // Slightly above tile
+            Instantiate(barrenPrefab, spawnPosition, Quaternion.identity, transform);
+        }
+        else
+        {
+            Debug.LogWarning($"Barren prefab not assigned for tile at {transform.position}");
+        }
     }
 
     // Update the tile's material based on current degradation level
