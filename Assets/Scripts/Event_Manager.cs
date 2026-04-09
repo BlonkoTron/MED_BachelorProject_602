@@ -30,6 +30,8 @@ public class Event_Manager : MonoBehaviour
 
     //Testint
     public int Testmoney;
+    public bool HasThirdChoice;
+    public GameObject Button3;
 
     [System.Serializable]
     public class Events
@@ -59,18 +61,34 @@ public class Event_Manager : MonoBehaviour
         {
             Panel.SetActive(true);
             selectedEvent = InGameEvents[UnityEngine.Random.Range(0, InGameEvents.Count)];
+
             Eventinfo.text = selectedEvent.Info;
-            //Eventtext
+
+            // Event text
             Eventchoice1.text = selectedEvent.Choicetext1;
             Eventchoice2.text = selectedEvent.Choicetext2;
-            Eventchoice3.text = selectedEvent.Choicetext3;
-            //Buttontext
+
+            // Button text
             Buttonchoice1.text = selectedEvent.Buttontext1;
             Buttonchoice2.text = selectedEvent.Buttontext2;
-            Buttonchoice3.text = selectedEvent.Buttontext3;
+
+            // Third choice check
+            if (HasThirdChoice == true)
+            {
+                Eventchoice3.gameObject.SetActive(true);
+                Button3.gameObject.SetActive(true);
+
+                Eventchoice3.text = selectedEvent.Choicetext3;
+                Buttonchoice3.text = selectedEvent.Buttontext3;
+            }
+            else
+            {
+                Eventchoice3.gameObject.SetActive(false);
+                Button3.gameObject.SetActive(false);
+            }
+
             Spawnevent = false;
         }
-
     }
 
     public void Buttonok()

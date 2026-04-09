@@ -262,6 +262,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!1 &963838493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 940198512950874565, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+  m_PrefabInstance: {fileID: 3947005558878895219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803074757
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,9 +463,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4553897995323546167, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+      propertyPath: Button3
+      value: 
+      objectReference: {fileID: 963838493}
+    - target: {fileID: 4553897995323546167, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+      propertyPath: button3
+      value: 
+      objectReference: {fileID: 963838493}
     - target: {fileID: 6832563957221337772, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_Name
       value: 3ChoiceEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832563957221337772, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8480668794557930999, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_LocalPosition.x

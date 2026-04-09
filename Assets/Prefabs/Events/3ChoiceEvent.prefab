@@ -701,6 +701,7 @@ MonoBehaviour:
     Tiledestuction: 0
     TileSpawn: 0
   Testmoney: 100
+  HasThirdChoice: 1
 --- !u!1 &5382124447530194152
 GameObject:
   m_ObjectHideFlags: 0
