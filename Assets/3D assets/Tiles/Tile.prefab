@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 3459743983685633166}
   - component: {fileID: 5460373011800008093}
   - component: {fileID: 5081756970598248352}
+  - component: {fileID: 6985420767132876022}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -237,6 +238,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6985420767132876022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197807196140216742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf63f19d8dae8946b50fe53518b27da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tileinfo
+  q: 0
+  r: 0
+  neighbors: []
 --- !u!1 &8957944785909826674
 GameObject:
   m_ObjectHideFlags: 0

@@ -262,6 +262,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!1 &403448112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403448113}
+  - component: {fileID: 403448114}
+  m_Layer: 0
+  m_Name: TileSpawn+logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403448113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403448112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.99676, y: 0.97795, z: -3.5159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403448114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403448112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c22bd77db2a63f42a9059c5dc547115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tileadjecentplacement
+  hexPrefab: {fileID: 8197807196140216742, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
+  radius: 5
+  hexSize: 1
 --- !u!1 &963838493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 940198512950874565, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
@@ -477,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6832563957221337772, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480668794557930999, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_LocalPosition.x
@@ -532,3 +579,4 @@ SceneRoots:
   - {fileID: 1871813220}
   - {fileID: 1803074759}
   - {fileID: 3947005558878895219}
+  - {fileID: 403448113}
