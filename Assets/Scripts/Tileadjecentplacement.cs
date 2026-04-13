@@ -69,7 +69,7 @@ public class Tileadjecentplacement : MonoBehaviour
         // Create a list to store neighboring tiles
         List<Tileinfo> result = new List<Tileinfo>();
 
-        // Loop through all possible hex directions (usually 6 directions)
+        // Loop through all possible hex directions (6 directions)
         foreach (var dir in directions)
         {
             // Calculate the position of the neighbor by adding direction offset
@@ -82,7 +82,6 @@ public class Tileadjecentplacement : MonoBehaviour
                 result.Add(neighbor);
             }
         }
-
         // Return the list of valid neighbors
         return result;
     }
