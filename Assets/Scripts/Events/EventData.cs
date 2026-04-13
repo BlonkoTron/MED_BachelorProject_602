@@ -5,19 +5,53 @@ public class EventData : ScriptableObject
 {
     [TextArea] public string eventInfo;
 
-    public string choiceText1;
-    public string choiceText2;
-    public string choiceText3;
-
-    public string buttonText1;
-    public string buttonText2;
-    public string buttonText3;
-
     public Texture Scenariosprite;
 
-    public int moneyLoss;
-    public int moneyGain;
+    [System.Serializable]
+    public class ChoiceData
+    {
+        public string choiceText;
+        public string buttonText;
 
-    public bool tileDestruction;
-    public bool tileSpawn;
+        public int moneyLoss;
+        public int moneyGain;
+        public bool tileDestruction;
+        public bool tileSpawn;
+    }
+
+    public ChoiceData choice1;
+    public ChoiceData choice2;
+    public ChoiceData choice3;
+
+    public void choice1_Setup()
+    {
+        ApplyChoice(choice1);
+    }
+
+    public void choice2_Setup()
+    {
+        ApplyChoice(choice2);
+    }
+
+    public void choice3_Setup()
+    {
+        ApplyChoice(choice3);
+    }
+
+    private void ApplyChoice(ChoiceData choice)
+    {
+        // Example usage:
+        Debug.Log("Money Gain: " + choice.moneyGain);
+        Debug.Log("Money Loss: " + choice.moneyLoss);
+
+        if (choice.tileDestruction)
+        {
+            Debug.Log("Destroy tile");
+        }
+
+        if (choice.tileSpawn)
+        {
+            Debug.Log("Spawn tile");
+        }
+    }
 }

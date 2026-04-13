@@ -38,7 +38,6 @@ public class Event_Manager : MonoBehaviour
     private void Start()
     {
         Panel.SetActive(false);
-       
     }
 
     public void Startevent()
@@ -49,14 +48,14 @@ public class Event_Manager : MonoBehaviour
         Eventinfo.text = selectedEvent.eventInfo;
 
         // Choices text
-        Eventchoice1.text = selectedEvent.choiceText1;
-        Eventchoice2.text = selectedEvent.choiceText2;
-        Eventchoice3.text = selectedEvent.choiceText3;
+        Eventchoice1.text = selectedEvent.choice1.choiceText;
+        Eventchoice2.text = selectedEvent.choice2.choiceText;
+        Eventchoice3.text = selectedEvent.choice3.choiceText;
 
         // Button text
-        Buttonchoice1.text = selectedEvent.buttonText1;
-        Buttonchoice2.text = selectedEvent.buttonText2;
-        Buttonchoice3.text = selectedEvent.buttonText3;
+        Buttonchoice1.text = selectedEvent.choice1.buttonText;
+        Buttonchoice2.text = selectedEvent.choice2.buttonText;
+        Buttonchoice3.text = selectedEvent.choice3.buttonText;
 
         // Image
         ScenarioImage.texture = selectedEvent.Scenariosprite;
@@ -66,31 +65,22 @@ public class Event_Manager : MonoBehaviour
 
     public void Option_1()
     {
-        Debug.Log("Option 1 picked");
+        selectedEvent.choice1_Setup();
         Panel.SetActive(false);
-        Testmoney -= selectedEvent.moneyLoss;
-        Testmoney += selectedEvent.moneyGain;
-        selectedEvent = null;
+        Debug.Log("Option 1 picked");
     }
 
     public void Option_2()
     {
-        Debug.Log("Option 2 picked");
+        selectedEvent.choice2_Setup();
         Panel.SetActive(false);
-        if (selectedEvent.tileSpawn)
-        {
-
-        }
-        selectedEvent = null;
+        Debug.Log("Option 2 picked");
     }
 
     public void Option_3()
     {
-        Debug.Log("Option 3 picked");
+        selectedEvent.choice3_Setup();
         Panel.SetActive(false);
-        if (selectedEvent.tileDestruction)
-        {
-        }
-        selectedEvent = null;
+        Debug.Log("Option 3 picked");
     }
 }
