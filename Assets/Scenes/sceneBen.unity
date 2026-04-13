@@ -278,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &403448113
 Transform:
   m_ObjectHideFlags: 0
@@ -312,6 +312,11 @@ MonoBehaviour:
 --- !u!1 &963838493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 940198512950874565, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+  m_PrefabInstance: {fileID: 3947005558878895219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502837834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4784502272578166877, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
   m_PrefabInstance: {fileID: 3947005558878895219}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803074757
@@ -502,6 +507,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &2082742741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082742743}
+  - component: {fileID: 2082742742}
+  m_Layer: 0
+  m_Name: Eventdata
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2082742742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082742741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24beead23013ce4bac83db72643809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eventmanager_NEWSETUP
+  allEvents:
+  - {fileID: 11400000, guid: 0ea2f3cde5f48a2429aeb79462846e46, type: 2}
+  - {fileID: 11400000, guid: f575d4b3aeb93144695cfbb19f443ae4, type: 2}
+  EventMan: {fileID: 0}
+  test: 1
+--- !u!4 &2082742743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082742741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5525, y: 2.46393, z: -1.16333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3947005558878895219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,13 +572,17 @@ PrefabInstance:
       propertyPath: button3
       value: 
       objectReference: {fileID: 963838493}
+    - target: {fileID: 4553897995323546167, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
+      propertyPath: Eventmanagersetup
+      value: 
+      objectReference: {fileID: 1502837834}
     - target: {fileID: 6832563957221337772, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_Name
       value: 3ChoiceEvent
       objectReference: {fileID: 0}
     - target: {fileID: 6832563957221337772, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8480668794557930999, guid: f2707ff7861dd5e4cadb669aa0c57369, type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,3 +638,4 @@ SceneRoots:
   - {fileID: 1803074759}
   - {fileID: 3947005558878895219}
   - {fileID: 403448113}
+  - {fileID: 2082742743}

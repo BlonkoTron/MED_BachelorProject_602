@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
+  m_Name: Jaguarcumming
+  m_EditorClassIdentifier: Assembly-CSharp::EventData
+  eventInfo: Hes frisky
+  choiceText1: owo
+  choiceText2: OWO
+  choiceText3: DIE
+  buttonText1: fuck
+  buttonText2: marry
+  buttonText3: kill
+  moneyLoss: 0
+  moneyGain: 1000000
+  tileDestruction: 0
+  tileSpawn: 0
