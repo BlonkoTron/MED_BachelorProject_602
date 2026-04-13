@@ -119,6 +119,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &297696854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297696856}
+  - component: {fileID: 297696855}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297696855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297696854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7beb76877f140214ebe47452aaff5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldGenerarion
+  Generate: 1
+  spawnrate: 1
+  spawdistance: 2
+  spawcount: 10
+  tiles:
+  - name: tile
+    prefab: {fileID: 7795194006395238821, guid: 86ca7fcce0018794bb09ce763f816508, type: 3}
+    WorldWeight: 0
+--- !u!4 &297696856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297696854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01517, y: 0.16046, z: -4.41003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424873534
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,13 +621,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tile
-  tileType: 3
+  tileType: 1
   currentDegradation: 0
   degradationThreshold: 100
   healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
   degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
   criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
   barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 0}
+  placementHeight: 0.1
   degradedThreshold: 0.33
   criticalThreshold: 0.66
   onMoneyEarned:
@@ -773,3 +827,4 @@ SceneRoots:
   - {fileID: 1862752478}
   - {fileID: 4675397726007459705}
   - {fileID: 1106521762}
+  - {fileID: 297696856}

@@ -11,6 +11,7 @@ public class QuotaManager : MonoBehaviour
     private int currentQuotaIndex = 0;
 
     public int CurrentQuotaAmount => currentQuotaAmount;
+    public int TicksTillNextQuota => ticksTillNextQuota;
 
     [SerializeField] private int[] quotaAmounts;
 
@@ -18,6 +19,7 @@ public class QuotaManager : MonoBehaviour
     private PointSystem pointSystem;
 
     public UnityEvent OnQuotaUpdated;
+    public UnityEvent OnQuotaPaymentTime;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -59,10 +61,10 @@ public class QuotaManager : MonoBehaviour
 
     private void OnGameManagerTick()
     {
-        Debug.Log("quota tick!");
         ticksTillNextQuota--;
         if (ticksTillNextQuota<=0)
         {
+            OnQuotaPaymentTime.Invoke();
             // pay the quota money
             if (pointSystem!=null)
             {
