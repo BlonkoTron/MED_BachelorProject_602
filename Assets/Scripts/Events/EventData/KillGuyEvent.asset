@@ -19,6 +19,7 @@ MonoBehaviour:
   buttonText1: DIE
   buttonText2: DIE MORE
   buttonText3: "DIE\xB4ST"
+  Scenariosprite: {fileID: 2800000, guid: c5872dbec4a3aa5488f745b4664dace1, type: 3}
   moneyLoss: 1000000
   moneyGain: 0
   tileDestruction: 0

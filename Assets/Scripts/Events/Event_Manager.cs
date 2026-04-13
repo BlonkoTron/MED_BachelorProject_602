@@ -20,6 +20,8 @@ public class Event_Manager : MonoBehaviour
     public Text Buttonchoice2;
     public Text Buttonchoice3;
 
+    public RawImage ScenarioImage;
+
 
 
     // Enable/disable Panel
@@ -39,27 +41,27 @@ public class Event_Manager : MonoBehaviour
        
     }
 
-    void Update()
+    public void Startevent()
     {
-        if (Spawnevent && selectedEvent != null)
-        {
-            Panel.SetActive(true);
+        Panel.SetActive(true);
 
-            // Event info
-            Eventinfo.text = selectedEvent.eventInfo;
+        // Event info
+        Eventinfo.text = selectedEvent.eventInfo;
 
-            // Choices text
-            Eventchoice1.text = selectedEvent.choiceText1;
-            Eventchoice2.text = selectedEvent.choiceText2;
-            Eventchoice3.text = selectedEvent.choiceText3;
+        // Choices text
+        Eventchoice1.text = selectedEvent.choiceText1;
+        Eventchoice2.text = selectedEvent.choiceText2;
+        Eventchoice3.text = selectedEvent.choiceText3;
 
-            // Button text
-            Buttonchoice1.text = selectedEvent.buttonText1;
-            Buttonchoice2.text = selectedEvent.buttonText2;
-            Buttonchoice3.text = selectedEvent.buttonText3;
+        // Button text
+        Buttonchoice1.text = selectedEvent.buttonText1;
+        Buttonchoice2.text = selectedEvent.buttonText2;
+        Buttonchoice3.text = selectedEvent.buttonText3;
 
-            Spawnevent = false;
-        }
+        // Image
+        ScenarioImage.texture = selectedEvent.Scenariosprite;
+
+        Spawnevent = false;
     }
 
     public void Option_1()

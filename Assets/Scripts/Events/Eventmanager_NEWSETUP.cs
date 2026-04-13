@@ -10,7 +10,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     [SerializeField] private Event_Manager EventMan;
 
-    public bool test;
+    public bool Test_Triggerevent;
 
     private void Start()
     {
@@ -19,10 +19,10 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     private void Update()
     {
-        if (test == true)
+        if (Test_Triggerevent == true)
         {
             TriggerRandomEvent();
-            test = false;
+            Test_Triggerevent = false;
         }
     }
 
@@ -32,6 +32,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
         currentEvent = allEvents[Random.Range(0, allEvents.Count)];
         EventMan.selectedEvent = currentEvent;
+        EventMan.Startevent();
 
         Debug.Log(currentEvent.eventInfo);
     }

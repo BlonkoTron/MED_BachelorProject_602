@@ -13,6 +13,8 @@ public class EventData : ScriptableObject
     public string buttonText2;
     public string buttonText3;
 
+    public Texture Scenariosprite;
+
     public int moneyLoss;
     public int moneyGain;
 
