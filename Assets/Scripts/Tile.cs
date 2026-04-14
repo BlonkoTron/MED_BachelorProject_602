@@ -65,6 +65,8 @@ public class Tile : MonoBehaviour
     public int MoneyPerTick => GetMoneyPerTick();
     public float DegradationRate => GetDegradationRate();
 
+    [SerializeField] private GameObject MoneyGainUI;
+
     void Start()
     {
         tileRenderer = GetComponent<Renderer>();
@@ -86,23 +88,33 @@ public class Tile : MonoBehaviour
     // Money earned per tick for each tile type
     private int GetMoneyPerTick()
     {
+        int amount = 0;
         switch (tileType)
         {
             case TileType.Mine:
-                return MONEY_MINE; // Highest income
+                amount= MONEY_MINE; // Highest income
+                break;
             case TileType.CowField:
-                return MONEY_COW_FIELD;
+                amount= MONEY_COW_FIELD;
+                break;
             case TileType.Farm:
-                return MONEY_FARM;
+                amount= MONEY_FARM;
+                break;
             case TileType.Agroforest:
-                return MONEY_AGROFOREST; // Lowest income but sustainable
+                amount= MONEY_AGROFOREST; // Lowest income but sustainable
+                break;
             case TileType.Grass:
             case TileType.Rainforest:
             case TileType.Barren:
-                return MONEY_NATURAL; // No income
+                amount= MONEY_NATURAL; // No income
+                break;
             default:
-                return MONEY_NATURAL;
+                amount= MONEY_NATURAL;
+                break;
         }
+        amount = Mathf.FloorToInt(amount * PointSystem.Instance.GetEfficiencyMultiplier(tileType));
+        return amount;
+
     }
 
     // Degradation rate per turn (how fast the tile becomes barren)
@@ -154,6 +166,11 @@ public class Tile : MonoBehaviour
         if (moneyEarned > 0)
         {
             onMoneyEarned?.Invoke(moneyEarned);
+            if (MoneyGainUI!=null)
+            {
+                var ui=Instantiate(MoneyGainUI,transform);
+                ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(moneyEarned);
+            }
         }
     }
 

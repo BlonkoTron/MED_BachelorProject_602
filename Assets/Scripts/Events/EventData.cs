@@ -10,13 +10,25 @@ public class EventData : ScriptableObject
     [System.Serializable]
     public class ChoiceData
     {
+        //Text
         public string choiceText;
         public string buttonText;
 
+        //Money/currency
         public int moneyLoss;
         public int moneyGain;
+        public int HappinessUp;
+        public int HappinessDown;
+
+        //Tile Nerf or Buff
+        public bool TileNOEFFICIENT;
+        public bool TileHalfefficient;
+        public bool TileDoublefficient;
+
+        //TileChanges
         public bool tileDestruction;
-        public bool tileSpawn;
+        public bool tileSpawnMine;
+        public bool tileSpawnFarm;
     }
 
     public ChoiceData choice1;
@@ -44,14 +56,14 @@ public class EventData : ScriptableObject
         PointSystem.Instance.AddMoney(choice.moneyGain);
         PointSystem.Instance.LoseMoney(choice.moneyLoss);
 
-        if (choice.tileDestruction)
-        {
-            Debug.Log("Destroy tile");
-        }
+        //if (choice.tiledestruction)
+        //{
+        //    debug.log("destroy tile");
+        //}
 
-        if (choice.tileSpawn)
-        {
-            Debug.Log("Spawn tile");
-        }
+        //if (choice.tilespawn)
+        //{
+        //    debug.log("spawn tile");
+        //}
     }
 }

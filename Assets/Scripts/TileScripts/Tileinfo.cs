@@ -8,6 +8,14 @@ public class Tileinfo : MonoBehaviour
 
     public List<Tileinfo> neighbors = new List<Tileinfo>();
 
+    public Material[] variants; // Materialpick
+
+    void Start()
+    {
+        int randomIndex = Random.Range(0, variants.Length);
+        GetComponent<Renderer>().material = variants[randomIndex];
+    }
+
     public void SetCoordinates(int x, int y)
     {
         this.x = x;

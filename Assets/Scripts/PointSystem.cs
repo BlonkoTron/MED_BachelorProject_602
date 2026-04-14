@@ -19,6 +19,8 @@ public class PointSystem : MonoBehaviour
 
     [HideInInspector] public UnityEvent<int> onMoneyEarned;
     [HideInInspector] public UnityEvent<int> onMoneySpent;
+    [HideInInspector] public UnityEvent<int> onMoneyLost;
+
 
     private void Awake()
     {
@@ -60,35 +62,11 @@ public class PointSystem : MonoBehaviour
         onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
-    public void AddMoney(int amount, TileType tiletype)
-    {
-        // add a multiplier based on type
-        switch(tiletype)
-        {
-            case TileType.Farm:
-                amount=Mathf.FloorToInt(amount*farmEfficiencyMultiplier);
-                break;
-            case TileType.CowField:
-                amount= Mathf.FloorToInt(amount * cowfieldEfficiencyMultiplier);
-                break;
-            case TileType.Mine:
-                amount= Mathf.FloorToInt(amount * mineEfficiencyMultiplier);
-                break;
-            case TileType.Agroforest:
-                amount= Mathf.FloorToInt(amount * agroforestEfficiencyMultiplier);
-                break;
-            default:
-                break;
-        }
-        currentMoney += amount;
-        onMoneyEarned.Invoke(amount);
-        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
-    }
-
     public void LoseMoney(int amount)
     {
-        currentMoney += amount;
-        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
+        currentMoney -= amount;
+        onMoneyLost.Invoke(amount);
+        Debug.Log($"lost ${amount}. Total money: ${currentMoney}");
     }
 
     public bool SpendMoney(int amount)
@@ -104,6 +82,22 @@ public class PointSystem : MonoBehaviour
         {
             Debug.Log($"Not enough money! Need ${amount}, have ${currentMoney}");
             return false;
+        }
+    }
+    public float GetEfficiencyMultiplier(TileType type)
+    {
+        switch (type)
+        {
+            case TileType.Farm:
+                return farmEfficiencyMultiplier;
+            case TileType.CowField:
+                return cowfieldEfficiencyMultiplier;
+            case TileType.Mine:
+                return mineEfficiencyMultiplier;
+            case TileType.Agroforest:
+                return agroforestEfficiencyMultiplier;
+            default:
+                return 1;
         }
     }
     

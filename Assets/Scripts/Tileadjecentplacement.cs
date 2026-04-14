@@ -8,6 +8,8 @@ public class Tileadjecentplacement : MonoBehaviour
     public float hexSize = 1f; //Size of hex, The bigger the more space between hexes
 
     private Dictionary<Vector2Int, Tileinfo> grid = new Dictionary<Vector2Int, Tileinfo>(); // Creates a dictionary which acts like a grid/map where each position (Vector2Int) stores the tile data (Tileinfo).
+    
+    public Material[] variants; // Materialpick
 
     // Axial directions (6 neighbors)
     private static readonly Vector2Int[] directions = new Vector2Int[]
@@ -28,12 +30,19 @@ public class Tileadjecentplacement : MonoBehaviour
 
     void GenerateGrid()
     {
+        Transform topTransform = hexPrefab.transform.Find("Top");
+        GameObject topHex = topTransform.gameObject;
+
         // Loop over q (one axis in axial hex coordinates)
         for (int q = -radius; q <= radius; q++) // Generates columns of hexes within the radius
         {
             // Loop over r (the other axis), but constrained so the shape becomes a hex, not a square
             for (int r = Mathf.Max(-radius, -q - radius); r <= Mathf.Min(radius, -q + radius); r++)
             {
+                //Get random material
+                int randomIndex = Random.Range(0, variants.Length);
+                topHex.GetComponent<Renderer>().material = variants[randomIndex];
+
                 // Convert hex grid coordinates (q, r) into a world position (x, z in Unity)
                 Vector3 worldPos = HexToWorld(q, r);
 
