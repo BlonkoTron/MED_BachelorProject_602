@@ -1305,6 +1305,7 @@ MonoBehaviour:
   onMoneyEarned:
     m_PersistentCalls:
       m_Calls: []
+  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!114 &4584230055006635958
 MonoBehaviour:
   m_ObjectHideFlags: 0

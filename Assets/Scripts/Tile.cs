@@ -65,6 +65,8 @@ public class Tile : MonoBehaviour
     public int MoneyPerTick => GetMoneyPerTick();
     public float DegradationRate => GetDegradationRate();
 
+    [SerializeField] private GameObject MoneyGainUI;
+
     void Start()
     {
         tileRenderer = GetComponent<Renderer>();
@@ -164,6 +166,11 @@ public class Tile : MonoBehaviour
         if (moneyEarned > 0)
         {
             onMoneyEarned?.Invoke(moneyEarned);
+            if (MoneyGainUI!=null)
+            {
+                var ui=Instantiate(MoneyGainUI,transform);
+                ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(moneyEarned);
+            }
         }
     }
 
