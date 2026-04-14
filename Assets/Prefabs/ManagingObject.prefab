@@ -45,6 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointSystem
   currentMoney: 0
+  Eventsir: {fileID: 0}
+  farmEfficiencyMultiplier: 1
+  mineEfficiencyMultiplier: 1
+  cowfieldEfficiencyMultiplier: 1
+  agroforestEfficiencyMultiplier: 1
+  onMoneyEarned:
+    m_PersistentCalls:
+      m_Calls: []
+  onMoneySpent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8727227778973873950
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   tickInterval: 15
+  ticksBetweenRounds: 5
   onGameTick:
     m_PersistentCalls:
       m_Calls: []
+  onRoundEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  gameState: 0
