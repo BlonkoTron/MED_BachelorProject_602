@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Bits: 8
   UILayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   interactionDistance: 100
 --- !u!114 &6457457137181889875
 MonoBehaviour:
