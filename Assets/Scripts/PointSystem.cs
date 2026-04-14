@@ -19,6 +19,8 @@ public class PointSystem : MonoBehaviour
 
     [HideInInspector] public UnityEvent<int> onMoneyEarned;
     [HideInInspector] public UnityEvent<int> onMoneySpent;
+    [HideInInspector] public UnityEvent<int> onMoneyLost;
+
 
     private void Awake()
     {
@@ -60,20 +62,11 @@ public class PointSystem : MonoBehaviour
         onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
-   /* public void AddMoney(int amount, TileType tiletype) // moved the multiplier handling to tile
-    {
-        // add a multiplier based on type
-        amount = Mathf.FloorToInt(amount * GetEfficiencyMultiplier(tiletype));
-
-        currentMoney += amount;
-        onMoneyEarned.Invoke(amount);
-        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
-    }
-
     public void LoseMoney(int amount)
     {
-        currentMoney += amount;
-        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
+        currentMoney -= amount;
+        onMoneyLost.Invoke(amount);
+        Debug.Log($"lost ${amount}. Total money: ${currentMoney}");
     }
 
     public bool SpendMoney(int amount)
