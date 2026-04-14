@@ -1458,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   tickInterval: 15
+  ticksBetweenRounds: 5
   onGameTick:
     m_PersistentCalls:
       m_Calls:
@@ -1473,6 +1474,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onRoundEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  gameState: 0
 --- !u!1 &2011239888
 GameObject:
   m_ObjectHideFlags: 0
