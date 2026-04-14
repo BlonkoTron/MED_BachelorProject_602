@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52cdff10e2129a643ba831bee3323b40, type: 2}
+  - {fileID: 2100000, guid: 4c01ce5dc093bcd4b9c3ac5883079573, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,7 +214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5537e83dbe959324396d8477cfe482b1, type: 2}
+  - {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -250,9 +250,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf63f19d8dae8946b50fe53518b27da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tileinfo
-  q: 0
-  r: 0
+  x: 0
+  y: 0
   neighbors: []
+  variants:
+  - {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
+  - {fileID: 2100000, guid: 1610e0706bb2dbc4c98f073d2038c61b, type: 2}
+  - {fileID: 2100000, guid: 4c01ce5dc093bcd4b9c3ac5883079573, type: 2}
 --- !u!1 &8957944785909826674
 GameObject:
   m_ObjectHideFlags: 0
