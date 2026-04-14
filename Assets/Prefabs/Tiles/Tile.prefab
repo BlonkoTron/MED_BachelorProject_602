@@ -14,13 +14,15 @@ GameObject:
   - component: {fileID: 255855088267627496}
   - component: {fileID: 7498090227574637327}
   - component: {fileID: 4095030317081575641}
+  - component: {fileID: 3299681438526459910}
+  - component: {fileID: 6459344736338280463}
   m_Layer: 5
   m_Name: TileUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5700639918077096850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -142,6 +144,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
   useStaticBillboard: 1
+--- !u!114 &3299681438526459910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931124000218102901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  tileType: 0
+  currentDegradation: 0
+  degradationThreshold: 100
+  healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
+  degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
+  criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
+  barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
+  placementHeight: 0.1
+  degradedThreshold: 0.33
+  criticalThreshold: 0.66
+  onMoneyEarned:
+    m_PersistentCalls:
+      m_Calls: []
+  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
+--- !u!114 &6459344736338280463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931124000218102901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
+  highlightObj: {fileID: 5939521722586337789}
+  tileUI: {fileID: 0}
+  blankTileUI: {fileID: 1931124000218102901}
+  buildingUI: {fileID: 5449687786812584257}
 --- !u!1 &2162552414375044930
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +651,7 @@ MonoBehaviour:
   onMoneyEarned:
     m_PersistentCalls:
       m_Calls: []
-  MoneyGainUI: {fileID: 0}
+  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!1 &3870815425066860072
 GameObject:
   m_ObjectHideFlags: 0
