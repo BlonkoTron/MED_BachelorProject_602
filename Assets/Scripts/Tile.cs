@@ -93,6 +93,7 @@ public class Tile : MonoBehaviour
 
     public void SetTileType(TileType newType)
     {
+        if (newType == tileType) return;
         tileType = newType;
         
         UpdateMaterial();
