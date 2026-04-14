@@ -10,6 +10,7 @@ public class Event_Manager : MonoBehaviour
     public EventData selectedEvent;
 
     // UI text
+    public TMP_Text Eventtitle;
     public TMP_Text Eventinfo;
 
     public TMP_Text Eventchoice1;
@@ -20,7 +21,7 @@ public class Event_Manager : MonoBehaviour
     public TMP_Text Buttonchoice2;
     public TMP_Text Buttonchoice3;
 
-    public Image ScenarioImage;
+    public RawImage ScenarioImage;
 
     // Enable/disable Panel
     public GameObject Panel;
@@ -44,7 +45,8 @@ public class Event_Manager : MonoBehaviour
 
         // Event info
         Eventinfo.text = selectedEvent.eventInfo;
-        
+        Eventtitle.text = selectedEvent.eventtitle;
+
         // Choices text
         Eventchoice1.text = selectedEvent.choice1.choiceText;
         Eventchoice2.text = selectedEvent.choice2.choiceText;
@@ -56,6 +58,7 @@ public class Event_Manager : MonoBehaviour
         Buttonchoice3.text = selectedEvent.choice3.buttonText;
 
         // Image
+        ScenarioImage.texture = selectedEvent.Scenariosprite;
     }
 
     public void Option_1()
