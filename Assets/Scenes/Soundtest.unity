@@ -617,7 +617,6 @@ GameObject:
   m_Component:
   - component: {fileID: 101006919}
   - component: {fileID: 101006920}
-  - component: {fileID: 101006921}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -657,31 +656,6 @@ MonoBehaviour:
   moveSpeed: 20
   edgeSize: 20
   smoothTime: 0.1
-  zoomSpeed: 10
-  minHeight: 0
-  maxHeight: 10
-  zoomSmoothTime: 0.2
-  xLimits: {x: -100, y: 100}
-  zLimits: {x: -100, y: 100}
---- !u!114 &101006921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101006918}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8061182c04e3b84b9ffcd05eb23efa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cammovement2
-  moveSpeed: 20
-  edgeSize: 20
-  smoothTime: 0.1
-  zoomSpeed: 10
-  minDistance: 0
-  maxDistance: 10
-  zoomSmoothTime: 0.2
   xLimits: {x: -100, y: 100}
   zLimits: {x: -100, y: 100}
 --- !u!1001 &101059246
@@ -1911,8 +1885,9 @@ GameObject:
   m_Component:
   - component: {fileID: 273646436}
   - component: {fileID: 273646435}
-  - component: {fileID: 273646434}
   - component: {fileID: 273646437}
+  - component: {fileID: 273646438}
+  - component: {fileID: 273646439}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1920,14 +1895,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &273646434
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273646433}
-  m_Enabled: 1
 --- !u!20 &273646435
 Camera:
   m_ObjectHideFlags: 0
@@ -2038,6 +2005,45 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!95 &273646438
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273646433}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d636ee4a4f9ac2479689becceb57e41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &273646439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273646433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7e841fb0bc80f4cb849c67bb26454b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraZoom
+  zoomSpeed: 5
+  zoomSmoothTime: 0.2
+  zoomValue: 0
+  animator: {fileID: 273646438}
+  animationName: ZoomAnimation
 --- !u!1001 &275865702
 PrefabInstance:
   m_ObjectHideFlags: 0
