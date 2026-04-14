@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PointSystem : MonoBehaviour
 {
@@ -9,6 +10,16 @@ public class PointSystem : MonoBehaviour
     [SerializeField] private Eventmanager_NEWSETUP Eventsir;
     
     public int CurrentMoney => currentMoney;
+
+    [HideInInspector] public float farmEfficiencyMultiplier = 1;
+    [HideInInspector] public float mineEfficiencyMultiplier = 1;
+    [HideInInspector] public float cowfieldEfficiencyMultiplier = 1;
+    [HideInInspector] public float agroforestEfficiencyMultiplier = 1;
+
+
+    [HideInInspector] public UnityEvent<int> onMoneyEarned;
+    [HideInInspector] public UnityEvent<int> onMoneySpent;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -46,6 +57,31 @@ public class PointSystem : MonoBehaviour
     public void AddMoney(int amount)
     {
         currentMoney += amount;
+        onMoneyEarned.Invoke(amount);
+        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
+    }
+    public void AddMoney(int amount, TileType tiletype)
+    {
+        // add a multiplier based on type
+        switch(tiletype)
+        {
+            case TileType.Farm:
+                amount=Mathf.FloorToInt(amount*farmEfficiencyMultiplier);
+                break;
+            case TileType.CowField:
+                amount= Mathf.FloorToInt(amount * cowfieldEfficiencyMultiplier);
+                break;
+            case TileType.Mine:
+                amount= Mathf.FloorToInt(amount * mineEfficiencyMultiplier);
+                break;
+            case TileType.Agroforest:
+                amount= Mathf.FloorToInt(amount * agroforestEfficiencyMultiplier);
+                break;
+            default:
+                break;
+        }
+        currentMoney += amount;
+        onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
 
@@ -60,6 +96,7 @@ public class PointSystem : MonoBehaviour
         if (currentMoney >= amount)
         {
             currentMoney -= amount;
+            onMoneySpent.Invoke(amount);
             Debug.Log($"Spent ${amount}. Remaining money: ${currentMoney}");
             return true;
         }

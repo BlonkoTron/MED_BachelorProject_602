@@ -23,8 +23,11 @@ public class QuotaUI : MonoBehaviour
     private void UpdateQuotaText()
     {
         quotaAmountText.text = quotaManager.CurrentQuotaAmount.ToString();
-        //timeLeftText.text = quotaManager.ticksTillNextQuota.ToString();
 
+    }
+    private void Update()
+    {
+        timeLeftText.text = GameManager.Instance.SecondsTillRoundEnd().ToString();
     }
     private void OnDestroy()
     {
