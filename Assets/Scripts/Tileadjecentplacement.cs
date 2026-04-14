@@ -30,6 +30,7 @@ public class Tileadjecentplacement : MonoBehaviour
 
     void GenerateGrid()
     {
+        //Find Top gameobject to refrence its material later
         Transform topTransform = hexPrefab.transform.Find("Top");
         GameObject topHex = topTransform.gameObject;
 
@@ -39,7 +40,7 @@ public class Tileadjecentplacement : MonoBehaviour
             // Loop over r (the other axis), but constrained so the shape becomes a hex, not a square
             for (int r = Mathf.Max(-radius, -q - radius); r <= Mathf.Min(radius, -q + radius); r++)
             {
-                //Get random material
+                //Get random material and apply to topHex
                 int randomIndex = Random.Range(0, variants.Length);
                 topHex.GetComponent<Renderer>().material = variants[randomIndex];
 
