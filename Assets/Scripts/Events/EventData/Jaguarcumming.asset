@@ -12,15 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: Jaguarcumming
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventInfo: Hes frisky
-  choiceText1: owo
-  choiceText2: OWO
-  choiceText3: DIE
-  buttonText1: fuck
-  buttonText2: marry
-  buttonText3: kill
+  eventInfo: Frisky jaguar
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
-  moneyLoss: 0
-  moneyGain: 1000000
-  tileDestruction: 0
-  tileSpawn: 0
+  choice1:
+    choiceText: Date him
+    buttonText: OWO
+    moneyLoss: 0
+    moneyGain: 100
+    tileDestruction: 0
+    tileSpawn: 0
+  choice2:
+    choiceText: FUCK HIM
+    buttonText: OWWWWWOOO
+    moneyLoss: 0
+    moneyGain: 100
+    tileDestruction: 0
+    tileSpawn: 0
+  choice3:
+    choiceText: Kill him
+    buttonText: man...
+    moneyLoss: 0
+    moneyGain: 100
+    tileDestruction: 0
+    tileSpawn: 0
