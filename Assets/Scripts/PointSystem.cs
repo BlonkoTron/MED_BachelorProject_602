@@ -5,6 +5,8 @@ public class PointSystem : MonoBehaviour
     public static PointSystem Instance;
     [Header("Money Tracking")]
     [SerializeField] private int currentMoney = 0;
+
+    [SerializeField] private Eventmanager_NEWSETUP Eventsir;
     
     public int CurrentMoney => currentMoney;
     private void Awake()
@@ -20,6 +22,9 @@ public class PointSystem : MonoBehaviour
     }
     void Start()
     {
+        //Get Eventmanager_NEWSETUP 
+        Eventsir = Eventmanager_NEWSETUP.instance;
+
         // Find all tiles and subscribe to their money events
         RegisterAllTiles();
     }
@@ -43,7 +48,13 @@ public class PointSystem : MonoBehaviour
         currentMoney += amount;
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
-    
+
+    public void LoseMoney(int amount)
+    {
+        currentMoney += amount;
+        Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
+    }
+
     public bool SpendMoney(int amount)
     {
         if (currentMoney >= amount)

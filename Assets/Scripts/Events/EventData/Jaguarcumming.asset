@@ -18,20 +18,20 @@ MonoBehaviour:
     choiceText: Date him
     buttonText: OWO
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0
   choice2:
     choiceText: FUCK HIM
     buttonText: OWWWWWOOO
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0
   choice3:
     choiceText: Kill him
     buttonText: man...
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0

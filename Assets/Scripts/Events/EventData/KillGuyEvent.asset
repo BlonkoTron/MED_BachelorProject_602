@@ -18,20 +18,20 @@ MonoBehaviour:
     choiceText: AAAAAAH
     buttonText: '*die'
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0
   choice2:
     choiceText: OH NO
     buttonText: DIES
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0
   choice3:
     choiceText: HEUIFEUFEK
     buttonText: "DIE\xB4ED"
     moneyLoss: 0
-    moneyGain: 0
+    moneyGain: 100
     tileDestruction: 0
     tileSpawn: 0
