@@ -56,10 +56,11 @@ public class EventData : ScriptableObject
         PointSystem.Instance.AddMoney(choice.moneyGain);
         PointSystem.Instance.LoseMoney(choice.moneyLoss);
 
-        //if (choice.tiledestruction)
-        //{
-        //    debug.log("destroy tile");
-        //}
+        if (choice.tileDestruction)
+        {
+
+            Debug.Log("destroy tile");
+        }
 
         //if (choice.tilespawn)
         //{
