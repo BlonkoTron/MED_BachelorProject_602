@@ -55,30 +55,15 @@ public class PointSystem : MonoBehaviour
         onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
-    public void AddMoney(int amount, TileType tiletype)
+   /* public void AddMoney(int amount, TileType tiletype) // moved the multiplier handling to tile
     {
         // add a multiplier based on type
-        switch(tiletype)
-        {
-            case TileType.Farm:
-                amount=Mathf.FloorToInt(amount*farmEfficiencyMultiplier);
-                break;
-            case TileType.CowField:
-                amount= Mathf.FloorToInt(amount * cowfieldEfficiencyMultiplier);
-                break;
-            case TileType.Mine:
-                amount= Mathf.FloorToInt(amount * mineEfficiencyMultiplier);
-                break;
-            case TileType.Agroforest:
-                amount= Mathf.FloorToInt(amount * agroforestEfficiencyMultiplier);
-                break;
-            default:
-                break;
-        }
+        amount = Mathf.FloorToInt(amount * GetEfficiencyMultiplier(tiletype));
+
         currentMoney += amount;
         onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
-    }
+    } */ 
     
     public bool SpendMoney(int amount)
     {
@@ -93,6 +78,22 @@ public class PointSystem : MonoBehaviour
         {
             Debug.Log($"Not enough money! Need ${amount}, have ${currentMoney}");
             return false;
+        }
+    }
+    public float GetEfficiencyMultiplier(TileType type)
+    {
+        switch (type)
+        {
+            case TileType.Farm:
+                return farmEfficiencyMultiplier;
+            case TileType.CowField:
+                return cowfieldEfficiencyMultiplier;
+            case TileType.Mine:
+                return mineEfficiencyMultiplier;
+            case TileType.Agroforest:
+                return agroforestEfficiencyMultiplier;
+            default:
+                return 1;
         }
     }
     
