@@ -7,7 +7,6 @@ public class Event_Manager : MonoBehaviour
     // Reference to ScriptableObject
     public static Event_Manager instance { get; private set; }
     public EventData selectedEvent;
-    public bool Spawnevent;
 
     // UI text
     public Text Eventinfo;
@@ -59,8 +58,6 @@ public class Event_Manager : MonoBehaviour
 
         // Image
         ScenarioImage.texture = selectedEvent.Scenariosprite;
-
-        Spawnevent = false;
     }
 
     public void Option_1()

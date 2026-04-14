@@ -40,9 +40,9 @@ public class EventData : ScriptableObject
 
     private void ApplyChoice(ChoiceData choice)
     {
-        // Example usage:
-        Debug.Log("Money Gain: " + choice.moneyGain);
-        Debug.Log("Money Loss: " + choice.moneyLoss);
+        Debug.Log("ApplyChoice called");
+        PointSystem.Instance.AddMoney(choice.moneyGain);
+        PointSystem.Instance.LoseMoney(choice.moneyLoss);
 
         if (choice.tileDestruction)
         {
