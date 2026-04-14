@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Eventmanager_NEWSETUP : MonoBehaviour
 {
+    public static Eventmanager_NEWSETUP instance { get; private set; }
+
     public List<EventData> allEvents;
 
-    private EventData currentEvent;
+    public EventData currentEvent;
 
     [SerializeField] private Event_Manager EventMan;
 
-    public bool Test_Triggerevent;
+    public bool Test_Triggerevent = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {

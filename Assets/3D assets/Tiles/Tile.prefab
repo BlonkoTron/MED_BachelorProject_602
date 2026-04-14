@@ -173,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8197807196140216742}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.306665, y: 0.000000003790049, z: -19.123829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -250,9 +250,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf63f19d8dae8946b50fe53518b27da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tileinfo
-  q: 0
-  r: 0
+  x: 0
+  y: 0
   neighbors: []
+  variants:
+  - {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
+  - {fileID: 2100000, guid: 1610e0706bb2dbc4c98f073d2038c61b, type: 2}
+  - {fileID: 2100000, guid: 4c01ce5dc093bcd4b9c3ac5883079573, type: 2}
 --- !u!1 &8957944785909826674
 GameObject:
   m_ObjectHideFlags: 0

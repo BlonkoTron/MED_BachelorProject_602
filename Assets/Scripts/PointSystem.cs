@@ -1,12 +1,27 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PointSystem : MonoBehaviour
 {
     public static PointSystem Instance;
     [Header("Money Tracking")]
     [SerializeField] private int currentMoney = 0;
+
+    [SerializeField] private Eventmanager_NEWSETUP Eventsir;
     
     public int CurrentMoney => currentMoney;
+
+    [HideInInspector] public float farmEfficiencyMultiplier = 1;
+    [HideInInspector] public float mineEfficiencyMultiplier = 1;
+    [HideInInspector] public float cowfieldEfficiencyMultiplier = 1;
+    [HideInInspector] public float agroforestEfficiencyMultiplier = 1;
+
+
+    [HideInInspector] public UnityEvent<int> onMoneyEarned;
+    [HideInInspector] public UnityEvent<int> onMoneySpent;
+    [HideInInspector] public UnityEvent<int> onMoneyLost;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -20,6 +35,9 @@ public class PointSystem : MonoBehaviour
     }
     void Start()
     {
+        //Get Eventmanager_NEWSETUP 
+        Eventsir = Eventmanager_NEWSETUP.instance;
+
         // Find all tiles and subscribe to their money events
         RegisterAllTiles();
     }
@@ -41,14 +59,22 @@ public class PointSystem : MonoBehaviour
     public void AddMoney(int amount)
     {
         currentMoney += amount;
+        onMoneyEarned.Invoke(amount);
         Debug.Log($"Earned ${amount}. Total money: ${currentMoney}");
     }
-    
+    public void LoseMoney(int amount)
+    {
+        currentMoney -= amount;
+        onMoneyLost.Invoke(amount);
+        Debug.Log($"lost ${amount}. Total money: ${currentMoney}");
+    }
+
     public bool SpendMoney(int amount)
     {
         if (currentMoney >= amount)
         {
             currentMoney -= amount;
+            onMoneySpent.Invoke(amount);
             Debug.Log($"Spent ${amount}. Remaining money: ${currentMoney}");
             return true;
         }
@@ -56,6 +82,22 @@ public class PointSystem : MonoBehaviour
         {
             Debug.Log($"Not enough money! Need ${amount}, have ${currentMoney}");
             return false;
+        }
+    }
+    public float GetEfficiencyMultiplier(TileType type)
+    {
+        switch (type)
+        {
+            case TileType.Farm:
+                return farmEfficiencyMultiplier;
+            case TileType.CowField:
+                return cowfieldEfficiencyMultiplier;
+            case TileType.Mine:
+                return mineEfficiencyMultiplier;
+            case TileType.Agroforest:
+                return agroforestEfficiencyMultiplier;
+            default:
+                return 1;
         }
     }
     

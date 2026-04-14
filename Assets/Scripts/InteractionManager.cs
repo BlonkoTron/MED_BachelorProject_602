@@ -8,7 +8,7 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class InteractionManager : MonoBehaviour
 {
-    public InteractionManager Instance;
+    public static InteractionManager Instance;
 
     public bool openUI;
 
