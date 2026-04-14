@@ -5,8 +5,6 @@ public class QuotaManager : MonoBehaviour
 {
     public static QuotaManager Instance;
 
-    [SerializeField] private int ticksBetweenQuotas = 5;
-    private int ticksTillNextQuota;
     private int currentQuotaAmount;
     private int currentQuotaIndex = 0;
 
@@ -28,8 +26,6 @@ public class QuotaManager : MonoBehaviour
         {
             Instance = this;
         }
-        // setup for first quota
-        ticksTillNextQuota = ticksBetweenQuotas;
         currentQuotaAmount = quotaAmounts[0];
     }
 
@@ -37,13 +33,23 @@ public class QuotaManager : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         pointSystem = PointSystem.Instance;
-        // subscribe to game manager tick
         if (gameManager!=null)
         {
-            gameManager.onGameTick.AddListener(OnGameManagerTick);
+            gameManager.onRoundEnd.AddListener(OnGameManagerRoundEnd);
         }
     }
+    private void OnGameManagerRoundEnd()
+    {
+        // pay the quota money
+        if (pointSystem != null)
+        {
+            pointSystem.SpendMoney(currentQuotaAmount);
+        }
 
+        // update to new quota
+        currentQuotaAmount = NewQuota();
+        OnQuotaUpdated.Invoke();
+    }
     private int NewQuota()
     {
         currentQuotaIndex++;
@@ -56,28 +62,9 @@ public class QuotaManager : MonoBehaviour
             return quotaAmounts[quotaAmounts.Length-1];
         }
     }
-
-    private void OnGameManagerTick()
-    {
-        Debug.Log("quota tick!");
-        ticksTillNextQuota--;
-        if (ticksTillNextQuota<=0)
-        {
-            // pay the quota money
-            if (pointSystem!=null)
-            {
-                pointSystem.SpendMoney(currentQuotaAmount);
-            }
-
-            // update to new quota
-            currentQuotaAmount = NewQuota();
-            ticksTillNextQuota = ticksBetweenQuotas;
-            OnQuotaUpdated.Invoke();
-        }
-    }
     private void OnDestroy()
     {
-        gameManager.onGameTick.RemoveListener(OnGameManagerTick);
+        gameManager.onGameTick.RemoveListener(OnGameManagerRoundEnd);
 
     }
 }

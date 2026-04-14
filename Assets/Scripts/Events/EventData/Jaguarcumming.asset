@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
+  m_Name: Jaguarcumming
+  m_EditorClassIdentifier: Assembly-CSharp::EventData
+  eventInfo: Frisky jaguar
+  Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
+  choice1:
+    choiceText: Date him
+    buttonText: OWO
+    moneyLoss: 0
+    moneyGain: 0
+    tileDestruction: 0
+    tileSpawn: 0
+  choice2:
+    choiceText: FUCK HIM
+    buttonText: OWWWWWOOO
+    moneyLoss: 0
+    moneyGain: 0
+    tileDestruction: 0
+    tileSpawn: 0
+  choice3:
+    choiceText: Kill him
+    buttonText: man...
+    moneyLoss: 0
+    moneyGain: 0
+    tileDestruction: 0
+    tileSpawn: 0
