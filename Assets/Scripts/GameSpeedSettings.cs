@@ -14,7 +14,7 @@ public class GameSpeedSettings : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         gameManager.onGameStateChanged.AddListener(UpdateSpeedSettingButtons);
-        normalSpeedButton.interactable=false;
+        UpdateSpeedSettingButtons(gameManager.gameState);
     }
 
     private void UpdateSpeedSettingButtons(GameManager.GameState state)

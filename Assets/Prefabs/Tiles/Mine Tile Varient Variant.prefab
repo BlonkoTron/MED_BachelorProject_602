@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: tileType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1384247732302900432, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
+      propertyPath: currentAddOn
+      value: 
+      objectReference: {fileID: 3077704201500009556}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.632053
@@ -153,5 +157,10 @@ PrefabInstance:
 --- !u!4 &2449363390164041454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8675408006226483458, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
+  m_PrefabInstance: {fileID: 6456154812938938348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3077704201500009556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
   m_PrefabInstance: {fileID: 6456154812938938348}
   m_PrefabAsset: {fileID: 0}

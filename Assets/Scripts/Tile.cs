@@ -18,6 +18,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private TileType tileType = TileType.Grass;
     [SerializeField] private GameObject addonAttachPoint;
     [SerializeField] private GameObject detailTop;
+    [SerializeField] private GameObject currentAddOn;
 
     [Header("Tile Types")]
     [SerializeField] private GameObject barrenAddOnPrefab;
@@ -35,7 +36,6 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material rainforestDetailmat;
     [SerializeField] private Material grasslandsDetailMat;
 
-    private GameObject currentAddOn;
     private Material currentDetailMat;
 
     [Header("Degradation")]
@@ -89,6 +89,7 @@ public class Tile : MonoBehaviour
     {
         tileRenderer = GetComponent<Renderer>();
         SetTileType(tileType);
+        currentDetailMat = detailTop.GetComponent<Renderer>().material;
     }
 
     public void SetTileType(TileType newType)
