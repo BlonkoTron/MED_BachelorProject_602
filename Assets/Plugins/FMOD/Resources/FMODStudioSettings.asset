@@ -632,8 +632,9 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - 602FMOD/Build/Desktop/Master
-  Banks: []
+  - Master
+  Banks:
+  - sfx
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

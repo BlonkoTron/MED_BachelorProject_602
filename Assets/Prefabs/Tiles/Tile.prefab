@@ -598,7 +598,7 @@ MonoBehaviour:
   barrenAddOnPrefab: {fileID: 919132149155446097, guid: 33088000d242cbf43b44ab5e2a68d620, type: 3}
   farmAddOnPrefab: {fileID: 919132149155446097, guid: 99095af4a6acd1b489ceace02023aa20, type: 3}
   mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
-  cowfieldAddOnPrefab: {fileID: 0}
+  cowfieldAddOnPrefab: {fileID: 919132149155446097, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
   agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
   rainforestAddOnPrefab: {fileID: 3184952439879516689, guid: cae8e681d4a0eea4a87430c39c41634f, type: 3}
   grasslandsAddOnPrefab: {fileID: 0}
