@@ -36,25 +36,6 @@ public class Happiness : MonoBehaviour
     [Tooltip("Happiness change when natural tiles exceed low threshold")]
     [SerializeField] private int naturalLowBonus = 1;
 
-    [Header("Efficiency Multiplier Thresholds")]
-    [Tooltip("Happiness level below which lowest multiplier applies")]
-    [SerializeField] private int veryLowHappinessThreshold = 25;
-    [Tooltip("Efficiency multiplier when happiness is very low")]
-    [SerializeField][Range(0f, 2f)] private float veryLowMultiplier = 0.5f;
-    
-    [Tooltip("Happiness level below which low multiplier applies")]
-    [SerializeField] private int lowHappinessThreshold = 50;
-    [Tooltip("Efficiency multiplier when happiness is low")]
-    [SerializeField][Range(0f, 2f)] private float lowMultiplier = 0.75f;
-    
-    [Tooltip("Happiness level below which normal multiplier applies")]
-    [SerializeField] private int mediumHappinessThreshold = 75;
-    [Tooltip("Efficiency multiplier when happiness is medium/normal")]
-    [SerializeField][Range(0f, 2f)] private float normalMultiplier = 1.0f;
-    
-    [Tooltip("Efficiency multiplier when happiness is high")]
-    [SerializeField][Range(0f, 2f)] private float highMultiplier = 1.25f;
-
     [Header("Events")]
     [HideInInspector] public UnityEvent<int> onHappinessChanged;
     [HideInInspector] public UnityEvent<int> onHappinessIncreased;
@@ -255,22 +236,6 @@ public class Happiness : MonoBehaviour
                 onHappinessCritical?.Invoke();
             }
         }
-    }
-
-    /// <summary>
-    /// Returns a multiplier based on current happiness level for gameplay effects
-    /// </summary>
-    public float GetHappinessMultiplier()
-    {
-        // Stepped thresholds for predictable gameplay
-        if (happinessLevel < veryLowHappinessThreshold)
-            return veryLowMultiplier;
-        else if (happinessLevel < lowHappinessThreshold)
-            return lowMultiplier;
-        else if (happinessLevel < mediumHappinessThreshold)
-            return normalMultiplier;
-        else
-            return highMultiplier;
     }
 
     /// <summary>
