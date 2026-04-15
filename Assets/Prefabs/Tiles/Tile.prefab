@@ -14,13 +14,15 @@ GameObject:
   - component: {fileID: 255855088267627496}
   - component: {fileID: 7498090227574637327}
   - component: {fileID: 4095030317081575641}
+  - component: {fileID: 3299681438526459910}
+  - component: {fileID: 6459344736338280463}
   m_Layer: 5
   m_Name: TileUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5700639918077096850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -142,6 +144,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
   useStaticBillboard: 1
+--- !u!114 &3299681438526459910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931124000218102901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  tileType: 0
+  addonAttachPoint: {fileID: 0}
+  detailTop: {fileID: 0}
+  barrenAddOnPrefab: {fileID: 0}
+  farmAddOnPrefab: {fileID: 0}
+  mineAddOnPrefab: {fileID: 0}
+  cowfieldAddOnPrefab: {fileID: 0}
+  agroforestAddOnPrefab: {fileID: 0}
+  rainforestAddOnPrefab: {fileID: 0}
+  grasslandsAddOnPrefab: {fileID: 0}
+  barrenDetailMat: {fileID: 0}
+  farmDetailMat: {fileID: 0}
+  mineDetailMat: {fileID: 0}
+  cowfieldDetailMat: {fileID: 0}
+  agroforestDetailMat: {fileID: 0}
+  rainforestDetailmat: {fileID: 0}
+  grasslandsDetailMat: {fileID: 0}
+  currentDegradation: 0
+  degradationThreshold: 100
+  healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
+  degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
+  criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
+  barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
+  degradedThreshold: 0.33
+  criticalThreshold: 0.66
+  onMoneyEarned:
+    m_PersistentCalls:
+      m_Calls: []
+  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
+--- !u!114 &6459344736338280463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931124000218102901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
+  highlightObj: {fileID: 5939521722586337789}
+  tileUI: {fileID: 0}
+  blankTileUI: {fileID: 1931124000218102901}
+  buildingUI: {fileID: 5449687786812584257}
 --- !u!1 &2162552414375044930
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,20 +652,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tile
   tileType: 0
+  addonAttachPoint: {fileID: 4950460000197265117}
+  detailTop: {fileID: 8957944785909826674}
+  barrenAddOnPrefab: {fileID: 919132149155446097, guid: 33088000d242cbf43b44ab5e2a68d620, type: 3}
+  farmAddOnPrefab: {fileID: 919132149155446097, guid: 99095af4a6acd1b489ceace02023aa20, type: 3}
+  mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
+  cowfieldAddOnPrefab: {fileID: 0}
+  agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
+  rainforestAddOnPrefab: {fileID: 3184952439879516689, guid: cae8e681d4a0eea4a87430c39c41634f, type: 3}
+  grasslandsAddOnPrefab: {fileID: 0}
+  barrenDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
+  farmDetailMat: {fileID: 2100000, guid: 08843e96473651348befa04d0662d8a2, type: 2}
+  mineDetailMat: {fileID: 2100000, guid: 4775d1e88e6c69b44815de087c80787e, type: 2}
+  cowfieldDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
+  agroforestDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
+  rainforestDetailmat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
+  grasslandsDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
   currentDegradation: 0
   degradationThreshold: 100
-  healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
-  degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
-  criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
-  barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
-  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
-  placementHeight: 0.1
+  healthyMaterial: {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
+  degradedMaterial: {fileID: 2100000, guid: 872dc64a87e4e374990a7109d4369fad, type: 2}
+  criticalMaterial: {fileID: 2100000, guid: dd9e518c0d13a2e44a437e0edd459600, type: 2}
+  barrenMaterial: {fileID: 2100000, guid: e353d7718e822ab42ad817928b100a3f, type: 2}
   degradedThreshold: 0.33
   criticalThreshold: 0.66
   onMoneyEarned:
     m_PersistentCalls:
       m_Calls: []
-  MoneyGainUI: {fileID: 0}
+  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!1 &3870815425066860072
 GameObject:
   m_ObjectHideFlags: 0

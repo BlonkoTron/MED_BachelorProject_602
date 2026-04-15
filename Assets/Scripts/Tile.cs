@@ -93,6 +93,7 @@ public class Tile : MonoBehaviour
 
     public void SetTileType(TileType newType)
     {
+        if (newType == tileType) return;
         tileType = newType;
         
         UpdateMaterial();
@@ -133,6 +134,7 @@ public class Tile : MonoBehaviour
                 newAddOnType = grasslandsAddOnPrefab; ;
                 break;
         }
+        if (currentAddOn == null) return;
         currentAddOn= Instantiate(newAddOnType, addonAttachPoint.transform);
         
     }
