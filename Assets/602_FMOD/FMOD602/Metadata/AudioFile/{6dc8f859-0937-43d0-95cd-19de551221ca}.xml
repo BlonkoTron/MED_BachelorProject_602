@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6dc8f859-0937-43d0-95cd-19de551221ca}">
+		<property name="assetPath">
+			<value>Ticker.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{854a91d7-3c93-4362-a315-7735af6cb0e2}</destination>
+		</relationship>
+	</object>
+</objects>

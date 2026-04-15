@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{01606098-d0c5-458d-8f26-7e08b7d5e776}">
+		<property name="assetPath">
+			<value>freesound_community-poof-of-smoke-87381.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.98399999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{854a91d7-3c93-4362-a315-7735af6cb0e2}</destination>
+		</relationship>
+	</object>
+</objects>
