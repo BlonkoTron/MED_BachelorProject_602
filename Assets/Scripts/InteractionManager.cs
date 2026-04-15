@@ -22,6 +22,7 @@ public class InteractionManager : MonoBehaviour
     private bool hoveringUI;
 
     private GameObject hitObj;
+    private GameObject lastHoveredTile;
     private GameObject lastClickedTile;
 
     private void Awake()
@@ -46,19 +47,30 @@ public class InteractionManager : MonoBehaviour
             //Debug.Log(hit.collider.gameObject.name);
             hitObj = hit.collider.gameObject;
 
-            if (hitObj != null && !hitObj.GetComponent<TileChanger>().highlightObj.activeSelf)
+            if (hitObj.GetComponent<TileChanger>() != null)
             {
-                hitObj.GetComponent<TileChanger>().highlightObj.SetActive(true);
-            }
+                if (hitObj != null && !hitObj.GetComponent<TileChanger>().highlightObj.activeSelf)
+                {
 
+                    if (lastHoveredTile != null && lastHoveredTile != hitObj.GetComponent<TileChanger>().highlightObj)
+                    {
+                        lastHoveredTile.SetActive(false);
+                        lastHoveredTile = null;
+                    }
+
+                    hitObj.GetComponent<TileChanger>().highlightObj.SetActive(true);
+                    lastHoveredTile = hitObj.GetComponent<TileChanger>().highlightObj;
+                }
+            }
             return hitObj;
 
         }
         else
         {
-            if (hitObj != null && hitObj.GetComponent<TileChanger>().highlightObj.activeSelf)
+            if (lastHoveredTile != null)
             {
-                hitObj.GetComponent<TileChanger>().highlightObj.SetActive(false);
+                lastHoveredTile.SetActive(false);
+                lastHoveredTile = null;
             }
 
             return null;
