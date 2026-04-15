@@ -609,8 +609,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD/602FMOD_NEW/t/t.fspro
-  sourceBankPath: Assets/FMOD/602FMOD_NEW/t/Build
+  sourceProjectPath: Assets/602_FMOD/FMOD602/FMOD602.fspro
+  sourceBankPath: Assets/602_FMOD/FMOD602/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -632,9 +632,9 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - 602FMOD/Build/Desktop/Master
+  - Master
   Banks:
-  - SFX
+  - sfx
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
