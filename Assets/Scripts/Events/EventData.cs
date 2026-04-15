@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Events/Event Data")]
 public class EventData : ScriptableObject
 {
+    [TextArea] public string eventtitle;
     [TextArea] public string eventInfo;
 
     public Texture Scenariosprite;

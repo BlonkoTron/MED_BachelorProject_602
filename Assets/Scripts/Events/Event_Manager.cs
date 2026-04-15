@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Event_Manager : MonoBehaviour
 {
@@ -9,19 +10,18 @@ public class Event_Manager : MonoBehaviour
     public EventData selectedEvent;
 
     // UI text
-    public Text Eventinfo;
+    public TMP_Text Eventtitle;
+    public TMP_Text Eventinfo;
 
-    public Text Eventchoice1;
-    public Text Eventchoice2;
-    public Text Eventchoice3;
+    public TMP_Text Eventchoice1;
+    public TMP_Text Eventchoice2;
+    public TMP_Text Eventchoice3;
 
-    public Text Buttonchoice1;
-    public Text Buttonchoice2;
-    public Text Buttonchoice3;
+    public TMP_Text Buttonchoice1;
+    public TMP_Text Buttonchoice2;
+    public TMP_Text Buttonchoice3;
 
     public RawImage ScenarioImage;
-
-
 
     // Enable/disable Panel
     public GameObject Panel;
@@ -45,6 +45,7 @@ public class Event_Manager : MonoBehaviour
 
         // Event info
         Eventinfo.text = selectedEvent.eventInfo;
+        Eventtitle.text = selectedEvent.eventtitle;
 
         // Choices text
         Eventchoice1.text = selectedEvent.choice1.choiceText;

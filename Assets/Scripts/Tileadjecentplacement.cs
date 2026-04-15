@@ -7,12 +7,11 @@ public class Tileadjecentplacement : MonoBehaviour
     public int radius = 1; // 1 = 7 tiles, 2 = 19 tiles, Controls the amount
     public float hexSize = 1f; //Size of hex, The bigger the more space between hexes
 
-    public GameObject testnewtile;
-
     private Dictionary<Vector2Int, Tileinfo> grid = new Dictionary<Vector2Int, Tileinfo>(); // Creates a dictionary which acts like a grid/map where each position (Vector2Int) stores the tile data (Tileinfo).
     
     public Material[] variants; // Materialpick
     public bool testrandom = false;
+    public int Rainforestscore;
 
     // Axial directions (6 neighbors)
     private static readonly Vector2Int[] directions = new Vector2Int[]
@@ -36,7 +35,8 @@ public class Tileadjecentplacement : MonoBehaviour
         if (testrandom == true)
         {
             Tileinfo randomTile = GetRandomTile();
-            //randomTile = testnewtile.gameObject;
+            Rainforestscore = Rainforestscore - randomTile.neighbors.Count;
+            Destroy(randomTile.gameObject);
             testrandom = false;
         }
     }
@@ -103,7 +103,8 @@ public class Tileadjecentplacement : MonoBehaviour
             {
                 // If it exists, add it to the neighbor list
                 result.Add(neighbor);
-            }
+                Rainforestscore++;
+            } 
         }
         // Return the list of valid neighbors
         return result;
@@ -129,7 +130,6 @@ public class Tileadjecentplacement : MonoBehaviour
             return null;
 
         int randomIndex = Random.Range(0, grid.Count);
-
         int i = 0;
         foreach (var tile in grid.Values)
         {
@@ -137,7 +137,6 @@ public class Tileadjecentplacement : MonoBehaviour
                 return tile;
             i++;
         }
-
         return null; // fallback (should never hit)
     }
 }

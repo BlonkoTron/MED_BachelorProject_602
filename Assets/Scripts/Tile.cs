@@ -16,22 +16,38 @@ public class Tile : MonoBehaviour
 {
     [Header("Tile Configuration")]
     [SerializeField] private TileType tileType = TileType.Grass;
-    
+    [SerializeField] private GameObject addonAttachPoint;
+    [SerializeField] private GameObject detailTop;
+
+    [Header("Tile Types")]
+    [SerializeField] private GameObject barrenAddOnPrefab;
+    [SerializeField] private GameObject farmAddOnPrefab;
+    [SerializeField] private GameObject mineAddOnPrefab;
+    [SerializeField] private GameObject cowfieldAddOnPrefab;
+    [SerializeField] private GameObject agroforestAddOnPrefab;
+    [SerializeField] private GameObject rainforestAddOnPrefab;
+    [SerializeField] private GameObject grasslandsAddOnPrefab;
+    [SerializeField] private Material barrenDetailMat;
+    [SerializeField] private Material farmDetailMat;
+    [SerializeField] private Material mineDetailMat;
+    [SerializeField] private Material cowfieldDetailMat;
+    [SerializeField] private Material agroforestDetailMat;
+    [SerializeField] private Material rainforestDetailmat;
+    [SerializeField] private Material grasslandsDetailMat;
+
+    private GameObject currentAddOn;
+    private Material currentDetailMat;
+
     [Header("Degradation")]
     [SerializeField] private float currentDegradation = 0f;
     [SerializeField] private float degradationThreshold = 100f;
-    
+
     [Header("Materials")]
     [SerializeField] private Material healthyMaterial;
     [SerializeField] private Material degradedMaterial;
     [SerializeField] private Material criticalMaterial;
     [SerializeField] private Material barrenMaterial;
-    
-    [Header("Barren Prefab")]
-    [SerializeField] private GameObject barrenPrefab;
 
-    [SerializeField] private float placementHeight = 0.1f; // For grass/rainforest natural regeneration
-    
     [Header("Material Thresholds (% of max degradation)")]
     [Range(0f, 1f)]
     [SerializeField] private float degradedThreshold = 0.33f; // 33% degraded
@@ -65,24 +81,94 @@ public class Tile : MonoBehaviour
     public int MoneyPerTick => GetMoneyPerTick();
     public float DegradationRate => GetDegradationRate();
 
+
+
     [SerializeField] private GameObject MoneyGainUI;
 
     void Start()
     {
         tileRenderer = GetComponent<Renderer>();
-        UpdateMaterial();
-    }
-
-    void Update()
-    {
-        
+        SetTileType(tileType);
     }
 
     public void SetTileType(TileType newType)
     {
+        if (newType == tileType) return;
         tileType = newType;
         
         UpdateMaterial();
+        UpdateAddonPrefab(newType);
+        UpdateDetailMaterial(newType);
+    }
+
+    private void UpdateAddonPrefab(TileType type)
+    {
+        // clear current add-on
+        Destroy(currentAddOn);
+        // spawn new
+        GameObject newAddOnType;
+        switch (type)
+        {
+            case TileType.Mine:
+                newAddOnType = mineAddOnPrefab;
+                break;
+            case TileType.CowField:
+                newAddOnType = cowfieldAddOnPrefab;
+                break;
+            case TileType.Farm:
+                newAddOnType = farmAddOnPrefab;
+                break;
+            case TileType.Agroforest:
+                newAddOnType = agroforestAddOnPrefab;
+                break;
+            case TileType.Grass:
+                newAddOnType = grasslandsAddOnPrefab;
+                break;
+            case TileType.Rainforest:
+                newAddOnType = rainforestAddOnPrefab;
+                break;
+            case TileType.Barren:
+                newAddOnType = barrenAddOnPrefab;
+                break;
+            default:
+                newAddOnType = grasslandsAddOnPrefab; ;
+                break;
+        }
+        if (newAddOnType == null) return;
+        currentAddOn= Instantiate(newAddOnType, addonAttachPoint.transform);
+        
+    }
+    private void UpdateDetailMaterial(TileType type)
+    {
+        Material newDetailMat;
+        switch (type)
+        {
+            case TileType.Mine:
+                newDetailMat = mineDetailMat;
+                break;
+            case TileType.CowField:
+                newDetailMat = cowfieldDetailMat;
+                break;
+            case TileType.Farm:
+                newDetailMat = farmDetailMat;
+                break;
+            case TileType.Agroforest:
+                newDetailMat = agroforestDetailMat;
+                break;
+            case TileType.Grass:
+                newDetailMat = grasslandsDetailMat;
+                break;
+            case TileType.Rainforest:
+                newDetailMat = rainforestDetailmat;
+                break;
+            case TileType.Barren:
+                newDetailMat = barrenDetailMat;
+                break;
+            default:
+                newDetailMat = grasslandsDetailMat; ;
+                break;
+        }
+        currentDetailMat=detailTop.GetComponent<Renderer>().material = newDetailMat;
     }
 
     // Money earned per tick for each tile type
@@ -151,7 +237,7 @@ public class Tile : MonoBehaviour
         // Check if tile should become barren
         if (currentDegradation >= degradationThreshold && tileType != TileType.Barren)
         {
-            ConvertToBarren();
+            SetTileType(TileType.Barren);
         }
         // Natural regeneration for grass/rainforest
         else if (currentDegradation < 0)
@@ -171,23 +257,6 @@ public class Tile : MonoBehaviour
                 var ui=Instantiate(MoneyGainUI,transform);
                 ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(moneyEarned);
             }
-        }
-    }
-
-    private void ConvertToBarren()
-    {
-        Debug.Log($"Tile at {transform.position} has become barren!");
-        SetTileType(TileType.Barren);
-        
-        // Instantiate barren prefab on top of the tile
-        if (barrenPrefab != null)
-        {
-            Vector3 spawnPosition = transform.position + Vector3.up * placementHeight; // Slightly above tile
-            Instantiate(barrenPrefab, spawnPosition, Quaternion.identity, transform);
-        }
-        else
-        {
-            Debug.LogWarning($"Barren prefab not assigned for tile at {transform.position}");
         }
     }
 
