@@ -133,6 +133,83 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &2535254354056114483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671420539474783435}
+  - component: {fileID: 6816462097022770592}
+  m_Layer: 0
+  m_Name: Happiness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671420539474783435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535254354056114483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2576639973879086002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6816462097022770592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535254354056114483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb52c355905b95b4d9fb07dccb9569f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Happiness
+  happinessLevel: 40
+  maxHappiness: 100
+  minHappiness: 0
+  criticalThreshold: 20
+  lowThreshold: 40
+  goodThreshold: 70
+  barrenHighThreshold: 0.3
+  barrenHighPenalty: 2
+  barrenLowThreshold: 0.1
+  barrenLowPenalty: 1
+  naturalHighThreshold: 0.5
+  naturalHighBonus: 2
+  naturalLowThreshold: 0.3
+  naturalLowBonus: 1
+  veryLowHappinessThreshold: 25
+  veryLowMultiplier: 0.25
+  lowHappinessThreshold: 50
+  lowMultiplier: 0.5
+  mediumHappinessThreshold: 75
+  normalMultiplier: 0.75
+  highMultiplier: 1
+  onHappinessChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHappinessIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onHappinessDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onHappinessCritical:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2584456270350195632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1671420539474783435}
   - {fileID: 2905996135133068680}
   - {fileID: 3174580037339913502}
   m_Father: {fileID: 0}
