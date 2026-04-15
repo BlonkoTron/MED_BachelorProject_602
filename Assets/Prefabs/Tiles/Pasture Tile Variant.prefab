@@ -62,6 +62,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
   m_PrefabInstance: {fileID: 1207002901362117207}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2017977050543109894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+  m_PrefabInstance: {fileID: 1207002901362117207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6890380595154056644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,6 +75,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1384247732302900432, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
+      propertyPath: currentAddOn
+      value: 
+      objectReference: {fileID: 2017977050543109894}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7794134
