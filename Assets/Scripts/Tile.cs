@@ -134,7 +134,7 @@ public class Tile : MonoBehaviour
                 newAddOnType = grasslandsAddOnPrefab; ;
                 break;
         }
-        if (currentAddOn == null) return;
+        if (newAddOnType == null) return;
         currentAddOn= Instantiate(newAddOnType, addonAttachPoint.transform);
         
     }
