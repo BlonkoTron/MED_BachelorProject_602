@@ -107,7 +107,7 @@ public class Happiness : MonoBehaviour
         if (allTiles.Length == 0) return;
 
         // Count tiles by type
-        int neutralTiles = 0;      // Grass
+        int naturalTiles = 0;      // Rainforest
         int barrenTiles = 0;
 
         foreach (Tile tile in allTiles)
@@ -118,9 +118,7 @@ public class Happiness : MonoBehaviour
                 case TileType.CowField:
                 case TileType.Agroforest:
                 case TileType.Farm:
-                    break;
                 case TileType.Grass:
-                    neutralTiles++;
                     break;
                 case TileType.Rainforest:
                     naturalTiles++;
