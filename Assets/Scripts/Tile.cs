@@ -241,9 +241,14 @@ public class Tile : MonoBehaviour
             SetTileType(TileType.Barren);
         }
         // Natural regeneration for grass/rainforest
-        else if (currentDegradation < 0)
+        else if (currentDegradation <= 0)
         {
             currentDegradation = 0;
+            // Grassland converts back to rainforest when fully healed
+            if (tileType == TileType.Grass)
+            {
+                SetTileType(TileType.Rainforest);
+            }
         }
         
         // Update material based on current degradation
