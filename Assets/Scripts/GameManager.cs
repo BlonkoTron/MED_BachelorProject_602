@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public GameState gameState = GameState.normal;
 
+    public UnityEvent<GameState> onGameStateChanged;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -86,7 +88,12 @@ public class GameManager : MonoBehaviour
     {
         ticksTillRoundEnd = ticksBetweenRounds;
         onRoundEnd?.Invoke();
-        //gameState = GameState.Paused;
+        SetNewState(GameState.Paused);
+    }
+    public void StartRound()
+    {
+        ticksTillRoundEnd = ticksBetweenRounds;
+        SetNewState(GameState.normal);
     }
 
     // Automatically register all tiles in the scene
@@ -115,5 +122,10 @@ public class GameManager : MonoBehaviour
     {
         int seconds = (int)tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
+    }
+    public void SetNewState(GameState state)
+    {
+        gameState = state;
+        onGameStateChanged.Invoke(state);
     }
 }
