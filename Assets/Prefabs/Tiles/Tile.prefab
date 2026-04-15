@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 255855088267627496}
   - component: {fileID: 7498090227574637327}
   - component: {fileID: 4095030317081575641}
-  - component: {fileID: 3299681438526459910}
-  - component: {fileID: 6459344736338280463}
   m_Layer: 5
   m_Name: TileUI
   m_TagString: Untagged
@@ -144,63 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
   useStaticBillboard: 1
---- !u!114 &3299681438526459910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931124000218102901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tile
-  tileType: 0
-  addonAttachPoint: {fileID: 0}
-  detailTop: {fileID: 0}
-  barrenAddOnPrefab: {fileID: 0}
-  farmAddOnPrefab: {fileID: 0}
-  mineAddOnPrefab: {fileID: 0}
-  cowfieldAddOnPrefab: {fileID: 0}
-  agroforestAddOnPrefab: {fileID: 0}
-  rainforestAddOnPrefab: {fileID: 0}
-  grasslandsAddOnPrefab: {fileID: 0}
-  barrenDetailMat: {fileID: 0}
-  farmDetailMat: {fileID: 0}
-  mineDetailMat: {fileID: 0}
-  cowfieldDetailMat: {fileID: 0}
-  agroforestDetailMat: {fileID: 0}
-  rainforestDetailmat: {fileID: 0}
-  grasslandsDetailMat: {fileID: 0}
-  currentDegradation: 0
-  degradationThreshold: 100
-  healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
-  degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
-  criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
-  barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
-  degradedThreshold: 0.33
-  criticalThreshold: 0.66
-  onMoneyEarned:
-    m_PersistentCalls:
-      m_Calls: []
-  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
---- !u!114 &6459344736338280463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931124000218102901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
-  highlightObj: {fileID: 5939521722586337789}
-  tileUI: {fileID: 0}
-  blankTileUI: {fileID: 1931124000218102901}
-  buildingUI: {fileID: 5449687786812584257}
 --- !u!1 &2162552414375044930
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6c89fc89015a24aa0769d01d17975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileButtons
-  ParentTile: {fileID: 0}
+  ParentTile: {fileID: 6185234511052565292}
   tileType: 2
 --- !u!65 &533771623533378087
 BoxCollider:
@@ -1406,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6c89fc89015a24aa0769d01d17975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileButtons
-  ParentTile: {fileID: 0}
+  ParentTile: {fileID: 6185234511052565292}
   tileType: 3
 --- !u!65 &4452430175202167767
 BoxCollider:
@@ -1581,7 +1522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce74f167a16ea24aa13f1f783b87610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileInfoUI
-  tile: {fileID: 0}
+  tile: {fileID: 1384247732302900432}
   info_text: {fileID: 320719596482956048}
 --- !u!1 &5610074912389734236
 GameObject:
@@ -2017,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6c89fc89015a24aa0769d01d17975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileButtons
-  ParentTile: {fileID: 0}
+  ParentTile: {fileID: 6185234511052565292}
   tileType: 6
 --- !u!65 &986498683562356685
 BoxCollider:
@@ -2391,7 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6c89fc89015a24aa0769d01d17975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileButtons
-  ParentTile: {fileID: 0}
+  ParentTile: {fileID: 6185234511052565292}
   tileType: 4
 --- !u!65 &9201549220539809989
 BoxCollider:
@@ -2424,15 +2365,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.97665995
+      value: 1.0062528
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.97462
+      value: 1.004151
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.979
+      value: 1.0086637
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2440,7 +2381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.572
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9134b465e3a58c944bad97ba4cf53b9b, type: 3}
       propertyPath: m_LocalPosition.z
