@@ -10,6 +10,7 @@ public class QuotaUI : MonoBehaviour
 
     [SerializeField] private TMP_Text timeLeftText;
 
+    [SerializeField] private Animator clockAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
