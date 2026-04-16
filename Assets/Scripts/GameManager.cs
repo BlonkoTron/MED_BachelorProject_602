@@ -17,10 +17,17 @@ public class GameManager : MonoBehaviour
     public UnityEvent onRoundEnd;
     
     private float tickTimer = 0f;
-
     public enum GameState { normal, Speedx2, speedx3, Paused}
-
     public GameState gameState = GameState.normal;
+
+
+    [Range(0f, 1f)]
+    public float clockSpinValue = 0.5f;
+
+    [Header("Animation")]
+    [SerializeField] private Animator clockAnimator;
+    [SerializeField] private string animationName = "ClockSpinning";
+    private float secondsLeftAtStart;
 
     private void Awake()
     {
@@ -37,6 +44,7 @@ public class GameManager : MonoBehaviour
             onGameTick = new UnityEvent();
         }
         ticksTillRoundEnd = ticksBetweenRounds;
+        secondsLeftAtStart = SecondsTillRoundEnd();
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
     }
@@ -52,6 +60,9 @@ public class GameManager : MonoBehaviour
     }
     private void UpdateTickTimer()
     {
+
+        UpdateClockUI();
+
         switch (gameState)
         {
             case GameState.normal:
@@ -69,6 +80,9 @@ public class GameManager : MonoBehaviour
                tickTimer += Time.fixedDeltaTime;
                 break;
         }
+
+        
+
     }
     
     private void ProcessTick()
@@ -116,4 +130,19 @@ public class GameManager : MonoBehaviour
         int seconds = (int)tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
     }
+
+    private void UpdateClockUI()
+    {
+        float currentVal = SecondsTillRoundEnd();
+
+        float progress = 1.0f - (Mathf.Clamp(currentVal, 0, secondsLeftAtStart) / secondsLeftAtStart);
+
+        if (clockAnimator != null) 
+        {
+            clockAnimator.Play(animationName, 0, progress);
+        }
+        
+
+    }
+
 }
