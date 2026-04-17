@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public int TicksTillRoundEnd => ticksTillRoundEnd;
     public int TicksBetweenRounds => ticksBetweenRounds;
 
+    //Get eventmanager
+    [SerializeField] private Eventmanager_NEWSETUP EventMangerGET;
+
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
@@ -48,6 +51,9 @@ public class GameManager : MonoBehaviour
         secondsLeftAtStart = SecondsTillRoundEnd();
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
+
+        //Call eventmanager
+        EventMangerGET = Eventmanager_NEWSETUP.instance;
     }
 
     void FixedUpdate()
@@ -102,6 +108,8 @@ public class GameManager : MonoBehaviour
         ticksTillRoundEnd = ticksBetweenRounds;
         onRoundEnd?.Invoke();
         SetNewState(GameState.Paused);
+        //Call event here
+        EventMangerGET.TriggerRandomEvent();
     }
     public void StartRound()
     {
