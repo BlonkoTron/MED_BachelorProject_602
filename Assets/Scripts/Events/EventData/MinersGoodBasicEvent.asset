@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: AgroforestBasicEvent
+  m_Name: MinersGoodBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Funds needed!
-  eventInfo: Agroforests need more funds to properly function
+  eventtitle: Mine production!
+  eventInfo: Mines have found a huge vein of gold
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: 2 Agroforest tiles becomes rainforest
-    buttonText: Tear it down
+    choiceText: Mining income doubles untill next turn
+    buttonText: Mine it!
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    MineEfficiencymult: 1
+    MineEfficiencymult: 2
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
@@ -30,9 +30,9 @@ MonoBehaviour:
     tileSpawnMine: 0
     tileSpawnFarm: 0
   choice2:
-    choiceText: Lose 100 gold
-    buttonText: Pay to keep it steady
-    moneyLoss: 100
+    choiceText: Gain 500 gold
+    buttonText: SELL SELL SELL
+    moneyLoss: 500
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
@@ -44,11 +44,11 @@ MonoBehaviour:
     tileSpawnMine: 0
     tileSpawnFarm: 0
   choice3:
-    choiceText: Agroforest tiles cannot be bulit next turn
-    buttonText: Let it be
+    choiceText: Happiness increase by 10 points
+    buttonText: 'Use the gold for the people '
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 10
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1

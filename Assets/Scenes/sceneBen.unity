@@ -1145,8 +1145,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eventmanager_NEWSETUP
   allEvents:
+  - {fileID: 11400000, guid: ef959914647af514797abfa2be53621e, type: 2}
+  - {fileID: 11400000, guid: ed5d882ea7288c0459860b78e6466b09, type: 2}
   - {fileID: 11400000, guid: 0ea2f3cde5f48a2429aeb79462846e46, type: 2}
+  - {fileID: 11400000, guid: dec717d4b4bec3f4ab0dbec0fa0c431f, type: 2}
+  - {fileID: 11400000, guid: da908f79c3c83fc409cb1e97c5243b33, type: 2}
+  - {fileID: 11400000, guid: d3754187c354bb24b88493996297725d, type: 2}
   - {fileID: 11400000, guid: f575d4b3aeb93144695cfbb19f443ae4, type: 2}
+  - {fileID: 11400000, guid: 1f9ce6baba971fc4cb47d1b5bf6d9d49, type: 2}
   currentEvent: {fileID: 0}
   EventMan: {fileID: 0}
   Test_Triggerevent: 0
