@@ -8,7 +8,7 @@ public class GameSettings : ScriptableObject
     public float tickInterval = 15f;
     public int ticksBetweenRounds = 5;
 
-    [Header("Degradation Rates")]
+    [Header("Degradation Rates (% per tick)")]
     // Degradation Rate Constants
     public float DEGRADATION_MINE = 50f;
     public float DEGRADATION_COW_FIELD = 34f;
@@ -17,7 +17,7 @@ public class GameSettings : ScriptableObject
     public float DEGRADATION_NATURAL_REGEN = -10f;
     public float DEGRADATION_NONE = 0f;
 
-    [Header("Income")]
+    [Header("Income (per tick)")]
     // Money Per Tick Constants
     public int MONEY_MINE = 100;
     public int MONEY_COW_FIELD = 60;
