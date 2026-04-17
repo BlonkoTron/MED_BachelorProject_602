@@ -191,13 +191,6 @@ MonoBehaviour:
   naturalHighBonus: 2
   naturalLowThreshold: 0.3
   naturalLowBonus: 1
-  veryLowHappinessThreshold: 25
-  veryLowMultiplier: 0.25
-  lowHappinessThreshold: 50
-  lowMultiplier: 0.5
-  mediumHappinessThreshold: 75
-  normalMultiplier: 0.75
-  highMultiplier: 1
   onHappinessChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1938,8 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a062097989d955488f9dcfa5e64aee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  tickInterval: 15
-  ticksBetweenRounds: 5
+  gameSettings: {fileID: 11400000, guid: db2fe33ad3f772f40b91006532b4febc, type: 2}
   onGameTick:
     m_PersistentCalls:
       m_Calls: []
@@ -1950,6 +1942,9 @@ MonoBehaviour:
   onGameStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  clockSpinValue: 0.5
+  clockAnimator: {fileID: 0}
+  animationName: ClockSpinning
 --- !u!1 &8736237275716494701
 GameObject:
   m_ObjectHideFlags: 0

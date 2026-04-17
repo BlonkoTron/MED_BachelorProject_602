@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466f60b0729d2cf4ebfe256501b05565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuotaManager
-  quotaAmounts: 0a00000014000000280000003c00000064000000
+  gameSettings: {fileID: 11400000, guid: db2fe33ad3f772f40b91006532b4febc, type: 2}
   OnQuotaUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -486,6 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuotaUI
   quotaAmountText: {fileID: 2884239787627089536}
   timeLeftText: {fileID: 4493227096987695998}
+  clockAnimator: {fileID: 0}
 --- !u!223 &7367998744873977421
 Canvas:
   m_ObjectHideFlags: 0

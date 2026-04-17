@@ -580,6 +580,20 @@ MonoBehaviour:
   tileUI: {fileID: 0}
   blankTileUI: {fileID: 1931124000218102901}
   buildingUI: {fileID: 5449687786812584257}
+  ClickSFX_OpenUI:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ClickSFX_CloseUI:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1384247732302900432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,9 +606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gameSettings: {fileID: 11400000, guid: db2fe33ad3f772f40b91006532b4febc, type: 2}
   tileType: 0
   addonAttachPoint: {fileID: 4950460000197265117}
   detailTop: {fileID: 8957944785909826674}
+  currentAddOn: {fileID: 0}
   barrenAddOnPrefab: {fileID: 919132149155446097, guid: 33088000d242cbf43b44ab5e2a68d620, type: 3}
   farmAddOnPrefab: {fileID: 919132149155446097, guid: 99095af4a6acd1b489ceace02023aa20, type: 3}
   mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
