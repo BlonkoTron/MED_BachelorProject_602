@@ -10,47 +10,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: KillGuyEvent
+  m_Name: CowBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: BIG FUCKING GUY COMING
-  eventInfo: OH NO HES TOO SCARY RUN
+  eventtitle: CowFlu!
+  eventInfo: Cows are sick all around your land!
   Scenariosprite: {fileID: 2800000, guid: c5872dbec4a3aa5488f745b4664dace1, type: 3}
   choice1:
-    choiceText: AAAAAAH
-    buttonText: '*die'
+    choiceText: Cowfield becomes grassland
+    buttonText: Let the cows be
     moneyLoss: 0
-    moneyGain: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
-    tileDestruction: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    tileDestruction: 1
     tileSpawnMine: 0
     tileSpawnFarm: 0
   choice2:
-    choiceText: OH NO
-    buttonText: DIES
-    moneyLoss: 0
-    moneyGain: 100
+    choiceText: Lose 100 money
+    buttonText: Buy water
+    moneyLoss: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     tileDestruction: 0
     tileSpawnMine: 0
-    tileSpawnFarm: 0
+    tileSpawnFarm: 1
   choice3:
-    choiceText: HEUIFEUFEK
-    buttonText: "DIE\xB4ED"
+    choiceText: Cowfield tiles cannot be built next turn
+    buttonText: Work overtime
     moneyLoss: 0
-    moneyGain: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     tileDestruction: 0
     tileSpawnMine: 0
     tileSpawnFarm: 0

@@ -10,47 +10,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: Jaguarcumming
+  m_Name: FarmBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Frisky jaguar
-  eventInfo: He wants more than just your meat
+  eventtitle: Drought!
+  eventInfo: Crops are dying because of the heat
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Date him
-    buttonText: OWO
+    choiceText: Farm tile becomes barren
+    buttonText: Ignore it
     moneyLoss: 0
-    moneyGain: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
-    tileDestruction: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    tileDestruction: 1
     tileSpawnMine: 0
     tileSpawnFarm: 0
   choice2:
-    choiceText: FUCK HIM
-    buttonText: OWWWWWOOO
-    moneyLoss: 0
-    moneyGain: 100
+    choiceText: Lose 100 gold
+    buttonText: Buy water
+    moneyLoss: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     tileDestruction: 0
     tileSpawnMine: 0
     tileSpawnFarm: 0
   choice3:
-    choiceText: Kill him
-    buttonText: man...
+    choiceText: Farm tiles cannot be build next turn
+    buttonText: Attend to it
     moneyLoss: 0
-    moneyGain: 100
+    moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    TileNOEFFICIENT: 0
-    TileHalfefficient: 0
-    TileDoublefficient: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     tileDestruction: 0
     tileSpawnMine: 0
     tileSpawnFarm: 0
