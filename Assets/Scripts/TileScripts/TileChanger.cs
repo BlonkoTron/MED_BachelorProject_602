@@ -1,5 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
+using NUnit.Framework.Internal;
 
 public class TileChanger : MonoBehaviour
 {
@@ -9,6 +12,10 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
 
+    private EventInstance ClickSFX_Open;
+    [SerializeField] private EventReference ClickSFX_OpenUI;
+    private EventInstance ClickSFX_Close;
+    [SerializeField] private EventReference ClickSFX_CloseUI;
 
     private Tile tile;
 
@@ -30,7 +37,7 @@ public class TileChanger : MonoBehaviour
     public void OnClick()
     {
         //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
-
+        ClickSFX_Open = Audiomanager.instance.PlaySound(ClickSFX_OpenUI, transform.position);
         if (tile.Type != TileType.Barren) 
         {
 
@@ -42,6 +49,7 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
+        ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
 
         tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
