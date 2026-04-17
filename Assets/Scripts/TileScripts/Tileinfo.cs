@@ -12,8 +12,8 @@ public class Tileinfo : MonoBehaviour
 
     void Start()
     {
-        int randomIndex = Random.Range(0, variants.Length);
-        GetComponent<Renderer>().material = variants[randomIndex];
+        //int randomIndex = Random.Range(0, variants.Length);
+        //GetComponent<Renderer>().material = variants[randomIndex];
     }
 
     public void SetCoordinates(int x, int y)
