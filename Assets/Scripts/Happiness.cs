@@ -19,22 +19,22 @@ public class Happiness : MonoBehaviour
     [Tooltip("Barren percentage above which happiness decreases by a large amount")]
     [SerializeField][Range(0f, 1f)] private float barrenHighThreshold = 0.3f;
     [Tooltip("Happiness change when barren tiles exceed high threshold")]
-    [SerializeField] private int barrenHighPenalty = 2;
+    [SerializeField] private int barrenHighPenalty = 4;
     
     [Tooltip("Barren percentage above which happiness decreases by a small amount")]
     [SerializeField][Range(0f, 1f)] private float barrenLowThreshold = 0.1f;
     [Tooltip("Happiness change when barren tiles exceed low threshold")]
-    [SerializeField] private int barrenLowPenalty = 1;
+    [SerializeField] private int barrenLowPenalty = 2;
     
     [Tooltip("Natural tile percentage above which happiness increases by a large amount")]
     [SerializeField][Range(0f, 1f)] private float naturalHighThreshold = 0.5f;
     [Tooltip("Happiness change when natural tiles exceed high threshold")]
-    [SerializeField] private int naturalHighBonus = 2;
+    [SerializeField] private int naturalHighBonus = 4;
     
     [Tooltip("Natural tile percentage above which happiness increases by a small amount")]
     [SerializeField][Range(0f, 1f)] private float naturalLowThreshold = 0.3f;
     [Tooltip("Happiness change when natural tiles exceed low threshold")]
-    [SerializeField] private int naturalLowBonus = 1;
+    [SerializeField] private int naturalLowBonus = 2;
 
     [Header("Events")]
     [HideInInspector] public UnityEvent<int> onHappinessChanged;

@@ -280,5 +280,5 @@ MonoBehaviour:
   moveSpeed: 20
   edgeSize: 20
   smoothTime: 0.1
-  xLimits: {x: -100, y: 100}
-  zLimits: {x: -100, y: 100}
+  xLimits: {x: -20, y: 20}
+  zLimits: {x: -20, y: 20}
