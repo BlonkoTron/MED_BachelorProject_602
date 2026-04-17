@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
+  m_Name: CowGoodBasicEvent
+  m_EditorClassIdentifier: Assembly-CSharp::EventData
+  eventtitle: New cattle!
+  eventInfo: New cattle has been born on the farms
+  Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
+  choice1:
+    choiceText: Cowfield income doubles untill next turn
+    buttonText: Promote it
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 0
+    HappinessDown: 0
+    MineEfficiencymult: 2
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    tileDestruction: 1
+    tileSpawnMine: 0
+    tileSpawnFarm: 0
+  choice2:
+    choiceText: Gain 500 gold
+    buttonText: Sell them
+    moneyLoss: 500
+    moneyGain: 0
+    HappinessUp: 0
+    HappinessDown: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    tileDestruction: 0
+    tileSpawnMine: 0
+    tileSpawnFarm: 0
+  choice3:
+    choiceText: Happiness increase by 10 points
+    buttonText: Let it be
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 10
+    HappinessDown: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    tileDestruction: 0
+    tileSpawnMine: 0
+    tileSpawnFarm: 0
