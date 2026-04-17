@@ -19,10 +19,12 @@ public class TileChanger : MonoBehaviour
 
     private Tile tile;
 
+    private GameSettings gameSettings;
+
     private void Start()
     {
-   
 
+        gameSettings = GameManager.Instance.gameSettings;
         tile = GetComponent<Tile>();
 
         UpdateUI();
@@ -59,13 +61,50 @@ public class TileChanger : MonoBehaviour
 
     }
 
-    public void ChangeTile(TileType type)
+    public bool ChangeTile(TileType type)
     {
-        Debug.Log("Changing tile to " + type);
-        tile.SetTileType(type);
-        CloseUI();
-        UpdateUI();
+        if (CanAffordTileChange(type))
+        {
+            Debug.Log("Changing tile to " + type);
+            tile.SetTileType(type);
+            CloseUI();
+            UpdateUI();
+            return true;
+        } else
+        {
+            Debug.Log("Can't afford");
+            return false;
+        }
 
+    }
+    public bool CanAffordTileChange(TileType type)
+    {
+        var money = PointSystem.Instance.CurrentMoney;
+        switch (type)
+        {
+            case TileType.Mine:
+                if (money >= gameSettings.COST_MINE) { return true; };
+                break;
+            case TileType.CowField:
+                if (money >= gameSettings.COST_COW_FIELD) { return true; };
+                break;
+            case TileType.Farm:
+                if (money >= gameSettings.COST_FARM) { return true; };
+                break;
+            case TileType.Agroforest:
+                if (money >= gameSettings.COST_AGROFOREST) { return true; };
+                break;
+            case TileType.Grass:
+                if (money >= gameSettings.COST_NATURAL) { return true; };
+                break;
+            case TileType.Rainforest:
+                if (money >= gameSettings.COST_NATURAL) { return true; };
+                break;
+            case TileType.Barren:
+                return true;
+        }
+        return false;
+        
     }
 
     private void UpdateUI()

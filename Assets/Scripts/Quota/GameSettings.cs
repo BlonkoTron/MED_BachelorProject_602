@@ -3,12 +3,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameSettings", menuName = "Scriptable Objects/GameSettings")]
 public class GameSettings : ScriptableObject
 {
-    [Header("GameSpeed")]
+    [Header("Game Speed")]
     [Tooltip("Time between ticks in seconds")]
     public float tickInterval = 15f;
     public int ticksBetweenRounds = 5;
 
-    [Header("Degradation rates")]
+    [Header("Degradation Rates")]
     // Degradation Rate Constants
     public float DEGRADATION_MINE = 50f;
     public float DEGRADATION_COW_FIELD = 34f;
@@ -25,7 +25,7 @@ public class GameSettings : ScriptableObject
     public int MONEY_AGROFOREST = 30;
     public int MONEY_NATURAL = 0;
 
-    [Header("Build cost")]
+    [Header("Build Cost")]
     // Money Per Tick Constants
     public int COST_MINE = 0;
     public int COST_COW_FIELD = 0;

@@ -14,7 +14,7 @@ public enum TileType
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private GameSettings gameSettings;
+    private GameSettings gameSettings;
     [Header("Tile Configuration")]
     [SerializeField] private TileType tileType = TileType.Grass;
     [SerializeField] private GameObject addonAttachPoint;
@@ -76,6 +76,7 @@ public class Tile : MonoBehaviour
         tileRenderer = GetComponent<Renderer>();
         SetTileType(tileType);
         currentDetailMat = detailTop.GetComponent<Renderer>().material;
+        gameSettings = GameManager.Instance.gameSettings;
     }
 
     public void SetTileType(TileType newType)
@@ -118,7 +119,7 @@ public class Tile : MonoBehaviour
                 newAddOnType = barrenAddOnPrefab;
                 break;
             default:
-                newAddOnType = grasslandsAddOnPrefab; ;
+                newAddOnType = grasslandsAddOnPrefab;
                 break;
         }
         if (newAddOnType == null) return;

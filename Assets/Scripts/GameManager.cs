@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private GameSettings gameSettings;
+    public GameSettings gameSettings;
 
     private int ticksTillRoundEnd;
     public int TicksTillRoundEnd => ticksTillRoundEnd;
