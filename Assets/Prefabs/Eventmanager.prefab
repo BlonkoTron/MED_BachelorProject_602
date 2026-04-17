@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &917677693248300345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8711092621617715435}
+  - component: {fileID: 7505905683511476706}
+  m_Layer: 0
+  m_Name: Eventmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8711092621617715435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917677693248300345}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5525, y: 2.46393, z: -1.16333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7505905683511476706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917677693248300345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24beead23013ce4bac83db72643809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eventmanager_NEWSETUP
+  allEvents:
+  - {fileID: 11400000, guid: ef959914647af514797abfa2be53621e, type: 2}
+  - {fileID: 11400000, guid: ed5d882ea7288c0459860b78e6466b09, type: 2}
+  - {fileID: 11400000, guid: 0ea2f3cde5f48a2429aeb79462846e46, type: 2}
+  - {fileID: 11400000, guid: dec717d4b4bec3f4ab0dbec0fa0c431f, type: 2}
+  - {fileID: 11400000, guid: da908f79c3c83fc409cb1e97c5243b33, type: 2}
+  - {fileID: 11400000, guid: d3754187c354bb24b88493996297725d, type: 2}
+  - {fileID: 11400000, guid: f575d4b3aeb93144695cfbb19f443ae4, type: 2}
+  - {fileID: 11400000, guid: 1f9ce6baba971fc4cb47d1b5bf6d9d49, type: 2}
+  currentEvent: {fileID: 0}
+  EventMan: {fileID: 0}
+  Test_Triggerevent: 0
