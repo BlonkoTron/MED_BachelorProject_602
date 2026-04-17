@@ -10,7 +10,7 @@ public class QuotaManager : MonoBehaviour
 
     public int CurrentQuotaAmount => currentQuotaAmount;
 
-    [SerializeField] private int[] quotaAmounts;
+    [SerializeField] private GameSettings gameSettings;
 
     private GameManager gameManager;
     private PointSystem pointSystem;
@@ -26,7 +26,7 @@ public class QuotaManager : MonoBehaviour
         {
             Instance = this;
         }
-        currentQuotaAmount = quotaAmounts[0];
+        currentQuotaAmount = gameSettings.quotaAmounts[0];
     }
 
     void Start()
@@ -54,12 +54,12 @@ public class QuotaManager : MonoBehaviour
     {
         currentQuotaIndex++;
         // update quota if higher index exists. Else use the last value in the array
-        if (quotaAmounts.Length>currentQuotaIndex)
+        if (gameSettings.quotaAmounts.Length>currentQuotaIndex)
         {
-            return quotaAmounts[currentQuotaIndex];
+            return gameSettings.quotaAmounts[currentQuotaIndex];
         } else
         {
-            return quotaAmounts[quotaAmounts.Length-1];
+            return gameSettings.quotaAmounts[gameSettings.quotaAmounts.Length-1];
         }
     }
     private void OnDestroy()

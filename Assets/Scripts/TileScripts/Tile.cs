@@ -14,6 +14,7 @@ public enum TileType
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] private GameSettings gameSettings;
     [Header("Tile Configuration")]
     [SerializeField] private TileType tileType = TileType.Grass;
     [SerializeField] private GameObject addonAttachPoint;
@@ -58,21 +59,6 @@ public class Tile : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
     
     private Renderer tileRenderer;
-    
-    // Money Per Tick Constants
-    public const int MONEY_MINE = 100;
-    public const int MONEY_COW_FIELD = 60;
-    public const int MONEY_FARM = 50;
-    public const int MONEY_AGROFOREST = 30;
-    public const int MONEY_NATURAL = 0;
-    
-    // Degradation Rate Constants
-    public const float DEGRADATION_MINE = 50f;
-    public const float DEGRADATION_COW_FIELD = 34f;
-    public const float DEGRADATION_FARM = 25f;
-    public const float DEGRADATION_AGROFOREST = 10f;
-    public const float DEGRADATION_NATURAL_REGEN = -10f;
-    public const float DEGRADATION_NONE = 0f;
 
     // Tile Properties
     public TileType Type => tileType;
@@ -179,24 +165,24 @@ public class Tile : MonoBehaviour
         switch (tileType)
         {
             case TileType.Mine:
-                amount= MONEY_MINE; // Highest income
+                amount=gameSettings.MONEY_MINE; // Highest income
                 break;
             case TileType.CowField:
-                amount= MONEY_COW_FIELD;
+                amount=gameSettings.MONEY_COW_FIELD;
                 break;
             case TileType.Farm:
-                amount= MONEY_FARM;
+                amount=gameSettings.MONEY_FARM;
                 break;
             case TileType.Agroforest:
-                amount= MONEY_AGROFOREST; // Lowest income but sustainable
+                amount=gameSettings.MONEY_AGROFOREST; // Lowest income but sustainable
                 break;
             case TileType.Grass:
             case TileType.Rainforest:
             case TileType.Barren:
-                amount= MONEY_NATURAL; // No income
+                amount= gameSettings.MONEY_NATURAL; // No income
                 break;
             default:
-                amount= MONEY_NATURAL;
+                amount= gameSettings.MONEY_NATURAL;
                 break;
         }
         amount = Mathf.FloorToInt(amount * PointSystem.Instance.GetEfficiencyMultiplier(tileType));
@@ -210,20 +196,20 @@ public class Tile : MonoBehaviour
         switch (tileType)
         {
             case TileType.Mine:
-                return DEGRADATION_MINE; // Fastest degradation
+                return gameSettings.DEGRADATION_MINE; // Fastest degradation
             case TileType.CowField:
-                return DEGRADATION_COW_FIELD;
+                return gameSettings.DEGRADATION_COW_FIELD;
             case TileType.Farm: 
-                return DEGRADATION_FARM;
+                return gameSettings.DEGRADATION_FARM;
             case TileType.Agroforest:
-                return DEGRADATION_AGROFOREST; // Slowest degradation (sustainable)
+                return gameSettings.DEGRADATION_AGROFOREST; // Slowest degradation (sustainable)
             case TileType.Grass:
             case TileType.Rainforest:
-                return DEGRADATION_NATURAL_REGEN; // Natural regeneration
+                return gameSettings.DEGRADATION_NATURAL_REGEN; // Natural regeneration
             case TileType.Barren:
-                return DEGRADATION_NONE; // Already barren
+                return gameSettings.DEGRADATION_NONE; // Already barren
             default:
-                return DEGRADATION_NONE;
+                return gameSettings.DEGRADATION_NONE;
         }
     }
 

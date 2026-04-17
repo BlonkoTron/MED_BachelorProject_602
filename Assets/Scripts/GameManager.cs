@@ -4,12 +4,12 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [Header("Game Settings")]
-    [SerializeField] private float tickInterval = 15f; // Time between ticks in seconds
-    [SerializeField] private int ticksBetweenRounds = 5;
+
+    [SerializeField] private GameSettings gameSettings;
+
     private int ticksTillRoundEnd;
     public int TicksTillRoundEnd => ticksTillRoundEnd;
-    public int TicksBetweenRounds => ticksBetweenRounds;
+    public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
 
     //Get eventmanager
     [SerializeField] private Eventmanager_NEWSETUP EventMangerGET;
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             onGameTick = new UnityEvent();
         }
-        ticksTillRoundEnd = ticksBetweenRounds;
+        ticksTillRoundEnd = TicksBetweenRounds;
         secondsLeftAtStart = SecondsTillRoundEnd();
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     void FixedUpdate()
     {
         UpdateTickTimer();
-        if (tickTimer >= tickInterval)
+        if (tickTimer >= gameSettings.tickInterval)
         {
             tickTimer = 0f;
             ProcessTick();
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     }
     private void EndRound()
     {
-        ticksTillRoundEnd = ticksBetweenRounds;
+        ticksTillRoundEnd = TicksBetweenRounds;
         onRoundEnd?.Invoke();
         SetNewState(GameState.Paused);
         //Call event here
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartRound()
     {
-        ticksTillRoundEnd = ticksBetweenRounds;
+        ticksTillRoundEnd = TicksBetweenRounds;
         SetNewState(GameState.normal);
     }
 
@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     }
     public int SecondsTillRoundEnd()
     {
-        int seconds = (int)tickInterval * ticksTillRoundEnd-(int)tickTimer;
+        int seconds = (int)gameSettings.tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
     }
     public void SetNewState(GameState state)
