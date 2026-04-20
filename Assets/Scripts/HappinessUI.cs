@@ -10,7 +10,6 @@ public class HappinessUI : MonoBehaviour
     [SerializeField] private TMP_Text happinessText;
     [SerializeField] private Slider happinessBar;
     [SerializeField] private Image happinessBarFill;
-    [SerializeField] private Image smileyImage;
 
     [Header("Color Settings")]
     [SerializeField] private bool useColorGradient = true;
@@ -18,12 +17,6 @@ public class HappinessUI : MonoBehaviour
     [SerializeField] private Color lowColor = new Color(1f, 0.6f, 0f); // Orange
     [SerializeField] private Color goodColor = new Color(1f, 1f, 0f); // Yellow
     [SerializeField] private Color excellentColor = new Color(0.2f, 0.8f, 0.2f); // Green
-
-    [Header("Smiley Sprites")]
-    [SerializeField] private Sprite smileyCritical;      // 0-20% (Red)
-    [SerializeField] private Sprite smileyLow;           // 21-40% (Orange)
-    [SerializeField] private Sprite smileyGood;          // 41-70% (Yellow)
-    [SerializeField] private Sprite smileyExcellent;     // 71-100% (Green)
 
     [Header("Warning UI")]
     [SerializeField] private GameObject warningPanel;
@@ -73,12 +66,6 @@ public class HappinessUI : MonoBehaviour
         if (useColorGradient && happinessBarFill != null)
         {
             happinessBarFill.color = GetHappinessColor(newHappiness);
-        }
-
-        // Update smiley
-        if (smileyImage != null)
-        {
-            smileyImage.sprite = GetHappinessSmiley(newHappiness);
         }
 
         // Update warning panel visibility
@@ -134,26 +121,6 @@ public class HappinessUI : MonoBehaviour
             // Lerp between good and excellent
             float t = (happiness - 70) / 30f;
             return Color.Lerp(goodColor, excellentColor, t);
-        }
-    }
-
-    private Sprite GetHappinessSmiley(int happiness)
-    {
-        if (happiness <= 20)
-        {
-            return smileyCritical; // Critical - Red
-        }
-        else if (happiness <= 40)
-        {
-            return smileyLow; // Low - Orange
-        }
-        else if (happiness <= 70)
-        {
-            return smileyGood; // Good - Yellow
-        }
-        else
-        {
-            return smileyExcellent; // Excellent - Green
         }
     }
 
