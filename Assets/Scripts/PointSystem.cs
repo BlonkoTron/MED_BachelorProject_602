@@ -104,7 +104,7 @@ public class PointSystem : MonoBehaviour
                 return 1;
         }
     }
-    
+
     void OnDestroy()
     {
         // Unsubscribe from all tiles
