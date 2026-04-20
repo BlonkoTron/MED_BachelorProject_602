@@ -21,6 +21,8 @@ public class TileChanger : MonoBehaviour
 
     private GameSettings gameSettings;
 
+    public bool stopfirstsound = false;
+
     private void Start()
     {
 
@@ -44,6 +46,7 @@ public class TileChanger : MonoBehaviour
         {
 
             tileUI.SetActive(true);
+            stopfirstsound = true;
 
         }
 
@@ -51,8 +54,11 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
-        ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
-
+        if (stopfirstsound == true)
+        {
+            ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+        }
+        
         tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
         tileUI.SetActive(false);
