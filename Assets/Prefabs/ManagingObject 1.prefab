@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb52c355905b95b4d9fb07dccb9569f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Happiness
-  happinessLevel: 40
+  happinessLevel: 100
   maxHappiness: 100
   minHappiness: 0
   criticalThreshold: 20
