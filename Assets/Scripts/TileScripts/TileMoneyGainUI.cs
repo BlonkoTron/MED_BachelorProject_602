@@ -17,6 +17,13 @@ public class TileMoneyGainUI : MonoBehaviour
     }
     public void SetMoneyGainUI(int money)
     {
-        moneyGainText.text = "+" + money.ToString();
+        if (money>0)
+        {
+            moneyGainText.text = "+" + money.ToString();
+        } else
+        {
+            moneyGainText.text = money.ToString();
+
+        }
     }
 }
