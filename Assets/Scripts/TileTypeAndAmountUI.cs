@@ -46,10 +46,8 @@ public class TileTypeAndAmountUI : MonoBehaviour
 
         foreach (Tile tile in allTiles)
         {
-           // tile.onTileTypeChanged.AddListener(OnTileChanged);
+           tile.onTileChanged.AddListener(OnGameTick);
         }
-
-
 
         CountTiles();
         CalculateMoneyGain();
@@ -66,6 +64,15 @@ public class TileTypeAndAmountUI : MonoBehaviour
         Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
 
         if (allTiles.Length == 0) return;
+
+        mineTiles = 0;
+        pastureTiles = 0;
+        agroforestTiles = 0;
+        farmTiles = 0;
+        grassTiles = 0;
+        rainforestTiles = 0;
+        barrenTiles = 0;
+
 
         foreach (Tile tile in allTiles)
         {
