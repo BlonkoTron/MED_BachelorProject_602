@@ -45,15 +45,14 @@ public class TileTypeAndAmountUI : MonoBehaviour
             Debug.LogWarning("GameManager not found - tile money gain won't update with game ticks");
         }
 
-        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
+        TileChanger[] allTiles = FindObjectsByType<TileChanger>(FindObjectsSortMode.None);
 
-        foreach (Tile tile in allTiles)
+        foreach (TileChanger tile in allTiles)
         {
            tile.onTileChanged.AddListener(Recalculate);
         }
 
-        CountTiles();
-        CalculateMoneyGain();
+        Recalculate();
     }
 
     private void Recalculate()
