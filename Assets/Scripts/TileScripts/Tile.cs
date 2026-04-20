@@ -57,7 +57,7 @@ public class Tile : MonoBehaviour
     
     // Event that broadcasts when money is earned
     [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
-    [HideInInspector] public UnityEvent onTileChanged = new UnityEvent();
+
 
     private Renderer tileRenderer;
 
@@ -89,7 +89,7 @@ public class Tile : MonoBehaviour
         UpdateAddonPrefab(newType);
         UpdateDetailMaterial(newType);
 
-        onTileChanged.Invoke();
+
     }
     public void SetTileType(TileType newType, int cost)
     {
