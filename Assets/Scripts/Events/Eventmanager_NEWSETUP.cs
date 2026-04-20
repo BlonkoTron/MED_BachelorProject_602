@@ -10,7 +10,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     public EventData currentEvent;
 
-    [SerializeField] private Event_Manager EventMan;
+    private Event_Manager EventMan;
 
     public bool Test_Triggerevent = false;
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TileButtons : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class TileButtons : MonoBehaviour
     [SerializeField] private TileType tileType;
 
     private Button button;
+
+    [SerializeField] private TMP_Text costText;
 
     private PointSystem pointSystem;
 
@@ -19,6 +22,10 @@ public class TileButtons : MonoBehaviour
         pointSystem.onMoneyLost.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneySpent.AddListener(UpdateButtonInteractability);
         UpdateButtonInteractability(pointSystem.CurrentMoney);
+        if (costText!=null)
+        {
+            costText.text = ParentTile.GetTileCost(tileType).ToString();
+        }
     }
 
     public void OnClick()
