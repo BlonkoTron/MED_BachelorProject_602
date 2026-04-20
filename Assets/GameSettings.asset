@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f3c7f3c419c0343954f3d3f0790716, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: Assembly-CSharp::GameSettings
+  STARTING_MONEY: 0
   tickInterval: 15
   ticksBetweenRounds: 5
   DEGRADATION_MINE: 50
@@ -25,4 +26,9 @@ MonoBehaviour:
   MONEY_FARM: 50
   MONEY_AGROFOREST: 30
   MONEY_NATURAL: 0
+  COST_MINE: 10
+  COST_COW_FIELD: 10
+  COST_FARM: 10
+  COST_AGROFOREST: 10
+  COST_NATURAL: -5
   quotaAmounts: 0a00000014000000280000003c00000064000000

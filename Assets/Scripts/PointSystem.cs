@@ -21,6 +21,7 @@ public class PointSystem : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneySpent;
     [HideInInspector] public UnityEvent<int> onMoneyLost;
 
+    private GameSettings gameSettings;
 
     private void Awake()
     {
@@ -38,6 +39,9 @@ public class PointSystem : MonoBehaviour
         //Get Eventmanager_NEWSETUP 
         Eventsir = Eventmanager_NEWSETUP.instance;
 
+        gameSettings = GameManager.Instance.gameSettings;
+
+        currentMoney = gameSettings.STARTING_MONEY;
         // Find all tiles and subscribe to their money events
         RegisterAllTiles();
     }
@@ -100,7 +104,7 @@ public class PointSystem : MonoBehaviour
                 return 1;
         }
     }
-    
+
     void OnDestroy()
     {
         // Unsubscribe from all tiles
