@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameSettings", menuName = "Scriptable Objects/GameSettings")]
 public class GameSettings : ScriptableObject
 {
+    public int STARTING_MONEY = 0;
+
     [Header("Game Speed")]
     [Tooltip("Time between ticks in seconds")]
     public float tickInterval = 15f;
@@ -35,5 +37,6 @@ public class GameSettings : ScriptableObject
 
     [Header("Quota")]
     public int[] quotaAmounts= { 10,20,40,60,100};
+
 
 }
