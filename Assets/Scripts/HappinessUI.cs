@@ -9,6 +9,13 @@ public class HappinessUI : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private TMP_Text happinessText;
     [SerializeField] private Image happinessBarFill;
+    [SerializeField] private Image happinessLevelImage;
+
+    [Header("Happiness Level Pictures")]
+    [SerializeField] private Sprite levelCritical;      // 0-20% (Red)
+    [SerializeField] private Sprite levelLow;           // 21-40% (Orange)
+    [SerializeField] private Sprite levelGood;          // 41-70% (Yellow)
+    [SerializeField] private Sprite levelExcellent;     // 71-100% (Green)
 
     [Header("Color Settings")]
     [SerializeField] private bool useColorGradient = true;
@@ -67,6 +74,12 @@ public class HappinessUI : MonoBehaviour
             }
         }
 
+        // Update happiness level image
+        if (happinessLevelImage != null)
+        {
+            happinessLevelImage.sprite = GetHappinessLevelSprite(newHappiness);
+        }
+
         // Update warning panel visibility
         UpdateWarningPanel(newHappiness);
     }
@@ -120,6 +133,26 @@ public class HappinessUI : MonoBehaviour
             // Lerp between good and excellent
             float t = (happiness - 70) / 30f;
             return Color.Lerp(goodColor, excellentColor, t);
+        }
+    }
+
+    private Sprite GetHappinessLevelSprite(int happiness)
+    {
+        if (happiness <= 20)
+        {
+            return levelCritical; // Critical - Red
+        }
+        else if (happiness <= 40)
+        {
+            return levelLow; // Low - Orange
+        }
+        else if (happiness <= 70)
+        {
+            return levelGood; // Good - Yellow
+        }
+        else
+        {
+            return levelExcellent; // Excellent - Green
         }
     }
 
