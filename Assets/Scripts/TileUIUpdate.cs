@@ -23,10 +23,10 @@ public class TileUIUpdate : MonoBehaviour
     private void Start()
     {
         text = GetComponent<TMP_Text>();
-
+        UpdateText();
         tileTypeUI.onTileUIUpdate.AddListener(UpdateText);
 
-        UpdateText();
+       
     }
 
     private void UpdateText()
