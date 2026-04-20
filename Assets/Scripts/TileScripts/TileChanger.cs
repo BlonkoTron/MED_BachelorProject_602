@@ -8,7 +8,7 @@ public class TileChanger : MonoBehaviour
 {
     public GameObject highlightObj;
 
-    [SerializeField] private GameObject tileUI;
+    private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
 
@@ -66,9 +66,10 @@ public class TileChanger : MonoBehaviour
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
-            tile.SetTileType(type);
+            tile.SetTileType(type,GetTileCost(type));
             CloseUI();
             UpdateUI();
+            PointSystem.Instance.SpendMoney(GetTileCost(type));
             return true;
         } else
         {
@@ -77,34 +78,34 @@ public class TileChanger : MonoBehaviour
         }
 
     }
-    public bool CanAffordTileChange(TileType type)
+    public int GetTileCost(TileType type)
     {
-        var money = PointSystem.Instance.CurrentMoney;
         switch (type)
         {
             case TileType.Mine:
-                if (money >= gameSettings.COST_MINE) { return true; };
-                break;
+                return gameSettings.COST_MINE;
             case TileType.CowField:
-                if (money >= gameSettings.COST_COW_FIELD) { return true; };
-                break;
+                return gameSettings.COST_COW_FIELD;
             case TileType.Farm:
-                if (money >= gameSettings.COST_FARM) { return true; };
-                break;
+                return gameSettings.COST_FARM;
             case TileType.Agroforest:
-                if (money >= gameSettings.COST_AGROFOREST) { return true; };
-                break;
+                return gameSettings.COST_AGROFOREST;
             case TileType.Grass:
-                if (money >= gameSettings.COST_NATURAL) { return true; };
-                break;
+                return gameSettings.COST_NATURAL;
             case TileType.Rainforest:
-                if (money >= gameSettings.COST_NATURAL) { return true; };
-                break;
-            case TileType.Barren:
-                return true;
+                return gameSettings.COST_NATURAL;
         }
-        return false;
-        
+        return 0;
+    }
+    public bool CanAffordTileChange(TileType type)
+    {
+        if (PointSystem.Instance.CurrentMoney >= GetTileCost(type))
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 
     private void UpdateUI()
