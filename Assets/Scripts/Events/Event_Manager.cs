@@ -7,7 +7,7 @@ public class Event_Manager : MonoBehaviour
 {
     // Reference to ScriptableObject
     public static Event_Manager instance { get; private set; }
-    public EventData selectedEvent;
+    [HideInInspector] public EventData selectedEvent;
 
     // UI text
     public TMP_Text Eventtitle;
@@ -25,9 +25,6 @@ public class Event_Manager : MonoBehaviour
 
     // Enable/disable Panel
     public GameObject Panel;
-
-    // Test variables
-    public int Testmoney;
 
     private void Awake()
     {
