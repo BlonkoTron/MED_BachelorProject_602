@@ -14,9 +14,16 @@ public class CameraMovement : MonoBehaviour
 
     Vector3 moveVelocity;
 
+    public Vector3 Starposition;
+
     void Update()
     {
         MoveCamera();
+    }
+
+    private void Start()
+    {
+        this.gameObject.transform.position = Starposition;
     }
 
     void MoveCamera()
