@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb52c355905b95b4d9fb07dccb9569f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Happiness
-  happinessLevel: 60
+  happinessLevel: 66
   maxHappiness: 100
   minHappiness: 0
   criticalThreshold: 20
@@ -626,16 +626,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HappinessUI
   happinessText: {fileID: 4098628789165484884}
   happinessBarFill: {fileID: 5072381432904557024}
-  smileyImage: {fileID: 6972097362636772931}
+  happinessLevelImage: {fileID: 6972097362636772931}
+  levelCritical: {fileID: 21300000, guid: 29844ab56bea008448906f9eec6d6a4d, type: 3}
+  levelLow: {fileID: 21300000, guid: a0b58cacb511f7543b55ae892f5dac8c, type: 3}
+  levelGood: {fileID: 21300000, guid: 2cc3589084e117b409c1dc17ee329f03, type: 3}
+  levelExcellent: {fileID: 21300000, guid: 2757aaea04ea9014487dfadce7cea843, type: 3}
   useColorGradient: 1
   criticalColor: {r: 0.8, g: 0.1, b: 0.1, a: 1}
   lowColor: {r: 1, g: 0.6, b: 0, a: 1}
   goodColor: {r: 1, g: 1, b: 0, a: 1}
   excellentColor: {r: 0.2, g: 0.8, b: 0.2, a: 1}
-  smileyCritical: {fileID: 21300000, guid: 29844ab56bea008448906f9eec6d6a4d, type: 3}
-  smileyLow: {fileID: 21300000, guid: a0b58cacb511f7543b55ae892f5dac8c, type: 3}
-  smileyGood: {fileID: 21300000, guid: 2cc3589084e117b409c1dc17ee329f03, type: 3}
-  smileyExcellent: {fileID: 21300000, guid: 2757aaea04ea9014487dfadce7cea843, type: 3}
   warningPanel: {fileID: 0}
   warningText: {fileID: 0}
 --- !u!1 &2989429769224185357
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 4705087332886751925}
   - component: {fileID: 8204285527126228023}
   m_Layer: 0
-  m_Name: ManagingObject 1
+  m_Name: ManagingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1218,7 +1218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameSettings: {fileID: 11400000, guid: db2fe33ad3f772f40b91006532b4febc, type: 2}
-  EventMangerGET: {fileID: 0}
   onGameTick:
     m_PersistentCalls:
       m_Calls: []
