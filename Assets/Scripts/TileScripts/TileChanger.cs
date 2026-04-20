@@ -8,7 +8,7 @@ public class TileChanger : MonoBehaviour
 {
     public GameObject highlightObj;
 
-    [SerializeField] private GameObject tileUI;
+    private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
 

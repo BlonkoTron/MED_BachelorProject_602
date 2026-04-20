@@ -18,7 +18,7 @@ public class TileButtons : MonoBehaviour
         pointSystem.onMoneyEarned.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneyLost.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneySpent.AddListener(UpdateButtonInteractability);
-
+        UpdateButtonInteractability(pointSystem.CurrentMoney);
     }
 
     public void OnClick()
@@ -28,7 +28,13 @@ public class TileButtons : MonoBehaviour
 
     private void UpdateButtonInteractability(int money)
     {
-
+        if (ParentTile.CanAffordTileChange(tileType) && tileType!=TileType.Barren)
+        {
+            button.interactable = true;
+        } else
+        {
+            button.interactable = false;
+        }
     }
     private void OnDestroy()
     {
