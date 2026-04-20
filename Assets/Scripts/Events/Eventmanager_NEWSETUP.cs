@@ -8,7 +8,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     public List<EventData> allEvents;
 
-    [HideInInspector] public EventData currentEvent;
+    public EventData currentEvent;
 
     [SerializeField] private Event_Manager EventMan;
 
