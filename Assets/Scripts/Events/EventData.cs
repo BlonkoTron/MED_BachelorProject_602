@@ -61,5 +61,6 @@ public class EventData : ScriptableObject
         PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
         PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
         PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
+        GameManager.Instance.StartRound();
     }
 }
