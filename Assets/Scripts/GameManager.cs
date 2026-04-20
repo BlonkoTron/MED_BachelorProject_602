@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour
     public int TicksTillRoundEnd => ticksTillRoundEnd;
     public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
 
-    //Get eventmanager
-    [SerializeField] private Eventmanager_NEWSETUP EventMangerGET;
+    private Eventmanager_NEWSETUP EventMangerGET;
 
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
@@ -53,6 +52,9 @@ public class GameManager : MonoBehaviour
         RegisterAllTiles();
 
         //Call eventmanager
+    }
+    private void Start()
+    {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
     }
 

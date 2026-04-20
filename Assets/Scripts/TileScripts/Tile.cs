@@ -88,6 +88,21 @@ public class Tile : MonoBehaviour
         UpdateAddonPrefab(newType);
         UpdateDetailMaterial(newType);
     }
+    public void SetTileType(TileType newType, int cost)
+    {
+        if (newType == tileType) return;
+        tileType = newType;
+
+        UpdateMaterial();
+        UpdateAddonPrefab(newType);
+        UpdateDetailMaterial(newType);
+        if (MoneyGainUI != null)
+        {
+            var ui = Instantiate(MoneyGainUI, transform);
+            ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(cost*-1);
+        }
+
+    }
 
     private void UpdateAddonPrefab(TileType type)
     {
