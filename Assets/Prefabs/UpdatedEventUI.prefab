@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5258235324380371466}
         m_TargetAssemblyTypeName: Event_Manager, Assembly-CSharp
-        m_MethodName: Option_2
+        m_MethodName: Option_3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -852,7 +852,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5258235324380371466}
         m_TargetAssemblyTypeName: Event_Manager, Assembly-CSharp
-        m_MethodName: Option_2
+        m_MethodName: Option_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1539,12 +1539,12 @@ MonoBehaviour:
   selectedEvent: {fileID: 0}
   Eventtitle: {fileID: 8248838614321491940}
   Eventinfo: {fileID: 8556549068471940704}
-  Eventchoice1: {fileID: 33995347893183192}
-  Eventchoice2: {fileID: 5835982909681131475}
-  Eventchoice3: {fileID: 5594058686525727683}
-  Buttonchoice1: {fileID: 2211985131411812259}
-  Buttonchoice2: {fileID: 7112055170581326076}
-  Buttonchoice3: {fileID: 8974644451528089684}
+  Eventchoice1: {fileID: 2211985131411812259}
+  Eventchoice2: {fileID: 7112055170581326076}
+  Eventchoice3: {fileID: 8974644451528089684}
+  Buttonchoice1: {fileID: 33995347893183192}
+  Buttonchoice2: {fileID: 5835982909681131475}
+  Buttonchoice3: {fileID: 5594058686525727683}
   ScenarioImage: {fileID: 4954031321218734464}
   Panel: {fileID: 9180949565053694602}
   Testmoney: 100
