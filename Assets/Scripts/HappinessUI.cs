@@ -8,7 +8,6 @@ public class HappinessUI : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] private TMP_Text happinessText;
-    [SerializeField] private Slider happinessBar;
     [SerializeField] private Image happinessBarFill;
     [SerializeField] private Image smileyImage;
 
@@ -63,16 +62,16 @@ public class HappinessUI : MonoBehaviour
             happinessText.text = $"{newHappiness}%";
         }
 
-        // Update slider/bar
-        if (happinessBar != null)
+        // Update fill bar
+        if (happinessBarFill != null)
         {
-            happinessBar.value = newHappiness / 100f;
-        }
-
-        // Update color based on happiness level
-        if (useColorGradient && happinessBarFill != null)
-        {
-            happinessBarFill.color = GetHappinessColor(newHappiness);
+            happinessBarFill.fillAmount = newHappiness / 100f;
+            
+            // Update color based on happiness level
+            if (useColorGradient)
+            {
+                happinessBarFill.color = GetHappinessColor(newHappiness);
+            }
         }
 
         // Update smiley
