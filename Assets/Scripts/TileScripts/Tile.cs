@@ -44,6 +44,8 @@ public class Tile : MonoBehaviour
     [Header("Degradation")]
     [SerializeField] private float currentDegradation = 0f;
     [SerializeField] private float degradationThreshold = 100f;
+    [SerializeField] private GameObject oneTurnWarningPrefab; // Object to spawn when 1 turn til barren
+    private bool hasSpawnedWarning = false; // Track if warning was already spawned
 
     [Header("Materials")]
     [SerializeField] private Material healthyMaterial;
@@ -87,6 +89,9 @@ public class Tile : MonoBehaviour
         if (newType == tileType) return;
         tileType = newType;
         
+        // Reset warning flag when tile type changes
+        hasSpawnedWarning = false;
+        
         UpdateMaterial();
         UpdateAddonPrefab(newType);
         UpdateDetailMaterial(newType);
@@ -97,6 +102,9 @@ public class Tile : MonoBehaviour
     {
         if (newType == tileType) return;
         tileType = newType;
+
+        // Reset warning flag when tile type changes
+        hasSpawnedWarning = false;
 
         UpdateMaterial();
         UpdateAddonPrefab(newType);
@@ -240,6 +248,18 @@ public class Tile : MonoBehaviour
     {   
         int moneyEarned = GetMoneyPerTick();
         
+        // Check if next turn will make it barren (before applying degradation)
+        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren)
+        {
+            float nextDegradation = currentDegradation + GetDegradationRate();
+            if (nextDegradation >= degradationThreshold && GetDegradationRate() > 0)
+            {
+                // Instantiate warning object
+                Instantiate(oneTurnWarningPrefab, transform);
+                hasSpawnedWarning = true;
+            }
+        }
+        
         // Apply degradation
         currentDegradation += GetDegradationRate();
         // Check if tile should become barren
@@ -344,5 +364,11 @@ public class Tile : MonoBehaviour
         }
         
         return info;
+    }
+
+    // Public method to reset warning flag (called by TileWarning when destroyed)
+    public void ResetWarningFlag()
+    {
+        hasSpawnedWarning = false;
     }
 }
