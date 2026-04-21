@@ -4,12 +4,14 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [Header("Game Settings")]
-    [SerializeField] private float tickInterval = 15f; // Time between ticks in seconds
-    [SerializeField] private int ticksBetweenRounds = 5;
+
+    public GameSettings gameSettings;
+
     private int ticksTillRoundEnd;
     public int TicksTillRoundEnd => ticksTillRoundEnd;
-    public int TicksBetweenRounds => ticksBetweenRounds;
+    public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
+
+    private Eventmanager_NEWSETUP EventMangerGET;
 
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     public enum GameState { normal, Speedx2, speedx3, Paused}
     public GameState gameState = GameState.normal;
 
+    public UnityEvent<GameState> onGameStateChanged;
 
     [Range(0f, 1f)]
     public float clockSpinValue = 0.5f;
@@ -43,16 +46,22 @@ public class GameManager : MonoBehaviour
         {
             onGameTick = new UnityEvent();
         }
-        ticksTillRoundEnd = ticksBetweenRounds;
+        ticksTillRoundEnd = TicksBetweenRounds;
         secondsLeftAtStart = SecondsTillRoundEnd();
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
+
+        //Call eventmanager
+    }
+    private void Start()
+    {
+        EventMangerGET = Eventmanager_NEWSETUP.instance;
     }
 
     void FixedUpdate()
     {
         UpdateTickTimer();
-        if (tickTimer >= tickInterval)
+        if (tickTimer >= gameSettings.tickInterval)
         {
             tickTimer = 0f;
             ProcessTick();
@@ -98,9 +107,16 @@ public class GameManager : MonoBehaviour
     }
     private void EndRound()
     {
-        ticksTillRoundEnd = ticksBetweenRounds;
+        ticksTillRoundEnd = TicksBetweenRounds;
         onRoundEnd?.Invoke();
-        //gameState = GameState.Paused;
+        SetNewState(GameState.Paused);
+        //Call event here
+        EventMangerGET.TriggerRandomEvent();
+    }
+    public void StartRound()
+    {
+        ticksTillRoundEnd = TicksBetweenRounds;
+        SetNewState(GameState.normal);
     }
 
     // Automatically register all tiles in the scene
@@ -127,8 +143,13 @@ public class GameManager : MonoBehaviour
     }
     public int SecondsTillRoundEnd()
     {
-        int seconds = (int)tickInterval * ticksTillRoundEnd-(int)tickTimer;
+        int seconds = (int)gameSettings.tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
+    }
+    public void SetNewState(GameState state)
+    {
+        gameState = state;
+        onGameStateChanged.Invoke(state);
     }
 
     private void UpdateClockUI()

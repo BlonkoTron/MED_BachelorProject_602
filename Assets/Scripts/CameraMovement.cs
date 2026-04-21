@@ -14,9 +14,16 @@ public class CameraMovement : MonoBehaviour
 
     Vector3 moveVelocity;
 
+    public Vector3 Starposition;
+
     void Update()
     {
         MoveCamera();
+    }
+
+    private void Start()
+    {
+        this.gameObject.transform.position = Starposition;
     }
 
     void MoveCamera()
@@ -39,16 +46,16 @@ public class CameraMovement : MonoBehaviour
             move.z += 1;
 
         // WASD movement
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
             move.z += 1;
 
-        if (Keyboard.current.sKey.isPressed)
+        if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
             move.z -= 1;
 
-        if (Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
             move.x -= 1;
 
-        if (Keyboard.current.dKey.isPressed)
+        if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
             move.x += 1;
 
         Vector3 target = transform.position + move * moveSpeed * Time.deltaTime;

@@ -2062,14 +2062,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tile
   tileType: 1
+  addonAttachPoint: {fileID: 0}
+  detailTop: {fileID: 0}
+  barrenAddOnPrefab: {fileID: 0}
+  farmAddOnPrefab: {fileID: 0}
+  mineAddOnPrefab: {fileID: 0}
+  cowfieldAddOnPrefab: {fileID: 0}
+  agroforestAddOnPrefab: {fileID: 0}
+  rainforestAddOnPrefab: {fileID: 0}
+  grasslandsAddOnPrefab: {fileID: 0}
+  barrenDetailMat: {fileID: 0}
+  farmDetailMat: {fileID: 0}
+  mineDetailMat: {fileID: 0}
+  cowfieldDetailMat: {fileID: 0}
+  agroforestDetailMat: {fileID: 0}
+  rainforestDetailmat: {fileID: 0}
+  grasslandsDetailMat: {fileID: 0}
   currentDegradation: 0
   degradationThreshold: 100
   healthyMaterial: {fileID: 2100000, guid: 06eccbc9711490d4e8e845081a96cd3a, type: 2}
   degradedMaterial: {fileID: 2100000, guid: 2e4ee9ba034014748a6009c6d45cc515, type: 2}
   criticalMaterial: {fileID: 2100000, guid: baa90c9cf4c2fb7498abf320d22bd05f, type: 2}
   barrenMaterial: {fileID: 2100000, guid: 5927ea3bdb59c0d42b5a373e5432d32d, type: 2}
-  barrenPrefab: {fileID: 6508044903990853573, guid: a1ebb3e974458e04da321b63b001cd9e, type: 3}
-  placementHeight: 0.1
   degradedThreshold: 0.33
   criticalThreshold: 0.66
   onMoneyEarned:
@@ -2092,6 +2106,13 @@ MonoBehaviour:
   tileUI: {fileID: 0}
   blankTileUI: {fileID: 2710947815939201026}
   buildingUI: {fileID: 1429868186233719387}
+  ClickSFX_OpenUI:
+    Guid:
+      Data1: -1024100354
+      Data2: 1078082169
+      Data3: 960988848
+      Data4: -1007593164
+    Path: event:/ButtonUI
 --- !u!64 &5136925510239416787
 MeshCollider:
   m_ObjectHideFlags: 0

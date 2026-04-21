@@ -22,9 +22,10 @@ public class EventData : ScriptableObject
         public int HappinessDown;
 
         //Tile Nerf or Buff
-        public bool TileNOEFFICIENT;
-        public bool TileHalfefficient;
-        public bool TileDoublefficient;
+        public float MineEfficiencymult;
+        public float CowEfficiencymult;
+        public float AggroForestEfficiencymult;
+        public float FarmEfficiencymult;
 
         //TileChanges
         public bool tileDestruction;
@@ -56,16 +57,10 @@ public class EventData : ScriptableObject
         Debug.Log("ApplyChoice called");
         PointSystem.Instance.AddMoney(choice.moneyGain);
         PointSystem.Instance.LoseMoney(choice.moneyLoss);
-
-        if (choice.tileDestruction)
-        {
-
-            Debug.Log("destroy tile");
-        }
-
-        //if (choice.tilespawn)
-        //{
-        //    debug.log("spawn tile");
-        //}
+        PointSystem.Instance.mineEfficiencyMultiplier = choice.MineEfficiencymult;
+        PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
+        PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
+        PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
+        GameManager.Instance.StartRound();
     }
 }

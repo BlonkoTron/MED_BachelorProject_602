@@ -1,21 +1,35 @@
+using FMOD.Studio;
+using FMODUnity;
+using NUnit.Framework.Internal;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TileChanger : MonoBehaviour
 {
     public GameObject highlightObj;
 
-    [SerializeField] private GameObject tileUI;
+    private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
 
+    private EventInstance ClickSFX_Open;
+    [SerializeField] private EventReference ClickSFX_OpenUI;
+    private EventInstance ClickSFX_Close;
+    [SerializeField] private EventReference ClickSFX_CloseUI;
+
+    [HideInInspector] public UnityEvent onTileChanged = new UnityEvent();
 
     private Tile tile;
 
+    private GameSettings gameSettings;
+
+    public bool stopfirstsound = false;
+
     private void Start()
     {
-   
 
+        gameSettings = GameManager.Instance.gameSettings;
         tile = GetComponent<Tile>();
 
         UpdateUI();
@@ -30,11 +44,12 @@ public class TileChanger : MonoBehaviour
     public void OnClick()
     {
         //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
-
+        ClickSFX_Open = Audiomanager.instance.PlaySound(ClickSFX_OpenUI, transform.position);
         if (tile.Type != TileType.Barren) 
         {
 
             tileUI.SetActive(true);
+            stopfirstsound = true;
 
         }
 
@@ -42,7 +57,11 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
-
+        if (stopfirstsound == true)
+        {
+            ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+        }
+        
         tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
         tileUI.SetActive(false);
@@ -51,13 +70,52 @@ public class TileChanger : MonoBehaviour
 
     }
 
-    public void ChangeTile(TileType type)
+    public bool ChangeTile(TileType type)
     {
-        Debug.Log("Changing tile to " + type);
-        tile.SetTileType(type);
-        CloseUI();
-        UpdateUI();
+        if (CanAffordTileChange(type))
+        {
+            Debug.Log("Changing tile to " + type);
+            tile.SetTileType(type,GetTileCost(type));
+            CloseUI();
+            UpdateUI();
+            PointSystem.Instance.SpendMoney(GetTileCost(type));
+            onTileChanged.Invoke();
+            return true;
+        } else
+        {
+            Debug.Log("Can't afford");
+            return false;
+        }
 
+    }
+    public int GetTileCost(TileType type)
+    {
+        switch (type)
+        {
+            case TileType.Mine:
+                return gameSettings.COST_MINE;
+            case TileType.CowField:
+                return gameSettings.COST_COW_FIELD;
+            case TileType.Farm:
+                return gameSettings.COST_FARM;
+            case TileType.Agroforest:
+                return gameSettings.COST_AGROFOREST;
+            case TileType.Grass:
+                return gameSettings.COST_NATURAL;
+            case TileType.Rainforest:
+                return gameSettings.COST_NATURAL;
+        }
+        return 0;
+    }
+    public bool CanAffordTileChange(TileType type)
+    {
+        if (PointSystem.Instance.CurrentMoney >= GetTileCost(type))
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 
     private void UpdateUI()
