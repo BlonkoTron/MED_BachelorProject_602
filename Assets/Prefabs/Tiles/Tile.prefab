@@ -1103,6 +1103,7 @@ MonoBehaviour:
   highlightObj: {fileID: 5939521722586337789}
   blankTileUI: {fileID: 1931124000218102901}
   buildingUI: {fileID: 5449687786812584257}
+  tileAnimator: {fileID: 8604289627908459397}
   ClickSFX_OpenUI:
     Guid:
       Data1: -1024100354
