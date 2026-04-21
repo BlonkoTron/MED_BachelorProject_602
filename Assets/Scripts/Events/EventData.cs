@@ -66,10 +66,10 @@ public class EventData : ScriptableObject
         Happiness.Instance.DecreaseHappiness(choice.HappinessDown);
         Happiness.Instance.IncreaseHappiness(choice.HappinessUp);
         GameManager.Instance.StartRound();
-        GameManager.Instance.gameSettings.DisableMineTiles = choice.DisableMineTilesEvent;
-        GameManager.Instance.gameSettings.DisableFarmTiles = choice.DisableFarmTilesEvent;
-        GameManager.Instance.gameSettings.DisableAgroTiles = choice.DisableAgroTilesEvent;
-        GameManager.Instance.gameSettings.DisableCowTiles = choice.DisableCowTilesEvent;
+        GameManager.Instance.gameSettings.DisableMineTilesGamesetting = choice.DisableMineTilesEvent;
+        GameManager.Instance.gameSettings.DisableFarmTilesGamesetting = choice.DisableFarmTilesEvent;
+        GameManager.Instance.gameSettings.DisableAgroTilesGamesetting = choice.DisableAgroTilesEvent;
+        GameManager.Instance.gameSettings.DisableCowTilesGamesetting = choice.DisableCowTilesEvent;
 
     }
 }
