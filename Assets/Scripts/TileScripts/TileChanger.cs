@@ -75,6 +75,23 @@ public class TileChanger : MonoBehaviour
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
+            
+            // Check if we're changing from a rainforest tile
+            if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
+            {
+                // Apply happiness penalty for changing rainforest
+                if (Happiness.Instance != null)
+                {
+                    int happinessPenalty = gameSettings.HAPPINESS_PENALTY_RAINFOREST_CHANGE;
+                    Happiness.Instance.DecreaseHappiness(happinessPenalty);
+                    Debug.Log($"Rainforest changed - Happiness decreased by {happinessPenalty}");
+                }
+                else
+                {
+                    Debug.LogWarning("Happiness system not found - skipping happiness penalty");
+                }
+            }
+            
             tile.SetTileType(type,GetTileCost(type));
             CloseUI();
             UpdateUI();
