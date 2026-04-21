@@ -225,7 +225,7 @@ RectTransform:
   m_GameObject: {fileID: 527471148978271274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5981054, y: 2.5981054, z: 2.5981054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 875112285739910681}
@@ -235,13 +235,12 @@ RectTransform:
   - {fileID: 6070935520349888212}
   - {fileID: 7547994132344698951}
   - {fileID: 8326525017648120408}
-  - {fileID: 3012311772289054513}
   m_Father: {fileID: 8778622562769585128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 574.20465, y: -1808.2683}
-  m_SizeDelta: {x: 442.018, y: 468.39}
+  m_AnchoredPosition: {x: 220, y: -220}
+  m_SizeDelta: {x: 440, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4848389914799890455
 CanvasRenderer:
@@ -339,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 3
 --- !u!114 &3252534571800839792
 MonoBehaviour:
@@ -770,8 +769,8 @@ RectTransform:
   m_GameObject: {fileID: 1530670360878965108}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5981336, y: 2.5981336, z: 2.5981336}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2895025651973437231}
   - {fileID: 386970083145340491}
@@ -780,7 +779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.81967, y: -2324.1284}
+  m_AnchoredPosition: {x: 100, y: -460}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1532077797149574740
@@ -1029,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 48.4821, y: 38.3008}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5291097785110081911
@@ -1267,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 6
 --- !u!114 &4364355801907351760
 MonoBehaviour:
@@ -1844,7 +1843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 48.4821, y: 38.3008}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3402341612654364268
@@ -2167,7 +2166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 48.4821, y: 38.3008}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6619720625833005094
@@ -2294,6 +2293,7 @@ GameObject:
   - component: {fileID: 2327398708887801174}
   - component: {fileID: 6961382586905601615}
   - component: {fileID: 3041914965732358886}
+  - component: {fileID: 1664485766488685605}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2348,7 +2348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: jhhj
+  m_text: hyyy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125648a1e1def714d991e5935a25d000, type: 2}
   m_sharedMaterial: {fileID: 31474984575895679, guid: 125648a1e1def714d991e5935a25d000, type: 2}
@@ -2420,6 +2420,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1664485766488685605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970637395297139362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
+  tileTypeUI: {fileID: 6107480165739313057}
+  selectedTileType: 1
 --- !u!1 &6134536689010664802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,7 +2499,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b50f181eaf2d0e42a4f62e3f7d93219, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46b1d25f64d3d6541bb2ad40986aaec2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2589,7 +2603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 4
 --- !u!114 &8864977770966907297
 MonoBehaviour:
@@ -2762,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7128928887029199228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2778,10 +2792,10 @@ RectTransform:
   - {fileID: 792523252364670208}
   m_Father: {fileID: 3134453732415259368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 208.035, y: -25}
+  m_SizeDelta: {x: 90.89, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6719026457392151803
 GameObject:
@@ -2921,8 +2935,8 @@ RectTransform:
   m_GameObject: {fileID: 7056559782853026529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5981336, y: 2.5981336, z: 2.5981336}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3522013653720349495}
   - {fileID: 4702142858559501941}
@@ -2931,7 +2945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.81967, y: -2635.9014}
+  m_AnchoredPosition: {x: 100, y: -580}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7171384309615691115
@@ -2992,7 +3006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 2
 --- !u!114 &3684159309229778812
 MonoBehaviour:
@@ -3144,7 +3158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 0
 --- !u!114 &2613709168373508840
 MonoBehaviour:
@@ -3263,8 +3277,8 @@ RectTransform:
   m_GameObject: {fileID: 7238704364465158292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5981336, y: 2.5981336, z: 2.5981336}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7642355953349711396}
   - {fileID: 2156960767509309607}
@@ -3273,7 +3287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.81967, y: -3259.4465}
+  m_AnchoredPosition: {x: 100, y: -820}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7383865955832031615
@@ -3821,7 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b38f95e83a4e84c957ed538b0c88fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
-  tileTypeUI: {fileID: 0}
+  tileTypeUI: {fileID: 6107480165739313057}
   selectedTileType: 5
 --- !u!114 &6184618239174095669
 MonoBehaviour:
@@ -3940,8 +3954,8 @@ RectTransform:
   m_GameObject: {fileID: 8200167813998336285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5981336, y: 2.5981336, z: 2.5981336}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2396664246384004160}
   - {fileID: 5080648349679768625}
@@ -3950,7 +3964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.81967, y: -2947.6738}
+  m_AnchoredPosition: {x: 100, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8411296212731930774
@@ -4051,7 +4065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 48.4821, y: 38.3008}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4009887676123094983
@@ -4127,7 +4141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2012.356}
+  m_AnchoredPosition: {x: 100, y: -340}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8770653553799272570
@@ -4166,81 +4180,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &9110972590104113584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3012311772289054513}
-  - component: {fileID: 3415410976884353565}
-  - component: {fileID: 5885791578540638458}
-  m_Layer: 5
-  m_Name: Agroforest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3012311772289054513
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9110972590104113584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2873684164994946541}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -220}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3415410976884353565
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9110972590104113584}
-  m_CullTransparentMesh: 1
---- !u!114 &5885791578540638458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9110972590104113584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b50f181eaf2d0e42a4f62e3f7d93219, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &2653282277529199913
 PrefabInstance:
   m_ObjectHideFlags: 0
