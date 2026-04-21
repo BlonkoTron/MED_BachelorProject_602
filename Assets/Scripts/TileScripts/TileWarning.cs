@@ -20,7 +20,7 @@ public class TileWarning : MonoBehaviour
             animator.SetTrigger("PlayWarning");
         }
         
-        // Destroy after animation duration
+        // Destroy THIS warning object (not the tile) after animation duration
         Destroy(gameObject, animationDuration);
     }
     
