@@ -112,7 +112,7 @@ public class InteractionManager : MonoBehaviour
 
                     if (lastClickedTile != null)
                     {
-                        closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
+
                         lastClickedTile = null;
                     }
                 }
@@ -125,7 +125,6 @@ public class InteractionManager : MonoBehaviour
 
                     if (lastClickedTile != null)
                     {
-                        closeUI.RemoveListener(lastClickedTile.GetComponent<TileChanger>().CloseUI);
                         lastClickedTile = null;
                     }
 
