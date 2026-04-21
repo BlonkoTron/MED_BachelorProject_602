@@ -12,6 +12,8 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     private Event_Manager EventMan;
 
+    public TileChanger TileChange;
+
     public bool Test_Triggerevent = false;
 
     private void Awake()
@@ -22,6 +24,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
     private void Start()
     {
         EventMan = Event_Manager.instance;
+        
     }
 
     private void Update()
@@ -35,6 +38,13 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
     public void TriggerRandomEvent()
     {
+        TileChanger[] allTiles = FindObjectsByType<TileChanger>(FindObjectsSortMode.None);
+
+        foreach (TileChanger tile in allTiles)
+        {
+            tile.CloseUI();
+        }
+
         if (allEvents.Count == 0) return;
 
         currentEvent = allEvents[Random.Range(0, allEvents.Count)];
