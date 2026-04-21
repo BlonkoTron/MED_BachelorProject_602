@@ -1,4 +1,4 @@
-using FMOD.Studio;
+﻿using FMOD.Studio;
 using FMODUnity;
 using NUnit.Framework.Internal;
 using Unity.VisualScripting;
@@ -34,7 +34,6 @@ public class TileChanger : MonoBehaviour
 
     private void Start()
     {
-
         gameSettings = GameManager.Instance.gameSettings;
         tile = GetComponent<Tile>();
         InteractionManager.Instance.closeUI.AddListener(CloseUI);
@@ -87,23 +86,23 @@ public class TileChanger : MonoBehaviour
     }
     public bool ChangeTile(TileType type)
     {
+        // 🚫 Block if tile type is disabled
+        if (!IsTileTypeEnabled(type))
+        {
+            Debug.Log(type + " is currently disabled!");
+            return false;
+        }
+
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
 
-            // Check if we're changing from a rainforest tile
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
-                // Apply happiness penalty for changing rainforest
                 if (Happiness.Instance != null)
                 {
                     int happinessPenalty = gameSettings.HAPPINESS_PENALTY_RAINFOREST_CHANGE;
                     Happiness.Instance.DecreaseHappiness(happinessPenalty);
-                    Debug.Log($"Rainforest changed - Happiness decreased by {happinessPenalty}");
-                }
-                else
-                {
-                    Debug.LogWarning("Happiness system not found - skipping happiness penalty");
                 }
             }
 
@@ -121,7 +120,7 @@ public class TileChanger : MonoBehaviour
         }
     }
 
-        public int GetTileCost(TileType type)
+    public int GetTileCost(TileType type)
     {
         switch (type)
         {
@@ -156,13 +155,13 @@ public class TileChanger : MonoBehaviour
         switch (type)
         {
             case TileType.Mine:
-                return !gameSettings.DisableMineTiles;
+                return !gameSettings.DisableMineTilesGamesetting;
             case TileType.CowField:
-                return !gameSettings.DisableCowTiles;
+                return !gameSettings.DisableCowTilesGamesetting;
             case TileType.Agroforest:
-                return !gameSettings.DisableAgroTiles;
+                return !gameSettings.DisableAgroTilesGamesetting;
             case TileType.Farm:
-                return !gameSettings.DisableFarmTiles;
+                return !gameSettings.DisableFarmTilesGamesetting;
             default:
                 return true;
         }

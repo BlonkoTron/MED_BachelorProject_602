@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 3113223172525648155}
   - component: {fileID: 7687451009302566650}
   m_Layer: 5
-  m_Name: TileNotAvalibleX
+  m_Name: FarmLockedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 6993095016926570792}
   - component: {fileID: 8563874968737682482}
   m_Layer: 5
-  m_Name: TileNotAvalibleX
+  m_Name: MineLockedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 2351653843799463229}
   - component: {fileID: 603914451695008007}
   m_Layer: 5
-  m_Name: TileNotAvalibleX
+  m_Name: CattleLockedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1348,10 +1348,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   stopfirstsound: 0
-  DisableMineTiles: 0
-  DisableCowTiles: 0
-  DisableAgroTiles: 0
-  DisableFarmTiles: 0
+  mineDisabledImage: {fileID: 1692007663009644892}
+  cowDisabledImage: {fileID: 2751946212725179677}
+  agroDisabledImage: {fileID: 7428976513087882351}
+  farmDisabledImage: {fileID: 1383545437679402187}
 --- !u!114 &1384247732302900432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 2725779002943456661}
   - component: {fileID: 1634017299663314278}
   m_Layer: 5
-  m_Name: TileNotAvalibleX
+  m_Name: AgroLockedImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
