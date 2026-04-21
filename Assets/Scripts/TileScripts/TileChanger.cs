@@ -192,5 +192,10 @@ public class TileChanger : MonoBehaviour
     }
 
 
+    private void OnDestroy()
+    {
+        InteractionManager.Instance.closeUI.RemoveListener(CloseUI);
+    }
+
 }
 
