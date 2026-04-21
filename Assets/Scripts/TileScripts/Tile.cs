@@ -19,7 +19,9 @@ public class Tile : MonoBehaviour
     [SerializeField] private TileType tileType = TileType.Grass;
     [SerializeField] private GameObject addonAttachPoint;
     [SerializeField] private GameObject detailTop;
-    [SerializeField] private GameObject currentAddOn;
+
+    //Public so ForestSwapper can see it (mostly for start of game) D was here
+    [SerializeField] public GameObject currentAddOn;
 
     [Header("Tile Types")]
     [SerializeField] private GameObject barrenAddOnPrefab;

@@ -36,6 +36,7 @@ public class TileChanger : MonoBehaviour
 
         gameSettings = GameManager.Instance.gameSettings;
         tile = GetComponent<Tile>();
+        InteractionManager.Instance.closeUI.AddListener(CloseUI);
 
         UpdateUI();
 
@@ -48,6 +49,7 @@ public class TileChanger : MonoBehaviour
 
     public void OnClick()
     {
+        InteractionManager.Instance.closeUI.Invoke();
         //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
         ClickSFX_Open = Audiomanager.instance.PlaySound(ClickSFX_OpenUI, transform.position);
         if (tile.Type != TileType.Barren) 
@@ -62,26 +64,24 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
-        if (stopfirstsound == true)
+        if (tileUI.activeSelf) 
         {
-            ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+            if (stopfirstsound == true)
+            {
+                ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+            }
+
+            tileUI.GetComponent<Animator>().SetTrigger("Reset");
+
+            tileUI.SetActive(false);
+
+            //Debug.Log(gameObject.name + " Is me and im closing my UI");
         }
-        
-        tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
-        tileUI.SetActive(false);
-
-        //Debug.Log(gameObject.name + " Is me and im closing my UI");
 
     }
     public bool ChangeTile(TileType type)
     {
-        if (!IsTileTypeEnabled(type))
-        {
-            Debug.Log(type + " is disabled!");
-            return false;
-        }
-
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
@@ -194,6 +194,11 @@ public class TileChanger : MonoBehaviour
         UpdateDisabledIcons();
     }
 
+
+    private void OnDestroy()
+    {
+        InteractionManager.Instance.closeUI.RemoveListener(CloseUI);
+    }
 
 }
 
