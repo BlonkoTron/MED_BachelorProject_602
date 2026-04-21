@@ -1121,6 +1121,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   stopfirstsound: 0
+  DisableMineTiles: 0
+  DisableCowTiles: 0
+  DisableAgroTiles: 0
+  DisableFarmTiles: 0
 --- !u!114 &1384247732302900432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1146,7 @@ MonoBehaviour:
   mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
   cowfieldAddOnPrefab: {fileID: 919132149155446097, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
   agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-  rainforestAddOnPrefab: {fileID: 3184952439879516689, guid: cae8e681d4a0eea4a87430c39c41634f, type: 3}
+  rainforestAddOnPrefab: {fileID: 5897402839481660530, guid: 838855dd7e4e5ee48ad70dbc41bca68e, type: 3}
   grasslandsAddOnPrefab: {fileID: 8084324542173367170, guid: 20f1773368052fc45a48fec02a2a25d0, type: 3}
   barrenDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
   farmDetailMat: {fileID: 2100000, guid: 08843e96473651348befa04d0662d8a2, type: 2}
