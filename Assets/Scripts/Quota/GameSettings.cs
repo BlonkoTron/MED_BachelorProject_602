@@ -35,6 +35,10 @@ public class GameSettings : ScriptableObject
     public int COST_AGROFOREST = 0;
     public int COST_NATURAL = 0;
 
+    [Header("Happiness")]
+    [Tooltip("Happiness penalty when changing a rainforest tile to another type")]
+    public int HAPPINESS_PENALTY_RAINFOREST_CHANGE = 2;
+
     [Header("Quota")]
     public int[] quotaAmounts= { 10,20,40,60,100};
 
