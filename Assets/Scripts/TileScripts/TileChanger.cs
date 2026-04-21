@@ -26,6 +26,11 @@ public class TileChanger : MonoBehaviour
 
     public bool stopfirstsound = false;
 
+    public bool DisableMineTiles;
+    public bool DisableCowTiles;
+    public bool DisableAgroTiles;
+    public bool DisableFarmTiles;
+
     private void Start()
     {
 
@@ -75,13 +80,18 @@ public class TileChanger : MonoBehaviour
 
 
     }
-
     public bool ChangeTile(TileType type)
     {
+        if (!IsTileTypeEnabled(type))
+        {
+            Debug.Log(type + " is disabled!");
+            return false;
+        }
+
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
-            
+
             // Check if we're changing from a rainforest tile
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
@@ -97,21 +107,22 @@ public class TileChanger : MonoBehaviour
                     Debug.LogWarning("Happiness system not found - skipping happiness penalty");
                 }
             }
-            
-            tile.SetTileType(type,GetTileCost(type));
+
+            tile.SetTileType(type, GetTileCost(type));
             CloseUI();
             UpdateUI();
             PointSystem.Instance.SpendMoney(GetTileCost(type));
             onTileChanged.Invoke();
             return true;
-        } else
+        }
+        else
         {
             Debug.Log("Can't afford");
             return false;
         }
-
     }
-    public int GetTileCost(TileType type)
+
+        public int GetTileCost(TileType type)
     {
         switch (type)
         {
@@ -141,6 +152,23 @@ public class TileChanger : MonoBehaviour
         }
     }
 
+    private bool IsTileTypeEnabled(TileType type)
+    {
+        switch (type)
+        {
+            case TileType.Mine:
+                return !gameSettings.DisableMineTiles;
+            case TileType.CowField:
+                return !gameSettings.DisableCowTiles;
+            case TileType.Agroforest:
+                return !gameSettings.DisableAgroTiles;
+            case TileType.Farm:
+                return !gameSettings.DisableFarmTiles;
+            default:
+                return true;
+        }
+    }
+
     private void UpdateUI()
     {
         switch (tile.Type)
@@ -165,3 +193,4 @@ public class TileChanger : MonoBehaviour
 
 
 }
+
