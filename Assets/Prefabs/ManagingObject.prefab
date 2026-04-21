@@ -593,13 +593,13 @@ MonoBehaviour:
   lowThreshold: 40
   goodThreshold: 70
   barrenHighThreshold: 0.3
-  barrenHighPenalty: 2
+  barrenHighPenalty: 8
   barrenLowThreshold: 0.1
-  barrenLowPenalty: 1
+  barrenLowPenalty: 4
   naturalHighThreshold: 0.5
-  naturalHighBonus: 2
+  naturalHighBonus: 8
   naturalLowThreshold: 0.3
-  naturalLowBonus: 1
+  naturalLowBonus: 4
   onHappinessChanged:
     m_PersistentCalls:
       m_Calls: []
