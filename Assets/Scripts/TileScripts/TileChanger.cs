@@ -26,10 +26,10 @@ public class TileChanger : MonoBehaviour
 
     public bool stopfirstsound = false;
 
-    public bool DisableMineTiles;
-    public bool DisableCowTiles;
-    public bool DisableAgroTiles;
-    public bool DisableFarmTiles;
+    [SerializeField] private GameObject mineDisabledImage;
+    [SerializeField] private GameObject cowDisabledImage;
+    [SerializeField] private GameObject agroDisabledImage;
+    [SerializeField] private GameObject farmDisabledImage;
 
     private void Start()
     {
@@ -55,9 +55,9 @@ public class TileChanger : MonoBehaviour
 
             tileUI.SetActive(true);
             stopfirstsound = true;
-
         }
 
+        UpdateDisabledIcons();
     }
 
     public void CloseUI()
@@ -163,6 +163,14 @@ public class TileChanger : MonoBehaviour
         }
     }
 
+    private void UpdateDisabledIcons()
+    {
+        mineDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Mine));
+        cowDisabledImage.SetActive(!IsTileTypeEnabled(TileType.CowField));
+        agroDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Agroforest));
+        farmDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Farm));
+    }
+
     private void UpdateUI()
     {
         switch (tile.Type)
@@ -183,6 +191,7 @@ public class TileChanger : MonoBehaviour
                 return;
 
         }
+        UpdateDisabledIcons();
     }
 
 
