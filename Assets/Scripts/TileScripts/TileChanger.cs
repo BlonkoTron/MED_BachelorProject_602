@@ -12,6 +12,7 @@ public class TileChanger : MonoBehaviour
     private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
+    [SerializeField] private Animator tileAnimator;
 
     private EventInstance ClickSFX_Open;
     [SerializeField] private EventReference ClickSFX_OpenUI;
@@ -55,6 +56,8 @@ public class TileChanger : MonoBehaviour
         if (tile.Type != TileType.Barren) 
         {
 
+            tileAnimator.SetBool("Highlighted", true);
+
             tileUI.SetActive(true);
             stopfirstsound = true;
 
@@ -70,6 +73,8 @@ public class TileChanger : MonoBehaviour
             {
                 ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
             }
+
+            tileAnimator.SetBool("Highlighted", false);
 
             tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
