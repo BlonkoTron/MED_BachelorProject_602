@@ -1,8 +1,9 @@
-using Unity.VisualScripting;
-using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
 using NUnit.Framework.Internal;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class TileChanger : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private EventReference ClickSFX_OpenUI;
     private EventInstance ClickSFX_Close;
     [SerializeField] private EventReference ClickSFX_CloseUI;
+
+    [HideInInspector] public UnityEvent onTileChanged = new UnityEvent();
 
     private Tile tile;
 
@@ -76,6 +79,7 @@ public class TileChanger : MonoBehaviour
             CloseUI();
             UpdateUI();
             PointSystem.Instance.SpendMoney(GetTileCost(type));
+            onTileChanged.Invoke();
             return true;
         } else
         {

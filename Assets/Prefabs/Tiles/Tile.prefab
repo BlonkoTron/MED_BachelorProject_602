@@ -1117,6 +1117,10 @@ MonoBehaviour:
       Data3: -771114874
       Data4: -924848983
     Path: event:/ButtonUI_Close
+  onTileChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  stopfirstsound: 0
 --- !u!114 &1384247732302900432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,8 +1148,8 @@ MonoBehaviour:
   farmDetailMat: {fileID: 2100000, guid: 08843e96473651348befa04d0662d8a2, type: 2}
   mineDetailMat: {fileID: 2100000, guid: 4775d1e88e6c69b44815de087c80787e, type: 2}
   cowfieldDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  agroforestDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  rainforestDetailmat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
+  agroforestDetailMat: {fileID: 2100000, guid: e6e6a6e05ec249b44acaa40bc93e5fdf, type: 2}
+  rainforestDetailmat: {fileID: 2100000, guid: 3a5fe7d792609c848b9b1fb4b816ecc7, type: 2}
   grasslandsDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
   currentDegradation: 0
   degradationThreshold: 100

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TileTypeAndAmountUI : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class TileTypeAndAmountUI : MonoBehaviour
 
     public GameSettings gameSettings;
 
+    [HideInInspector] public UnityEvent onTileUIUpdate = new UnityEvent();
+
     private void Awake()
     {
         // Singleton pattern
@@ -35,28 +38,31 @@ public class TileTypeAndAmountUI : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.onGameTick.AddListener(OnGameTick);
+            GameManager.Instance.onGameTick.AddListener(Recalculate);
         }
         else
         {
             Debug.LogWarning("GameManager not found - tile money gain won't update with game ticks");
         }
 
-        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
+        TileChanger[] allTiles = FindObjectsByType<TileChanger>(FindObjectsSortMode.None);
 
-        foreach (Tile tile in allTiles)
+        foreach (TileChanger tile in allTiles)
         {
-           tile.onTileChanged.AddListener(OnGameTick);
+           tile.onTileChanged.AddListener(Recalculate);
         }
 
-        CountTiles();
-        CalculateMoneyGain();
+        Recalculate();
     }
 
-    private void OnGameTick()
+    private void Recalculate()
     {
         CountTiles();
         CalculateMoneyGain();
+
+        onTileUIUpdate.Invoke();
+
+        Debug.Log("Recalculated");
     }
 
     public void CountTiles()
