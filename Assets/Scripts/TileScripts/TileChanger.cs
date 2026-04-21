@@ -87,12 +87,6 @@ public class TileChanger : MonoBehaviour
     }
     public bool ChangeTile(TileType type)
     {
-        if (!IsTileTypeEnabled(type))
-        {
-            Debug.Log(type + " is disabled!");
-            return false;
-        }
-
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);

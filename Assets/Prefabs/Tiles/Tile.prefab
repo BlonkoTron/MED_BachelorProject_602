@@ -1157,6 +1157,7 @@ MonoBehaviour:
   grasslandsDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
   currentDegradation: 0
   degradationThreshold: 100
+  oneTurnWarningPrefab: {fileID: 710066310894013837, guid: 2608ff616570e5947a9150ad1fde241f, type: 3}
   healthyMaterial: {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
   degradedMaterial: {fileID: 2100000, guid: 872dc64a87e4e374990a7109d4369fad, type: 2}
   criticalMaterial: {fileID: 2100000, guid: dd9e518c0d13a2e44a437e0edd459600, type: 2}
