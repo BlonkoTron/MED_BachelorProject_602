@@ -26,9 +26,10 @@ MonoBehaviour:
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
-    tileDestruction: 1
-    tileSpawnMine: 0
-    tileSpawnFarm: 0
+    DisableMineTilesEvent: 1
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
   choice2:
     choiceText: Gain 500 gold
     buttonText: Sell the corn
@@ -40,9 +41,10 @@ MonoBehaviour:
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
-    tileDestruction: 0
-    tileSpawnMine: 0
-    tileSpawnFarm: 0
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
   choice3:
     choiceText: Happiness increase by 10 points
     buttonText: Feed the locals
@@ -54,6 +56,7 @@ MonoBehaviour:
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
-    tileDestruction: 0
-    tileSpawnMine: 0
-    tileSpawnFarm: 0
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0

@@ -28,9 +28,11 @@ public class EventData : ScriptableObject
         public float FarmEfficiencymult;
 
         //TileChanges
-        public bool tileDestruction;
-        public bool tileSpawnMine;
-        public bool tileSpawnFarm;
+        public bool DisableMineTilesEvent;
+        public bool DisableCowTilesEvent;
+        public bool DisableAgroTilesEvent;
+        public bool DisableFarmTilesEvent;
+
     }
 
     public ChoiceData choice1;
@@ -64,5 +66,10 @@ public class EventData : ScriptableObject
         Happiness.Instance.DecreaseHappiness(choice.HappinessDown);
         Happiness.Instance.IncreaseHappiness(choice.HappinessUp);
         GameManager.Instance.StartRound();
+        GameManager.Instance.gameSettings.DisableMineTiles = choice.DisableMineTilesEvent;
+        GameManager.Instance.gameSettings.DisableFarmTiles = choice.DisableFarmTilesEvent;
+        GameManager.Instance.gameSettings.DisableAgroTiles = choice.DisableAgroTilesEvent;
+        GameManager.Instance.gameSettings.DisableCowTiles = choice.DisableCowTilesEvent;
+
     }
 }
