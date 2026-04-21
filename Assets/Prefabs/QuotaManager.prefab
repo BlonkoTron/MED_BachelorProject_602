@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125648a1e1def714d991e5935a25d000, type: 2}
-  m_sharedMaterial: {fileID: 31474984575895679, guid: 125648a1e1def714d991e5935a25d000, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -202,10 +202,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time left
+  m_text: Tid tilbage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125648a1e1def714d991e5935a25d000, type: 2}
-  m_sharedMaterial: {fileID: 31474984575895679, guid: 125648a1e1def714d991e5935a25d000, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 63.522705, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125648a1e1def714d991e5935a25d000, type: 2}
-  m_sharedMaterial: {fileID: 31474984575895679, guid: 125648a1e1def714d991e5935a25d000, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -615,10 +615,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next Quota
+  m_text: "N\xE6ste Kvota"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125648a1e1def714d991e5935a25d000, type: 2}
-  m_sharedMaterial: {fileID: 31474984575895679, guid: 125648a1e1def714d991e5935a25d000, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 101.19861, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
