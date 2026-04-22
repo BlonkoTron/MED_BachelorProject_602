@@ -3,23 +3,38 @@ using UnityEngine;
 public class FeedbackArrow : MonoBehaviour
 {
     [SerializeField] private float hideDelay = 3f; // Time before hiding the arrow
+    [SerializeField] private string positiveAnimationTrigger = "PositiveTrigger";
+    [SerializeField] private string negativeAnimationTrigger = "NegativeTrigger";
     
     private Animator animator;
 
-    void OnEnable()
+    void Awake()
     {
-        // Get the Animator component if not cached
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
-        
-        // Play the animation (assumes there's a trigger or default animation)
+        animator = GetComponent<Animator>();
+    }
+
+    public void PlayPositiveAnimation()
+    {
         if (animator != null)
         {
-            animator.SetTrigger("ArrowAnimation");
+            animator.SetTrigger(positiveAnimationTrigger);
         }
         
+        // Cancel any previous hide invokes
+        CancelInvoke(nameof(HideArrow));
+        // Hide the arrow after the animation duration
+        Invoke(nameof(HideArrow), hideDelay);
+    }
+
+    public void PlayNegativeAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger(negativeAnimationTrigger);
+        }
+        
+        // Cancel any previous hide invokes
+        CancelInvoke(nameof(HideArrow));
         // Hide the arrow after the animation duration
         Invoke(nameof(HideArrow), hideDelay);
     }

@@ -34,6 +34,7 @@ public class HappinessUI : MonoBehaviour
     [SerializeField] private Sprite decreaseArrowSprite;
     
     private Image arrowImage;
+    private FeedbackArrow arrowController;
 
     void Start()
     {
@@ -55,6 +56,7 @@ public class HappinessUI : MonoBehaviour
         if (feedbackArrow != null)
         {
             arrowImage = feedbackArrow.GetComponent<Image>();
+            arrowController = feedbackArrow.GetComponent<FeedbackArrow>();
         }
 
         // Initial UI update
@@ -104,6 +106,11 @@ public class HappinessUI : MonoBehaviour
         {
             arrowImage.sprite = increaseArrowSprite;
             feedbackArrow.SetActive(true);
+            
+            if (arrowController != null)
+            {
+                arrowController.PlayPositiveAnimation();
+            }
         }
         
         Debug.Log($"UI: Happiness increased by {amount}");
@@ -116,6 +123,11 @@ public class HappinessUI : MonoBehaviour
         {
             arrowImage.sprite = decreaseArrowSprite;
             feedbackArrow.SetActive(true);
+            
+            if (arrowController != null)
+            {
+                arrowController.PlayNegativeAnimation();
+            }
         }
         
         Debug.Log($"UI: Happiness decreased by {amount}");
