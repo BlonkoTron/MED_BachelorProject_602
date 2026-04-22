@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Events/Event Data")]
@@ -31,7 +30,7 @@ public class EventData : ScriptableObject
         //TileChanges
         public bool DisableMineTilesEvent;
         public bool DisableCowTilesEvent;
-        public bool DisableAgroTilesEvent; 
+        public bool DisableAgroTilesEvent;
         public bool DisableFarmTilesEvent;
 
     }
@@ -58,44 +57,19 @@ public class EventData : ScriptableObject
     private void ApplyChoice(ChoiceData choice)
     {
         Debug.Log("ApplyChoice called");
-
-        //Money calls
-        int ED_currentmoney = PointSystem.Instance.CurrentMoney;
         PointSystem.Instance.AddMoney(choice.moneyGain);
         PointSystem.Instance.LoseMoney(choice.moneyLoss);
-
-        if (PointSystem.Instance.CurrentMoney > ED_currentmoney)
-        {
-            // plus money
-        }
-        else if (PointSystem.Instance.CurrentMoney < ED_currentmoney)
-        {
-            // minus money
-        }
-        else
-        {
-            // no change
-        }
-
-        //Efficientmultiply calls
         PointSystem.Instance.mineEfficiencyMultiplier = choice.MineEfficiencymult;
         PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
         PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
         PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
-        PointSystem.Instance.UpdateEfficiencyUI();
-
-        //Happiness calls
         Happiness.Instance.DecreaseHappiness(choice.HappinessDown);
         Happiness.Instance.IncreaseHappiness(choice.HappinessUp);
-
-        //Start round
         GameManager.Instance.StartRound();
-
-        //Disable tile
-        GameManager.Instance.gameSettings.DisableMineTilesGamesetting = choice.DisableMineTilesEvent;
-        GameManager.Instance.gameSettings.DisableFarmTilesGamesetting = choice.DisableFarmTilesEvent;
-        GameManager.Instance.gameSettings.DisableAgroTilesGamesetting = choice.DisableAgroTilesEvent;
-        GameManager.Instance.gameSettings.DisableCowTilesGamesetting = choice.DisableCowTilesEvent;
+        GameManager.Instance.gameSettings.DisableMineTiles = choice.DisableMineTilesEvent;
+        GameManager.Instance.gameSettings.DisableFarmTiles = choice.DisableFarmTilesEvent;
+        GameManager.Instance.gameSettings.DisableAgroTiles = choice.DisableAgroTilesEvent;
+        GameManager.Instance.gameSettings.DisableCowTiles = choice.DisableCowTilesEvent;
 
     }
 }
