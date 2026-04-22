@@ -431,6 +431,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+    - target: {fileID: 3529231607482843030, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: decreaseArrowSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c2681c80edebb84ca47adcdfc76785b, type: 3}
+    - target: {fileID: 3529231607482843030, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: increaseArrowSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f16460af9097333448526ad352ba695d, type: 3}
     - target: {fileID: 3740558623999445739, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_fontAsset
       value: 
