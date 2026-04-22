@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string animationName = "ClockSpinning";
     private float secondsLeftAtStart;
 
+    public bool DisableMineTilesGamesetting = false;
+    public bool DisableCowTilesGamesetting = false;
+    public bool DisableAgroTilesGamesetting = false;
+    public bool DisableFarmTilesGamesetting = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
