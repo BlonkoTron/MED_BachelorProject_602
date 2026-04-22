@@ -28,6 +28,14 @@ public class HappinessUI : MonoBehaviour
     [SerializeField] private GameObject warningPanel;
     [SerializeField] private TMP_Text warningText;
 
+    [Header("Feedback Arrows")]
+    [SerializeField] private GameObject feedbackArrow;
+    [SerializeField] private Sprite increaseArrowSprite;
+    [SerializeField] private Sprite decreaseArrowSprite;
+    
+    private Image arrowImage;
+    private FeedbackArrow arrowController;
+
     void Start()
     {
         happiness = Happiness.Instance;
@@ -43,6 +51,13 @@ public class HappinessUI : MonoBehaviour
         happiness.onHappinessIncreased.AddListener(OnHappinessIncreased);
         happiness.onHappinessDecreased.AddListener(OnHappinessDecreased);
         happiness.onHappinessCritical.AddListener(OnHappinessCritical);
+
+        // Get arrow image component
+        if (feedbackArrow != null)
+        {
+            arrowImage = feedbackArrow.GetComponent<Image>();
+            arrowController = feedbackArrow.GetComponent<FeedbackArrow>();
+        }
 
         // Initial UI update
         OnHappinessChanged(happiness.HappinessLevel);
@@ -86,13 +101,35 @@ public class HappinessUI : MonoBehaviour
 
     private void OnHappinessIncreased(int amount)
     {
-        // Optional: Add visual feedback for increase (particle effect, animation, etc.)
+        // Change sprite and activate arrow
+        if (feedbackArrow != null && arrowImage != null && increaseArrowSprite != null)
+        {
+            arrowImage.sprite = increaseArrowSprite;
+            feedbackArrow.SetActive(true);
+            
+            if (arrowController != null)
+            {
+                arrowController.PlayPositiveAnimation();
+            }
+        }
+        
         Debug.Log($"UI: Happiness increased by {amount}");
     }
 
     private void OnHappinessDecreased(int amount)
     {
-        // Optional: Add visual feedback for decrease (shake, flash, etc.)
+        // Change sprite and activate arrow
+        if (feedbackArrow != null && arrowImage != null && decreaseArrowSprite != null)
+        {
+            arrowImage.sprite = decreaseArrowSprite;
+            feedbackArrow.SetActive(true);
+            
+            if (arrowController != null)
+            {
+                arrowController.PlayNegativeAnimation();
+            }
+        }
+        
         Debug.Log($"UI: Happiness decreased by {amount}");
     }
 

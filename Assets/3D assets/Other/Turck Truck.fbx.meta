@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: be4b9d02c02f09e459ac291588a90131
+guid: 480d999ea08d933458889341f09e9fc5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Turck
-    second: {fileID: 2100000, guid: 603275c74f219dd498d5c5f9be0a41f7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

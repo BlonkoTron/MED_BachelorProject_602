@@ -22,10 +22,17 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 10
+<<<<<<< HEAD
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
+=======
+    MineEfficiencymult: 2
+    CowEfficiencymult: 0.5
+    AggroForestEfficiencymult: 2
+    FarmEfficiencymult: 0.5
+>>>>>>> parent of b748493 (Merge branch 'main' into AlexRestored)
     DisableMineTilesEvent: 1
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0

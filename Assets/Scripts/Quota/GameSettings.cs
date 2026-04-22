@@ -42,12 +42,4 @@ public class GameSettings : ScriptableObject
     [Header("Quota")]
     public int[] quotaAmounts= { 10,20,40,60,100};
 
-    [Header("Tile Lock")]
-    public bool DisableMineTilesGamesetting = false;
-    public bool DisableCowTilesGamesetting = false;
-    public bool DisableAgroTilesGamesetting = false;
-    public bool DisableFarmTilesGamesetting = false;
-
-
-
 }

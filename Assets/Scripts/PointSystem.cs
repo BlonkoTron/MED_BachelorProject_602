@@ -21,6 +21,8 @@ public class PointSystem : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneySpent;
     [HideInInspector] public UnityEvent<int> onMoneyLost;
 
+    private GameSettings gameSettings;
+
     [SerializeField] private GameObject farm2xUI;
     [SerializeField] private GameObject farm05xUI;
 
@@ -34,8 +36,6 @@ public class PointSystem : MonoBehaviour
     [SerializeField] private GameObject agro05xUI;
 
     [SerializeField] private GameObject efficiencyUI;
-
-    private GameSettings gameSettings;
 
     private void Awake()
     {
@@ -135,6 +135,7 @@ public class PointSystem : MonoBehaviour
         goodUI.SetActive(isGood);
         badUI.SetActive(isBad);
     }
+
 
     void OnDestroy()
     {
