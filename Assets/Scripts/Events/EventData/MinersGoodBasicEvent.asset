@@ -22,19 +22,19 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 10
-    MineEfficiencymult: 0.5
-    CowEfficiencymult: 2
-    AggroForestEfficiencymult: 0.5
-    FarmEfficiencymult: 2
-    DisableMineTilesEvent: 1
+    MineEfficiencymult: 2
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Gain 500 gold
+    choiceText: Gain 250 gold
     buttonText: SELL SELL SELL
-    moneyLoss: 500
-    moneyGain: 0
+    moneyLoss: 0
+    moneyGain: 250
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1

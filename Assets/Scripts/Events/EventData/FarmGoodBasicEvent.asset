@@ -21,20 +21,20 @@ MonoBehaviour:
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 10
-    MineEfficiencymult: 0.5
+    HappinessDown: 0
+    MineEfficiencymult: 1
     CowEfficiencymult: 2
-    AggroForestEfficiencymult: 0.5
+    AggroForestEfficiencymult: 1
     FarmEfficiencymult: 2
-    DisableMineTilesEvent: 1
+    DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Gain 500 gold
+    choiceText: Gain 150 gold
     buttonText: Sell the corn
-    moneyLoss: 500
-    moneyGain: 0
+    moneyLoss: 0
+    moneyGain: 150
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
