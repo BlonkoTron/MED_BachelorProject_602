@@ -1,7 +1,9 @@
-using FMOD.Studio;
+﻿using FMOD.Studio;
 using FMODUnity;
 using NUnit.Framework.Internal;
+using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +14,9 @@ public class TileChanger : MonoBehaviour
     private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
+    [SerializeField] private GameObject dustPrefab;
+
+    private Animator topAnimator;
 
     private EventInstance ClickSFX_Open;
     [SerializeField] private EventReference ClickSFX_OpenUI;
@@ -25,20 +30,25 @@ public class TileChanger : MonoBehaviour
     private GameSettings gameSettings;
 
     public bool stopfirstsound = false;
+    private bool hasWaited;
 
-    public bool DisableMineTiles;
-    public bool DisableCowTiles;
-    public bool DisableAgroTiles;
-    public bool DisableFarmTiles;
+
+    [SerializeField] private GameObject mineDisabledImage;
+    [SerializeField] private GameObject cowDisabledImage;
+    [SerializeField] private GameObject agroDisabledImage;
+    [SerializeField] private GameObject farmDisabledImage;
+
+    private TileType tileType_toChange;
 
     private void Start()
     {
-
         gameSettings = GameManager.Instance.gameSettings;
         tile = GetComponent<Tile>();
         InteractionManager.Instance.closeUI.AddListener(CloseUI);
 
         UpdateUI();
+
+        topAnimator = GetComponent<Animator>();
 
         if (tileUI != null)
         {
@@ -55,11 +65,13 @@ public class TileChanger : MonoBehaviour
         if (tile.Type != TileType.Barren) 
         {
 
+            topAnimator.SetBool("Highlighted", true);
+
             tileUI.SetActive(true);
             stopfirstsound = true;
-
         }
 
+        UpdateDisabledIcons();
     }
 
     public void CloseUI()
@@ -70,6 +82,8 @@ public class TileChanger : MonoBehaviour
             {
                 ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
             }
+
+            topAnimator.SetBool("Highlighted", false);
 
             tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
@@ -82,29 +96,34 @@ public class TileChanger : MonoBehaviour
     }
     public bool ChangeTile(TileType type)
     {
+        // 🚫 Block if tile type is disabled
+        if (!IsTileTypeEnabled(type))
+        {
+            Debug.Log(type + " is currently disabled!");
+            return false;
+        }
+
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
 
-            // Check if we're changing from a rainforest tile
+           
+
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
-                // Apply happiness penalty for changing rainforest
                 if (Happiness.Instance != null)
                 {
                     int happinessPenalty = gameSettings.HAPPINESS_PENALTY_RAINFOREST_CHANGE;
                     Happiness.Instance.DecreaseHappiness(happinessPenalty);
-                    Debug.Log($"Rainforest changed - Happiness decreased by {happinessPenalty}");
-                }
-                else
-                {
-                    Debug.LogWarning("Happiness system not found - skipping happiness penalty");
                 }
             }
-
-            tile.SetTileType(type, GetTileCost(type));
+            
             CloseUI();
-            UpdateUI();
+
+            tileType_toChange = type;
+
+            topAnimator.SetTrigger("Swap");
+
             PointSystem.Instance.SpendMoney(GetTileCost(type));
             onTileChanged.Invoke();
             return true;
@@ -116,7 +135,7 @@ public class TileChanger : MonoBehaviour
         }
     }
 
-        public int GetTileCost(TileType type)
+    public int GetTileCost(TileType type)
     {
         switch (type)
         {
@@ -151,16 +170,24 @@ public class TileChanger : MonoBehaviour
         switch (type)
         {
             case TileType.Mine:
-                return !gameSettings.DisableMineTiles;
+                return !gameSettings.DisableMineTilesGamesetting;
             case TileType.CowField:
-                return !gameSettings.DisableCowTiles;
+                return !gameSettings.DisableCowTilesGamesetting;
             case TileType.Agroforest:
-                return !gameSettings.DisableAgroTiles;
+                return !gameSettings.DisableAgroTilesGamesetting;
             case TileType.Farm:
-                return !gameSettings.DisableFarmTiles;
+                return !gameSettings.DisableFarmTilesGamesetting;
             default:
                 return true;
         }
+    }
+
+    private void UpdateDisabledIcons()
+    {
+        mineDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Mine));
+        cowDisabledImage.SetActive(!IsTileTypeEnabled(TileType.CowField));
+        agroDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Agroforest));
+        farmDisabledImage.SetActive(!IsTileTypeEnabled(TileType.Farm));
     }
 
     private void UpdateUI()
@@ -183,8 +210,21 @@ public class TileChanger : MonoBehaviour
                 return;
 
         }
+        UpdateDisabledIcons();
     }
 
+    public void SwapMethod()
+    {
+        tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
+        UpdateUI();
+
+    }
+
+    public void CreateDust()
+    {
+        Debug.Log("BABOOM");
+        Instantiate(dustPrefab, transform);
+    }
 
     private void OnDestroy()
     {
