@@ -14,7 +14,9 @@ public class TileChanger : MonoBehaviour
     private GameObject tileUI;
     [SerializeField] private GameObject blankTileUI;
     [SerializeField] private GameObject buildingUI;
-    [SerializeField] private Animator tileAnimator;
+    [SerializeField] private GameObject dustPrefab;
+
+    private Animator topAnimator;
 
     private EventInstance ClickSFX_Open;
     [SerializeField] private EventReference ClickSFX_OpenUI;
@@ -36,6 +38,8 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private GameObject agroDisabledImage;
     [SerializeField] private GameObject farmDisabledImage;
 
+    private TileType tileType_toChange;
+
     private void Start()
     {
         gameSettings = GameManager.Instance.gameSettings;
@@ -43,6 +47,8 @@ public class TileChanger : MonoBehaviour
         InteractionManager.Instance.closeUI.AddListener(CloseUI);
 
         UpdateUI();
+
+        topAnimator = GetComponent<Animator>();
 
         if (tileUI != null)
         {
@@ -59,7 +65,7 @@ public class TileChanger : MonoBehaviour
         if (tile.Type != TileType.Barren) 
         {
 
-            tileAnimator.SetBool("Highlighted", true);
+            topAnimator.SetBool("Highlighted", true);
 
             tileUI.SetActive(true);
             stopfirstsound = true;
@@ -77,7 +83,7 @@ public class TileChanger : MonoBehaviour
                 ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
             }
 
-            tileAnimator.SetBool("Highlighted", false);
+            topAnimator.SetBool("Highlighted", false);
 
             tileUI.GetComponent<Animator>().SetTrigger("Reset");
 
@@ -101,7 +107,7 @@ public class TileChanger : MonoBehaviour
         {
             Debug.Log("Changing tile to " + type);
 
-            tileAnimator.SetTrigger("Swap");
+           
 
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
@@ -111,13 +117,12 @@ public class TileChanger : MonoBehaviour
                     Happiness.Instance.DecreaseHappiness(happinessPenalty);
                 }
             }
-
-            SwapWait(0.2f, type);
-            tile.SetTileType(type, GetTileCost(type));
-            UpdateUI();
-
-
+            
             CloseUI();
+
+            tileType_toChange = type;
+
+            topAnimator.SetTrigger("Swap");
 
             PointSystem.Instance.SpendMoney(GetTileCost(type));
             onTileChanged.Invoke();
@@ -208,13 +213,17 @@ public class TileChanger : MonoBehaviour
         UpdateDisabledIcons();
     }
 
-    private IEnumerator SwapWait(float time, TileType type)
+    public void SwapMethod()
     {
+        tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
+        UpdateUI();
 
-        yield return new WaitForSeconds(time);
+    }
 
-        // This will work because the Manager stays active!
-       
+    public void CreateDust()
+    {
+        Debug.Log("BABOOM");
+        Instantiate(dustPrefab, transform);
     }
 
     private void OnDestroy()
