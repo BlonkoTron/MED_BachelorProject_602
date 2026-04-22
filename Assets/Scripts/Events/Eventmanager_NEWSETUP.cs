@@ -84,7 +84,8 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
         PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
         PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
-        PointSystem.Instance.UpdateEfficiencyUI();
+
+        //PointSystem.Instance.UpdateEfficiencyUI();
 
         //Happiness calls
         Happiness.Instance.DecreaseHappiness(choice.HappinessDown);
