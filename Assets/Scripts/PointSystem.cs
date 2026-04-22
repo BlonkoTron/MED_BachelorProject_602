@@ -21,6 +21,8 @@ public class PointSystem : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneySpent;
     [HideInInspector] public UnityEvent<int> onMoneyLost;
 
+    [SerializeField] private GameObject efficiencyUI;
+
     private GameSettings gameSettings;
 
     private void Awake()
@@ -104,16 +106,36 @@ public class PointSystem : MonoBehaviour
                 return 1;
         }
     }
-    private void CheckMultiplierTrigger(TileType type, float value)
+
+    public void SetEfficiencyMultiplier(TileType type, float value)
     {
-        if (value == 0.5f)
+        switch (type)
         {
-            
+            case TileType.Farm:
+                farmEfficiencyMultiplier = value;
+                break;
+            case TileType.CowField:
+                cowfieldEfficiencyMultiplier = value;
+                break;
+            case TileType.Mine:
+                mineEfficiencyMultiplier = value;
+                break;
+            case TileType.Agroforest:
+                agroforestEfficiencyMultiplier = value;
+                break;
         }
-        else if (value == 2f)
-        {
-            
-        }
+        UpdateEfficiencyUI();
+    }
+
+    private void UpdateEfficiencyUI()
+    {
+        bool shouldShow =
+            farmEfficiencyMultiplier == 0.5f || farmEfficiencyMultiplier == 2f ||
+            mineEfficiencyMultiplier == 0.5f || mineEfficiencyMultiplier == 2f ||
+            cowfieldEfficiencyMultiplier == 0.5f || cowfieldEfficiencyMultiplier == 2f ||
+            agroforestEfficiencyMultiplier == 0.5f || agroforestEfficiencyMultiplier == 2f;
+
+        efficiencyUI.SetActive(shouldShow);
     }
 
     void OnDestroy()
