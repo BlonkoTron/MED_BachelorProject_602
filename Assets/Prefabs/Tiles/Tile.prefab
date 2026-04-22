@@ -1369,10 +1369,10 @@ MonoBehaviour:
   addonAttachPoint: {fileID: 4950460000197265117}
   detailTop: {fileID: 8957944785909826674}
   currentAddOn: {fileID: 0}
-  barrenAddOnPrefab: {fileID: 919132149155446097, guid: 33088000d242cbf43b44ab5e2a68d620, type: 3}
-  farmAddOnPrefab: {fileID: 919132149155446097, guid: 99095af4a6acd1b489ceace02023aa20, type: 3}
+  barrenAddOnPrefab: {fileID: 6025762409685305313, guid: ff00ed5b4dcd657428eb2163d367030b, type: 3}
+  farmAddOnPrefab: {fileID: 2847884612024327366, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
   mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
-  cowfieldAddOnPrefab: {fileID: 919132149155446097, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+  cowfieldAddOnPrefab: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
   agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
   rainforestAddOnPrefab: {fileID: 5897402839481660530, guid: 838855dd7e4e5ee48ad70dbc41bca68e, type: 3}
   grasslandsAddOnPrefab: {fileID: 8084324542173367170, guid: 20f1773368052fc45a48fec02a2a25d0, type: 3}
