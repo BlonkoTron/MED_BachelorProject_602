@@ -104,6 +104,17 @@ public class PointSystem : MonoBehaviour
                 return 1;
         }
     }
+    private void CheckMultiplierTrigger(TileType type, float value)
+    {
+        if (value == 0.5f)
+        {
+            
+        }
+        else if (value == 2f)
+        {
+            
+        }
+    }
 
     void OnDestroy()
     {
