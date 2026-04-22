@@ -23,9 +23,9 @@ MonoBehaviour:
     HappinessUp: 0
     HappinessDown: 10
     MineEfficiencymult: 2
-    CowEfficiencymult: 1
-    AggroForestEfficiencymult: 1
-    FarmEfficiencymult: 1
+    CowEfficiencymult: 0.5
+    AggroForestEfficiencymult: 2
+    FarmEfficiencymult: 0.5
     DisableMineTilesEvent: 1
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
