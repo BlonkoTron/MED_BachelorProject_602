@@ -62,7 +62,7 @@ public class Tile : MonoBehaviour
     // Event that broadcasts when money is earned
     [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
 
-
+    [SerializeField] private float warningHeight = 2f; // Height of the warning animation
     private Renderer tileRenderer;
 
     // Tile Properties
@@ -251,11 +251,16 @@ public class Tile : MonoBehaviour
         // Check if next turn will make it barren (before applying degradation)
         if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren)
         {
-            float nextDegradation = currentDegradation + GetDegradationRate();
-            if (nextDegradation >= degradationThreshold && GetDegradationRate() > 0)
+            // Check if it will be barren in 2 turns (i.e., 1 turn til barren)
+            float degradationAfterNextTurn = currentDegradation + (2 * GetDegradationRate());
+            if (degradationAfterNextTurn >= degradationThreshold && GetDegradationRate() > 0)
             {
                 // Instantiate warning object
-                Instantiate(oneTurnWarningPrefab, transform);
+                var warning = Instantiate(oneTurnWarningPrefab);
+                warning.transform.SetParent(transform);
+                warning.transform.localPosition = Vector3.up * warningHeight;
+                warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
+                warning.transform.localScale = Vector3.one;
                 hasSpawnedWarning = true;
             }
         }
