@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class TileTypeAndAmountUI : MonoBehaviour
 {
@@ -18,8 +19,22 @@ public class TileTypeAndAmountUI : MonoBehaviour
     public float mineMoneyGain;
 
     public GameSettings gameSettings;
+    public GradientColor gradientColor;
+    public TMP_Text percentageText;
 
     [HideInInspector] public UnityEvent onTileUIUpdate = new UnityEvent();
+
+    public int rainforestScore;
+    public float rainforestScorePercent;
+
+
+    private int rainforestTileScore = 3;
+    private int agroforestTileScore = 2;
+    private int farmTileScore = 0;
+    private int pastureTileScore = -1;
+    private int grassTileScore = 1;
+    private int barrenTileScore = -3;
+    private int mineTileScore = -2;
 
     private void Awake()
     {
@@ -61,8 +76,6 @@ public class TileTypeAndAmountUI : MonoBehaviour
         CalculateMoneyGain();
 
         onTileUIUpdate.Invoke();
-
-        Debug.Log("Recalculated");
     }
 
     public void CountTiles()
@@ -79,6 +92,7 @@ public class TileTypeAndAmountUI : MonoBehaviour
         rainforestTiles = 0;
         barrenTiles = 0;
 
+        rainforestScore = 0;
 
         foreach (Tile tile in allTiles)
         {
@@ -86,27 +100,44 @@ public class TileTypeAndAmountUI : MonoBehaviour
             {
                 case TileType.Mine:
                     mineTiles++;
+                    rainforestScore += mineTileScore;
                     break;
                 case TileType.CowField:
                     pastureTiles++;
+                    rainforestScore += pastureTileScore;
                     break;
                 case TileType.Agroforest:
                     agroforestTiles++;
+                    rainforestScore += agroforestTileScore;
                     break;
                 case TileType.Farm:
                     farmTiles++;
+                    rainforestScore += farmTileScore;
                     break;
                 case TileType.Grass:
                     grassTiles++;
+                    rainforestScore += grassTileScore;
                     break;
                 case TileType.Rainforest:
                     rainforestTiles++;
+                    rainforestScore += rainforestTileScore;
                     break;
                 case TileType.Barren:
                     barrenTiles++;
+                    rainforestScore += barrenTileScore;
                     break;
             }
         }
+
+        int totalTiles = allTiles.Length;
+
+        int maxRainforestScore = totalTiles * rainforestTileScore;
+        int minRainforestScore = totalTiles * barrenTileScore;
+
+        rainforestScorePercent = (float)(rainforestScore - minRainforestScore) / (maxRainforestScore - minRainforestScore)*100;
+        gradientColor.SetValue(rainforestScorePercent);
+        percentageText.text = rainforestScorePercent.ToString("F1") + "%";
+        Debug.Log(rainforestScorePercent);
     }
 
     public void CalculateMoneyGain()
@@ -116,4 +147,7 @@ public class TileTypeAndAmountUI : MonoBehaviour
         pastureMoneyGain = pastureTiles * gameSettings.MONEY_COW_FIELD;
         mineMoneyGain = mineTiles * gameSettings.MONEY_MINE;
     }
+
+
+
 }

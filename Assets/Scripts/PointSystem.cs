@@ -21,20 +21,6 @@ public class PointSystem : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneySpent;
     [HideInInspector] public UnityEvent<int> onMoneyLost;
 
-    [SerializeField] private GameObject farm2xUI;
-    [SerializeField] private GameObject farm05xUI;
-
-    [SerializeField] private GameObject mine2xUI;
-    [SerializeField] private GameObject mine05xUI;
-
-    [SerializeField] private GameObject cow2xUI;
-    [SerializeField] private GameObject cow05xUI;
-
-    [SerializeField] private GameObject agro2xUI;
-    [SerializeField] private GameObject agro05xUI;
-
-    [SerializeField] private GameObject efficiencyUI;
-
     private GameSettings gameSettings;
 
     private void Awake()
@@ -117,23 +103,6 @@ public class PointSystem : MonoBehaviour
             default:
                 return 1;
         }
-    }
-
-    public void UpdateEfficiencyUI()
-    {
-        UpdateUIForType(TileType.Farm, farmEfficiencyMultiplier, farm2xUI, farm05xUI);
-        UpdateUIForType(TileType.Mine, mineEfficiencyMultiplier, mine2xUI, mine05xUI);
-        UpdateUIForType(TileType.CowField, cowfieldEfficiencyMultiplier, cow2xUI, cow05xUI);
-        UpdateUIForType(TileType.Agroforest, agroforestEfficiencyMultiplier, agro2xUI, agro05xUI);
-    }
-
-    private void UpdateUIForType(TileType type, float multiplier, GameObject goodUI, GameObject badUI)
-    {
-        bool isGood = Mathf.Approximately(multiplier, 2f);
-        bool isBad = Mathf.Approximately(multiplier, 0.5f);
-
-        goodUI.SetActive(isGood);
-        badUI.SetActive(isBad);
     }
 
     void OnDestroy()
