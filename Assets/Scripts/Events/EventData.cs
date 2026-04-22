@@ -31,7 +31,7 @@ public class EventData : ScriptableObject
         //TileChanges
         public bool DisableMineTilesEvent;
         public bool DisableCowTilesEvent;
-        public bool DisableAgroTilesEvent;
+        public bool DisableAgroTilesEvent; 
         public bool DisableFarmTilesEvent;
 
     }
@@ -82,6 +82,7 @@ public class EventData : ScriptableObject
         PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
         PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
         PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
+        PointSystem.Instance.UpdateEfficiencyUI();
 
         //Happiness calls
         Happiness.Instance.DecreaseHappiness(choice.HappinessDown);

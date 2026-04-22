@@ -21,6 +21,18 @@ public class PointSystem : MonoBehaviour
     [HideInInspector] public UnityEvent<int> onMoneySpent;
     [HideInInspector] public UnityEvent<int> onMoneyLost;
 
+    [SerializeField] private GameObject farm2xUI;
+    [SerializeField] private GameObject farm05xUI;
+
+    [SerializeField] private GameObject mine2xUI;
+    [SerializeField] private GameObject mine05xUI;
+
+    [SerializeField] private GameObject cow2xUI;
+    [SerializeField] private GameObject cow05xUI;
+
+    [SerializeField] private GameObject agro2xUI;
+    [SerializeField] private GameObject agro05xUI;
+
     [SerializeField] private GameObject efficiencyUI;
 
     private GameSettings gameSettings;
@@ -107,35 +119,21 @@ public class PointSystem : MonoBehaviour
         }
     }
 
-    public void SetEfficiencyMultiplier(TileType type, float value)
+    public void UpdateEfficiencyUI()
     {
-        switch (type)
-        {
-            case TileType.Farm:
-                farmEfficiencyMultiplier = value;
-                break;
-            case TileType.CowField:
-                cowfieldEfficiencyMultiplier = value;
-                break;
-            case TileType.Mine:
-                mineEfficiencyMultiplier = value;
-                break;
-            case TileType.Agroforest:
-                agroforestEfficiencyMultiplier = value;
-                break;
-        }
-        UpdateEfficiencyUI();
+        UpdateUIForType(TileType.Farm, farmEfficiencyMultiplier, farm2xUI, farm05xUI);
+        UpdateUIForType(TileType.Mine, mineEfficiencyMultiplier, mine2xUI, mine05xUI);
+        UpdateUIForType(TileType.CowField, cowfieldEfficiencyMultiplier, cow2xUI, cow05xUI);
+        UpdateUIForType(TileType.Agroforest, agroforestEfficiencyMultiplier, agro2xUI, agro05xUI);
     }
 
-    private void UpdateEfficiencyUI()
+    private void UpdateUIForType(TileType type, float multiplier, GameObject goodUI, GameObject badUI)
     {
-        bool shouldShow =
-            farmEfficiencyMultiplier == 0.5f || farmEfficiencyMultiplier == 2f ||
-            mineEfficiencyMultiplier == 0.5f || mineEfficiencyMultiplier == 2f ||
-            cowfieldEfficiencyMultiplier == 0.5f || cowfieldEfficiencyMultiplier == 2f ||
-            agroforestEfficiencyMultiplier == 0.5f || agroforestEfficiencyMultiplier == 2f;
+        bool isGood = Mathf.Approximately(multiplier, 2f);
+        bool isBad = Mathf.Approximately(multiplier, 0.5f);
 
-        efficiencyUI.SetActive(shouldShow);
+        goodUI.SetActive(isGood);
+        badUI.SetActive(isBad);
     }
 
     void OnDestroy()
