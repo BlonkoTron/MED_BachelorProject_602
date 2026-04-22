@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Events/Event Data")]
@@ -41,35 +42,18 @@ public class EventData : ScriptableObject
 
     public void choice1_Setup()
     {
-        ApplyChoice(choice1);
+        Eventmanager_NEWSETUP.instance.ApplyChoice(choice1);
     }
 
     public void choice2_Setup()
     {
-        ApplyChoice(choice2);
+        Eventmanager_NEWSETUP.instance.ApplyChoice(choice2);
     }
 
     public void choice3_Setup()
     {
-        ApplyChoice(choice3);
+        Eventmanager_NEWSETUP.instance.ApplyChoice(choice3);
     }
 
-    private void ApplyChoice(ChoiceData choice)
-    {
-        Debug.Log("ApplyChoice called");
-        PointSystem.Instance.AddMoney(choice.moneyGain);
-        PointSystem.Instance.LoseMoney(choice.moneyLoss);
-        PointSystem.Instance.mineEfficiencyMultiplier = choice.MineEfficiencymult;
-        PointSystem.Instance.cowfieldEfficiencyMultiplier = choice.CowEfficiencymult;
-        PointSystem.Instance.agroforestEfficiencyMultiplier = choice.AggroForestEfficiencymult;
-        PointSystem.Instance.farmEfficiencyMultiplier = choice.FarmEfficiencymult;
-        Happiness.Instance.DecreaseHappiness(choice.HappinessDown);
-        Happiness.Instance.IncreaseHappiness(choice.HappinessUp);
-        GameManager.Instance.StartRound();
-        GameManager.Instance.gameSettings.DisableMineTilesGamesetting = choice.DisableMineTilesEvent;
-        GameManager.Instance.gameSettings.DisableFarmTilesGamesetting = choice.DisableFarmTilesEvent;
-        GameManager.Instance.gameSettings.DisableAgroTilesGamesetting = choice.DisableAgroTilesEvent;
-        GameManager.Instance.gameSettings.DisableCowTilesGamesetting = choice.DisableCowTilesEvent;
 
-    }
 }
