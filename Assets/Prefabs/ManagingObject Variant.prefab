@@ -709,11 +709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834497696384637501, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -630
+      value: -683
       objectReference: {fileID: 0}
     - target: {fileID: 3834497696384637501, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -506.361
+      value: -480
       objectReference: {fileID: 0}
     - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: gradientColor
