@@ -1211,6 +1211,7 @@ GameObject:
   - component: {fileID: 1975924573931977833}
   - component: {fileID: 6185234511052565292}
   - component: {fileID: 1384247732302900432}
+  - component: {fileID: 831362033068281181}
   m_Layer: 3
   m_Name: Top
   m_TagString: Untagged
@@ -1329,7 +1330,7 @@ MonoBehaviour:
   highlightObj: {fileID: 5939521722586337789}
   blankTileUI: {fileID: 1931124000218102901}
   buildingUI: {fileID: 5449687786812584257}
-  tileAnimator: {fileID: 8604289627908459397}
+  dustPrefab: {fileID: 8052690634479869283, guid: 2bd84bad354325d47a549420ba600ebd, type: 3}
   ClickSFX_OpenUI:
     Guid:
       Data1: -1024100354
@@ -1395,6 +1396,28 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
+--- !u!95 &831362033068281181
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010925924614957380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a29f5eccce898344cb6dd3141f075b29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3080089607773291825
 GameObject:
   m_ObjectHideFlags: 0
