@@ -170,13 +170,13 @@ public class TileChanger : MonoBehaviour
         switch (type)
         {
             case TileType.Mine:
-                return !GameManager.Instance.DisableMineTilesGamesetting;
+                return !gameSettings.DisableMineTilesGamesetting;
             case TileType.CowField:
-                return !GameManager.Instance.DisableCowTilesGamesetting;
+                return !gameSettings.DisableCowTilesGamesetting;
             case TileType.Agroforest:
-                return !GameManager.Instance.DisableAgroTilesGamesetting;
+                return !gameSettings.DisableAgroTilesGamesetting;
             case TileType.Farm:
-                return !GameManager.Instance.DisableFarmTilesGamesetting;
+                return !gameSettings.DisableFarmTilesGamesetting;
             default:
                 return true;
         }

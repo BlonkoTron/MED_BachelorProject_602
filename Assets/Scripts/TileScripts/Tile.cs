@@ -44,8 +44,6 @@ public class Tile : MonoBehaviour
     [Header("Degradation")]
     [SerializeField] private float currentDegradation = 0f;
     [SerializeField] private float degradationThreshold = 100f;
-    [SerializeField] private GameObject oneTurnWarningPrefab; // Object to spawn when 1 turn til barren
-    private bool hasSpawnedWarning = false; // Track if warning was already spawned
 
     [Header("Materials")]
     [SerializeField] private Material healthyMaterial;
@@ -62,7 +60,7 @@ public class Tile : MonoBehaviour
     // Event that broadcasts when money is earned
     [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
 
-    [SerializeField] private float warningHeight = 2f; // Height of the warning animation
+
     private Renderer tileRenderer;
 
     // Tile Properties
@@ -89,9 +87,6 @@ public class Tile : MonoBehaviour
         if (newType == tileType) return;
         tileType = newType;
         
-        // Reset warning flag when tile type changes
-        hasSpawnedWarning = false;
-        
         UpdateMaterial();
         UpdateAddonPrefab(newType);
         UpdateDetailMaterial(newType);
@@ -102,9 +97,6 @@ public class Tile : MonoBehaviour
     {
         if (newType == tileType) return;
         tileType = newType;
-
-        // Reset warning flag when tile type changes
-        hasSpawnedWarning = false;
 
         UpdateMaterial();
         UpdateAddonPrefab(newType);
@@ -248,23 +240,6 @@ public class Tile : MonoBehaviour
     {   
         int moneyEarned = GetMoneyPerTick();
         
-        // Check if next turn will make it barren (before applying degradation)
-        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren)
-        {
-            // Check if it will be barren in 2 turns (i.e., 1 turn til barren)
-            float degradationAfterNextTurn = currentDegradation + (2 * GetDegradationRate());
-            if (degradationAfterNextTurn >= degradationThreshold && GetDegradationRate() > 0)
-            {
-                // Instantiate warning object
-                var warning = Instantiate(oneTurnWarningPrefab);
-                warning.transform.SetParent(transform);
-                warning.transform.localPosition = Vector3.up * warningHeight;
-                warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
-                warning.transform.localScale = Vector3.one;
-                hasSpawnedWarning = true;
-            }
-        }
-        
         // Apply degradation
         currentDegradation += GetDegradationRate();
         // Check if tile should become barren
@@ -369,11 +344,5 @@ public class Tile : MonoBehaviour
         }
         
         return info;
-    }
-
-    // Public method to reset warning flag (called by TileWarning when destroyed)
-    public void ResetWarningFlag()
-    {
-        hasSpawnedWarning = false;
     }
 }
