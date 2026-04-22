@@ -31,7 +31,7 @@ public class GradientColor : MonoBehaviour
 
         Color color = gradient.Evaluate(t);
 
-        img.color = color;
-        // sr.color = color;
+        //img.color = color;
+        //sr.color = color;
     }
 }
