@@ -25,8 +25,8 @@ MonoBehaviour:
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
-    FarmEfficiencymult: 1
-    DisableMineTilesEvent: 1
+    FarmEfficiencymult: 0.5
+    DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
@@ -59,4 +59,4 @@ MonoBehaviour:
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
-    DisableFarmTilesEvent: 0
+    DisableFarmTilesEvent: 1
