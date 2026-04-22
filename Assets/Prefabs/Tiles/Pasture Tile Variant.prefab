@@ -56,8 +56,18 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
 --- !u!4 &1678325073308773820 stripped
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
+--- !u!1 &6323358677647084556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
+  m_PrefabInstance: {fileID: 6431815323277466221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6668359465139017398 stripped
+>>>>>>> Stashed changes
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
   m_PrefabInstance: {fileID: 1207002901362117207}
@@ -76,9 +86,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1384247732302900432, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
+<<<<<<< Updated upstream
       propertyPath: currentAddOn
       value: 
       objectReference: {fileID: 2017977050543109894}
+=======
+      propertyPath: tileType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384247732302900432, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
+      propertyPath: currentAddOn
+      value: 
+      objectReference: {fileID: 6323358677647084556}
+>>>>>>> Stashed changes
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.414
