@@ -1,7 +1,9 @@
 ﻿using FMOD.Studio;
 using FMODUnity;
 using NUnit.Framework.Internal;
+using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,6 +28,8 @@ public class TileChanger : MonoBehaviour
     private GameSettings gameSettings;
 
     public bool stopfirstsound = false;
+    private bool hasWaited;
+
 
     [SerializeField] private GameObject mineDisabledImage;
     [SerializeField] private GameObject cowDisabledImage;
@@ -97,6 +101,8 @@ public class TileChanger : MonoBehaviour
         {
             Debug.Log("Changing tile to " + type);
 
+            tileAnimator.SetTrigger("Swap");
+
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
                 if (Happiness.Instance != null)
@@ -106,9 +112,13 @@ public class TileChanger : MonoBehaviour
                 }
             }
 
+            SwapWait(0.2f, type);
             tile.SetTileType(type, GetTileCost(type));
-            CloseUI();
             UpdateUI();
+
+
+            CloseUI();
+
             PointSystem.Instance.SpendMoney(GetTileCost(type));
             onTileChanged.Invoke();
             return true;
@@ -198,6 +208,14 @@ public class TileChanger : MonoBehaviour
         UpdateDisabledIcons();
     }
 
+    private IEnumerator SwapWait(float time, TileType type)
+    {
+
+        yield return new WaitForSeconds(time);
+
+        // This will work because the Manager stays active!
+       
+    }
 
     private void OnDestroy()
     {
