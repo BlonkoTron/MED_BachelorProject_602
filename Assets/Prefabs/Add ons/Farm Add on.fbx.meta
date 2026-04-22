@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 480d999ea08d933458889341f09e9fc5
+guid: 99095af4a6acd1b489ceace02023aa20
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Farm - Soil
+    second: {fileID: 2100000, guid: 36a6d3bf0ec5b2e4ca9a4269bf4ae036, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Farm Crop Material
+    second: {fileID: 2100000, guid: 118568d146bbb924da0821fc0aff2776, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Farm House
+    second: {fileID: 2100000, guid: 6b9ae3f4bd1b03443b9dbd9d8e841ed8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
