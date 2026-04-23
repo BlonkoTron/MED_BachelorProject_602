@@ -31,7 +31,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Mist 100 guld
+    choiceText: Betal 100 guld
     buttonText: "K\xF8b ekstra vand"
     moneyLoss: 100
     moneyGain: 0
