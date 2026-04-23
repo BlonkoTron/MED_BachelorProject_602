@@ -69,6 +69,16 @@ public class TileChanger : MonoBehaviour
         if (tile.Type != TileType.Barren) 
         {
 
+            if (TutorialManager.instance != null)
+            {
+                if (!TutorialManager.instance.hasFirstClicked)
+                {
+                    TutorialManager.instance.hasFirstClicked = true;
+                    TutorialManager.instance.UpdateTutorial();
+                }
+            }
+
+
             topAnimator.SetBool("Highlighted", true);
 
             tileUI.SetActive(true);
@@ -177,13 +187,13 @@ public class TileChanger : MonoBehaviour
         switch (type)
         {
             case TileType.Mine:
-                return !gameSettings.DisableMineTilesGamesetting;
+                return !GameManager.Instance.DisableMineTilesGamesetting;
             case TileType.CowField:
-                return !gameSettings.DisableCowTilesGamesetting;
+                return !GameManager.Instance.DisableCowTilesGamesetting;
             case TileType.Agroforest:
-                return !gameSettings.DisableAgroTilesGamesetting;
+                return !GameManager.Instance.DisableAgroTilesGamesetting;
             case TileType.Farm:
-                return !gameSettings.DisableFarmTilesGamesetting;
+                return !GameManager.Instance.DisableFarmTilesGamesetting;
             default:
                 return true;
         }
@@ -222,9 +232,19 @@ public class TileChanger : MonoBehaviour
 
     public void SwapMethod()
     {
+
         tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
         UpdateUI();
         tileCollider.enabled = true;
+
+        if (TutorialManager.instance != null) 
+        { 
+            if (!TutorialManager.instance.hasFirstBuilded)
+            {
+                TutorialManager.instance.hasFirstBuilded = true;
+                TutorialManager.instance.UpdateTutorial();
+            }
+        }
 
     }
 
