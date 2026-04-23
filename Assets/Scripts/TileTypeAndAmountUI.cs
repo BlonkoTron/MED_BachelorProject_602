@@ -111,9 +111,9 @@ public class TileTypeAndAmountUI : MonoBehaviour
 
     public void CalculateMoneyGain()
     {
-        agroforestMoneyGain = agroforestTiles * gameSettings.MONEY_AGROFOREST;
-        farmMoneyGain = farmTiles * gameSettings.MONEY_FARM;
-        pastureMoneyGain = pastureTiles * gameSettings.MONEY_COW_FIELD;
-        mineMoneyGain = mineTiles * gameSettings.MONEY_MINE;
+        agroforestMoneyGain = agroforestTiles * gameSettings.MONEY_AGROFOREST*PointSystem.Instance.agroforestEfficiencyMultiplier;
+        farmMoneyGain = farmTiles * gameSettings.MONEY_FARM*PointSystem.Instance.farmEfficiencyMultiplier;
+        pastureMoneyGain = pastureTiles * gameSettings.MONEY_COW_FIELD * PointSystem.Instance.cowfieldEfficiencyMultiplier;
+        mineMoneyGain = mineTiles * gameSettings.MONEY_MINE * PointSystem.Instance.mineEfficiencyMultiplier;
     }
 }
