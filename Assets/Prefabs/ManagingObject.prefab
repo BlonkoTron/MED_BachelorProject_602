@@ -1347,9 +1347,13 @@ MonoBehaviour:
   pastureMoneyGain: 0
   mineMoneyGain: 0
   gameSettings: {fileID: 11400000, guid: db2fe33ad3f772f40b91006532b4febc, type: 2}
+  gradientColor: {fileID: 0}
+  percentageText: {fileID: 0}
   onTileUIUpdate:
     m_PersistentCalls:
       m_Calls: []
+  rainforestScore: 0
+  rainforestScorePercentage: 0
 --- !u!1 &1930346344856903852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1690,7 @@ MonoBehaviour:
   naturalHighBonus: 10
   naturalLowThreshold: 0.3
   naturalLowBonus: 5
+  naturalDeficitPenalty: 2
   onHappinessChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3588,6 +3593,11 @@ MonoBehaviour:
   onGameStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  HappinessLoseTreshold: 100
+  HappinessLoseRoundThreshold: 2
+  RainscoreLoseTreshold: 50
+  RainscoreLoseRoundThreshold: 2
+  BarrentilesLoseTreshold: 60
   clockSpinValue: 0.5
   clockAnimator: {fileID: 0}
   animationName: ClockSpinning
