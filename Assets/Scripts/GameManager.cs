@@ -27,10 +27,11 @@ public class GameManager : MonoBehaviour
 
     //Losing condition settings
     [SerializeField] private int HappinessLoseTreshold;
+    [SerializeField] private int BarrentilesLoseTreshold;
 
 
 
-   [Range(0f, 1f)]
+    [Range(0f, 1f)]
     public float clockSpinValue = 0.5f;
 
     [Header("Animation")]
@@ -79,7 +80,14 @@ public class GameManager : MonoBehaviour
         {
             LoseNoHappiness();
         }
+
+        //All barren
+        if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
+        {
+            LoseBarren();
+        }
     }
+
     private void UpdateTickTimer()
     {
 
@@ -183,25 +191,22 @@ public class GameManager : MonoBehaviour
     //Losing conditions
     public void LoseBarren()
     {
-        
-    }
-
-    public void LoseNoMoney()
-    {
-
+        //check
     }
 
     public void LoseNoBiodiversity()
     {
 
     }
+
     public void LoseNoHappiness()
     {
         //Check
     }
+
     public void WinPerfectBalance()
     {
-
+        //Certain happiness/bio and quotaturn
     }
 
 }
