@@ -77,8 +77,6 @@ public class TileTypeAndAmountUI : MonoBehaviour
         CalculateMoneyGain();
 
         onTileUIUpdate.Invoke();
-
-        Debug.Log("Recalculated");
     }
 
     public void CountTiles()
@@ -96,7 +94,6 @@ public class TileTypeAndAmountUI : MonoBehaviour
         grassTiles = 0;
         rainforestTiles = 0;
         barrenTiles = 0;
-
         rainforestScore = 0;
 
         foreach (Tile tile in allTiles)
@@ -143,10 +140,6 @@ public class TileTypeAndAmountUI : MonoBehaviour
         gradientColor.SetValue(rainforestScorePercentage);
         percentageText.text = rainforestScorePercentage.ToString("F1") + "%";
         Debug.Log(rainforestScorePercentage);
-
-
-
-
     }
 
     public void CalculateMoneyGain()

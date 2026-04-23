@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: FarmBadBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Drought!
-  eventInfo: Crops are dying because of the heat
+  eventtitle: "T\xF8rke!"
+  eventInfo: "Dine afgr\xF8der d\xF8r p\xE5 grund af vandmangel"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Farm tile becomes barren
-    buttonText: Ignore it
+    choiceText: Landbrugstiles produktion bliver halveret
+    buttonText: Ignorer det
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 10
+    HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Lose 100 gold
-    buttonText: Buy water
+    choiceText: Mist 100 guld
+    buttonText: "K\xF8b ekstra vand"
     moneyLoss: 100
     moneyGain: 0
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Farm tiles cannot be build next turn
-    buttonText: Attend to it
+    choiceText: "Landbrugstiles kan ikke blive bygget til n\xE6ste uge"
+    buttonText: "S\xF8rg for det eksistere landbrugstile"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
