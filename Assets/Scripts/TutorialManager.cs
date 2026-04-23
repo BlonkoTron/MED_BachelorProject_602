@@ -28,7 +28,7 @@ public class TutorialManager : MonoBehaviour
 
     }
 
-    private void UpdateTutorial()
+    public void UpdateTutorial()
     {
         if (tutorialObjects[currentStep] != null)
         {
