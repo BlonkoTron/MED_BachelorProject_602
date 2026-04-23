@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<GameState> onGameStateChanged;
 
-    [Range(0f, 1f)]
+    //Losing condition settings
+    [SerializeField] private int HappinessLoseTreshold;
+
+
+
+   [Range(0f, 1f)]
     public float clockSpinValue = 0.5f;
 
     [Header("Animation")]
@@ -65,6 +71,13 @@ public class GameManager : MonoBehaviour
         {
             tickTimer = 0f;
             ProcessTick();
+        }
+
+        //Lose checkmarks
+        //No happiness
+        if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
+        {
+            LoseNoHappiness();
         }
     }
     private void UpdateTickTimer()
@@ -163,6 +176,31 @@ public class GameManager : MonoBehaviour
             clockAnimator.Play(animationName, 0, progress);
         }
         
+
+    }
+
+
+    //Losing conditions
+    public void LoseBarren()
+    {
+        
+    }
+
+    public void LoseNoMoney()
+    {
+
+    }
+
+    public void LoseNoBiodiversity()
+    {
+
+    }
+    public void LoseNoHappiness()
+    {
+        //Check
+    }
+    public void WinPerfectBalance()
+    {
 
     }
 
