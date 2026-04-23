@@ -6,7 +6,7 @@ public class Happiness : MonoBehaviour
     public static Happiness Instance;
 
     [Header("Happiness Settings")]
-    [SerializeField] private int happinessLevel = 100;
+    [SerializeField] public int happinessLevel = 100;
     [SerializeField] private int maxHappiness = 100;
     [SerializeField] private int minHappiness = 0;
 
@@ -72,6 +72,11 @@ public class Happiness : MonoBehaviour
         {
             Debug.LogWarning("GameManager not found - happiness won't update with game ticks");
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void OnGameTick()
