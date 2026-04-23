@@ -424,11 +424,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: naturalLowThreshold
-      value: 0.5
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: naturalHighThreshold
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: naturalDeficitPenalty
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2545064508347266036, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_Sprite

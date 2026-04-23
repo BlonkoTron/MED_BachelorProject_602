@@ -35,6 +35,9 @@ public class Happiness : MonoBehaviour
     [SerializeField][Range(0f, 1f)] private float naturalLowThreshold = 0.3f;
     [Tooltip("Happiness change when natural tiles exceed low threshold")]
     [SerializeField] private int naturalLowBonus = 2;
+    
+    [Tooltip("Happiness penalty when natural tiles fall below low threshold")]
+    [SerializeField] private int naturalDeficitPenalty = 2;
 
     [Header("Events")]
     [HideInInspector] public UnityEvent<int> onHappinessChanged;
@@ -134,7 +137,7 @@ public class Happiness : MonoBehaviour
             happinessChange -= barrenLowPenalty;
         }
 
-        // Natural tiles increase happiness
+        // Natural tiles increase happiness when sufficient, decrease when insufficient
         if (naturalPercent > naturalHighThreshold)
         {
             happinessChange += naturalHighBonus;
@@ -142,6 +145,11 @@ public class Happiness : MonoBehaviour
         else if (naturalPercent > naturalLowThreshold)
         {
             happinessChange += naturalLowBonus;
+        }
+        else
+        {
+            // Penalty when there isn't enough rainforest
+            happinessChange -= naturalDeficitPenalty;
         }
 
         // Apply the change
