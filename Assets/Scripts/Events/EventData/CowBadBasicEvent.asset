@@ -16,18 +16,18 @@ MonoBehaviour:
   eventInfo: "K\xF8erne i omr\xE5det er blevet syge"
   Scenariosprite: {fileID: 2800000, guid: c5872dbec4a3aa5488f745b4664dace1, type: 3}
   choice1:
-    choiceText: "kv\xE6gfarme bliver omdannet til gr\xE6s"
+    choiceText: "Produktion fra kv\xE6gfarmtiles bliver halveret"
     buttonText: "Lad k\xF8erne v\xE6re"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
-    CowEfficiencymult: 1
+    CowEfficiencymult: 0.5
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 1
+    DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:

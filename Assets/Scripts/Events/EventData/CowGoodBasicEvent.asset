@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: "Der er blevet f\xF8dt mange nye kalve!"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: "Kv\xE6gfarmene inkomst bliver fordoblet til n\xE6ste kvote"
+    choiceText: "Kv\xE6gfarmtiles inkomst bliver fordoblet til n\xE6ste uge"
     buttonText: Promover de nye kalve
     moneyLoss: 0
     moneyGain: 0

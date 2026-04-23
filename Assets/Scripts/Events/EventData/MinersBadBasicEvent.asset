@@ -16,8 +16,8 @@ MonoBehaviour:
   eventInfo: "Minearbejderne vil have bedre vilk\xE5r"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: "En mine bliver \xF8de"
-    buttonText: Ignore them
+    choiceText: 'Minetiles produktion bliver halveret '
+    buttonText: Ignore dem
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: "Miner kan ikke blive bygget til n\xE6ste kvote"
+    choiceText: "Minetiles kan ikke blive bygget til n\xE6ste uge"
     buttonText: Fyr dem
     moneyLoss: 0
     moneyGain: 0
