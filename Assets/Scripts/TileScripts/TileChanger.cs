@@ -29,6 +29,8 @@ public class TileChanger : MonoBehaviour
 
     private GameSettings gameSettings;
 
+    private Collider tileCollider;
+
     public bool stopfirstsound = false;
     private bool hasWaited;
 
@@ -47,6 +49,8 @@ public class TileChanger : MonoBehaviour
         InteractionManager.Instance.closeUI.AddListener(CloseUI);
 
         UpdateUI();
+
+        tileCollider = GetComponent<Collider>();
 
         topAnimator = GetComponent<Animator>();
 
@@ -97,6 +101,9 @@ public class TileChanger : MonoBehaviour
     public bool ChangeTile(TileType type)
     {
         // 🚫 Block if tile type is disabled
+
+        tileCollider.enabled = false;
+
         if (!IsTileTypeEnabled(type))
         {
             Debug.Log(type + " is currently disabled!");
@@ -217,6 +224,7 @@ public class TileChanger : MonoBehaviour
     {
         tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
         UpdateUI();
+        tileCollider.enabled = true;
 
     }
 

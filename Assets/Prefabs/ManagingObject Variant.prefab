@@ -406,6 +406,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: naturalLowBonus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: barrenLowPenalty
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: naturalHighBonus
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: barrenHighPenalty
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: naturalLowThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: naturalHighThreshold
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2545064508347266036, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_Sprite
       value: 
