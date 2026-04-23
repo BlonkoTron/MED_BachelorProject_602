@@ -3,33 +3,31 @@ using UnityEngine;
 public class RandomAnimTrigger : MonoBehaviour
 {
     public Animator anim;
-    public float waitTime = 5f;
-    private float timer;
-    private bool initialized = false;
+    public float minWait = 30f;
+    public float maxWait = 120f;
+
+    private float _timer;
 
     void Start()
     {
         anim.enabled = false;
-        timer = Random.Range(0, waitTime);
-        initialized = true;
+        _timer = Random.Range(2f, maxWait);
     }
 
     void Update()
     {
-        if (!initialized) return;
+        _timer -= Time.deltaTime;
 
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
+        if (_timer <= 0)
         {
-            timer = waitTime + Random.Range(0f, 45f);
+            _timer = Random.Range(minWait, maxWait);
 
             anim.enabled = true;
             anim.SetTrigger("AnimGo");
         }
     }
 
-    // Call this via Animation Event at the end of the "Barren" clip
+    // Call this from an Animation Event on the LAST FRAME of your clip
     public void OnAnimationComplete()
     {
         anim.enabled = false;
