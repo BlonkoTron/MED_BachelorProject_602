@@ -13,6 +13,9 @@ public class TutorialManager : MonoBehaviour
 
     public UnityEvent nextStep;
 
+    public bool hasFirstBuilded;
+    public bool hasFirstClicked;
+
     private void Start()
     {
         instance = this;
@@ -21,27 +24,47 @@ public class TutorialManager : MonoBehaviour
 
         nextStep.AddListener(UpdateTutorial);
 
+        InteractionManager.Instance.EnableDisablePlayerInput();
+
         if (tutorialObjects[currentStep] != null)
         {
             tutorialObjects[currentStep].gameObject.SetActive(true);
         }
 
+        hasFirstBuilded = false;
+
+        GameManager.Instance.SetNewState(GameManager.GameState.Paused);
+
     }
 
-    private void UpdateTutorial()
+    public void UpdateTutorial()
     {
         if (tutorialObjects[currentStep] != null)
         {
             tutorialObjects[currentStep].gameObject.SetActive(false);
 
-            currentStep++;
-            
-            tutorialObjects[currentStep].gameObject.SetActive(true);
+            if (currentStep +1 < tutorialObjects.Count)
+            {
+                currentStep++;
+                tutorialObjects[currentStep].gameObject.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Tutorial Is now Done");
+                Destroy(gameObject);
+            }
+
+            Debug.Log(currentStep);
+
         }
     }
 
+    
+
     private void OnDestroy()
     {
+        InteractionManager.Instance.EnableDisablePlayerInput();
+        GameManager.Instance.SetNewState(GameManager.GameState.normal);
         nextStep.RemoveAllListeners();
     }
 
