@@ -18,10 +18,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
     public UnityEvent onRoundEnd;
+    public UnityEvent onRoundStart;
     
     private float tickTimer = 0f;
     public enum GameState { normal, Speedx2, speedx3, Paused}
     public GameState gameState = GameState.normal;
+    public GameState previousGameState = GameState.normal;
 
     public UnityEvent<GameState> onGameStateChanged;
 
@@ -122,6 +124,7 @@ public class GameManager : MonoBehaviour
     {
         ticksTillRoundEnd = TicksBetweenRounds;
         onRoundEnd?.Invoke();
+        previousGameState = gameState;
         SetNewState(GameState.Paused);
         //Call event here
         EventMangerGET.TriggerRandomEvent();
@@ -129,7 +132,8 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
-        SetNewState(GameState.normal);
+        SetNewState(previousGameState);
+        onRoundStart.Invoke();
     }
 
     // Automatically register all tiles in the scene
