@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: "H\xF8sten har v\xE6re st\xF8rre end normalt "
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: "Landbrugstile produktion bliver fordoblet til n\xE6ste kovte"
+    choiceText: "Landbrugstile produktion bliver fordoblet til n\xE6ste uge"
     buttonText: Lad dem plante mere
     moneyLoss: 0
     moneyGain: 0
