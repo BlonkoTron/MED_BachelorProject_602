@@ -1395,7 +1395,7 @@ MonoBehaviour:
   onMoneyEarned:
     m_PersistentCalls:
       m_Calls: []
-  warningHeight: 2
+  warningHeight: 1
   MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!95 &831362033068281181
 Animator:
