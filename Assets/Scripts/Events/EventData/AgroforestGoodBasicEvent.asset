@@ -16,8 +16,8 @@ MonoBehaviour:
   eventInfo: "Skovlandbruget oplever at der kommer mere dyrevildt i omr\xE5det"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: "Skovlandbrugtiles inkomst bliver doublet til n\xE6ste uger"
-    buttonText: "Der kommer ekstra hj\xE6lp"
+    choiceText: "Skovlandbrugtiles inkomst fordobler indtil n\xE6ste uge"
+    buttonText: "Ekstra hj\xE6lp ankommer"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -28,11 +28,11 @@ MonoBehaviour:
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
-    DisableAgroTilesEvent: 1
+    DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
     choiceText: "F\xE5 200 guld"
-    buttonText: "F\xE5 penge fra staten"
+    buttonText: "F\xE5 extra penge fra staten"
     moneyLoss: 0
     moneyGain: 200
     HappinessUp: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     DisableFarmTilesEvent: 0
   choice3:
     choiceText: Tilfredshed stiger med 20
-    buttonText: "S\xF8rg for omr\xE5det er sikret "
+    buttonText: "Sikre omr\xE5det "
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 20

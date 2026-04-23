@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         //Lose checkmarks
 
         //All barren
-        if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
+        if (TileTypeAndAmountUI.Instance.barrenTiles > BarrentilesLoseTreshold)
         {
             LoseBarren();
         }
