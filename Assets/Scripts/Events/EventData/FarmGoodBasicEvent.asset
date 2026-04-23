@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: FarmGoodBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Too much corn
-  eventInfo: Corn has been growing nonstop, now you have too much
+  eventtitle: "Store m\xE6ngder afgr\xF8der! "
+  eventInfo: "H\xF8sten har v\xE6re st\xF8rre end normalt "
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Farm productio doubles untill next turn
-    buttonText: Farm more
+    choiceText: "Landbrugstile produktion bliver fordoblet til n\xE6ste kovte"
+    buttonText: Lad dem plante mere
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Gain 150 gold
-    buttonText: Sell the corn
+    choiceText: "F\xE5 150 guld"
+    buttonText: "S\xE6lg de afgr\xF8der"
     moneyLoss: 0
     moneyGain: 150
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Happiness increase by 10 points
-    buttonText: Feed the locals
+    choiceText: Tilfredsheden stiger med 10
+    buttonText: Give dit folk ekstra mad
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 10

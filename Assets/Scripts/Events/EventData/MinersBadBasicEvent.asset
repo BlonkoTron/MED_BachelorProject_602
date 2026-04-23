@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: MinersBadBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Miners angry!
-  eventInfo: Miners are tired
+  eventtitle: Minearbejder klager!
+  eventInfo: "Minearbejderne vil have bedre vilk\xE5r"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: A mining tile becomes barren
+    choiceText: "En mine bliver \xF8de"
     buttonText: Ignore them
     moneyLoss: 0
     moneyGain: 0
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Lose 200 gold
-    buttonText: Pay them more
+    choiceText: Mist 200 guld
+    buttonText: Betal dem mere
     moneyLoss: 200
     moneyGain: 0
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Mining tiles cannot be build next turn
-    buttonText: 'Fire them all '
+    choiceText: "Miner kan ikke blive bygget til n\xE6ste kvote"
+    buttonText: Fyr dem
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0

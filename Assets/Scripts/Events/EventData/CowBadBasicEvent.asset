@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: CowBadBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: CowFlu!
-  eventInfo: Cows are sick all around your land!
+  eventtitle: "Sygdom rammer kv\xE6gfarmene!"
+  eventInfo: "K\xF8erne i omr\xE5det er blevet syge"
   Scenariosprite: {fileID: 2800000, guid: c5872dbec4a3aa5488f745b4664dace1, type: 3}
   choice1:
-    choiceText: Cowfield becomes grassland
-    buttonText: Let the cows be
+    choiceText: "kv\xE6gfarme bliver omdannet til gr\xE6s"
+    buttonText: "Lad k\xF8erne v\xE6re"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 10
+    HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Lose 100 money
-    buttonText: Buy water
+    choiceText: Mist 100 penge
+    buttonText: "K\xF8b ekstra medicin"
     moneyLoss: 100
     moneyGain: 0
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Cowfield tiles cannot be built next turn
-    buttonText: Work overtime
+    choiceText: "Kv\xE6gfarmtiles kan ikke blive bygget til n\xE6ste kvote"
+    buttonText: "Start en karant\xE6ne for k\xF8erne"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
