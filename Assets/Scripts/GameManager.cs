@@ -26,9 +26,12 @@ public class GameManager : MonoBehaviour
     public UnityEvent<GameState> onGameStateChanged;
 
     //Losing condition settings
-    [SerializeField] private int HappinessLoseTreshold;
-    [SerializeField] private int BarrentilesLoseTreshold;
+    [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
+    [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
+    private int Ticktime = 0; //Int tto count number of rounds
 
+    [SerializeField] private int BarrentilesLoseTreshold;
+   
 
 
     [Range(0f, 1f)]
@@ -75,11 +78,6 @@ public class GameManager : MonoBehaviour
         }
 
         //Lose checkmarks
-        //No happiness
-        if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
-        {
-            LoseNoHappiness();
-        }
 
         //All barren
         if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
@@ -124,6 +122,20 @@ public class GameManager : MonoBehaviour
         if (ticksTillRoundEnd<=0)
         {
             EndRound();
+        }
+
+        if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
+        {
+            Ticktime++;
+
+            if (Ticktime == HappinessLoseRoundThreshold)
+            {
+                LoseNoHappiness();
+            }
+          }
+        else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
+        {
+            Ticktime = 0;
         }
     }
     private void EndRound()
