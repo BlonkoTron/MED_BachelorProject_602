@@ -916,12 +916,12 @@ MonoBehaviour:
   onMoneyLost:
     m_PersistentCalls:
       m_Calls: []
-  farm2xUI: {fileID: 0}
-  farm05xUI: {fileID: 0}
-  mine2xUI: {fileID: 0}
-  mine05xUI: {fileID: 0}
-  cow2xUI: {fileID: 0}
-  cow05xUI: {fileID: 0}
+  farm2xUI: {fileID: 426857742679451995}
+  farm05xUI: {fileID: 7875142969134401302}
+  mine2xUI: {fileID: 4475839160778397406}
+  mine05xUI: {fileID: 7569882404725615550}
+  cow2xUI: {fileID: 5120888954583344902}
+  cow05xUI: {fileID: 5745340183405783899}
   agro2xUI: {fileID: 1397776932636235991}
   agro05xUI: {fileID: 3527250261933857557}
   efficiencyUI: {fileID: 0}
