@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: AgroforestBadBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: "Finansiering ikke tilstr\xE6kkligt!"
-  eventInfo: Skovlandbruget har brug for flere penge for at funktionel
+  eventInfo: Skovlandbruget har brug for flere penge
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: To skovlandbrugtiles bliver til regnskov
-    buttonText: Riv det ned
+    choiceText: Skovlandbrugtiles produktion bliver halveret
+    buttonText: "Arbejd med mindre underst\xF8tte"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: "Skovlandbrugtiles can ikke blive bygget til n\xE6ste kvote"
+    choiceText: "Skovlandbrugtiles can ikke blive bygget til n\xE6ste uge"
     buttonText: "Lad v\xE6r med at st\xF8tte"
     moneyLoss: 0
     moneyGain: 0
