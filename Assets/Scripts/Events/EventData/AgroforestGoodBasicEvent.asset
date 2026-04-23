@@ -22,13 +22,13 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 10
-    MineEfficiencymult: 0.5
-    CowEfficiencymult: 2
-    AggroForestEfficiencymult: 0.5
-    FarmEfficiencymult: 2
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 2
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
-    DisableAgroTilesEvent: 0
+    DisableAgroTilesEvent: 1
     DisableFarmTilesEvent: 0
   choice2:
     choiceText: Gain 200 gold
