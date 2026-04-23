@@ -11,7 +11,7 @@ public class GradientColor : MonoBehaviour
     private Image img;
     // private SpriteRenderer sr;
 
-    void Start()
+    void Awake()
     {
         img = GetComponent<Image>();
         // sr = GetComponent<SpriteRenderer>();
