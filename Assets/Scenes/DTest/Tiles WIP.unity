@@ -2392,68 +2392,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5833273548847975527, guid: da4d11dbf3aabbe4fb884f527efd435f, type: 3}
   m_PrefabInstance: {fileID: 603605757}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &624605210
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2000053156}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.11800003
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.47399998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_Name
-      value: Turck Truck
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
---- !u!4 &624605211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-  m_PrefabInstance: {fileID: 624605210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &639024527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3039,10 +2977,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 46001011953015712, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 416759368275954907, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.582188
@@ -3089,47 +3023,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 416759368275954907, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1991315172}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 777381260}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
---- !u!1 &777381258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-  m_PrefabInstance: {fileID: 777381257}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &777381259 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 416759368275954907, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-  m_PrefabInstance: {fileID: 777381257}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &777381260
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777381258}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 708c07ae14808424bb0bc2a79ce10f98, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &783896993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13369,68 +13265,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1203614614503404577, guid: ae85a63a62a2d924e8142aefc66142e6, type: 3}
   m_PrefabInstance: {fileID: 1953640317}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1991315171
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 777381259}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.40399933
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.408
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-      propertyPath: m_Name
-      value: Turck Truck
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
---- !u!4 &1991315172 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
-  m_PrefabInstance: {fileID: 1991315171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1997652554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13545,53 +13379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agroforest Add on
       objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 556075301218453388, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 624605211}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2000053157}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
---- !u!1 &2000053155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-  m_PrefabInstance: {fileID: 2000053154}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2000053156 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 556075301218453388, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-  m_PrefabInstance: {fileID: 2000053154}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2000053157
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000053155}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec5d6b4e32953c94498163e6b90271f1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2033365464
 PrefabInstance:
   m_ObjectHideFlags: 0
