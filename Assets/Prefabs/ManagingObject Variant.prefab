@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758c720d27b67c94f8cf234632d3cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeedbackArrow
-  hideDelay: 3
+  hideDelay: 2
   positiveAnimationTrigger: PositiveTrigger
   negativeAnimationTrigger: NegativeTrigger
 --- !u!95 &5463746024598295514
