@@ -14,7 +14,15 @@ public class GameSpeedSettings : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         gameManager.onGameStateChanged.AddListener(UpdateSpeedSettingButtons);
+        gameManager.onRoundEnd.AddListener(Disablebuttons);
+        gameManager.onRoundStart.AddListener(EnableButtons);
         UpdateSpeedSettingButtons(gameManager.gameState);
+    }
+    private void OnDestroy()
+    {
+        gameManager.onGameStateChanged.RemoveListener(UpdateSpeedSettingButtons);
+        gameManager.onRoundEnd.RemoveListener(Disablebuttons);
+        gameManager.onRoundStart.RemoveListener(EnableButtons);
     }
 
     private void UpdateSpeedSettingButtons(GameManager.GameState state)
@@ -62,6 +70,20 @@ public class GameSpeedSettings : MonoBehaviour
     public void SetGameState3XSpeed()
     {
         gameManager.SetNewState(GameManager.GameState.speedx3);
+    }
+    private void Disablebuttons()
+    {
+        normalSpeedButton.enabled = false;
+        x2SpeedButton.enabled = false;
+        x3SpeedButton.enabled = false;
+        pauseButton.enabled = false;
+    }
+    private void EnableButtons()
+    {
+        normalSpeedButton.enabled = true;
+        x2SpeedButton.enabled = true;
+        x3SpeedButton.enabled = true;
+        pauseButton.enabled = true;
     }
 
 }

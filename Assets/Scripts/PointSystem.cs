@@ -56,6 +56,7 @@ public class PointSystem : MonoBehaviour
         gameSettings = GameManager.Instance.gameSettings;
 
         currentMoney = gameSettings.STARTING_MONEY;
+        onMoneyEarned.Invoke(currentMoney);
         // Find all tiles and subscribe to their money events
         RegisterAllTiles();
     }
