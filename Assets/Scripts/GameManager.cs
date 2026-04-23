@@ -27,12 +27,23 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<GameState> onGameStateChanged;
 
-    //Losing condition settings
-    [SerializeField] private int HappinessLoseTreshold;
+    //Losing condition happiness settings
+    [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
+    [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
+    private int HappinessTicktime = 0; //Int tto count number of rounds
 
 
+    //Losing condition happiness settings
+    [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
+    [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
+    private int RainscoreTicktime = 0; //Int tto count number of rounds
 
-   [Range(0f, 1f)]
+
+    [SerializeField] private int BarrentilesLoseTreshold;
+   
+
+
+    [Range(0f, 1f)]
     public float clockSpinValue = 0.5f;
 
     [Header("Animation")]
@@ -76,12 +87,14 @@ public class GameManager : MonoBehaviour
         }
 
         //Lose checkmarks
-        //No happiness
-        if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
+
+        //All barren
+        if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
         {
-            LoseNoHappiness();
+            LoseBarren();
         }
     }
+
     private void UpdateTickTimer()
     {
 
@@ -120,6 +133,7 @@ public class GameManager : MonoBehaviour
             EndRound();
         }
     }
+
     private void EndRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
@@ -128,6 +142,38 @@ public class GameManager : MonoBehaviour
         SetNewState(GameState.Paused);
         //Call event here
         EventMangerGET.TriggerRandomEvent();
+        
+        //HappyLosecheck
+
+        if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
+        {
+            HappinessTicktime++;
+
+            if (HappinessTicktime == HappinessLoseRoundThreshold)
+            {
+                LoseNoHappiness();
+            }
+        }
+        else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
+        {
+            HappinessTicktime = 0;
+        }
+
+        //Rainforestscore Losecheck
+        if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
+        {
+            RainscoreTicktime++;
+
+            if (RainscoreTicktime == RainscoreLoseRoundThreshold)
+            {
+                LoseNoBiodiversity();
+            }
+        }
+        else if (TileTypeAndAmountUI.Instance.rainforestScore >= RainscoreLoseTreshold)
+        {
+            RainscoreTicktime = 0;
+        }
+
     }
     public void StartRound()
     {
@@ -187,25 +233,22 @@ public class GameManager : MonoBehaviour
     //Losing conditions
     public void LoseBarren()
     {
-        
-    }
-
-    public void LoseNoMoney()
-    {
-
+        //check
     }
 
     public void LoseNoBiodiversity()
     {
-
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
     }
+
     public void LoseNoHappiness()
     {
-        //Check
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
     }
+
     public void WinPerfectBalance()
     {
-
+        //Certain happiness/bio and quotaturn
     }
 
 }

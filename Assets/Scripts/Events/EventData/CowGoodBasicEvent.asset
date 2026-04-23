@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: CowGoodBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: New cattle!
-  eventInfo: New cattle has been born on the farms
+  eventtitle: "Flere k\xF8er!"
+  eventInfo: "Der er blevet f\xF8dt mange nye kalve!"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Cowfield income doubles untill next turn
-    buttonText: Promote it
+    choiceText: "Kv\xE6gfarmtiles inkomst bliver fordoblet til n\xE6ste uge"
+    buttonText: Promover de nye kalve
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Gain 150 gold
-    buttonText: Sell them
+    choiceText: "F\xE5 150 guld"
+    buttonText: "S\xE6lg dem"
     moneyLoss: 0
     moneyGain: 150
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Happiness increase by 10 points
-    buttonText: Let it be
+    choiceText: Tilfredshed stiger med 10
+    buttonText: "Lad b\xF8rne se dem"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 10
