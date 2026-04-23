@@ -27,10 +27,17 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<GameState> onGameStateChanged;
 
-    //Losing condition settings
+    //Losing condition happiness settings
     [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    private int Ticktime = 0; //Int tto count number of rounds
+    private int HappinessTicktime = 0; //Int tto count number of rounds
+
+
+    //Losing condition happiness settings
+    [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
+    [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
+    private int RainscoreTicktime = 0; //Int tto count number of rounds
+
 
     [SerializeField] private int BarrentilesLoseTreshold;
    
@@ -140,17 +147,33 @@ public class GameManager : MonoBehaviour
 
         if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
         {
-            Ticktime++;
+            HappinessTicktime++;
 
-            if (Ticktime == HappinessLoseRoundThreshold)
+            if (HappinessTicktime == HappinessLoseRoundThreshold)
             {
                 LoseNoHappiness();
             }
         }
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
-            Ticktime = 0;
+            HappinessTicktime = 0;
         }
+
+        //Rainforestscore Losecheck
+        if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
+        {
+            RainscoreTicktime++;
+
+            if (RainscoreTicktime == RainscoreLoseRoundThreshold)
+            {
+                LoseNoBiodiversity();
+            }
+        }
+        else if (TileTypeAndAmountUI.Instance.rainforestScore >= RainscoreLoseTreshold)
+        {
+            RainscoreTicktime = 0;
+        }
+
     }
     public void StartRound()
     {
@@ -215,7 +238,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseNoBiodiversity()
     {
-
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
     }
 
     public void LoseNoHappiness()
