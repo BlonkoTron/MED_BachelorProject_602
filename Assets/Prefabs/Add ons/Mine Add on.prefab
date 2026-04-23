@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000003774895
+      value: -0.0000000754979
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
       propertyPath: m_LocalRotation.z
@@ -60,8 +60,92 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mine Add on
       objectReference: {fileID: 0}
+    - target: {fileID: 6543989504589107829, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543989504589107829, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708053342456609098, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6152905454889768380}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6906504408143102464}
   m_SourcePrefab: {fileID: 100100000, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+--- !u!1 &8299831964811510712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ba6448f6e74d7498d6f9a86cd0f082, type: 3}
+  m_PrefabInstance: {fileID: 9218733074656329449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6152905454889768380
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299831964811510712}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9dca8fefb05d1246bd52c275c313ae0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6906504408143102464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299831964811510712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a76404a0e9003b459ad73a01286dda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimTrigger
+  anim: {fileID: 6152905454889768380}
+  minWait: 30
+  maxWait: 120

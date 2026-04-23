@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: AgroforestGoodBasicEvent
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Biodiversity Increase!
-  eventInfo: Agroforests experience more wildlife coming to the area
+  eventtitle: Biodiversiteten vokser!
+  eventInfo: "Skovlandbruget oplever at der kommer mere dyrevildt i omr\xE5det"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Agroforests income doubles untill next turn
-    buttonText: Seek help
+    choiceText: "Skovlandbrugtiles inkomst bliver doublet til n\xE6ste uger"
+    buttonText: "Der kommer ekstra hj\xE6lp"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 10
+    HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 2
@@ -31,8 +31,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 1
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Gain 200 gold
-    buttonText: Get funds from the state
+    choiceText: "F\xE5 200 guld"
+    buttonText: "F\xE5 penge fra staten"
     moneyLoss: 0
     moneyGain: 200
     HappinessUp: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: Happiness increase by 20 points
-    buttonText: 'Ensure the safety '
+    choiceText: Tilfredshed stiger med 20
+    buttonText: "S\xF8rg for omr\xE5det er sikret "
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 20

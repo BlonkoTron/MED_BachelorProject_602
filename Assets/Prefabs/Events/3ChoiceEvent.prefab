@@ -66,7 +66,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8203703afcd13274c993157fe8bbcc3d, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -648,13 +648,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eventsystem
   selectedEvent: {fileID: 0}
-  Eventinfo: {fileID: 7937745077440960684}
-  Eventchoice1: {fileID: 3653614736933390140}
-  Eventchoice2: {fileID: 9081673669591445145}
-  Eventchoice3: {fileID: 2349859211544143479}
-  Buttonchoice1: {fileID: 6174279379954290437}
-  Buttonchoice2: {fileID: 6458175494797701915}
-  Buttonchoice3: {fileID: 9210679909844936463}
+  Eventtitle: {fileID: 0}
+  Eventinfo: {fileID: 0}
+  Eventchoice1: {fileID: 0}
+  Eventchoice2: {fileID: 0}
+  Eventchoice3: {fileID: 0}
+  Buttonchoice1: {fileID: 0}
+  Buttonchoice2: {fileID: 0}
+  Buttonchoice3: {fileID: 0}
   ScenarioImage: {fileID: 3309826068419612032}
   Panel: {fileID: 4562002195554633780}
   Testmoney: 100
@@ -990,7 +991,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -1174,7 +1175,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1253,7 +1254,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -1332,7 +1333,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3291ed6fd80e15145aeb3778f4e0c8b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 48ff2006b3c64654f9bf51179cf296fb, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
