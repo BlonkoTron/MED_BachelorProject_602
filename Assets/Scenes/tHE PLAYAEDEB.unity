@@ -6141,6 +6141,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: HappinessLoseTreshold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: HappinessLoseRoundThreshold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6309893923207429948, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

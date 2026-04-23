@@ -123,6 +123,17 @@ public class GameManager : MonoBehaviour
         {
             EndRound();
         }
+    }
+
+    private void EndRound()
+    {
+        ticksTillRoundEnd = TicksBetweenRounds;
+        onRoundEnd?.Invoke();
+        SetNewState(GameState.Paused);
+        //Call event here
+        EventMangerGET.TriggerRandomEvent();
+        
+        //HappyLosecheck
 
         if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
         {
@@ -132,19 +143,11 @@ public class GameManager : MonoBehaviour
             {
                 LoseNoHappiness();
             }
-          }
+        }
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
             Ticktime = 0;
         }
-    }
-    private void EndRound()
-    {
-        ticksTillRoundEnd = TicksBetweenRounds;
-        onRoundEnd?.Invoke();
-        SetNewState(GameState.Paused);
-        //Call event here
-        EventMangerGET.TriggerRandomEvent();
     }
     public void StartRound()
     {
@@ -213,7 +216,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseNoHappiness()
     {
-        //Check
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
     }
 
     public void WinPerfectBalance()
