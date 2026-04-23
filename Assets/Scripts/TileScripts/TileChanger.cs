@@ -69,6 +69,16 @@ public class TileChanger : MonoBehaviour
         if (tile.Type != TileType.Barren) 
         {
 
+            if (TutorialManager.instance != null)
+            {
+                if (!TutorialManager.instance.hasFirstClicked)
+                {
+                    TutorialManager.instance.hasFirstClicked = true;
+                    TutorialManager.instance.UpdateTutorial();
+                }
+            }
+
+
             topAnimator.SetBool("Highlighted", true);
 
             tileUI.SetActive(true);
@@ -222,9 +232,19 @@ public class TileChanger : MonoBehaviour
 
     public void SwapMethod()
     {
+
         tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
         UpdateUI();
         tileCollider.enabled = true;
+
+        if (TutorialManager.instance != null) 
+        { 
+            if (!TutorialManager.instance.hasFirstBuilded)
+            {
+                TutorialManager.instance.hasFirstBuilded = true;
+                TutorialManager.instance.UpdateTutorial();
+            }
+        }
 
     }
 
