@@ -94,7 +94,6 @@ public class TileTypeAndAmountUI : MonoBehaviour
         grassTiles = 0;
         rainforestTiles = 0;
         barrenTiles = 0;
-
         rainforestScore = 0;
 
         foreach (Tile tile in allTiles)
