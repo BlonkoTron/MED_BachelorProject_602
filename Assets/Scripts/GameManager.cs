@@ -19,6 +19,20 @@ public class GameManager : MonoBehaviour
     public bool DisableAgroTilesGamesetting = false;
     public bool DisableFarmTilesGamesetting = false;
 
+    public enum SceneType
+    {
+        Lose_Happiness,
+        Lose_Bio,
+        Lose_Barren,
+        Win_Balance
+    }
+
+    public void LoadScene(SceneType scene)
+    {
+        SceneManager.LoadScene(scene.ToString());
+    }
+
+
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
@@ -43,10 +57,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
     private int RainscoreTicktime = 0; //Int tto count number of rounds
 
-
+    //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
-   
 
+    //Winning the game settings
+
+    [SerializeField] private int WinningThreshold; //How many events the player must survive before they can win
+    private int Eventcounter; //Counter for events
 
     [Range(0f, 1f)]
     public float clockSpinValue = 0.5f;
@@ -162,6 +179,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Rainforestscore Losecheck
+
         if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
         {
             RainscoreTicktime++;
@@ -176,7 +194,16 @@ public class GameManager : MonoBehaviour
             RainscoreTicktime = 0;
         }
 
+        //WinCondition!
+
+        Eventcounter++;
+
+        if (Eventcounter >= WinningThreshold && TileTypeAndAmountUI.Instance.rainforestScore > RainscoreLoseTreshold && Happiness.Instance.happinessLevel > HappinessLoseTreshold)
+        {
+            WinPerfectBalance();
+        }
     }
+
     public void StartRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
@@ -235,22 +262,26 @@ public class GameManager : MonoBehaviour
     //Losing conditions
     public void LoseBarren()
     {
-        //check
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (alt er fedt)");
+        LoadScene(SceneType.Lose_Barren);
     }
 
     public void LoseNoBiodiversity()
     {
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
+        LoadScene(SceneType.Lose_Bio);
     }
 
     public void LoseNoHappiness()
     {
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
+        LoadScene(SceneType.Lose_Happiness);
     }
 
     public void WinPerfectBalance()
     {
-        //Certain happiness/bio and quotaturn
+        Debug.Log("YOU WIN, YOU WIIIIIN (balance baby)");
+        LoadScene(SceneType.Win_Balance);
     }
 
 }
