@@ -926,70 +926,6 @@ MonoBehaviour:
   agro2xUI: {fileID: 1397776932636235991}
   agro05xUI: {fileID: 3527250261933857557}
   efficiencyUI: {fileID: 0}
---- !u!1 &934831930624894363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6404447889234791296}
-  - component: {fileID: 715735933747353745}
-  m_Layer: 5
-  m_Name: Amount & Gain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6404447889234791296
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934831930624894363}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8758291029290931769}
-  - {fileID: 5241664343598583202}
-  m_Father: {fileID: 2366062030747024201}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 194.74, y: -24}
-  m_SizeDelta: {x: 153.48, y: -50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &715735933747353745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934831930624894363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 3
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!1 &1027466903773194922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1626,6 @@ MonoBehaviour:
   naturalHighBonus: 10
   naturalLowThreshold: 0.3
   naturalLowBonus: 5
-  naturalDeficitPenalty: 2
   onHappinessChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2038,7 +1973,8 @@ RectTransform:
   - {fileID: 457943919305883507}
   - {fileID: 7355673539699313520}
   - {fileID: 7784039943070406055}
-  - {fileID: 6404447889234791296}
+  - {fileID: 8758291029290931769}
+  - {fileID: 5241664343598583202}
   m_Father: {fileID: 8326356050929093340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2188,6 +2124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 6
+  selectedAmountOrGrain: 0
 --- !u!114 &1171681537186713415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4882,6 +4819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 0
+  selectedAmountOrGrain: 0
 --- !u!114 &6059239908652072702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5820,6 +5758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 2
+  selectedAmountOrGrain: 0
 --- !u!114 &3278858416608626010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6065,6 +6004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 1
+  selectedAmountOrGrain: 0
 --- !u!114 &7082294211444683111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6079,6 +6019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 1
+  selectedAmountOrGrain: 0
 --- !u!1 &6474086580699906052
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,6 +7405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 3
+  selectedAmountOrGrain: 0
 --- !u!114 &5796377036682463106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7692,6 +7634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 5
+  selectedAmountOrGrain: 0
 --- !u!114 &4365640879365187452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7813,12 +7756,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 759087300572472910}
-  m_Father: {fileID: 6404447889234791296}
+  m_Father: {fileID: 2366062030747024201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 244.74005, y: -74.00004}
+  m_SizeDelta: {x: 253.48, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8174591473715390766
 GameObject:
@@ -7926,12 +7869,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6404447889234791296}
+  m_Father: {fileID: 2366062030747024201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 290.185, y: -74.00004}
+  m_SizeDelta: {x: 162.59, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8630265888159138370
 CanvasRenderer:
@@ -7955,6 +7898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileUIUpdate
   tileTypeUI: {fileID: 3851543637436058288}
   selectedTileType: 4
+  selectedAmountOrGrain: 0
 --- !u!114 &8923354384745198882
 MonoBehaviour:
   m_ObjectHideFlags: 0

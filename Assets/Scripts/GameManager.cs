@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
 
     private Eventmanager_NEWSETUP EventMangerGET;
 
+    public bool DisableMineTilesGamesetting = false;
+    public bool DisableCowTilesGamesetting = false;
+    public bool DisableAgroTilesGamesetting = false;
+    public bool DisableFarmTilesGamesetting = false;
+
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
@@ -89,7 +94,7 @@ public class GameManager : MonoBehaviour
         //Lose checkmarks
 
         //All barren
-        if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
+        if (TileTypeAndAmountUI.Instance.barrenTiles > BarrentilesLoseTreshold)
         {
             LoseBarren();
         }
@@ -117,9 +122,6 @@ public class GameManager : MonoBehaviour
                tickTimer += Time.fixedDeltaTime;
                 break;
         }
-
-        
-
     }
     
     private void ProcessTick()

@@ -18,15 +18,20 @@ public class TileUIUpdate : MonoBehaviour
         Mine
     }
 
+    public enum TileTypeUIAmountOrGrain
+    {
+       Amount,
+       Gain
+    }
+
     public TileTypeUI selectedTileType;
+    public TileTypeUIAmountOrGrain selectedAmountOrGrain;
 
     private void Start()
     {
         text = GetComponent<TMP_Text>();
         UpdateText();
         tileTypeUI.onTileUIUpdate.AddListener(UpdateText);
-
-       
     }
 
     private void UpdateText()
@@ -34,25 +39,53 @@ public class TileUIUpdate : MonoBehaviour
         switch (selectedTileType)
         {
             case TileTypeUI.Grass:
-                text.text = tileTypeUI.grassTiles.ToString() + "x";
+                text.text = "x" + tileTypeUI.grassTiles.ToString();
                 break;
             case TileTypeUI.Rainforest:
-                text.text = tileTypeUI.rainforestTiles.ToString() + "x";
+                text.text = "x" + tileTypeUI.rainforestTiles.ToString();
                 break;
             case TileTypeUI.Farm:
-                text.text = tileTypeUI.farmTiles.ToString() + "x = " + tileTypeUI.farmMoneyGain.ToString();
+                if (selectedAmountOrGrain == TileTypeUIAmountOrGrain.Amount)
+                {
+                    text.text = "x" + tileTypeUI.farmTiles.ToString();
+                }
+                else
+                {
+                    text.text = tileTypeUI.farmMoneyGain.ToString();
+                }
                 break;
             case TileTypeUI.CowField:
-                text.text = tileTypeUI.pastureTiles.ToString() + "x = " + tileTypeUI.pastureMoneyGain.ToString();
+                if (selectedAmountOrGrain == TileTypeUIAmountOrGrain.Amount)
+                {
+                    text.text = "x" + tileTypeUI.pastureTiles.ToString();
+                }
+                else
+                {
+                    text.text = tileTypeUI.pastureMoneyGain.ToString();
+                }
                 break;
             case TileTypeUI.Agroforest:
-                text.text = tileTypeUI.agroforestTiles.ToString() + "x = " + tileTypeUI.agroforestMoneyGain.ToString();
+                if (selectedAmountOrGrain == TileTypeUIAmountOrGrain.Amount)
+                {
+                    text.text = "x" + tileTypeUI.agroforestTiles.ToString();
+                }
+                else
+                {
+                    text.text = tileTypeUI.agroforestMoneyGain.ToString();
+                }
                 break;
             case TileTypeUI.Barren:
-                text.text = tileTypeUI.barrenTiles.ToString() + "x";
+                text.text = "x" + tileTypeUI.barrenTiles.ToString();
                 break;
             case TileTypeUI.Mine:
-                text.text = tileTypeUI.mineTiles.ToString() + "x = " + tileTypeUI.mineMoneyGain.ToString();
+                if (selectedAmountOrGrain == TileTypeUIAmountOrGrain.Amount)
+                {
+                    text.text = "x" + tileTypeUI.mineTiles.ToString();
+                }
+                else
+                {
+                    text.text = tileTypeUI.mineMoneyGain.ToString();
+                }
                 break;
         }
     }
