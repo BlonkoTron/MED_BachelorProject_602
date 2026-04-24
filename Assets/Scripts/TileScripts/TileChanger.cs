@@ -179,7 +179,6 @@ public class TileChanger : MonoBehaviour
                 }
             }
             
-            onTileChanged.Invoke();
             return true;
         }
         else
@@ -295,7 +294,7 @@ public class TileChanger : MonoBehaviour
                 TutorialManager.instance.UpdateTutorial();
             }
         }
-
+        onTileChanged.Invoke();
     }
 
     public void CreateDust()
