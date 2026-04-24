@@ -41,6 +41,7 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private GameObject farmDisabledImage;
 
     private TileType tileType_toChange;
+    private int actualCostForUI; // Tracks actual money change for visual display
 
     private void Start()
     {
@@ -110,7 +111,6 @@ public class TileChanger : MonoBehaviour
     }
     public bool ChangeTile(TileType type)
     {
-        // 🚫 Block if tile type is disabled
 
         tileCollider.enabled = false;
 
@@ -141,22 +141,43 @@ public class TileChanger : MonoBehaviour
 
             topAnimator.SetTrigger("Swap");
 
-            // Calculate the cost difference
-            int targetCost = GetTileCost(type);
-            int currentCost = GetTileCost(tile.Type);
-            int costDifference = targetCost - currentCost;
-            
-            if (costDifference > 0)
+            // Special handling when converting TO natural tiles
+            if (type == TileType.Grass || type == TileType.Rainforest)
             {
-                // Upgrading: spend the difference
-                PointSystem.Instance.SpendMoney(costDifference);
+                // Only give the flat demolition bonus, not the tile's full value
+                int demolitionBonus = Mathf.Abs(gameSettings.COST_NATURAL); // 10 gold
+                PointSystem.Instance.AddMoney(demolitionBonus);
+                actualCostForUI = -demolitionBonus; // Negative for visual display (shows as gain)
             }
-            else if (costDifference < 0)
+            else
             {
-                // Downgrading: get money back
-                PointSystem.Instance.AddMoney(-costDifference);
+                // Normal cost calculation for non-natural tiles
+                int targetCost = GetTileCost(type);
+                int currentCost = GetTileCost(tile.Type);
+                int costDifference = targetCost - currentCost;
+                
+                if (costDifference > 0)
+                {
+                    // Upgrading: spend the difference
+                    if (!PointSystem.Instance.SpendMoney(costDifference))
+                    {
+                        Debug.LogError("Failed to spend money despite CanAffordTileChange check!");
+                        tileCollider.enabled = true;
+                        return false;
+                    }
+                    actualCostForUI = costDifference; // Positive (cost)
+                }
+                else if (costDifference < 0)
+                {
+                    // Downgrading: get money back (difference between tiles)
+                    PointSystem.Instance.AddMoney(-costDifference);
+                    actualCostForUI = costDifference; // Negative (gain)
+                }
+                else
+                {
+                    actualCostForUI = 0; // No change
+                }
             }
-            // If costDifference == 0, no money exchange needed
             
             onTileChanged.Invoke();
             return true;
@@ -181,9 +202,10 @@ public class TileChanger : MonoBehaviour
             case TileType.Agroforest:
                 return gameSettings.COST_AGROFOREST;
             case TileType.Grass:
-                return gameSettings.COST_NATURAL;
             case TileType.Rainforest:
-                return gameSettings.COST_NATURAL;
+                // Natural tiles have 0 cost for purchasing calculations
+                // The demolition refund is handled separately in ChangeTile()
+                return 0;
         }
         return 0;
     }
@@ -192,15 +214,16 @@ public class TileChanger : MonoBehaviour
         
         int targetCost = GetTileCost(type);
         int currentCost = GetTileCost(tile.Type);
+        int costDifference = targetCost - currentCost;
         
         // If downgrading (target is cheaper than current), always allow it
-        if (targetCost < currentCost)
+        if (costDifference <= 0)
         {
             return true;
         }
         
-        // If upgrading or lateral move, check if player can afford it
-        if (PointSystem.Instance.CurrentMoney >= targetCost)
+        // If upgrading, check if player can afford the difference
+        if (PointSystem.Instance.CurrentMoney >= costDifference)
         {
             return true;
         } else
@@ -260,7 +283,7 @@ public class TileChanger : MonoBehaviour
     public void SwapMethod()
     {
 
-        tile.SetTileType(tileType_toChange, GetTileCost(tileType_toChange));
+        tile.SetTileType(tileType_toChange, actualCostForUI);
         UpdateUI();
         tileCollider.enabled = true;
 
