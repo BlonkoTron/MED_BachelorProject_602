@@ -5788,6 +5788,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1773703116003140688, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773703116003140688, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1819149874270219075, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_Name
       value: ManagingObject Variant
@@ -5828,6 +5836,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2031997575574474365, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+    - target: {fileID: 2031997575574474365, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+    - target: {fileID: 2031997575574474365, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2233853477775330102, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5923,6 +5943,14 @@ PrefabInstance:
     - target: {fileID: 5657153895400177260, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935394179877475397, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+    - target: {fileID: 5935394179877475397, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: WinningThreshold
