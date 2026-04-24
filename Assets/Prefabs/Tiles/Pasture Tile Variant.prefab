@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 6566982836514545846}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.648649
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5699998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2597613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3459743983685633166, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 97f1bb7e7a7a844499a88a4170d0d857, type: 2}
     - target: {fileID: 8197807196140216742, guid: 425445bc5aee8d24ea7b3eaaae94384e, type: 3}
       propertyPath: m_Name
-      value: Pasture Tile Variant 1
+      value: Pasture Tile Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

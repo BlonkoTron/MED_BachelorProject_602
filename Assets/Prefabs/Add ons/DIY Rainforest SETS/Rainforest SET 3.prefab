@@ -2696,6 +2696,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rainforest SET 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      propertyPath: m_TagString
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 2086001919348432530, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.243
@@ -2731,10 +2739,62 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5422145806805577775}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3913343329406754382}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012657107769498633}
   m_SourcePrefab: {fileID: 100100000, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
 --- !u!4 &1325117498179387548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
   m_PrefabInstance: {fileID: 1578927445751261047}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1812720791361640998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+  m_PrefabInstance: {fileID: 1578927445751261047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3913343329406754382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812720791361640998}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.15, y: 0.17, z: 1.17}
+  m_Center: {x: 0, y: 0.55, z: 0}
+--- !u!114 &2012657107769498633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812720791361640998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbab77aabac90d4b85e645d07ff7ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestDecorator
+  spawnPrefab: {fileID: 391132151874798671, guid: 739b08a48019b0d42b85e02bbd3c0aaa, type: 3}
+  spawnLocation: {fileID: 1325117498179387548}
+  spawnChance: 40
+  forestLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  searchRadius: 2
+  searchHeight: 5
