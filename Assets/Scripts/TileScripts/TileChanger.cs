@@ -178,11 +178,7 @@ public class TileChanger : MonoBehaviour
                     actualCostForUI = 0; // No change
                 }
             }
-
-   
-
-
-            onTileChanged.Invoke();
+            
             return true;
         }
         else
@@ -305,7 +301,7 @@ public class TileChanger : MonoBehaviour
                 TutorialManager.instance.UpdateTutorial();
             }
         }
-
+        onTileChanged.Invoke();
     }
 
     public void CreateDust()
