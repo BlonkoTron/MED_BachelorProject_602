@@ -355,17 +355,17 @@ public class Tile : MonoBehaviour
     public string GetTileInfo()
     {
         string info = $"Type: {tileType}\n";
-        info += $"Income: ${GetMoneyPerTick()}/tick\n";
+        info += $"Indtægt: ${GetMoneyPerTick()}/tick\n";
         info += $"Degradation: {currentDegradation:F1}/{degradationThreshold}\n";
         
         int turnsLeft = GetTurnsUntilBarren();
         if (turnsLeft > 0)
         {
-            info += $"Turns until barren: {turnsLeft}";
+            info += $"Øde om {turnsLeft} runder";
         }
         else if (turnsLeft == -1 && tileType != TileType.Barren)
         {
-            info += "Sustainable";
+            info += "Bæredygtig";
         }
         
         return info;
