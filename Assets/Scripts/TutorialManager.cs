@@ -24,7 +24,10 @@ public class TutorialManager : MonoBehaviour
 
         nextStep.AddListener(UpdateTutorial);
 
-        InteractionManager.Instance.EnableDisablePlayerInput();
+        InteractionManager.Instance.DisablePlayerInput();
+
+        DisableAllTutorialObj();
+
 
         if (tutorialObjects[currentStep] != null)
         {
@@ -63,9 +66,17 @@ public class TutorialManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        InteractionManager.Instance.EnableDisablePlayerInput();
+        InteractionManager.Instance.EnablePlayerInput();
         GameManager.Instance.SetNewState(GameManager.GameState.normal);
         nextStep.RemoveAllListeners();
+    }
+
+    private void DisableAllTutorialObj()
+    {
+        foreach (GameObject i in tutorialObjects)
+        {
+            i.SetActive(false);
+        }
     }
 
 }
