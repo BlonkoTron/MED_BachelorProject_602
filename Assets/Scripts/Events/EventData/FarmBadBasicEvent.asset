@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: "Dine afgr\xF8der d\xF8r p\xE5 grund af vandmangel"
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Landbrugstiles produktion bliver halveret
+    choiceText: "Produktion fra landbrugstiles bliver halveret indtil n\xE6ste uge"
     buttonText: Ignorer det
     moneyLoss: 0
     moneyGain: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Mist 100 guld
+    choiceText: Betal 100 guld
     buttonText: "K\xF8b ekstra vand"
     moneyLoss: 100
     moneyGain: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: "Landbrugstiles kan ikke blive bygget til n\xE6ste uge"
-    buttonText: "S\xF8rg for det eksistere landbrugstile"
+    choiceText: "Landbrugstiles kan ikke blive bygget indtil n\xE6ste uge"
+    buttonText: "Pas p\xE5 de eksisterende landbrugstile"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0

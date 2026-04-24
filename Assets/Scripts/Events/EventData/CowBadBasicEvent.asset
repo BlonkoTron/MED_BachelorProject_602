@@ -16,7 +16,8 @@ MonoBehaviour:
   eventInfo: "K\xF8erne i omr\xE5det er blevet syge"
   Scenariosprite: {fileID: 2800000, guid: c5872dbec4a3aa5488f745b4664dace1, type: 3}
   choice1:
-    choiceText: "Produktion fra kv\xE6gfarmtiles bliver halveret"
+    choiceText: "Produktion fra kv\xE6gfarmtiles bliver halveret indtil n\xE6ste
+      uge"
     buttonText: "Lad k\xF8erne v\xE6re"
     moneyLoss: 0
     moneyGain: 0
@@ -31,8 +32,8 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Mist 100 penge
-    buttonText: "K\xF8b ekstra medicin"
+    choiceText: Betal 100 guld
+    buttonText: "K\xF8b medicin til k\xF8erne"
     moneyLoss: 100
     moneyGain: 0
     HappinessUp: 0
@@ -46,7 +47,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: "Kv\xE6gfarmtiles kan ikke blive bygget til n\xE6ste kvote"
+    choiceText: "Kv\xE6gfarmtiles kan ikke blive bygget indtil n\xE6ste uge"
     buttonText: "Start en karant\xE6ne for k\xF8erne"
     moneyLoss: 0
     moneyGain: 0

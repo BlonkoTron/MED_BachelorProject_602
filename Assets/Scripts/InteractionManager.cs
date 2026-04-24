@@ -20,6 +20,8 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] float interactionDistance = 100f;
 
     private bool hoveringUI;
+    private PlayerInput playerInput;
+
 
     private GameObject hitObj;
     private GameObject lastHoveredTile;
@@ -31,6 +33,9 @@ public class InteractionManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        playerInput = GetComponent<PlayerInput>();
+
     }
 
     private void Update()
@@ -136,6 +141,23 @@ public class InteractionManager : MonoBehaviour
         }
 
 
+    }
+
+    public void DisablePlayerInput()
+    {
+        if (playerInput.enabled)
+        {
+            playerInput.enabled = false;
+        }
+
+    }
+
+    public void EnablePlayerInput()
+    {
+        if (!playerInput.enabled)
+        {
+            playerInput.enabled = true;
+        }
     }
 
     private bool CheckIfUI()

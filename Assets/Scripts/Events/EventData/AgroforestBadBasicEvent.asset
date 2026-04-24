@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: Skovlandbruget har brug for flere penge
   Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
   choice1:
-    choiceText: Skovlandbrugtiles produktion bliver halveret
+    choiceText: "Skovlandbrugtiles produktion bliver halveret indtil n\xE6ste uge"
     buttonText: "Arbejd med mindre underst\xF8tte"
     moneyLoss: 0
     moneyGain: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice2:
-    choiceText: Mist 100 guld
+    choiceText: Betal 100 guld
     buttonText: "Betal for at uderst\xF8tte skovlandbruget"
     moneyLoss: 100
     moneyGain: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
   choice3:
-    choiceText: "Skovlandbrugtiles can ikke blive bygget til n\xE6ste uge"
+    choiceText: "Skovlandbrugtiles kan ikke blive bygget indtil n\xE6ste uge"
     buttonText: "Lad v\xE6r med at st\xF8tte"
     moneyLoss: 0
     moneyGain: 0

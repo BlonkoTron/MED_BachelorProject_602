@@ -14,6 +14,25 @@ public class GameManager : MonoBehaviour
 
     private Eventmanager_NEWSETUP EventMangerGET;
 
+    public bool DisableMineTilesGamesetting = false;
+    public bool DisableCowTilesGamesetting = false;
+    public bool DisableAgroTilesGamesetting = false;
+    public bool DisableFarmTilesGamesetting = false;
+
+    public enum SceneType
+    {
+        Lose_Happiness,
+        Lose_Bio,
+        Lose_Barren,
+        Win_Balance
+    }
+
+    public void LoadScene(SceneType scene)
+    {
+        SceneManager.LoadScene(scene.ToString());
+    }
+
+
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
@@ -27,17 +46,27 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<GameState> onGameStateChanged;
 
-    //Losing condition settings
+    //Losing condition happiness settings
     [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    private int Ticktime = 0; //Int tto count number of rounds
+    private int HappinessTicktime = 0; //Int tto count number of rounds
 
+
+    //Losing condition happiness settings
+    [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
+    [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
+    private int RainscoreTicktime = 0; //Int tto count number of rounds
+
+    //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
-   
 
+    //Winning the game settings
+
+    [SerializeField] private int WinningThreshold; //How many events the player must survive before they can win
+    private int Eventcounter; //Counter for events
 
     [Range(0f, 1f)]
-    public float clockSpinValue = 0.5f;
+    public float roundProgressValue = 0.5f;
 
     [Header("Animation")]
     [SerializeField] private Animator clockAnimator;
@@ -82,7 +111,7 @@ public class GameManager : MonoBehaviour
         //Lose checkmarks
 
         //All barren
-        if (TileTypeAndAmountUI.Instance.barrenTiles < BarrentilesLoseTreshold)
+        if (TileTypeAndAmountUI.Instance.barrenTiles > BarrentilesLoseTreshold)
         {
             LoseBarren();
         }
@@ -110,9 +139,6 @@ public class GameManager : MonoBehaviour
                tickTimer += Time.fixedDeltaTime;
                 break;
         }
-
-        
-
     }
     
     private void ProcessTick()
@@ -140,18 +166,44 @@ public class GameManager : MonoBehaviour
 
         if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
         {
-            Ticktime++;
+            HappinessTicktime++;
 
-            if (Ticktime == HappinessLoseRoundThreshold)
+            if (HappinessTicktime == HappinessLoseRoundThreshold)
             {
                 LoseNoHappiness();
             }
         }
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
-            Ticktime = 0;
+            HappinessTicktime = 0;
+        }
+
+        //Rainforestscore Losecheck
+
+        if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
+        {
+            RainscoreTicktime++;
+
+            if (RainscoreTicktime == RainscoreLoseRoundThreshold)
+            {
+                LoseNoBiodiversity();
+            }
+        }
+        else if (TileTypeAndAmountUI.Instance.rainforestScore >= RainscoreLoseTreshold)
+        {
+            RainscoreTicktime = 0;
+        }
+
+        //WinCondition!
+
+        Eventcounter++;
+
+        if (Eventcounter >= WinningThreshold && TileTypeAndAmountUI.Instance.rainforestScore > RainscoreLoseTreshold && Happiness.Instance.happinessLevel > HappinessLoseTreshold)
+        {
+            WinPerfectBalance();
         }
     }
+
     public void StartRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
@@ -202,7 +254,7 @@ public class GameManager : MonoBehaviour
         {
             clockAnimator.Play(animationName, 0, progress);
         }
-        
+        roundProgressValue = progress;
 
     }
 
@@ -210,22 +262,26 @@ public class GameManager : MonoBehaviour
     //Losing conditions
     public void LoseBarren()
     {
-        //check
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (alt er fedt)");
+        LoadScene(SceneType.Lose_Barren);
     }
 
     public void LoseNoBiodiversity()
     {
-
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
+        LoadScene(SceneType.Lose_Bio);
     }
 
     public void LoseNoHappiness()
     {
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
+        LoadScene(SceneType.Lose_Happiness);
     }
 
     public void WinPerfectBalance()
     {
-        //Certain happiness/bio and quotaturn
+        Debug.Log("YOU WIN, YOU WIIIIIN (balance baby)");
+        LoadScene(SceneType.Win_Balance);
     }
 
 }

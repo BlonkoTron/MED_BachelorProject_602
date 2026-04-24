@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bdb63c252e3e8d49b2700b5694d1697
+guid: c0454169c22583e4d8c412b53cb586e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: speedSettings_0
+      name: speedSettingsPressed_0
       rect:
         serializedVersion: 2
         x: 34
         y: 28
         width: 94
-        height: 105
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f31cdc8fb0361954cac9acd376426d42
-      internalID: -2090571773
+      spriteID: 2852256e23b9abf49a84b9b6b8e324bd
+      internalID: -581708122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: speedSettings_1
+      name: speedSettingsPressed_1
       rect:
         serializedVersion: 2
         x: 181
         y: 29
         width: 88
-        height: 106
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92da3a03af35b334293abd7bb7cffe3a
-      internalID: 1038886406
+      spriteID: 191ba807feca8834385067ed349d127c
+      internalID: 1820166582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: speedSettings_2
+      name: speedSettingsPressed_2
       rect:
         serializedVersion: 2
-        x: 297
+        x: 298
         y: 29
-        width: 137
-        height: 107
+        width: 136
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 901d8ce1727e1974ebc20e089d1697a2
-      internalID: -1822271267
+      spriteID: bb293e46ac42432429104b4b8b624578
+      internalID: -1571748225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: speedSettings_3
+      name: speedSettingsPressed_3
       rect:
         serializedVersion: 2
         x: 463
         y: 29
         width: 188
-        height: 106
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf9b0f7525373a4bb749eee7b299bdb
-      internalID: -1704746954
+      spriteID: e81f326701955a54ca7100e481328220
+      internalID: 1307888706
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4cbd981dd271b904da2c4607165cd35b
+    spriteID: e8f8a03a34d39874486cbee96fcb1bce
     internalID: 0
     vertices: []
     indices: 
@@ -200,10 +200,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      speedSettings_0: -2090571773
-      speedSettings_1: 1038886406
-      speedSettings_2: -1822271267
-      speedSettings_3: -1704746954
+      speedSettingsPressed_0: -581708122
+      speedSettingsPressed_1: 1820166582
+      speedSettingsPressed_2: -1571748225
+      speedSettingsPressed_3: 1307888706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
