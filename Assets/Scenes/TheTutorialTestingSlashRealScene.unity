@@ -5820,6 +5820,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 549402813}
+    - target: {fileID: 1025172268718100126, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnablePlayerInput
+      objectReference: {fileID: 0}
     - target: {fileID: 1329727772288003754, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
       propertyPath: m_SizeDelta.x
       value: 523.8341
@@ -5980,9 +5984,45 @@ PrefabInstance:
       propertyPath: m_text
       value: "Her Kan du pause tiden og v\xE6lge om tiden skal g\xE5 hurtigere."
       objectReference: {fileID: 0}
+    - target: {fileID: 5711253225259386386, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 549402813}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnablePlayerInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InteractionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850641784065757201, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6202838729089057361, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
       propertyPath: m_Name
       value: "11 - Trykp\xE5bygning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202838729089057361, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6215919157498567776, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
       propertyPath: m_Name

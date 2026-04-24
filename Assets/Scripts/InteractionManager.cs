@@ -143,17 +143,23 @@ public class InteractionManager : MonoBehaviour
 
     }
 
-    public void EnableDisablePlayerInput()
+    public void DisablePlayerInput()
     {
         if (playerInput.enabled)
         {
             playerInput.enabled = false;
         }
-        else 
+
+    }
+
+    public void EnablePlayerInput()
+    {
+        if (!playerInput.enabled)
         {
             playerInput.enabled = true;
         }
     }
+
     private bool CheckIfUI()
     {
         if (EventSystem.current.IsPointerOverGameObject())
