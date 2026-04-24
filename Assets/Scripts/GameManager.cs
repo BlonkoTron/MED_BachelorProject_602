@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     private int Eventcounter; //Counter for events
 
     [Range(0f, 1f)]
-    public float clockSpinValue = 0.5f;
+    public float roundProgressValue = 0.5f;
 
     [Header("Animation")]
     [SerializeField] private Animator clockAnimator;
@@ -254,7 +254,7 @@ public class GameManager : MonoBehaviour
         {
             clockAnimator.Play(animationName, 0, progress);
         }
-        
+        roundProgressValue = progress;
 
     }
 

@@ -149,4 +149,8 @@ public class TileTypeAndAmountUI : MonoBehaviour
         pastureMoneyGain = pastureTiles * gameSettings.MONEY_COW_FIELD * PointSystem.Instance.cowfieldEfficiencyMultiplier;
         mineMoneyGain = mineTiles * gameSettings.MONEY_MINE * PointSystem.Instance.mineEfficiencyMultiplier;
     }
+    public float GetTotalMoneyGain()
+    {        
+        return agroforestMoneyGain + farmMoneyGain + pastureMoneyGain + mineMoneyGain;
+    }
 }
