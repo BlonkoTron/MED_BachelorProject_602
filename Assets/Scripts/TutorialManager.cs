@@ -53,8 +53,7 @@ public class TutorialManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Tutorial Is now Done");
-                Destroy(gameObject);
+                SkipTutorial();
             }
 
             Debug.Log(currentStep);
@@ -62,7 +61,11 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    
+    public void SkipTutorial()
+    {
+        Debug.Log("Tutorial Is now Done");
+        Destroy(gameObject);
+    }
 
     private void OnDestroy()
     {
