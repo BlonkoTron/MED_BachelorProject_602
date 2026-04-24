@@ -15,18 +15,24 @@ public class PointsUI : MonoBehaviour
         pointSystem.onMoneyEarned.AddListener(OnMoneyAdded);
         pointSystem.onMoneySpent.AddListener(OnMoneyRemoved);
         pointSystem.onMoneyLost.AddListener(OnMoneyRemoved);
+        TileTypeAndAmountUI.Instance.onTileUIUpdate.AddListener(UpdateMoneyPerDay);
+
         OnMoneyAdded(0);
+        UpdateMoneyPerDay();
     }
 
     private void OnMoneyAdded(int money)
     {
         moneyText.text = pointSystem.CurrentMoney.ToString();
-        moneyPerDayText.text ="+"+ TileTypeAndAmountUI.Instance.GetTotalMoneyGain().ToString() +"/dag";
     }
     private void OnMoneyRemoved(int money)
     {
         moneyText.text = pointSystem.CurrentMoney.ToString();
+    }
+    private void UpdateMoneyPerDay()
+    {
         moneyPerDayText.text = "+" + TileTypeAndAmountUI.Instance.GetTotalMoneyGain().ToString() + "/dag";
+
     }
 
 }
