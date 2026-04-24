@@ -5,10 +5,13 @@ using TMPro;
 public class QuotaUI : MonoBehaviour
 {
     private QuotaManager quotaManager;
+    private GameManager gameManager;
 
     [SerializeField] private TMP_Text quotaAmountText;
 
     [SerializeField] private TMP_Text timeLeftText;
+
+    [SerializeField] private Image roundProgressBar;
 
     [SerializeField] private Animator clockAnimator;
 
@@ -16,6 +19,7 @@ public class QuotaUI : MonoBehaviour
     void Start()
     {
         quotaManager = QuotaManager.Instance;
+        gameManager = GameManager.Instance;
 
         quotaManager.OnQuotaUpdated.AddListener(UpdateQuotaText);
         UpdateQuotaText();
@@ -28,7 +32,8 @@ public class QuotaUI : MonoBehaviour
     }
     private void Update()
     {
-        timeLeftText.text = GameManager.Instance.SecondsTillRoundEnd().ToString();
+        timeLeftText.text = gameManager.SecondsTillRoundEnd().ToString();
+        roundProgressBar.fillAmount = gameManager.roundProgressValue;
     }
     private void OnDestroy()
     {
