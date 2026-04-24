@@ -5925,6 +5925,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: WinningThreshold
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: HappinessLoseTreshold
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: RainscoreLoseTreshold
       value: 50
       objectReference: {fileID: 0}
