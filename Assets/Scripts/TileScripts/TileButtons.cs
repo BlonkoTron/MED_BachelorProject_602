@@ -33,16 +33,32 @@ public class TileButtons : MonoBehaviour
         ParentTile.ChangeTile(tileType);
     }
 
-    private void UpdateButtonInteractability(int money)
+   private void UpdateButtonInteractability(int money)
+{
+    
+
+    int targetCost = ParentTile.GetTileCost(tileType);
+    int currentCost = ParentTile.GetTileCost(ParentTile.GetComponent<Tile>().Type);
+    
+    // If downgrading (target is cheaper), always allow it
+    if (targetCost < currentCost)
     {
-        if (ParentTile.CanAffordTileChange(tileType) && tileType!=TileType.Barren)
-        {
-            button.interactable = true;
-        } else
-        {
-            button.interactable = false;
-        }
+        button.interactable = true;
     }
+    else
+    {
+        // If upgrading, check if player can afford it
+        button.interactable = ParentTile.CanAffordTileChange(tileType);
+    }
+
+    if (tileType == TileType.Barren)
+    {
+        button.interactable = false;
+        return;
+    }
+
+
+}
     private void OnDestroy()
     {
         pointSystem.onMoneyEarned.RemoveListener(UpdateButtonInteractability);

@@ -141,7 +141,23 @@ public class TileChanger : MonoBehaviour
 
             topAnimator.SetTrigger("Swap");
 
-            PointSystem.Instance.SpendMoney(GetTileCost(type));
+            // Calculate the cost difference
+            int targetCost = GetTileCost(type);
+            int currentCost = GetTileCost(tile.Type);
+            int costDifference = targetCost - currentCost;
+            
+            if (costDifference > 0)
+            {
+                // Upgrading: spend the difference
+                PointSystem.Instance.SpendMoney(costDifference);
+            }
+            else if (costDifference < 0)
+            {
+                // Downgrading: get money back
+                PointSystem.Instance.AddMoney(-costDifference);
+            }
+            // If costDifference == 0, no money exchange needed
+            
             onTileChanged.Invoke();
             return true;
         }
@@ -173,7 +189,18 @@ public class TileChanger : MonoBehaviour
     }
     public bool CanAffordTileChange(TileType type)
     {
-        if (PointSystem.Instance.CurrentMoney >= GetTileCost(type))
+        
+        int targetCost = GetTileCost(type);
+        int currentCost = GetTileCost(tile.Type);
+        
+        // If downgrading (target is cheaper than current), always allow it
+        if (targetCost < currentCost)
+        {
+            return true;
+        }
+        
+        // If upgrading or lateral move, check if player can afford it
+        if (PointSystem.Instance.CurrentMoney >= targetCost)
         {
             return true;
         } else
