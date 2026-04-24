@@ -550,8 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Manager
   sceneNames:
-    MAIN_MENU: 
-    GAME: 
+    MAIN_MENU: MainMenu
+    GAME: tHE PLAYAEDEB
     SETTINGS: 
 --- !u!4 &596521321
 Transform:
