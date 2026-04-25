@@ -55,7 +55,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1885747343268361805, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2705094434853586623}
   m_SourcePrefab: {fileID: 100100000, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
 --- !u!4 &2580211849665538125 stripped
 Transform:
@@ -67,6 +70,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1885747343268361805, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
   m_PrefabInstance: {fileID: 7985465144948600788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2705094434853586623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428934247364499865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc094d86b32d344abba8d8d2a95d5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Randomaudio
+  tileChanger: {fileID: 0}
 --- !u!1001 &9039471253018037202
 PrefabInstance:
   m_ObjectHideFlags: 0
