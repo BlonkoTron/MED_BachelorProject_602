@@ -256,8 +256,7 @@ public class Tile : MonoBehaviour
             if (degradationAfterNextTurn >= degradationThreshold && GetDegradationRate() > 0)
             {
                 // Instantiate warning object
-                var warning = Instantiate(oneTurnWarningPrefab);
-                warning.transform.SetParent(transform);
+                var warning = Instantiate(oneTurnWarningPrefab,transform);
                 warning.transform.localPosition = Vector3.up * warningHeight;
                 warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
                 warning.transform.localScale = Vector3.one;
