@@ -225,13 +225,13 @@ public class Tile : MonoBehaviour
         switch (tileType)
         {
             case TileType.Mine:
-                return gameSettings.DEGRADATION_MINE; // Fastest degradation
+                return gameSettings.DEGRADATION_MINE * Eventmanager_NEWSETUP.instance.MineDEGRADATION_Mult; // Fastest degradation
             case TileType.CowField:
-                return gameSettings.DEGRADATION_COW_FIELD;
+                return gameSettings.DEGRADATION_COW_FIELD * Eventmanager_NEWSETUP.instance.CowDEGRADATION_Mult;
             case TileType.Farm: 
-                return gameSettings.DEGRADATION_FARM;
+                return gameSettings.DEGRADATION_FARM * Eventmanager_NEWSETUP.instance.FarmDEGRADATION_Mult;
             case TileType.Agroforest:
-                return gameSettings.DEGRADATION_AGROFOREST; // Slowest degradation (sustainable)
+                return gameSettings.DEGRADATION_AGROFOREST * Eventmanager_NEWSETUP.instance.AgroDEGRADATION_Mult; // Slowest degradation (sustainable)
             case TileType.Grass:
             case TileType.Rainforest:
                 return gameSettings.DEGRADATION_NATURAL_REGEN; // Natural regeneration
@@ -256,8 +256,7 @@ public class Tile : MonoBehaviour
             if (degradationAfterNextTurn >= degradationThreshold && GetDegradationRate() > 0)
             {
                 // Instantiate warning object
-                var warning = Instantiate(oneTurnWarningPrefab);
-                warning.transform.SetParent(transform);
+                var warning = Instantiate(oneTurnWarningPrefab,transform);
                 warning.transform.localPosition = Vector3.up * warningHeight;
                 warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
                 warning.transform.localScale = Vector3.one;
