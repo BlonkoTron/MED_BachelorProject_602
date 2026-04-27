@@ -20,8 +20,12 @@ public class TileChanger : MonoBehaviour
 
     private EventInstance ClickSFX_Open;
     [SerializeField] private EventReference ClickSFX_OpenUI;
+
     private EventInstance ClickSFX_Close;
     [SerializeField] private EventReference ClickSFX_CloseUI;
+
+    private EventInstance Tileflip;
+    [SerializeField] private EventReference Tileflip_SFX;
 
     [HideInInspector] public UnityEvent onTileChanged = new UnityEvent();
 
@@ -123,8 +127,9 @@ public class TileChanger : MonoBehaviour
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
+            Tileflip = Audiomanager.instance.PlaySound(Tileflip_SFX, transform.position);
 
-           
+
 
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
