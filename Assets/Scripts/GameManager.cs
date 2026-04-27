@@ -49,13 +49,13 @@ public class GameManager : MonoBehaviour
     //Losing condition happiness settings
     [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    private int HappinessTicktime = 0; //Int tto count number of rounds
+    public int HappinessTicktime = 0; //Int tto count number of rounds
 
 
     //Losing condition happiness settings
     [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    private int RainscoreTicktime = 0; //Int tto count number of rounds
+    public int RainscoreTicktime = 0; //Int tto count number of rounds
 
     //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;

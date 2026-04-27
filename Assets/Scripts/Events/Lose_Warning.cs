@@ -72,17 +72,17 @@ public class Lose_Warning : MonoBehaviour
         Warning = false;
 
 
-        //if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime < Bioscorethreshold)
-        //{
-        //    warningText.text = warningMessages[0];
-        //}
-        //else if (GameManager.Instance.RainscoreTicktime == Bioscorethreshold && GameManager.Instance.HappinessTicktime < Happinessthreshold)
-        //{
-        //    warningText.text = warningMessages[1];
-        //}
-        //else if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime == Bioscorethreshold)
-        //{
-        //    warningText.text = warningMessages[2];
-        //}
+        if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime < Bioscorethreshold)
+        {
+            warningText.text = warningMessages[0];
+        }
+        else if (GameManager.Instance.RainscoreTicktime == Bioscorethreshold && GameManager.Instance.HappinessTicktime < Happinessthreshold)
+        {
+            warningText.text = warningMessages[1];
+        }
+        else if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime == Bioscorethreshold)
+        {
+            warningText.text = warningMessages[2];
+        }
     }
 }
