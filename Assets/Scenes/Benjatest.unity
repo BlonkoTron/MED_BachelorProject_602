@@ -5409,10 +5409,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8824702006617430177, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13590,8 +13586,10 @@ MonoBehaviour:
       m_Calls: []
   HappinessLoseTreshold: 100
   HappinessLoseRoundThreshold: 2
+  HappinessTicktime: 0
   RainscoreLoseTreshold: 50
   RainscoreLoseRoundThreshold: 2
+  RainscoreTicktime: 0
   BarrentilesLoseTreshold: 60
   WinningThreshold: 10
   roundProgressValue: 0.5
