@@ -11,6 +11,8 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
     public List<EventData> allEvents;
     private List<EventData> usedEvents = new List<EventData>(); // 🔥 track used
 
+    public Tile tilescript;
+
     public EventData currentEvent;
 
     private Event_Manager EventMan;
@@ -18,6 +20,12 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
     public TileChanger TileChange;
 
     public bool Test_Triggerevent = false;
+
+    //Degredationmults
+    public float MineDEGRADATION_Mult = 1f;
+    public float CowDEGRADATION_Mult = 1f;
+    public float FarmDEGRADATION_Mult = 1f;
+    public float AgroDEGRADATION_Mult = 1f;
 
     private void Awake()
     {
@@ -113,7 +121,10 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         GameManager.Instance.DisableAgroTilesGamesetting = choice.DisableAgroTilesEvent;
         GameManager.Instance.DisableCowTilesGamesetting = choice.DisableCowTilesEvent;
 
-        //Disable tile
-        
+        //DEGRADATION mult change
+        MineDEGRADATION_Mult = choice.MineDegradation;
+        FarmDEGRADATION_Mult = choice.Farmdegradation;
+        AgroDEGRADATION_Mult = choice.AggroForestdegradation;
+        CowDEGRADATION_Mult = choice.Cowdegradation;
     }
 }

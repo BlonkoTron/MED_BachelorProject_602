@@ -30,6 +30,10 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
+    MineDegradation: 2
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
   choice2:
     choiceText: "F\xE5 150 guld"
     buttonText: "S\xE6lg de afgr\xF8der"
@@ -45,6 +49,10 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
+    MineDegradation: 0
+    Cowdegradation: 0
+    AggroForestdegradation: 0
+    Farmdegradation: 0
   choice3:
     choiceText: Tilfredsheden stiger med 10
     buttonText: Giv indbyggere ekstra mad
@@ -60,3 +68,7 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
+    MineDegradation: 0
+    Cowdegradation: 0
+    AggroForestdegradation: 0
+    Farmdegradation: 0
