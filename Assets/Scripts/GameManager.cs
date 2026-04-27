@@ -167,6 +167,7 @@ public class GameManager : MonoBehaviour
         if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
         {
             HappinessTicktime++;
+            Lose_Warning.Instance.Warning = true;
 
             if (HappinessTicktime == HappinessLoseRoundThreshold)
             {
@@ -176,6 +177,7 @@ public class GameManager : MonoBehaviour
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
             HappinessTicktime = 0;
+            Lose_Warning.Instance.Warning = false;
         }
 
         //Rainforestscore Losecheck
@@ -183,6 +185,7 @@ public class GameManager : MonoBehaviour
         if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
         {
             RainscoreTicktime++;
+            Lose_Warning.Instance.Warning = true;
 
             if (RainscoreTicktime == RainscoreLoseRoundThreshold)
             {
@@ -192,6 +195,7 @@ public class GameManager : MonoBehaviour
         else if (TileTypeAndAmountUI.Instance.rainforestScore >= RainscoreLoseTreshold)
         {
             RainscoreTicktime = 0;
+            Lose_Warning.Instance.Warning = false;
         }
 
         //WinCondition!
