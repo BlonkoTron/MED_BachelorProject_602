@@ -68,10 +68,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.164
       objectReference: {fileID: 0}
+    - target: {fileID: -7325164002302623882, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fae99ce7663d524682344c7a12c0f6b, type: 2}
+    - target: {fileID: -3539722369558177286, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fae99ce7663d524682344c7a12c0f6b, type: 2}
+    - target: {fileID: -2774368420143185879, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fae99ce7663d524682344c7a12c0f6b, type: 2}
+    - target: {fileID: -2046160104851722080, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e259ff93af8afbd41bf08984d8dc0f69, type: 2}
+    - target: {fileID: -1940546729023487776, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 441f7b50ad841024b9613e4e20b76f57, type: 2}
     - target: {fileID: 919132149155446097, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
       propertyPath: m_Name
       value: Pasture
       objectReference: {fileID: 0}
+    - target: {fileID: 8855105134406824092, guid: 1ae0453ae12939249a57cb4289c13599, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fae99ce7663d524682344c7a12c0f6b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -181,6 +205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4293e748a81f5cb41b74413e2ea539ff, type: 2}
     - target: {fileID: 919132149155446097, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
       propertyPath: m_Name
       value: Turck Truck
