@@ -56,10 +56,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.037
       objectReference: {fileID: 0}
+    - target: {fileID: 532059189778096099, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d13b225cfc0fe0489fce55fd9750581, type: 2}
     - target: {fileID: 919132149155446097, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
       propertyPath: m_Name
       value: Rainforest add on SET Performance
       objectReference: {fileID: 0}
+    - target: {fileID: 4071496561099915719, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d13b225cfc0fe0489fce55fd9750581, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 375517915199365746, guid: de5fca294450ed94a9bdbc5a1816370f, type: 3}
