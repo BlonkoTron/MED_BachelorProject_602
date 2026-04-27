@@ -34,6 +34,11 @@ public class EventData : ScriptableObject
         public bool DisableAgroTilesEvent;
         public bool DisableFarmTilesEvent;
 
+        //Tile degradation buff/nerf
+        public float MineDegradation = 1f;
+        public float Cowdegradation = 1f;
+        public float AggroForestdegradation = 1f;
+        public float Farmdegradation = 1f;
     }
 
     public ChoiceData choice1;
