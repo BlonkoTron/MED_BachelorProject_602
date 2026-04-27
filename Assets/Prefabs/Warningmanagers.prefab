@@ -418,7 +418,7 @@ Animator:
   m_GameObject: {fileID: 8015153943650377460}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5de182615d5be004b86ba3b649c1fb66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 15516c0d546c6d04ca8b05c998e7c65d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1173258206375388346}
           m_TargetAssemblyTypeName: Lose_Warning, Assembly-CSharp
           m_MethodName: info_Enable
           m_Mode: 1
