@@ -112,5 +112,8 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         GameManager.Instance.DisableFarmTilesGamesetting = choice.DisableFarmTilesEvent;
         GameManager.Instance.DisableAgroTilesGamesetting = choice.DisableAgroTilesEvent;
         GameManager.Instance.DisableCowTilesGamesetting = choice.DisableCowTilesEvent;
+
+        //Disable tile
+        
     }
 }
