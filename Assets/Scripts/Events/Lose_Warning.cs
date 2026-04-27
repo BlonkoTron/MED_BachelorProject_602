@@ -10,7 +10,8 @@ public class Lose_Warning : MonoBehaviour
 
     [SerializeField] private float flashDuration;
 
-    public bool Warning = false;
+    public bool Warning_bio = false;
+    public bool Warning_happy = false;
 
     public Image imagewar;
     public Sprite imagewarclicked;
@@ -41,23 +42,23 @@ public class Lose_Warning : MonoBehaviour
     }
 
     void Update()
+{
+    if ((Warning_bio || Warning_happy) && flashCoroutine == null)
     {
-        if (Warning && flashCoroutine == null)
-        {
-            imagewar.sprite = imagewarNOTclicked;
-            flashCoroutine = StartCoroutine(FlashRoutine());
-            
-        }
-        else if (!Warning && flashCoroutine != null)
-        {
-            StopCoroutine(flashCoroutine);
-            flashCoroutine = null;
-        }
+        imagewar.sprite = imagewarNOTclicked;
+        flashCoroutine = StartCoroutine(FlashRoutine());
     }
+    else if (!(Warning_bio || Warning_happy) && flashCoroutine != null)
+    {
+        StopCoroutine(flashCoroutine);
+        flashCoroutine = null;
+        imagewar.gameObject.SetActive(false);
+    }
+}
 
     private IEnumerator FlashRoutine()
     {
-        while (Warning)
+        while (Warning_bio || Warning_happy)
         {
             imagewar.gameObject.SetActive(true);
             yield return new WaitForSeconds(flashDuration);
@@ -72,7 +73,8 @@ public class Lose_Warning : MonoBehaviour
     public void info_Enable()
     {
         imagewar.sprite = imagewarclicked;
-        Warning = false;
+        Warning_bio = false;
+        Warning_happy = false;
 
 
         if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime < Bioscorethreshold)
