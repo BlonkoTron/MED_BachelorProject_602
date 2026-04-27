@@ -5391,11 +5391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564506664851787638, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -499.43024
+      value: 822
       objectReference: {fileID: 0}
     - target: {fileID: 5564506664851787638, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 21.649231
+      value: 410
       objectReference: {fileID: 0}
     - target: {fileID: 5564506664851787638, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5409,48 +5409,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4550354957181160447, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1916340722443570828, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1474575359}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
 --- !u!224 &1474575357 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5564506664851787638, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
   m_PrefabInstance: {fileID: 1474575356}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1474575358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1916340722443570828, guid: 6b16bb8941a2f9d48b1b8698e3abe3f9, type: 3}
-  m_PrefabInstance: {fileID: 1474575356}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1474575359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474575358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6210899b97d51f5479c48a6101507f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Lose_Warning
-  flashDuration: 0.3
-  Warning: 0
-  imagewar: {fileID: 0}
-  imagewarclicked: {fileID: 0}
-  warningText: {fileID: 0}
-  warningMessages:
-  - 
-  - 
-  - 
-  Happinessthreshold: 1
-  Bioscorethreshold: 1
 --- !u!1001 &1475182050
 PrefabInstance:
   m_ObjectHideFlags: 0
