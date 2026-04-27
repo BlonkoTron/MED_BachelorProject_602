@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2532,6 +2532,10 @@ PrefabInstance:
       propertyPath: selectedAmountOrGrain
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 405602422845428746, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 612848682352297973, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2588,6 +2592,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+    - target: {fileID: 1292458490388845526, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2141803117792618796, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2788,6 +2796,10 @@ PrefabInstance:
       propertyPath: percentageText
       value: 
       objectReference: {fileID: 2677815242836617550}
+    - target: {fileID: 4186306408608669877, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4244413625094365520, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -3171,6 +3183,10 @@ PrefabInstance:
     - target: {fileID: 8113591140183131214, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_Name
       value: CoinObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153024819940612301, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8204285527126228023, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: HappinessLoseTreshold
