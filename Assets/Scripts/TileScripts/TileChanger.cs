@@ -18,19 +18,10 @@ public class TileChanger : MonoBehaviour
 
     private Animator topAnimator;
 
-
-    //Audio
-    //Click open UI
     private EventInstance ClickSFX_Open;
-    [SerializeField] private EventReference ClickSFX_Open_REF;
-    //Click close UI
+    [SerializeField] private EventReference ClickSFX_OpenUI;
     private EventInstance ClickSFX_Close;
-    [SerializeField] private EventReference ClickSFX_Close_REF;
-    //Flip tile
-    private EventInstance TileFlip_SFX;
-    [SerializeField] private EventReference TileFlip_SFX_REF;
-
-
+    [SerializeField] private EventReference ClickSFX_CloseUI;
 
     [HideInInspector] public UnityEvent onTileChanged = new UnityEvent();
 
@@ -75,7 +66,7 @@ public class TileChanger : MonoBehaviour
     {
         InteractionManager.Instance.closeUI.Invoke();
         //Debug.Log(gameObject.name + " Says: 'Im Clicked'");
-        ClickSFX_Open = Audiomanager.instance.PlaySound(ClickSFX_Open_REF, transform.position);
+        ClickSFX_Open = Audiomanager.instance.PlaySound(ClickSFX_OpenUI, transform.position);
         if (tile.Type != TileType.Barren) 
         {
 
@@ -104,7 +95,7 @@ public class TileChanger : MonoBehaviour
         {
             if (stopfirstsound == true)
             {
-                ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_Close_REF, transform.position);
+                ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
             }
 
             topAnimator.SetBool("Highlighted", false);
@@ -132,8 +123,6 @@ public class TileChanger : MonoBehaviour
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
-            //Play sfx
-            TileFlip_SFX = Audiomanager.instance.PlaySound(TileFlip_SFX_REF, transform.position);
 
            
 

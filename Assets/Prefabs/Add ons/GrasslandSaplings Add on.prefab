@@ -1983,6 +1983,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 105
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 87bc275f42cef864b9279a5aa5b33745, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -3846018093981099296, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
     - target: {fileID: 919132149155446097, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
       propertyPath: m_Name
       value: Sapling
@@ -2045,9 +2057,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b029508b48b73884882c66027fdeb202, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 39fb2e31e2aaecf44bcd96be1ff17b0f, type: 2}
     - target: {fileID: 919132149155446097, guid: b029508b48b73884882c66027fdeb202, type: 3}
       propertyPath: m_Name
-      value: GrasslandSaplings Add on (1)
+      value: GrasslandSaplings Add on
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2140,6 +2156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.709
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 87bc275f42cef864b9279a5aa5b33745, type: 2}
     - target: {fileID: 919132149155446097, guid: 05e9f8a82c85c8c48b4c46b86fc5333d, type: 3}
       propertyPath: m_Name
       value: Sapling (1)
