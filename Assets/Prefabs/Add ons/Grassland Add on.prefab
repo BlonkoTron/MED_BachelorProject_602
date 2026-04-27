@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 76315507555195654}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: 0.3835566, y: 0.12399995, z: 0.33478162}
+  m_LocalPosition: {x: 0.3835566, y: 0.05, z: 0.33478162}
   m_LocalScale: {x: 1.6717999, y: 1.6718, z: 1.6717999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 398982970185343510}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: 0.28255653, y: 0.14199999, z: -0.04021838}
+  m_LocalPosition: {x: 0.28255653, y: 0.05, z: -0.04021838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -910,7 +910,7 @@ Transform:
   m_GameObject: {fileID: 3682526627500334206}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: 0.42855668, y: 0.123, z: -0.20521834}
+  m_LocalPosition: {x: 0.42855668, y: 0.05, z: -0.20521834}
   m_LocalScale: {x: 1.6717999, y: 1.6718, z: 1.6717999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -943,7 +943,7 @@ Transform:
   m_GameObject: {fileID: 3745876074453256549}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: -0.19744349, y: 0.13900004, z: -0.24021819}
+  m_LocalPosition: {x: -0.19744349, y: 0.05, z: -0.24021819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -976,7 +976,7 @@ Transform:
   m_GameObject: {fileID: 3848856907354520085}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: -0.1084435, y: 0.12999998, z: 0.49478146}
+  m_LocalPosition: {x: -0.1084435, y: 0.05, z: 0.49478146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1009,7 +1009,7 @@ Transform:
   m_GameObject: {fileID: 4153561461816378295}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: 0.024556637, y: 0.13000005, z: -0.4622183}
+  m_LocalPosition: {x: 0.024556637, y: 0.05, z: -0.4622183}
   m_LocalScale: {x: 1.6717999, y: 1.6718, z: 1.6717999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1133,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 6180312307701287406}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: -0.4934435, y: 0.11300001, z: -0.20321849}
+  m_LocalPosition: {x: -0.4934435, y: 0.05, z: -0.20321849}
   m_LocalScale: {x: 1.6717999, y: 1.6718, z: 1.6717999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1439,7 +1439,7 @@ Transform:
   m_GameObject: {fileID: 7910645297169237640}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: -0.015443325, y: 0.11100001, z: 0.18778178}
+  m_LocalPosition: {x: -0.015443325, y: 0.05, z: 0.18778178}
   m_LocalScale: {x: 0.92423993, y: 0.92424, z: 0.92423993}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1836,7 +1836,7 @@ Transform:
   m_GameObject: {fileID: 9012946513638924404}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000034875487, y: 0.38268322, z: 0.00000001444589, w: 0.9238797}
-  m_LocalPosition: {x: -0.40744328, y: 0.13400003, z: 0.07578179}
+  m_LocalPosition: {x: -0.40744328, y: 0.05, z: 0.07578179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1991,7 +1991,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grassland Add on
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5754084199372789682, guid: b029508b48b73884882c66027fdeb202, type: 3}
+    - {fileID: -7511558181221131132, guid: b029508b48b73884882c66027fdeb202, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b029508b48b73884882c66027fdeb202, type: 3}
