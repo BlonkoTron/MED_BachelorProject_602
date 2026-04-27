@@ -48,94 +48,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4658753828472030777, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e50cda5fadfb3f41903aa2e33c4dbc5, type: 2}
     - target: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
       propertyPath: m_Name
       value: Agroforest Add on
       objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: tileType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileCow_SFX.Path
-      value: event:/test
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileFarm_SFX.Path
-      value: event:/test
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileMine_SFX.Path
-      value: event:/test
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileAggro_SFX.Path
-      value: event:/test
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileCow_SFX.Guid.Data1
-      value: 392210959
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileCow_SFX.Guid.Data2
-      value: 1292695235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileCow_SFX.Guid.Data3
-      value: -539701854
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileCow_SFX.Guid.Data4
-      value: 720603872
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileFarm_SFX.Guid.Data1
-      value: 392210959
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileFarm_SFX.Guid.Data2
-      value: 1292695235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileFarm_SFX.Guid.Data3
-      value: -539701854
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileFarm_SFX.Guid.Data4
-      value: 720603872
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileMine_SFX.Guid.Data1
-      value: 392210959
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileMine_SFX.Guid.Data2
-      value: 1292695235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileMine_SFX.Guid.Data3
-      value: -539701854
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileMine_SFX.Guid.Data4
-      value: 720603872
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileAggro_SFX.Guid.Data1
-      value: 392210959
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileAggro_SFX.Guid.Data2
-      value: 1292695235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileAggro_SFX.Guid.Data3
-      value: -539701854
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158422259567345301, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-      propertyPath: TileAggro_SFX.Guid.Data4
-      value: 720603872
-      objectReference: {fileID: 0}
+    - target: {fileID: 7576222413519863172, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4293e748a81f5cb41b74413e2ea539ff, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

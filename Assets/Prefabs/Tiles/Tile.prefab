@@ -1332,27 +1332,20 @@ MonoBehaviour:
   blankTileUI: {fileID: 1931124000218102901}
   buildingUI: {fileID: 5449687786812584257}
   dustPrefab: {fileID: 8052690634479869283, guid: 2bd84bad354325d47a549420ba600ebd, type: 3}
-  ClickSFX_Open_REF:
+  ClickSFX_OpenUI:
     Guid:
       Data1: -1024100354
       Data2: 1078082169
       Data3: 960988848
       Data4: -1007593164
     Path: event:/ButtonUI_Open
-  ClickSFX_Close_REF:
+  ClickSFX_CloseUI:
     Guid:
       Data1: -1543150912
       Data2: 1276447607
       Data3: -771114874
       Data4: -924848983
     Path: event:/ButtonUI_Close
-  TileFlip_SFX_REF:
-    Guid:
-      Data1: 480516024
-      Data2: 1301636965
-      Data3: 322420117
-      Data4: -1725448415
-    Path: event:/tilechange
   onTileChanged:
     m_PersistentCalls:
       m_Calls: []

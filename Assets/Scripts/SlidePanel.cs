@@ -30,16 +30,14 @@ public class SlidePanel : MonoBehaviour
         Vector2 startPos = panel.anchoredPosition;
         Vector2 targetPos = isOpen ? shownPosition : hiddenPosition;
 
-        float startRot = buttonIcon.localEulerAngles.z;
-        float targetRot = isOpen ? 0f : 180f;
+        float startRot = isOpen ? 0f : 180f;
+        float targetRot = isOpen ? 180f : 0f;
 
         float time = 0f;
 
         while (time < duration)
         {
             float t = time / duration;
-
-            // Smooth easing (optional but nicer)
             t = Mathf.SmoothStep(0f, 1f, t);
 
             panel.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);

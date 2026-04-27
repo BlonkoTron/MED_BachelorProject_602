@@ -72,35 +72,6 @@ MonoBehaviour:
   anim: {fileID: 4186883720018830231}
   minWait: 30
   maxWait: 120
-  tileType: 4
-  TileFarm_SFX:
-    Guid:
-      Data1: 392210959
-      Data2: 1292695235
-      Data3: -539701854
-      Data4: 720603872
-    Path: event:/test
-  TileCow_SFX:
-    Guid:
-      Data1: 392210959
-      Data2: 1292695235
-      Data3: -539701854
-      Data4: 720603872
-    Path: event:/test
-  TileMine_SFX:
-    Guid:
-      Data1: 392210959
-      Data2: 1292695235
-      Data3: -539701854
-      Data4: 720603872
-    Path: event:/test
-  TileAggro_SFX:
-    Guid:
-      Data1: 392210959
-      Data2: 1292695235
-      Data3: -539701854
-      Data4: 720603872
-    Path: event:/test
 --- !u!1001 &6297899581874346685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,6 +120,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad65c7a2cf9b2bc42b2a474dd641c43d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e50cda5fadfb3f41903aa2e33c4dbc5, type: 2}
     - target: {fileID: 919132149155446097, guid: ad65c7a2cf9b2bc42b2a474dd641c43d, type: 3}
       propertyPath: m_Name
       value: Agroforestry Add On 1.2 after
@@ -211,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4293e748a81f5cb41b74413e2ea539ff, type: 2}
     - target: {fileID: 919132149155446097, guid: be4b9d02c02f09e459ac291588a90131, type: 3}
       propertyPath: m_Name
       value: Turck Truck
