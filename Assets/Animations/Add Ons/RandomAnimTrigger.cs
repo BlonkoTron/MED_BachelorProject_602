@@ -1,12 +1,25 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class RandomAnimTrigger : MonoBehaviour
 {
     public Animator anim;
+
     public float minWait = 30f;
     public float maxWait = 120f;
 
+    public TileType tileType;
+
     private float _timer;
+
+    [Header("FMOD Events")]
+    [SerializeField] private EventReference TileFarm_SFX;
+    [SerializeField] private EventReference TileCow_SFX;
+    [SerializeField] private EventReference TileMine_SFX;
+    [SerializeField] private EventReference TileAggro_SFX;
+
+    private EventInstance currentInstance;
 
     void Start()
     {
@@ -24,12 +37,55 @@ public class RandomAnimTrigger : MonoBehaviour
 
             anim.enabled = true;
             anim.SetTrigger("AnimGo");
+
+            PlayTileSound();
+        }
+
+        // Optional: keep sound following object if it moves
+        if (currentInstance.isValid())
+        {
+            Audiomanager.instance.UpdateSoundPosition(currentInstance, transform.position);
         }
     }
 
-    // Call this from an Animation Event on the LAST FRAME of your clip
+    void PlayTileSound()
+    {
+        EventReference selectedEvent = default;
+
+        switch (tileType)
+        {
+            case TileType.Farm:
+                selectedEvent = TileFarm_SFX;
+                break;
+
+            case TileType.CowField:
+                selectedEvent = TileCow_SFX;
+                break;
+
+            case TileType.Mine:
+                selectedEvent = TileMine_SFX;
+                break;
+
+            case TileType.Agroforest:
+                selectedEvent = TileAggro_SFX;
+                break;
+        }
+
+        if (!selectedEvent.IsNull)
+        {
+            currentInstance = Audiomanager.instance.PlaySound(selectedEvent, transform.position);
+        }
+    }
+
+    // Called from animation event (last frame)
     public void OnAnimationComplete()
     {
         anim.enabled = false;
+
+        // Stop sound when animation ends (optional)
+        if (currentInstance.isValid())
+        {
+            Audiomanager.instance.StopSound(currentInstance);
+        }
     }
 }

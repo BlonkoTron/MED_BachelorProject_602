@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9b74ea82-fd22-4dc0-b3e7-30b6a4969000}">
+		<property name="assetPath">
+			<value>freesound_community-demolition-excavator-with-wrecking-ball-22250.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>77.543999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{854a91d7-3c93-4362-a315-7735af6cb0e2}</destination>
+		</relationship>
+	</object>
+</objects>

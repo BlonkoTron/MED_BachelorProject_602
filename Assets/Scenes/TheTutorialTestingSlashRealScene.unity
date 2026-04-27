@@ -119,25 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &54191839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2222609267733162447, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-  m_PrefabInstance: {fileID: 281455160}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &54191844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54191839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23e9c13b8c17ad439c0cedfd56e48dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::onEnableDisablePlayerControls
-  Disable: 1
-  Enable: 0
 --- !u!1001 &87690378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,6 +175,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1971135111982492207, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971135111982492207, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971135111982492207, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971135111982492207, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2157449858005221189, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -255,6 +252,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3283972659716362219, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418605381834694838, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418605381834694838, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418605381834694838, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -389,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 7285599634713889959, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7595829797321829819, guid: fd07e035192638943bffd98525269826, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113.3999
       objectReference: {fileID: 0}
     - target: {fileID: 7834499091501340724, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchorMax.y
@@ -609,14 +622,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2222609267733162447, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878083174274197343, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5329245297818135045, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
       propertyPath: m_LocalPosition.x
       value: 943.7197
@@ -664,13 +669,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3430581746317607523, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1079953424}
-    - targetCorrespondingSourceObject: {fileID: 2222609267733162447, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 54191844}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
 --- !u!1001 &281601836
 PrefabInstance:
@@ -3217,25 +3216,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
   m_PrefabInstance: {fileID: 1044016378}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1079953419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3430581746317607523, guid: 14fbca0a56b2d3444a5857c59b991b01, type: 3}
-  m_PrefabInstance: {fileID: 281455160}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1079953424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079953419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23e9c13b8c17ad439c0cedfd56e48dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::onEnableDisablePlayerControls
-  Disable: 0
-  Enable: 1
 --- !u!1001 &1087325562
 PrefabInstance:
   m_ObjectHideFlags: 0
