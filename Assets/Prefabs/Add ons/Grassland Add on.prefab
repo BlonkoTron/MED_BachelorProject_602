@@ -1983,6 +1983,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b029508b48b73884882c66027fdeb202, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 39fb2e31e2aaecf44bcd96be1ff17b0f, type: 2}
     - target: {fileID: 919132149155446097, guid: b029508b48b73884882c66027fdeb202, type: 3}
       propertyPath: m_Name
       value: Grassland Add on
