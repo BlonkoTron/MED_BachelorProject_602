@@ -49,13 +49,13 @@ public class GameManager : MonoBehaviour
     //Losing condition happiness settings
     [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    public int HappinessTicktime = 0; //Int tto count number of rounds
+    private int HappinessTicktime = 0; //Int tto count number of rounds
 
 
     //Losing condition happiness settings
     [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    public int RainscoreTicktime = 0; //Int tto count number of rounds
+    private int RainscoreTicktime = 0; //Int tto count number of rounds
 
     //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
@@ -167,8 +167,6 @@ public class GameManager : MonoBehaviour
         if (Happiness.Instance.happinessLevel < HappinessLoseTreshold)
         {
             HappinessTicktime++;
-            //Sends warning to ui
-            Lose_Warning.Instance.Warning = true;
 
             if (HappinessTicktime == HappinessLoseRoundThreshold)
             {
@@ -178,8 +176,6 @@ public class GameManager : MonoBehaviour
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
             HappinessTicktime = 0;
-            //Disables warning
-            Lose_Warning.Instance.Warning = false;
         }
 
         //Rainforestscore Losecheck
@@ -187,8 +183,6 @@ public class GameManager : MonoBehaviour
         if (TileTypeAndAmountUI.Instance.rainforestScore < RainscoreLoseTreshold)
         {
             RainscoreTicktime++;
-            //Sends warning to ui
-            Lose_Warning.Instance.Warning = true;
 
             if (RainscoreTicktime == RainscoreLoseRoundThreshold)
             {
@@ -198,8 +192,6 @@ public class GameManager : MonoBehaviour
         else if (TileTypeAndAmountUI.Instance.rainforestScore >= RainscoreLoseTreshold)
         {
             RainscoreTicktime = 0;
-            //Disables warning
-            Lose_Warning.Instance.Warning = false;
         }
 
         //WinCondition!
