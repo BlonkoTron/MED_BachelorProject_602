@@ -52,7 +52,6 @@ public class Lose_Warning : MonoBehaviour
     {
         StopCoroutine(flashCoroutine);
         flashCoroutine = null;
-        imagewar.gameObject.SetActive(false);
     }
 }
 
