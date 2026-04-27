@@ -111,8 +111,8 @@ public class TileChanger : MonoBehaviour
     }
     public bool ChangeTile(TileType type)
     {
-
-        tileCollider.enabled = false;
+        CloseUI();
+        //tileCollider.enabled = false;
 
         if (!IsTileTypeEnabled(type))
         {
@@ -162,7 +162,7 @@ public class TileChanger : MonoBehaviour
                     if (!PointSystem.Instance.SpendMoney(costDifference))
                     {
                         Debug.LogError("Failed to spend money despite CanAffordTileChange check!");
-                        tileCollider.enabled = true;
+                        //tileCollider.enabled = true;
                         return false;
                     }
                     actualCostForUI = costDifference; // Positive (cost)
@@ -179,14 +179,18 @@ public class TileChanger : MonoBehaviour
                 }
             }
             
-            onTileChanged.Invoke();
             return true;
         }
         else
         {
+
+
             Debug.Log("Can't afford");
             return false;
         }
+
+       
+
     }
 
     public int GetTileCost(TileType type)
@@ -285,7 +289,9 @@ public class TileChanger : MonoBehaviour
 
         tile.SetTileType(tileType_toChange, actualCostForUI);
         UpdateUI();
-        tileCollider.enabled = true;
+        //tileCollider.enabled = true;
+
+        CloseUI();
 
         if (TutorialManager.instance != null) 
         { 
@@ -295,12 +301,13 @@ public class TileChanger : MonoBehaviour
                 TutorialManager.instance.UpdateTutorial();
             }
         }
-
+        onTileChanged.Invoke();
     }
 
     public void CreateDust()
     {
         Debug.Log("BABOOM");
+        CloseUI();
         Instantiate(dustPrefab, transform);
     }
 
