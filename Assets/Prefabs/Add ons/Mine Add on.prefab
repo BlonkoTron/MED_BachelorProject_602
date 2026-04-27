@@ -149,3 +149,32 @@ MonoBehaviour:
   anim: {fileID: 6152905454889768380}
   minWait: 30
   maxWait: 120
+  tileType: 6
+  TileFarm_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileCow_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileMine_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileAggro_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test

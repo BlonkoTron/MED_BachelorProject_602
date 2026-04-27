@@ -164,6 +164,35 @@ MonoBehaviour:
   anim: {fileID: 7562512773376570647}
   minWait: 30
   maxWait: 120
+  tileType: 5
+  TileFarm_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileCow_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileMine_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
+  TileAggro_SFX:
+    Guid:
+      Data1: 392210959
+      Data2: 1292695235
+      Data3: -539701854
+      Data4: 720603872
+    Path: event:/test
 --- !u!1 &8706963761278543198
 GameObject:
   m_ObjectHideFlags: 0
