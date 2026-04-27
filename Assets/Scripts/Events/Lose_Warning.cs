@@ -10,10 +10,11 @@ public class Lose_Warning : MonoBehaviour
 
     [SerializeField] private float flashDuration;
 
-    public bool Warning;
+    public bool Warning = false;
 
     public Image imagewar;
     public Sprite imagewarclicked;
+    public Sprite imagewarNOTclicked;
 
     private Coroutine flashCoroutine;
 
@@ -43,7 +44,9 @@ public class Lose_Warning : MonoBehaviour
     {
         if (Warning && flashCoroutine == null)
         {
+            imagewar.sprite = imagewarNOTclicked;
             flashCoroutine = StartCoroutine(FlashRoutine());
+            
         }
         else if (!Warning && flashCoroutine != null)
         {
@@ -74,6 +77,7 @@ public class Lose_Warning : MonoBehaviour
 
         if (GameManager.Instance.HappinessTicktime == Happinessthreshold && GameManager.Instance.RainscoreTicktime < Bioscorethreshold)
         {
+            Debug.Log("WARNINGPISSEMAND");
             warningText.text = warningMessages[0];
         }
         else if (GameManager.Instance.RainscoreTicktime == Bioscorethreshold && GameManager.Instance.HappinessTicktime < Happinessthreshold)
