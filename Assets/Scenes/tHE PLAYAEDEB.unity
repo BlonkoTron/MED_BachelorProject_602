@@ -1680,11 +1680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: xLimits.x
-      value: -39
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: xLimits.y
-      value: -20
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: zLimits.x
