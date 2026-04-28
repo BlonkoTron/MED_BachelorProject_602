@@ -118,13 +118,14 @@ public class TileChanger : MonoBehaviour
     public bool ChangeTile(TileType type)
     {
         CloseUI();
-        //tileCollider.enabled = false;
 
         if (!IsTileTypeEnabled(type))
         {
             Debug.Log(type + " is currently disabled!");
             return false;
         }
+
+        tileCollider.enabled = false;
 
         if (CanAffordTileChange(type))
         {
@@ -203,8 +204,6 @@ public class TileChanger : MonoBehaviour
     public bool ChangeTileForFree(TileType type)
     {
         CloseUI();
-        //tileCollider.enabled = false;
-
         if (!IsTileTypeEnabled(type))
         {
             Debug.Log(type + " is currently disabled!");
@@ -334,7 +333,11 @@ public class TileChanger : MonoBehaviour
 
         tile.SetTileType(tileType_toChange, actualCostForUI);
         UpdateUI();
-        //tileCollider.enabled = true;
+
+        if (tileCollider != null) 
+        {
+            tileCollider.enabled = true;
+        }
 
         CloseUI();
 
