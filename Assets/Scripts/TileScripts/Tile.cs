@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour
 {
     private GameSettings gameSettings;
     [Header("Tile Configuration")]
-    [SerializeField] private TileType tileType = TileType.Grass;
+    [SerializeField] public TileType tileType = TileType.Grass;
     [SerializeField] private GameObject addonAttachPoint;
     [SerializeField] private GameObject detailTop;
 
