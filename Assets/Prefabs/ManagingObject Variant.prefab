@@ -3201,6 +3201,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8204285527126228023, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: BarrentilesLoseTreshold
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204285527126228023, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: HappinessLoseRoundThreshold
       value: 2
       objectReference: {fileID: 0}
