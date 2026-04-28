@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class ForestDecorator : MonoBehaviour
 {
-    [Header("Setup")]
+    
     public GameObject spawnPrefab;
     public Transform spawnLocation;
-    [Range(0, 100)] public float spawnChance = 50f; 
+    public float spawnYOffset = 0f;
+    [Range(0, 100)] public float spawnChance = 50f;
 
-    [Header("Detection Settings")]
+
     public LayerMask forestLayer;
     public float searchRadius = 2f;
     public float searchHeight = 5f;
@@ -35,7 +36,9 @@ public class ForestDecorator : MonoBehaviour
         {
             if (spawnPrefab && spawnLocation)
             {
-                Instantiate(spawnPrefab, spawnLocation.position, Quaternion.identity, spawnLocation);
+               
+                Vector3 finalSpawnPos = spawnLocation.position + new Vector3(0, spawnYOffset, 0);
+                Instantiate(spawnPrefab, finalSpawnPos, Quaternion.identity, spawnLocation);
             }
         }
     }
