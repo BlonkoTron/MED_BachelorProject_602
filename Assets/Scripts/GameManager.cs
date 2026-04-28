@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
     public int RainscoreTicktime = 0; //Int tto count number of rounds
 
+    //music
     private EventInstance Main_Music;
     [SerializeField] private EventReference Main_Music_MS;
 
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour
     {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
 
-        
+        //Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
 
     }
 
