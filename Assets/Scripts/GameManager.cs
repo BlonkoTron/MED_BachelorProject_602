@@ -1,6 +1,8 @@
+//using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class GameManager : MonoBehaviour
     public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
 
     private Eventmanager_NEWSETUP EventMangerGET;
+
+    public Tile[] allTiles;
+    public List<Tile> rainforestTiles;
 
     public bool DisableMineTilesGamesetting = false;
     public bool DisableCowTilesGamesetting = false;
@@ -98,6 +103,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
+
+        
+
     }
 
     void FixedUpdate()
@@ -152,6 +160,7 @@ public class GameManager : MonoBehaviour
         {
             EndRound();
         }
+
     }
 
     private void EndRound()
@@ -216,6 +225,22 @@ public class GameManager : MonoBehaviour
         onRoundStart.Invoke();
     }
 
+    public void ChangeAndLockAtile(TileType type)
+    {
+        int randomTile = Random.Range(0,allTiles.Length);
+        if (allTiles[randomTile].tileType == TileType.Rainforest || allTiles[randomTile].tileType == TileType.Grass)
+        {
+            allTiles[randomTile].GetComponent<TileChanger>().ChangeTileForFree(type);
+            Destroy(allTiles[randomTile].gameObject.GetComponent<Collider>());
+        }
+        else
+        {
+            //prøv igen
+            ChangeAndLockAtile(type);
+        }
+           
+    }
+
     // Automatically register all tiles in the scene
     private void RegisterAllTiles()
     {
@@ -223,7 +248,7 @@ public class GameManager : MonoBehaviour
         // Clear any existing listeners to prevent duplicates
         onGameTick.RemoveAllListeners();
         
-        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
+        allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         
         foreach (Tile tile in allTiles)
         {

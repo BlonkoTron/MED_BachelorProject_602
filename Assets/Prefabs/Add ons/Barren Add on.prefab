@@ -164,6 +164,42 @@ MonoBehaviour:
   anim: {fileID: 7562512773376570647}
   minWait: 30
   maxWait: 120
+  tileType: 5
+  tileFarm_SFX:
+    Guid:
+      Data1: 1110143245
+      Data2: 1205488011
+      Data3: 623010454
+      Data4: -1502154532
+    Path: event:/Randomtrig_Farm
+  tileCow_SFX:
+    Guid:
+      Data1: 1553559929
+      Data2: 1314678260
+      Data3: -723323260
+      Data4: -1755970495
+    Path: event:/Randomtrig_Cow
+  tileMine_SFX:
+    Guid:
+      Data1: 1839211568
+      Data2: 1154299103
+      Data3: 1741856940
+      Data4: -1637909262
+    Path: event:/Randomtrig_Mine
+  tileAggro_SFX:
+    Guid:
+      Data1: 226449299
+      Data2: 1254087816
+      Data3: -2108597848
+      Data4: 1125432482
+    Path: event:/Randomtrig_Agro
+  tileBarren_SFX:
+    Guid:
+      Data1: 1857962376
+      Data2: 1090743121
+      Data3: -977100125
+      Data4: -824630532
+    Path: event:/Randomtrig_Barren
 --- !u!1 &8706963761278543198
 GameObject:
   m_ObjectHideFlags: 0

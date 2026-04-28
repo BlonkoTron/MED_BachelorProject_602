@@ -1,35 +1,113 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class RandomAnimTrigger : MonoBehaviour
 {
-    public Animator anim;
-    public float minWait = 30f;
-    public float maxWait = 120f;
+    [Header("References")]
+    [SerializeField] private Animator anim;
 
-    private float _timer;
+    [Header("Timing")]
+    [SerializeField] private float minWait = 30f;
+    [SerializeField] private float maxWait = 120f;
 
-    void Start()
+    [Header("Tile Type")]
+    [SerializeField] private TileType tileType;
+
+    private float timer;
+
+    [Header("FMOD Events")]
+    [SerializeField] private EventReference tileFarm_SFX;
+    [SerializeField] private EventReference tileCow_SFX;
+    [SerializeField] private EventReference tileMine_SFX;
+    [SerializeField] private EventReference tileAggro_SFX;
+    [SerializeField] private EventReference tileBarren_SFX;
+
+    private EventInstance currentInstance;
+
+    private void Start()
     {
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
+
         anim.enabled = false;
-        _timer = Random.Range(2f, maxWait);
+        ResetTimer();
     }
 
-    void Update()
+    private void Update()
     {
-        _timer -= Time.deltaTime;
+        timer -= Time.deltaTime;
 
-        if (_timer <= 0)
+        if (timer <= 0f)
         {
-            _timer = Random.Range(minWait, maxWait);
+            TriggerAnimation();
+            ResetTimer();
+        }
 
-            anim.enabled = true;
-            anim.SetTrigger("AnimGo");
+        // Keep sound attached to object position
+        if (currentInstance.isValid())
+        {
+            Audiomanager.instance.UpdateSoundPosition(currentInstance, transform.position);
         }
     }
 
-    // Call this from an Animation Event on the LAST FRAME of your clip
+    private void TriggerAnimation()
+    {
+        anim.enabled = true;
+        anim.SetTrigger("AnimGo");
+
+        PlayTileSound();
+    }
+
+    private void ResetTimer()
+    {
+        timer = Random.Range(minWait, maxWait);
+    }
+
+    private void PlayTileSound()
+    {
+        EventReference selectedEvent = default;
+
+        switch (tileType)
+        {
+            case TileType.Farm:
+                selectedEvent = tileFarm_SFX;
+                break;
+
+            case TileType.CowField:
+                selectedEvent = tileCow_SFX;
+                break;
+
+            case TileType.Mine:
+                selectedEvent = tileMine_SFX;
+                break;
+
+            case TileType.Agroforest:
+                selectedEvent = tileAggro_SFX;
+                break;
+
+            case TileType.Barren:
+                selectedEvent = tileBarren_SFX;
+                break;
+        }
+
+        if (!selectedEvent.IsNull)
+        {
+            currentInstance = Audiomanager.instance.PlaySound(selectedEvent, transform.position);
+        }
+    }
+
+    // Hook this to an Animation Event on the LAST FRAME
     public void OnAnimationComplete()
     {
         anim.enabled = false;
+
+        if (currentInstance.isValid())
+        {
+            Audiomanager.instance.StopSound(currentInstance);
+            currentInstance.clearHandle(); // prevents stale reference issues
+        }
     }
 }
