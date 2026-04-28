@@ -1,6 +1,8 @@
+//using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class GameManager : MonoBehaviour
     public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
 
     private Eventmanager_NEWSETUP EventMangerGET;
+
+    public Tile[] allTiles;
+    public List<Tile> rainforestTiles;
 
     public bool DisableMineTilesGamesetting = false;
     public bool DisableCowTilesGamesetting = false;
@@ -59,6 +64,7 @@ public class GameManager : MonoBehaviour
 
     //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
+    public int BarrenTilesLoseThreshold => BarrentilesLoseTreshold;
 
     //Winning the game settings
 
@@ -215,6 +221,22 @@ public class GameManager : MonoBehaviour
         onRoundStart.Invoke();
     }
 
+    public void ChangeAndLockAtile(TileType type)
+    {
+        int randomTile = Random.Range(0,allTiles.Length);
+        if (allTiles[randomTile].tileType == TileType.Rainforest || allTiles[randomTile].tileType == TileType.Grass)
+        {
+            allTiles[randomTile].SetTileType(type);
+            Destroy(allTiles[randomTile].gameObject.GetComponent<Collider>());
+        }
+        else
+        {
+            //prøv igen
+            ChangeAndLockAtile(type);
+        }
+           
+    }
+
     // Automatically register all tiles in the scene
     private void RegisterAllTiles()
     {
@@ -222,7 +244,7 @@ public class GameManager : MonoBehaviour
         // Clear any existing listeners to prevent duplicates
         onGameTick.RemoveAllListeners();
         
-        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
+        allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         
         foreach (Tile tile in allTiles)
         {

@@ -49,10 +49,10 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
-    MineDegradation: 0
-    Cowdegradation: 0
-    AggroForestdegradation: 0
-    Farmdegradation: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
   choice3:
     choiceText: Tilfredshed stiger med 10
     buttonText: "Giv dem v\xE6k til folket"
@@ -68,7 +68,7 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
-    MineDegradation: 0
-    Cowdegradation: 0
-    AggroForestdegradation: 0
-    Farmdegradation: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
