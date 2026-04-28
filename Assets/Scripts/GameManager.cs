@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 
     //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
+    public int BarrenTilesLoseThreshold => BarrentilesLoseTreshold;
 
     //Winning the game settings
 
