@@ -5,8 +5,15 @@ public class WaterColorChanger : MonoBehaviour
     [SerializeField] private Renderer[] waterRenderers;
     [SerializeField] private string colorPropertyName = "_WaterColor";
     [SerializeField] private Color brownColor = new Color(0.4f, 0.2f, 0.05f, 1f);
+    [SerializeField] private Color foamBrownColor = new Color(0.8f, 0.35f, 0.05f, 1f);
+    [SerializeField] private string foamColorProperty = "_FoamColor";
+    [SerializeField] private string foamDensityProperty = "_FoamDens";
+    [SerializeField] private float foamDensityTarget = 3f;
 
     private Color originalColor;
+    private Color originalFoamColor;
+    private float originalFoamDensity;
+    private MaterialPropertyBlock propertyBlock;
     private bool initialized = false;
 
     private void Start()
@@ -18,7 +25,11 @@ public class WaterColorChanger : MonoBehaviour
 
         if (waterRenderers != null && waterRenderers.Length > 0 && waterRenderers[0] != null)
         {
-            originalColor = waterRenderers[0].material.GetColor(colorPropertyName);
+            Material mat = waterRenderers[0].sharedMaterial;
+            originalColor = mat.GetColor(colorPropertyName);
+            originalFoamColor = mat.GetColor(foamColorProperty);
+            originalFoamDensity = mat.GetFloat(foamDensityProperty);
+            propertyBlock = new MaterialPropertyBlock();
             initialized = true;
         }
     }
@@ -33,11 +44,19 @@ public class WaterColorChanger : MonoBehaviour
 
         float t = Mathf.Clamp01((float)barrenTiles / fullyBrownAt);
         Color targetColor = Color.Lerp(originalColor, brownColor, t);
+        Color targetFoamColor = Color.Lerp(originalFoamColor, foamBrownColor, t);
+        float targetFoamDensity = Mathf.Lerp(originalFoamDensity, foamDensityTarget, t);
 
         foreach (Renderer r in waterRenderers)
         {
             if (r != null)
-                r.material.SetColor(colorPropertyName, targetColor);
+            {
+                r.GetPropertyBlock(propertyBlock);
+                propertyBlock.SetColor(colorPropertyName, targetColor);
+                propertyBlock.SetColor(foamColorProperty, targetFoamColor);
+                propertyBlock.SetFloat(foamDensityProperty, targetFoamDensity);
+                r.SetPropertyBlock(propertyBlock);
+            }
         }
     }
 }
