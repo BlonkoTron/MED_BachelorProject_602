@@ -95,22 +95,24 @@ public class TileChanger : MonoBehaviour
 
     public void CloseUI()
     {
-        if (tileUI.activeSelf) 
+        if (tileUI != null)
         {
-            if (stopfirstsound == true)
+            if (tileUI.activeSelf)
             {
-                ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+                if (stopfirstsound == true)
+                {
+                    ClickSFX_Close = Audiomanager.instance.PlaySound(ClickSFX_CloseUI, transform.position);
+                }
+
+                topAnimator.SetBool("Highlighted", false);
+
+                tileUI.GetComponent<Animator>().SetTrigger("Reset");
+
+                tileUI.SetActive(false);
+
+                //Debug.Log(gameObject.name + " Is me and im closing my UI");
             }
-
-            topAnimator.SetBool("Highlighted", false);
-
-            tileUI.GetComponent<Animator>().SetTrigger("Reset");
-
-            tileUI.SetActive(false);
-
-            //Debug.Log(gameObject.name + " Is me and im closing my UI");
         }
-
 
     }
     public bool ChangeTile(TileType type)
@@ -129,7 +131,7 @@ public class TileChanger : MonoBehaviour
             Debug.Log("Changing tile to " + type);
             Tileflip = Audiomanager.instance.PlaySound(Tileflip_SFX, transform.position);
 
-
+            
 
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
@@ -195,6 +197,44 @@ public class TileChanger : MonoBehaviour
         }
 
        
+
+    }
+
+    public bool ChangeTileForFree(TileType type)
+    {
+        CloseUI();
+        //tileCollider.enabled = false;
+
+        if (!IsTileTypeEnabled(type))
+        {
+            Debug.Log(type + " is currently disabled!");
+            return false;
+        }
+
+       
+            Debug.Log("Changing tile to " + type);
+            Tileflip = Audiomanager.instance.PlaySound(Tileflip_SFX, transform.position);
+
+            if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
+            {
+                if (Happiness.Instance != null)
+                {
+                    int happinessPenalty = gameSettings.HAPPINESS_PENALTY_RAINFOREST_CHANGE;
+                    Happiness.Instance.DecreaseHappiness(happinessPenalty);
+                }
+            }
+
+            CloseUI();
+
+            tileType_toChange = type;
+
+            topAnimator.SetTrigger("Swap");
+
+
+            return true;
+
+
+
 
     }
 

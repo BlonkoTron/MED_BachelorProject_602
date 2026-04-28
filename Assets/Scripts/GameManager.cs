@@ -103,6 +103,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
+
+        
+
     }
 
     void FixedUpdate()
@@ -157,6 +160,7 @@ public class GameManager : MonoBehaviour
         {
             EndRound();
         }
+
     }
 
     private void EndRound()
@@ -226,7 +230,7 @@ public class GameManager : MonoBehaviour
         int randomTile = Random.Range(0,allTiles.Length);
         if (allTiles[randomTile].tileType == TileType.Rainforest || allTiles[randomTile].tileType == TileType.Grass)
         {
-            allTiles[randomTile].SetTileType(type);
+            allTiles[randomTile].GetComponent<TileChanger>().ChangeTileForFree(type);
             Destroy(allTiles[randomTile].gameObject.GetComponent<Collider>());
         }
         else
