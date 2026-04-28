@@ -21064,6 +21064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal 4
       objectReference: {fileID: 0}
+    - target: {fileID: 898950078407802731, guid: 73984bb8c7829364faf05264f40e7ed5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3247775217705053523, guid: 73984bb8c7829364faf05264f40e7ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.149
@@ -21217,6 +21221,10 @@ PrefabInstance:
     - target: {fileID: 7289643261931438752, guid: 80aca7dbc831194419b639b3115e8e2e, type: 3}
       propertyPath: m_Name
       value: Animal 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289643261931438752, guid: 80aca7dbc831194419b639b3115e8e2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22161,6 +22169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7599077322872654611, guid: 2c99ea8a5133efd49bab27c63e3a7199, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22177,6 +22189,10 @@ PrefabInstance:
     - target: {fileID: 5009067836036583459, guid: 6cc7834e065165945a3f2351fd08017b, type: 3}
       propertyPath: m_Name
       value: Animal 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009067836036583459, guid: 6cc7834e065165945a3f2351fd08017b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6246747555875557568, guid: 6cc7834e065165945a3f2351fd08017b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22518,10 +22534,6 @@ SceneRoots:
   - {fileID: 147285606}
   - {fileID: 6295961557770949764}
   - {fileID: 1092780271}
-  - {fileID: 8812924697719348529}
-  - {fileID: 8813077982445327998}
-  - {fileID: 6838043793042938500}
-  - {fileID: 6658001716314133703}
   - {fileID: 322859825}
   - {fileID: 1684348577}
   - {fileID: 1215272005}
@@ -22529,3 +22541,7 @@ SceneRoots:
   - {fileID: 722254460}
   - {fileID: 1317819740}
   - {fileID: 686278728}
+  - {fileID: 8812924697719348529}
+  - {fileID: 8813077982445327998}
+  - {fileID: 6838043793042938500}
+  - {fileID: 6658001716314133703}
