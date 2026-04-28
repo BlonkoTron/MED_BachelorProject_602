@@ -136,7 +136,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &44930221
 GameObject:
@@ -269,7 +269,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.690566, g: 0.27478018, b: 0, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1001 &87690378
 PrefabInstance:
@@ -711,7 +711,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &194420953
 GameObject:
@@ -844,7 +844,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!114 &205313265
 MonoBehaviour:
@@ -863,7 +863,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1001 &306023665
 PrefabInstance:
@@ -939,7 +939,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDensity
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &346941785
 GameObject:
@@ -1283,7 +1283,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &535667095
 GameObject:
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1001 &802109860
 PrefabInstance:
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &979656313
 GameObject:
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &1100273974
 GameObject:
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1001 &1386112795
 PrefabInstance:
@@ -3201,7 +3201,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!114 &1386112809
 MonoBehaviour:
@@ -3220,7 +3220,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!114 &1386112810
 MonoBehaviour:
@@ -3239,7 +3239,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!114 &1386112811
 MonoBehaviour:
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!114 &1386112812
 MonoBehaviour:
@@ -3277,7 +3277,7 @@ MonoBehaviour:
   brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
   foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
   foamColorProperty: _FoamColor
-  foamDensityProperty: _FoamDens
+  foamDensProperty: _FoamDens
   foamDensityTarget: 3
 --- !u!1 &1387985449
 GameObject:
@@ -3966,7 +3966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: BarrentilesLoseTreshold
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: RainscoreLoseRoundThreshold
