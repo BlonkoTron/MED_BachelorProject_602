@@ -21,6 +21,7 @@ public class RandomAnimTrigger : MonoBehaviour
     [SerializeField] private EventReference tileCow_SFX;
     [SerializeField] private EventReference tileMine_SFX;
     [SerializeField] private EventReference tileAggro_SFX;
+    [SerializeField] private EventReference tileBarren_SFX;
 
     private EventInstance currentInstance;
 
@@ -85,6 +86,10 @@ public class RandomAnimTrigger : MonoBehaviour
 
             case TileType.Agroforest:
                 selectedEvent = tileAggro_SFX;
+                break;
+
+            case TileType.Barren:
+                selectedEvent = tileBarren_SFX;
                 break;
         }
 
