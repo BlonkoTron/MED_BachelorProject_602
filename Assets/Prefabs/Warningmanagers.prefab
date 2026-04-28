@@ -268,6 +268,13 @@ MonoBehaviour:
   imagewar: {fileID: 4144222706993165901}
   imagewarclicked: {fileID: 21300000, guid: 06b737f57366199429bcca4d68dd9ae2, type: 3}
   imagewarNOTclicked: {fileID: 21300000, guid: f537c12941ee3bb4da1ff76ed0c70dcc, type: 3}
+  Warning_SFX:
+    Guid:
+      Data1: -1731778914
+      Data2: 1121462842
+      Data3: 1990168962
+      Data4: -879966537
+    Path: event:/Warning
   warningText: {fileID: 9053281296309737419}
   warningMessages:
   - Du er 1 tur fra at tabe pga. Utilfredshed fra folket!

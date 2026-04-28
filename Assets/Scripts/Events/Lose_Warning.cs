@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using FMOD.Studio;
+using FMODUnity;
 
 public class Lose_Warning : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class Lose_Warning : MonoBehaviour
     public Image imagewar;
     public Sprite imagewarclicked;
     public Sprite imagewarNOTclicked;
+
+    private EventInstance Warning;
+    [SerializeField] private EventReference Warning_SFX;
 
     private Coroutine flashCoroutine;
 
@@ -47,6 +52,7 @@ public class Lose_Warning : MonoBehaviour
     {
         imagewar.sprite = imagewarNOTclicked;
         flashCoroutine = StartCoroutine(FlashRoutine());
+            Warning = Audiomanager.instance.PlaySound(Warning_SFX, transform.position);
     }
     else if (!(Warning_bio || Warning_happy) && flashCoroutine != null)
     {
