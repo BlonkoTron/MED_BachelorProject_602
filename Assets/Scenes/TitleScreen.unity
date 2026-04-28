@@ -1892,6 +1892,7 @@ GameObject:
   - component: {fileID: 610553701}
   - component: {fileID: 610553700}
   - component: {fileID: 610553703}
+  - component: {fileID: 610553704}
   m_Layer: 5
   m_Name: Startknap
   m_TagString: Untagged
@@ -2036,6 +2037,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &610553704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610553698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1125386373}
+          m_TargetAssemblyTypeName: Scene_Manager, Assembly-CSharp
+          m_MethodName: Hoversfxtrig
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &630518657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3039,10 +3069,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98460cab060341949ae294974c075908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Manager
+  Menumusic_MS:
+    Guid:
+      Data1: 1531973232
+      Data2: 1279394355
+      Data3: -1931536999
+      Data4: -2123338650
+    Path: event:/Music_Menu
+  Main_Music_MS:
+    Guid:
+      Data1: 632928308
+      Data2: 1341426303
+      Data3: -1495179601
+      Data4: -418718003
+    Path: event:/Music
+  Hover_sfx:
+    Guid:
+      Data1: 309530849
+      Data2: 1083418881
+      Data3: 387458467
+      Data4: 1482404346
+    Path: event:/Hover
   sceneNames:
     MAIN_MENU: MainMenu
     GAME: tHE PLAYAEDEB
-    SETTINGS: 
+    SETTINGS: Setter
 --- !u!4 &1125386374
 Transform:
   m_ObjectHideFlags: 0
@@ -3438,6 +3489,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
   m_PrefabInstance: {fileID: 1270372699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1339590131
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6035059566354894209, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_Name
+      value: Audiomanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.18913
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.38205
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.10023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
 --- !u!1 &1348317739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,6 +5044,7 @@ GameObject:
   - component: {fileID: 1860492383}
   - component: {fileID: 1860492382}
   - component: {fileID: 1860492381}
+  - component: {fileID: 1860492385}
   m_Layer: 5
   m_Name: AflsutKnap
   m_TagString: Untagged
@@ -5080,6 +5189,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860492379}
   m_CullTransparentMesh: 1
+--- !u!114 &1860492385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860492379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1125386373}
+          m_TargetAssemblyTypeName: Scene_Manager, Assembly-CSharp
+          m_MethodName: Hoversfxtrig
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1899105540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5988,3 +6126,4 @@ SceneRoots:
   - {fileID: 1671113576}
   - {fileID: 367085909}
   - {fileID: 1125386374}
+  - {fileID: 1339590131}
