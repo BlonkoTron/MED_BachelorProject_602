@@ -119,6 +119,21 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &10967564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &44930221
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +146,7 @@ GameObject:
   - component: {fileID: 44930225}
   - component: {fileID: 44930224}
   - component: {fileID: 44930223}
+  - component: {fileID: 44930226}
   m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
@@ -232,6 +248,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44930221}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &44930226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44930221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1001 &87690378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,6 +584,7 @@ GameObject:
   - component: {fileID: 150958792}
   - component: {fileID: 150958791}
   - component: {fileID: 150958790}
+  - component: {fileID: 150958793}
   m_Layer: 3
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -654,6 +686,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150958788}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &150958793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150958788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &194420953
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +713,7 @@ GameObject:
   - component: {fileID: 194420957}
   - component: {fileID: 194420956}
   - component: {fileID: 194420955}
+  - component: {fileID: 194420958}
   m_Layer: 3
   m_Name: Plane (4)
   m_TagString: Untagged
@@ -767,6 +815,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194420953}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &194420958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194420953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
+--- !u!114 &205313265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1001 &306023665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -824,6 +902,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+--- !u!114 &345054908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &346941785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1242,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460865108}
   m_CullTransparentMesh: 1
+--- !u!114 &476042181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &535667095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1521,7 @@ GameObject:
   - component: {fileID: 737973359}
   - component: {fileID: 737973358}
   - component: {fileID: 737973357}
+  - component: {fileID: 737973360}
   m_Layer: 3
   m_Name: Plane (3)
   m_TagString: Untagged
@@ -1514,6 +1623,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737973355}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &737973360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737973355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1001 &802109860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1948,6 +2072,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899133368}
   m_CullTransparentMesh: 1
+--- !u!114 &946266236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &979656313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,6 +2219,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979656313}
   m_CullTransparentMesh: 1
+--- !u!114 &991984423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &1100273974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2590,7 @@ GameObject:
   - component: {fileID: 1381302148}
   - component: {fileID: 1381302147}
   - component: {fileID: 1381302146}
+  - component: {fileID: 1381302149}
   m_Layer: 3
   m_Name: Plane (2)
   m_TagString: Untagged
@@ -2537,6 +2692,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381302144}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1381302149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381302144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1001 &1386112795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2875,13 +3045,176 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 387124046868578295, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
       insertIndex: 9
       addedObject: {fileID: 194420954}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2408288850652096904, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386112812}
+    - targetCorrespondingSourceObject: {fileID: 4158744048609416603, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386112811}
+    - targetCorrespondingSourceObject: {fileID: 1606523021015057419, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386112810}
+    - targetCorrespondingSourceObject: {fileID: 6818705992950187253, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386112809}
+    - targetCorrespondingSourceObject: {fileID: 6879882290905430087, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386112808}
+    - targetCorrespondingSourceObject: {fileID: 5163207788103435348, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946266236}
+    - targetCorrespondingSourceObject: {fileID: 2467422167645919834, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 10967564}
+    - targetCorrespondingSourceObject: {fileID: 4243285017820735049, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 476042181}
+    - targetCorrespondingSourceObject: {fileID: 318482987916803667, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 205313265}
+    - targetCorrespondingSourceObject: {fileID: 2068943099384398400, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 991984423}
+    - targetCorrespondingSourceObject: {fileID: 4881937082763404409, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 345054908}
   m_SourcePrefab: {fileID: 100100000, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
 --- !u!4 &1386112796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 387124046868578295, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
   m_PrefabInstance: {fileID: 1386112795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4881937082763404409, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2068943099384398400, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 318482987916803667, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4243285017820735049, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2467422167645919834, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5163207788103435348, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6879882290905430087, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6818705992950187253, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1606523021015057419, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4158744048609416603, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386112807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2408288850652096904, guid: 3172617806f75c34a87bf6e6ee603e0d, type: 3}
+  m_PrefabInstance: {fileID: 1386112795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1386112808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
+--- !u!114 &1386112809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
+--- !u!114 &1386112810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
+--- !u!114 &1386112811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
+--- !u!114 &1386112812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386112807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
+  waterRenderers: []
+  colorPropertyName: _WaterColor
+  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
 --- !u!1 &1387985449
 GameObject:
   m_ObjectHideFlags: 0
