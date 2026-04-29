@@ -10,44 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: LargeWildfire
+  m_Name: ResourceBoom
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: 
-  eventInfo: 
+  eventtitle: Rygter Om Olie i Regnskoven
+  eventInfo: Folk har illegalt udvundet olie i rengskoven og rygterne om det sorte
+    guld spreder sig
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: 
-    buttonText: 
+    choiceText: Udvid minerne
+    buttonText: "Miner effektivitet stiger men udpiner landet til n\xE6ste uge og
+      tilfredshed falder med 20"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    HappinessDown: 20
+    MineEfficiencymult: 2
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
-    MineDegradation: 1
+    MineDegradation: 1.5
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
     ChangeLockEnable: 0
-    ChangeLocktype: 1
-    changeTileDegrationValue: 20
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
-    choiceText: 
-    buttonText: 
+    choiceText: Forbyd udvindingen
+    buttonText: "Miner effektivitet falder til n\xE6ste uge og tildfredshed stiger
+      med 20"
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 20
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 0.5
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -60,16 +63,16 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: 
+    choiceText: Ignorer det
     buttonText: 
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
