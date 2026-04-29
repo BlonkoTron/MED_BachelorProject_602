@@ -353,14 +353,14 @@ public class Tile : MonoBehaviour
     // Display tile info
     public string GetTileInfo()
     {
-        string info = $"Type: {tileType}\n";
-        info += $"Indtægt: ${GetMoneyPerTick()}/tick\n";
-        info += $"Degradation: {currentDegradation:F1}/{degradationThreshold}\n";
+        string info = $"Type: {GetTileName(tileType)}\n";
+        info += $"Indtægt: ${GetMoneyPerTick()}/dag\n";
+        info += $"Nedbrydning: {currentDegradation:F1}/{degradationThreshold}\n";
         
         int turnsLeft = GetTurnsUntilBarren();
         if (turnsLeft > 0)
         {
-            info += $"Øde om {turnsLeft} runder";
+            info += $"Øde om {turnsLeft} dage";
         }
         else if (turnsLeft == -1 && tileType != TileType.Barren)
         {
@@ -374,5 +374,26 @@ public class Tile : MonoBehaviour
     public void ResetWarningFlag()
     {
         hasSpawnedWarning = false;
+    }
+    private string GetTileName(TileType type)
+    {
+        switch (tileType)
+        {
+            case TileType.Mine:
+                return "Mine";
+            case TileType.CowField:
+                return "Kvægfarm";
+            case TileType.Farm:
+                return "Landbrug";
+            case TileType.Agroforest:
+                return "Skovlandbrug"; // Slowest degradation (sustainable)
+            case TileType.Grass:
+            case TileType.Rainforest:
+                return "Regnskov"; // Natural regeneration
+            case TileType.Barren:
+                return "øde"; // Already barren
+            default:
+                return "";
+        }
     }
 }

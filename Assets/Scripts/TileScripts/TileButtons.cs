@@ -16,12 +16,11 @@ public class TileButtons : MonoBehaviour
 
     [SerializeField] private Color32 unAvailableColor;
 
-    private Color32 startColor;
+    [SerializeField] private Color32 startColor;
 
     private void Start()
     {
         button = GetComponent<Button>();
-        startColor = costText.color;
         pointSystem = PointSystem.Instance;
         pointSystem.onMoneyEarned.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneyLost.AddListener(UpdateButtonInteractability);
@@ -39,40 +38,40 @@ public class TileButtons : MonoBehaviour
     }
 
    private void UpdateButtonInteractability(int money)
-{
-    
-
+   {
     int targetCost = ParentTile.GetTileCost(tileType);
     int currentCost = ParentTile.GetTileCost(ParentTile.GetComponent<Tile>().Type);
-    
-    if (ParentTile.CanAffordTileChange(tileType))
+    UpdateTextColor();
+     // If downgrading (target is cheaper), always allow it
+        if (targetCost < currentCost)
+        {
+            button.interactable = true;
+        }
+        else
+        {
+            // If upgrading, check if player can afford it
+            button.interactable = ParentTile.CanAffordTileChange(tileType);
+        }
+
+        if (tileType == TileType.Barren)
+        {
+            button.interactable = false;
+            return;
+        }
+    }
+    private void UpdateTextColor()
+    {
+        if (ParentTile.CanAffordTileChange(tileType) && costText != null)
         {
             costText.color = startColor;
-        } else
+        }
+        else if (costText!=null)
         {
             costText.color = unAvailableColor;
 
         }
 
-        // If downgrading (target is cheaper), always allow it
-        if (targetCost < currentCost)
-    {
-        button.interactable = true;
     }
-    else
-    {
-        // If upgrading, check if player can afford it
-        button.interactable = ParentTile.CanAffordTileChange(tileType);
-    }
-
-    if (tileType == TileType.Barren)
-    {
-        button.interactable = false;
-        return;
-    }
-
-
-}
     private void OnDestroy()
     {
         pointSystem.onMoneyEarned.RemoveListener(UpdateButtonInteractability);
