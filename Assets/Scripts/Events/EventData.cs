@@ -39,6 +39,10 @@ public class EventData : ScriptableObject
         public float Cowdegradation = 1f;
         public float AggroForestdegradation = 1f;
         public float Farmdegradation = 1f;
+
+        //Change/lcok tile Event
+        public bool ChangeLockEnable;
+        public TileType ChangeLocktype;
     }
 
     public ChoiceData choice1;

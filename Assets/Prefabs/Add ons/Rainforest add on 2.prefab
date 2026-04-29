@@ -218,6 +218,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a243803a4eadab543aa5271d7954078c, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4913783052539199275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a243803a4eadab543aa5271d7954078c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 873534889763550736}
   m_SourcePrefab: {fileID: 100100000, guid: a243803a4eadab543aa5271d7954078c, type: 3}
 --- !u!1 &2854933734276218573 stripped
 GameObject:
@@ -259,7 +262,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ForestDecorator
   spawnPrefab: {fileID: 391132151874798671, guid: 739b08a48019b0d42b85e02bbd3c0aaa, type: 3}
   spawnLocation: {fileID: 3230509981897876599}
+  spawnYOffset: 0
   spawnChance: 40
+  forestLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  searchRadius: 2
+  searchHeight: 5
+--- !u!114 &873534889763550736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854933734276218573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbab77aabac90d4b85e645d07ff7ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForestDecorator
+  spawnPrefab: {fileID: 7599077322872654611, guid: 2c99ea8a5133efd49bab27c63e3a7199, type: 3}
+  spawnLocation: {fileID: 3230509981897876599}
+  spawnYOffset: 0.05
+  spawnChance: 17
   forestLayer:
     serializedVersion: 2
     m_Bits: 64
