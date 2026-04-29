@@ -37,17 +37,10 @@ public class GameSettings : ScriptableObject
 
     [Header("Happiness")]
     [Tooltip("Happiness penalty when changing a rainforest tile to another type")]
-    public int HAPPINESS_PENALTY_RAINFOREST_CHANGE = 2;
+    public int HAPPINESS_PENALTY_RAINFOREST_CHANGE = 10;
 
     [Header("Quota")]
-    public int[] quotaAmounts= { 10,20,40,60,100};
-
-    [Header("Tile Lock")]
-    public bool DisableMineTilesGamesetting = false;
-    public bool DisableCowTilesGamesetting = false;
-    public bool DisableAgroTilesGamesetting = false;
-    public bool DisableFarmTilesGamesetting = false;
-
+    public int[] quotaAmounts= { 100,125,150,200,400,500,800,1000};
 
 
 }
