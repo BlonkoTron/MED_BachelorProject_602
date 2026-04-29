@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: PestIssue
+  m_Name: LaborShortage
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Mindre Skadedyr Udbrud
-  eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
+  eventtitle: Manglende Arbejdskraft
+  eventInfo: "Der er ikke nok medarbejdere til at holde industrien k\xF8rende"
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: Brug pesticider
-    buttonText: "Betal 150 og det tager l\xE6ngere tid for land at regenerer"
-    moneyLoss: 150
+    choiceText: "H\xE6v L\xF8nnen"
+    buttonText: "Betal 250 og f\xE5 20 tilfreshed "
+    moneyLoss: 250
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 20
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
@@ -37,15 +37,14 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
   choice2:
-    choiceText: Naturlig kontrol
-    buttonText: "Betal 100 men effektivitet af skovlandbrug og g\xE5rd falder til
-      n\xE6ste uge"
-    moneyLoss: 100
+    choiceText: Opfordre til overarbejde
+    buttonText: Alle tiles effetivitet falder og tilfredshed falder med 20
+    moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 1
-    CowEfficiencymult: 1
+    HappinessDown: 20
+    MineEfficiencymult: 0.75
+    CowEfficiencymult: 0.75
     AggroForestEfficiencymult: 0.75
     FarmEfficiencymult: 0.75
     DisableMineTilesEvent: 0
@@ -60,13 +59,13 @@ MonoBehaviour:
     ChangeLocktype: 0
   choice3:
     choiceText: Ignorer det
-    buttonText: Landbrug effektivitet falder meget
+    buttonText: Alle tiles effetivitet falder meget og tilfredshed falder med 10
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 1
-    CowEfficiencymult: 1
+    HappinessDown: 10
+    MineEfficiencymult: 0.5
+    CowEfficiencymult: 0.5
     AggroForestEfficiencymult: 0.5
     FarmEfficiencymult: 0.5
     DisableMineTilesEvent: 0
