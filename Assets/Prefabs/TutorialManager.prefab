@@ -436,8 +436,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Det her viser den n\xE6ste kvota og hvor langt tid der er tilbage inden
-    den n\xE6ste kvota.\n\nDu skal have nok penge til at betale din kvota. "
+  m_text: "Dette viser den n\xE6ste kvote, og hvor lang tid der er tilbage inden
+    den n\xE6ste kvote.\n\nDu skal have nok penge til at betale din kvote."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -1399,8 +1399,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Landbrug\nGror afgr\xF8der bland andet majs og soya.\nGiver en lille m\xE6ngde
-    penge men skader ogs\xE5 jorden mindre "
+  m_text: "Landbrug\nDyrker afgr\xF8der, blandt andet majs og soja.\nGiver en lille
+    m\xE6ngde penge, men skader ogs\xE5 jorden mindre."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du kan f\xE5 penge ved at bygge bygninger"
+  m_text: "Du kan f\xE5 penge ved at opf\xF8re bygninger."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -2035,8 +2035,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dette er dit folks tilfredshed\nHvis du ikke betale kvotaer eller \xF8del\xE6gger
-    naturen bliver de ultilfredse"
+  m_text: "Dette er dit folks tilfredshed.\nHvis du ikke betaler kvoter eller \xF8del\xE6gger
+    naturen, bliver de utilfredse."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -3594,8 +3594,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du kan trykke p\xE5 en bygning for at se hvor mange penge den giver og
-    hvor langt tid der er til den bliver \xF8de."
+  m_text: "Du kan trykke p\xE5 en bygning for at se, hvor mange penge den giver,
+    og hvor lang tid der er, til feltet bliver \xF8de."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -4273,7 +4273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tryk p\xE5 et felt for at bygge"
+  m_text: "Tryk p\xE5 et felt for at bygge."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -4674,8 +4674,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mine \nGraver efter guld og olie\nGiver flest penge men skader jorden
-    rigtig hurtigt"
+  m_text: 'Mine
+
+    Graver efter guld og olie.
+
+    Giver flest penge, men skader
+    jorden rigtig hurtigt.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5138,8 +5142,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Velkommen\nDit job er at finde balance i dette regnskovs omr\xE5de s\xE5
-    dit folk bliver glade og skoven har det godt"
+  m_text: "Velkommen\nDit job er at finde balance i dette regnskovsomr\xE5de, s\xE5
+    dit folk bliver glade, og skoven har det godt."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
@@ -5408,8 +5412,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Skovlandbrug\nGror afgr\xF8der inde i regnskovs omr\xE5de\nGiver lille
-    m\xE6ngde penge men skader jorden mindst"
+  m_text: "Skovlandbrug\nDyrker afgr\xF8der inde i regnskovsomr\xE5det.\nGiver en
+    lille m\xE6ngde penge, men skader jorden mindst."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5782,8 +5786,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du kan bruge venstre musseknap for at trykke p\xE5 felter\nDu kan bruge
-    WASD for at bev\xE6ge kameraet rundt\n"
+  m_text: "Du kan bruge venstre museknap for at trykke p\xE5 felter.\nDu kan bruge
+    WASD for at bev\xE6ge kameraet rundt."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
@@ -5852,7 +5856,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3758751494984143742
@@ -6842,10 +6846,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bygninger \xF8del\xE6gger jorden i feltet det er bygget i, er bygninger
-    p\xE5 et felt i for langt tid kan feltet blive \xF8de og vil ikke l\xE6ngere
-    kunne bliver brugt. Et felt uden bygning som ikke er \xF8de vil efter lang tid
-    blive til regnskov igen."
+  m_text: "Bygninger udpiner jorden. St\xE5r de for l\xE6nge, bliver feltet ubrugeligt.
+    Tomme felter genoprettes over tid og bliver til regnskov igen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -7859,7 +7861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tryk p\xE5 en af knapperne for at bygge den slags bygning"
+  m_text: "Tryk p\xE5 en af knapperne for at bygge den type bygning."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -9386,8 +9388,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kv\xE6gfarm\nOpvokser kv\xE6g\nGiver en mellem m\xE6ngde af penge men
-    skader jorden mere end g\xE5rden"
+  m_text: "Kv\xE6gfarm\nOpdr\xE6tter kv\xE6g.\nGiver en middel m\xE6ngde penge, men
+    skader jorden mere end landbruget."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9524,7 +9526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Her Kan du pause tiden og om tiden skal g\xE5 hurtigere "
+  m_text: "Her kan du pause tiden og styre, om tiden skal g\xE5 hurtigere."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -10858,10 +10860,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dette viser dine penge
+  m_text: 'Dette viser dine penge.
 
-    Penge skal bruges til at betale kvotaer og
-    til at bygge bygninger'
+    Penge skal bruges til at betale kvoter og
+    til at bygge bygninger.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -11770,8 +11772,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "N\xE5r Denne bar er fuld er det tid til at betale kvota og samtidigt kan
-    der ske begivenheder i verdenen hvor du v\xE6lge hvad der sker ske efterf\xF8lgende"
+  m_text: "N\xE5r denne bar er fuld, er det tid til at betale kvote. Samtidig kan
+    der ske begivenheder i verden, hvor du skal v\xE6lge, hvad der efterf\xF8lgende
+    skal ske."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -11861,7 +11864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3030958540479980284
 RectTransform:
   m_ObjectHideFlags: 0
