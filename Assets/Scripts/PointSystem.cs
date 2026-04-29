@@ -1,3 +1,4 @@
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,15 +24,23 @@ public class PointSystem : MonoBehaviour
 
     [SerializeField] private GameObject farm2xUI;
     [SerializeField] private GameObject farm05xUI;
+    [SerializeField] TextMeshProUGUI farmpositive;
+    [SerializeField] TextMeshProUGUI farmNegative;
 
     [SerializeField] private GameObject mine2xUI;
     [SerializeField] private GameObject mine05xUI;
+    [SerializeField] TextMeshProUGUI minepositive;
+    [SerializeField] TextMeshProUGUI mineNegative;
 
     [SerializeField] private GameObject cow2xUI;
     [SerializeField] private GameObject cow05xUI;
+    [SerializeField] TextMeshProUGUI cowpositive;
+    [SerializeField] TextMeshProUGUI cowNegative;
 
     [SerializeField] private GameObject agro2xUI;
     [SerializeField] private GameObject agro05xUI;
+    [SerializeField] TextMeshProUGUI agropositive;
+    [SerializeField] TextMeshProUGUI agroNegative;
 
     [SerializeField] private GameObject efficiencyUI;
 
@@ -122,6 +131,11 @@ public class PointSystem : MonoBehaviour
 
     public void UpdateEfficiencyUI()
     {
+        UpdateSingleUI(farmEfficiencyMultiplier, farmpositive, farmNegative);
+        UpdateSingleUI(mineEfficiencyMultiplier, minepositive, mineNegative);
+        UpdateSingleUI(cowfieldEfficiencyMultiplier, cowpositive, cowNegative);
+        UpdateSingleUI(agroforestEfficiencyMultiplier, agropositive, agroNegative);
+
         UpdateUIForType(TileType.Farm, farmEfficiencyMultiplier, farm2xUI, farm05xUI);
         UpdateUIForType(TileType.Mine, mineEfficiencyMultiplier, mine2xUI, mine05xUI);
         UpdateUIForType(TileType.CowField, cowfieldEfficiencyMultiplier, cow2xUI, cow05xUI);
@@ -130,11 +144,37 @@ public class PointSystem : MonoBehaviour
 
     private void UpdateUIForType(TileType type, float multiplier, GameObject goodUI, GameObject badUI)
     {
-        bool isGood = Mathf.Approximately(multiplier, 2f);
-        bool isBad = Mathf.Approximately(multiplier, 0.5f);
+        bool isGood = multiplier > 1f;
+        bool isBad = multiplier < 1f;
 
         goodUI.SetActive(isGood);
         badUI.SetActive(isBad);
+    }
+
+    void UpdateSingleUI(float multiplier, TextMeshProUGUI positiveText, TextMeshProUGUI negativeText)
+    {
+        string value = multiplier.ToString("0.00") + "x";
+
+        if (multiplier > 1f)
+        {
+            positiveText.gameObject.SetActive(true);
+            negativeText.gameObject.SetActive(false);
+
+            positiveText.text = value;
+        }
+        else if (multiplier < 1f)
+        {
+            positiveText.gameObject.SetActive(false);
+            negativeText.gameObject.SetActive(true);
+
+            negativeText.text = value;
+        }
+        else
+        {
+            // exactly 1 → optional: hide both or pick one
+            positiveText.gameObject.SetActive(false);
+            negativeText.gameObject.SetActive(false);
+        }
     }
 
     void OnDestroy()
