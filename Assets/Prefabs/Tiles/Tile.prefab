@@ -151,6 +151,9 @@ MonoBehaviour:
   ParentTile: {fileID: 6185234511052565292}
   tileType: 0
   costText: {fileID: 0}
+  unAvailableColor:
+    serializedVersion: 2
+    rgba: 0
 --- !u!65 &682822551841649528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1023,6 +1026,9 @@ MonoBehaviour:
   ParentTile: {fileID: 6185234511052565292}
   tileType: 2
   costText: {fileID: 7076622617612734175}
+  unAvailableColor:
+    serializedVersion: 2
+    rgba: 3071017215
 --- !u!65 &533771623533378087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2560,6 +2566,9 @@ MonoBehaviour:
   ParentTile: {fileID: 6185234511052565292}
   tileType: 3
   costText: {fileID: 4674877659439320135}
+  unAvailableColor:
+    serializedVersion: 2
+    rgba: 3071017215
 --- !u!65 &4452430175202167767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3648,6 +3657,9 @@ MonoBehaviour:
   ParentTile: {fileID: 6185234511052565292}
   tileType: 6
   costText: {fileID: 5524514529936650319}
+  unAvailableColor:
+    serializedVersion: 2
+    rgba: 3071017215
 --- !u!65 &986498683562356685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4261,6 +4273,9 @@ MonoBehaviour:
   ParentTile: {fileID: 6185234511052565292}
   tileType: 4
   costText: {fileID: 3555049301634752197}
+  unAvailableColor:
+    serializedVersion: 2
+    rgba: 3071017215
 --- !u!65 &9201549220539809989
 BoxCollider:
   m_ObjectHideFlags: 0

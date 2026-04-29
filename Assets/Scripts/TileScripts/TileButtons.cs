@@ -14,9 +14,14 @@ public class TileButtons : MonoBehaviour
 
     private PointSystem pointSystem;
 
+    [SerializeField] private Color32 unAvailableColor;
+
+    private Color32 startColor;
+
     private void Start()
     {
         button = GetComponent<Button>();
+        startColor = costText.color;
         pointSystem = PointSystem.Instance;
         pointSystem.onMoneyEarned.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneyLost.AddListener(UpdateButtonInteractability);
@@ -40,8 +45,17 @@ public class TileButtons : MonoBehaviour
     int targetCost = ParentTile.GetTileCost(tileType);
     int currentCost = ParentTile.GetTileCost(ParentTile.GetComponent<Tile>().Type);
     
-    // If downgrading (target is cheaper), always allow it
-    if (targetCost < currentCost)
+    if (ParentTile.CanAffordTileChange(tileType))
+        {
+            costText.color = startColor;
+        } else
+        {
+            costText.color = unAvailableColor;
+
+        }
+
+        // If downgrading (target is cheaper), always allow it
+        if (targetCost < currentCost)
     {
         button.interactable = true;
     }
