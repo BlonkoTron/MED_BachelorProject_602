@@ -9,7 +9,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
     public static Eventmanager_NEWSETUP instance { get; private set; }
 
     public List<EventData> allEvents;
-    private List<EventData> usedEvents = new List<EventData>(); // 🔥 track used
+    private List<EventData> usedEvents = new List<EventData>(); // track used
 
     public Tile tilescript;
 
@@ -85,8 +85,14 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
 
         //Money calls
         int ED_currentmoney = PointSystem.Instance.CurrentMoney;
-        PointSystem.Instance.AddMoney(choice.moneyGain);
-        PointSystem.Instance.LoseMoney(choice.moneyLoss);
+        if (choice.moneyGain!=0)
+        {
+            PointSystem.Instance.AddMoney(choice.moneyGain);
+        }
+        if (choice.moneyLoss!=0)
+        {
+            PointSystem.Instance.LoseMoney(choice.moneyLoss);
+        }
 
         if (PointSystem.Instance.CurrentMoney > ED_currentmoney)
         {
@@ -126,5 +132,12 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         FarmDEGRADATION_Mult = choice.Farmdegradation;
         AgroDEGRADATION_Mult = choice.AggroForestdegradation;
         CowDEGRADATION_Mult = choice.Cowdegradation;
+
+        //Tilelock/change
+        if (choice.ChangeLockEnable)
+            {
+            GameManager.Instance.ChangeAndLockAtile(choice.ChangeLocktype, choice.changeTileDegrationValue);
+            }
+
     }
 }
