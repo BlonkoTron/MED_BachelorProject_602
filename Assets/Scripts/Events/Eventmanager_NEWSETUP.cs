@@ -128,7 +128,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         CowDEGRADATION_Mult = choice.Cowdegradation;
 
         //Tilelock/change
-        if (choice.ChangeLock)
+        if (choice.ChangeLockEnable)
             {
             GameManager.Instance.ChangeAndLockAtile(choice.ChangeLocktype);
             }

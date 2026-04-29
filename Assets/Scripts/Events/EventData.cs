@@ -41,15 +41,8 @@ public class EventData : ScriptableObject
         public float Farmdegradation = 1f;
 
         //Change/lcok tile Event
-        public bool ChangeLock;
+        public bool ChangeLockEnable;
         public TileType ChangeLocktype;
-
-        public bool ChangeLock_Mine;
-        public bool ChangeLock_Cow;
-        public bool ChangeLock_Aggro;
-        public bool ChangeLock_Mult;
-        public bool ChangeLock_Rainforest;
-        public bool ChangeLock_Grassland;
     }
 
     public ChoiceData choice1;
