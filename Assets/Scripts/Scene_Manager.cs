@@ -16,9 +16,6 @@ public class Scene_Manager : MonoBehaviour
     private EventInstance Menumusic;
     [SerializeField] private EventReference Menumusic_MS;
 
-    private EventInstance Main_Music;
-    [SerializeField] private EventReference Main_Music_MS;
-
     private EventInstance Hovers;
     [SerializeField] private EventReference Hover_sfx;
 
@@ -38,7 +35,6 @@ public class Scene_Manager : MonoBehaviour
     public void Gamescene()
     {
         Audiomanager.instance.StopSound(Menumusic);
-        Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
         SceneManager.LoadScene(sceneNames.GAME);
     }
 
@@ -49,7 +45,7 @@ public class Scene_Manager : MonoBehaviour
 
     public void MainMenu()
     {
-        Menumusic = Audiomanager.instance.PlaySound(Menumusic_MS, transform.position);
+        Audiomanager.instance.StopSound(Menumusic);
         SceneManager.LoadScene(sceneNames.MAIN_MENU);
     }
     public void Exitgame()

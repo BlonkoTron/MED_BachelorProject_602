@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,6 +64,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
     public int RainscoreTicktime = 0; //Int tto count number of rounds
 
+    //music
+    private EventInstance Main_Music;
+    [SerializeField] private EventReference Main_Music_MS;
+
     //Losing condition barren settings
     [SerializeField] private int BarrentilesLoseTreshold;
     public int BarrenTilesLoseThreshold => BarrentilesLoseTreshold;
@@ -104,7 +110,7 @@ public class GameManager : MonoBehaviour
     {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
 
-        
+        //Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
 
     }
 
@@ -292,24 +298,28 @@ public class GameManager : MonoBehaviour
     //Losing conditions
     public void LoseBarren()
     {
+        Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (alt er fedt)");
         LoadScene(SceneType.Lose_Barren);
     }
 
     public void LoseNoBiodiversity()
     {
+        Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
         LoadScene(SceneType.Lose_Bio);
     }
 
     public void LoseNoHappiness()
     {
+        Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
         LoadScene(SceneType.Lose_Happiness);
     }
 
     public void WinPerfectBalance()
     {
+        Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU WIN, YOU WIIIIIN (balance baby)");
         LoadScene(SceneType.Win_Balance);
     }
