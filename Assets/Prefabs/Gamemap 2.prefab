@@ -81,116 +81,6 @@ Transform:
   - {fileID: 3304101190280081738}
   m_Father: {fileID: 4892805691360988828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &677667255163853654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7258381364529733740}
-  - component: {fileID: 5204077312840139972}
-  - component: {fileID: 7823734981155368765}
-  - component: {fileID: 8962643715782195221}
-  m_Layer: 0
-  m_Name: Plane (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7258381364529733740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677667255163853654}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.050651517, y: -0.34152287, z: -0.018435644, w: 0.93832654}
-  m_LocalPosition: {x: -1.53, y: 4.69, z: 16.44}
-  m_LocalScale: {x: 0.17499696, y: 0.51007, z: 0.501365}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387124046868578295}
-  m_LocalEulerAnglesHint: {x: -6.18, y: -40, z: 0}
---- !u!33 &5204077312840139972
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677667255163853654}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7823734981155368765
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677667255163853654}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b939a64411f54c348b7dd262449b72a2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8962643715782195221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677667255163853654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1 &888022196991142844
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,116 +151,6 @@ Transform:
   - {fileID: 5281146498313520346}
   m_Father: {fileID: 387124046868578295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2949131460365220881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3969901285537522818}
-  - component: {fileID: 5630036796368165506}
-  - component: {fileID: 2277126811555052800}
-  - component: {fileID: 8567024875027826927}
-  m_Layer: 0
-  m_Name: Plane (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3969901285537522818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2949131460365220881}
-  serializedVersion: 2
-  m_LocalRotation: {x: 7.1054274e-15, y: -0.258819, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: 1.978, y: 1.296, z: 13.625}
-  m_LocalScale: {x: 0.40776634, y: 0.51007, z: 0.394}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387124046868578295}
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
---- !u!33 &5630036796368165506
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2949131460365220881}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2277126811555052800
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2949131460365220881}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b939a64411f54c348b7dd262449b72a2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8567024875027826927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2949131460365220881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1 &2979285575294142259
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,11 +185,6 @@ Transform:
   - {fileID: 7182038938701595538}
   - {fileID: 2836686954766179670}
   - {fileID: 190250929875273151}
-  - {fileID: 5169393662358184605}
-  - {fileID: 6828411341420796634}
-  - {fileID: 8049232257035515951}
-  - {fileID: 3969901285537522818}
-  - {fileID: 7258381364529733740}
   - {fileID: 1370070278669344718}
   - {fileID: 5147954112423091381}
   - {fileID: 3283700611224516838}
@@ -606,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 3568292621595628206}
   serializedVersion: 2
   m_LocalRotation: {x: 0.24541146, y: 0.8395406, z: 0.0000005848705, w: 0.484711}
-  m_LocalPosition: {x: -0.257, y: -3.57, z: -1.437}
+  m_LocalPosition: {x: -0.23, y: -3.57, z: -1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -681,7 +456,6 @@ GameObject:
   - component: {fileID: 4431889290688157873}
   - component: {fileID: 7587253081331967762}
   - component: {fileID: 5308737795668779953}
-  - component: {fileID: 6349414673087304440}
   m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -783,25 +557,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6349414673087304440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881937082763404409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1 &5173584688533701377
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,116 +670,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &5395310429811824822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6828411341420796634}
-  - component: {fileID: 8375095862281901577}
-  - component: {fileID: 194174959664293854}
-  - component: {fileID: 8144369313698632906}
-  m_Layer: 0
-  m_Name: Plane (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6828411341420796634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395310429811824822}
-  serializedVersion: 2
-  m_LocalRotation: {x: 7.1054274e-15, y: -0.258819, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: 5.63, y: 0.1, z: 7.58}
-  m_LocalScale: {x: 0.51007, y: 0.51007, z: 0.34741205}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387124046868578295}
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
---- !u!33 &8375095862281901577
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395310429811824822}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &194174959664293854
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395310429811824822}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b939a64411f54c348b7dd262449b72a2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8144369313698632906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395310429811824822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1 &5938688974688001384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,116 +817,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &6274757738416853799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5169393662358184605}
-  - component: {fileID: 4734556324754786206}
-  - component: {fileID: 3316447789692189670}
-  - component: {fileID: 7045130858211640545}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5169393662358184605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274757738416853799}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 5.9588737, y: -0.5, z: 3.69}
-  m_LocalScale: {x: 0.20137137, y: 0.51007, z: 0.5161908}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387124046868578295}
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
---- !u!33 &4734556324754786206
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274757738416853799}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3316447789692189670
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274757738416853799}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 87d1893c09322c54abbe9727765f2cce, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7045130858211640545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6274757738416853799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.690566, g: 0.27478018, b: 0, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1 &6497009721547866341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +935,7 @@ Transform:
   - {fileID: 3571692916388823405}
   - {fileID: 238138045792510385}
   - {fileID: 2296105775900629819}
-  - {fileID: 549036547499572719}
+  - {fileID: 2138411705479039549}
   - {fileID: 7019374979367511362}
   - {fileID: 2205307257239387252}
   - {fileID: 1902903702587323492}
@@ -1409,119 +944,9 @@ Transform:
   - {fileID: 3165791651284899012}
   - {fileID: 3149249081941280928}
   - {fileID: 6675613336004959612}
-  - {fileID: 4410493065640857757}
+  - {fileID: 2812079990658459471}
   m_Father: {fileID: 4892805691360988828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8821489647718898844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8049232257035515951}
-  - component: {fileID: 5192919389709330377}
-  - component: {fileID: 4166845206102784630}
-  - component: {fileID: 1743360932580878312}
-  m_Layer: 0
-  m_Name: Plane (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8049232257035515951
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821489647718898844}
-  serializedVersion: 2
-  m_LocalRotation: {x: 7.1054274e-15, y: -0.258819, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: 3.872, y: 0.679, z: 10.501}
-  m_LocalScale: {x: 0.51007, y: 0.51007, z: 0.34741205}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 387124046868578295}
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
---- !u!33 &5192919389709330377
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821489647718898844}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4166845206102784630
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821489647718898844}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b939a64411f54c348b7dd262449b72a2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1743360932580878312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821489647718898844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1001 &9439458410402686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2124,67 +1549,13 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -2063781927710513450, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6378512827784056888}
-    - targetCorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1795405436090431050}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
 --- !u!4 &903941048656860409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
   m_PrefabInstance: {fileID: 793135896637174546}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5163207788103435348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 793135896637174546}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1795405436090431050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5163207788103435348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &6879882290905430087 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 793135896637174546}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6378512827784056888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879882290905430087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!1001 &893714608145462825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2607,11 +1978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9199003
+      value: -1.5200006
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.190078
+      value: 8.190079
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4147,22 +3518,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8250043395449799044, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0024166107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250043395449799044, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4999951
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250043395449799044, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250043395449799044, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8391553029723492560, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: currentDegradation
       value: 20
@@ -4319,15 +3674,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.422976
+      value: 9.422974
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.91990036
+      value: -1.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.690078
+      value: 6.6900783
       objectReference: {fileID: 0}
     - target: {fileID: 4074930547109165631, guid: 3dceebe84292c04409550b7a4923e7a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5009,58 +4364,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2215161308575222201}
     m_Modifications:
-    - target: {fileID: 916149372791220852, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 1622820653610327462, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_Name
-      value: Farm Tile Variant (1)
+      value: Grassland Tile Variant (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.155029
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.5200002
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalPosition.z
       value: 3.6900783
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391553029723492560, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+      propertyPath: currentDegradation
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
---- !u!4 &549036547499572719 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+--- !u!4 &2138411705479039549 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
   m_PrefabInstance: {fileID: 5399618247391015603}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5512336656194706676
@@ -5253,62 +4612,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -2063781927710513450, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5671719728104059303}
-    - targetCorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6684283085715443337}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
---- !u!1 &318482987916803667 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 5769377257315988742}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5671719728104059303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318482987916803667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &2068943099384398400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 5769377257315988742}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6684283085715443337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068943099384398400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!4 &6312440777275609837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
@@ -6642,47 +5947,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2215161308575222201}
     m_Modifications:
-    - target: {fileID: 1622820653610327462, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 916149372791220852, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_Name
-      value: Grassland Tile Variant (3)
+      value: Farm Tile Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.289
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.5200003
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalPosition.z
       value: 5.1900783
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+    - target: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -6690,10 +5995,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
---- !u!4 &4410493065640857757 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
+--- !u!4 &2812079990658459471 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6287700376693569678, guid: a82ab54cc7f677e44850d0cb668fb252, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5580485387700031324, guid: 8020874f232f6514e9b6039502ee78db, type: 3}
   m_PrefabInstance: {fileID: 7671704112830883859}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7753306455308315736
@@ -6958,31 +6263,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.194
+      value: 0.22000122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.749999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.511
+      value: 15.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9462141
+      value: 0.9659259
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000000357186
+      value: 0.000000036462687
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.32354113
+      value: -0.258819
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000012213336
+      value: -0.0000000097701465
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6990,7 +6295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -37.754
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7002,7 +6307,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 06114f72fea73a3448ce6437314fe593, type: 2}
     - target: {fileID: -634390397672621849, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.323
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -634390397672621849, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7010,7 +6315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -634390397672621849, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.277
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: -634390397672621849, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7067,116 +6372,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
       insertIndex: 1
       addedObject: {fileID: 5466904767443802218}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7645717429352527271}
-    - targetCorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6400481961457960303}
-    - targetCorrespondingSourceObject: {fileID: -2063781927710513450, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8470679453087500750}
-    - targetCorrespondingSourceObject: {fileID: 3148180590985553448, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9172453839174040720}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
---- !u!1 &1606523021015057419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2063781927710513450, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8435379989572395741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8470679453087500750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606523021015057419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &2408288850652096904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8435379989572395741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7645717429352527271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2408288850652096904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &4158744048609416603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8435379989572395741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6400481961457960303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4158744048609416603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &6818705992950187253 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3148180590985553448, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8435379989572395741}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9172453839174040720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6818705992950187253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!4 &8258128461501809974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
@@ -7372,62 +6569,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -2063781927710513450, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4445327251514566795}
-    - targetCorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8374566085276716112}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
---- !u!1 &2467422167645919834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3135762514684392619, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8522362971735052559}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4445327251514566795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467422167645919834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
---- !u!1 &4243285017820735049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3700077879237478586, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
-  m_PrefabInstance: {fileID: 8522362971735052559}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8374566085276716112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4243285017820735049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb9f0e9557d99e40ae275d2f15c80cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterColorChanger
-  waterRenderers: []
-  colorPropertyName: _WaterColor
-  brownColor: {r: 0.4, g: 0.2, b: 0.05, a: 1}
-  foamBrownColor: {r: 0.8, g: 0.35, b: 0.05, a: 1}
-  foamColorProperty: _FoamColor
-  foamDensProperty: _FoamDens
-  foamDensityTarget: 3
 --- !u!4 &8200837790838601444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d69f498e2c9c5c941948a9716de5a777, type: 3}
