@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: PestIssue
+  m_Name: EconomicCrash
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Mindre Skadedyr Udbrud
-  eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
+  eventtitle: "\xD8konomisk Krise"
+  eventInfo: 'Det globale marked bruder sammen pludseligt '
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: Brug pesticider
-    buttonText: "Betal 150 og det tager l\xE6ngere tid for land at regenerer"
-    moneyLoss: 150
+    choiceText: "Statslig st\xF8tte"
+    buttonText: Betal 400 og tilfredshed stiger med 15
+    moneyLoss: 400
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 15
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
@@ -37,15 +37,14 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
   choice2:
-    choiceText: Naturlig kontrol
-    buttonText: "Betal 100 men effektivitet af skovlandbrug og g\xE5rd falder til
-      n\xE6ste uge"
-    moneyLoss: 100
+    choiceText: "Fokuser p\xE5 at v\xE6re selvforsynende"
+    buttonText: Effektivitet for alle felter falder
+    moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    MineEfficiencymult: 1
-    CowEfficiencymult: 1
+    MineEfficiencymult: 0.75
+    CowEfficiencymult: 0.75
     AggroForestEfficiencymult: 0.75
     FarmEfficiencymult: 0.75
     DisableMineTilesEvent: 0
@@ -59,23 +58,24 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
   choice3:
-    choiceText: Ignorer det
-    buttonText: Landbrug effektivitet falder meget
+    choiceText: Opskaler produktion
+    buttonText: Effektivitet for alle felter stiger men skader landet og tilfredshed
+      falder med 15
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 1
-    CowEfficiencymult: 1
-    AggroForestEfficiencymult: 0.5
-    FarmEfficiencymult: 0.5
+    HappinessDown: 15
+    MineEfficiencymult: 2
+    CowEfficiencymult: 2
+    AggroForestEfficiencymult: 2
+    FarmEfficiencymult: 2
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
-    MineDegradation: 1
-    Cowdegradation: 1
-    AggroForestdegradation: 1
-    Farmdegradation: 1
+    MineDegradation: 2
+    Cowdegradation: 2
+    AggroForestdegradation: 2
+    Farmdegradation: 2
     ChangeLockEnable: 0
     ChangeLocktype: 0

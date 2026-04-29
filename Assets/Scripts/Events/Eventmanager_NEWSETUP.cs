@@ -136,7 +136,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         //Tilelock/change
         if (choice.ChangeLockEnable)
             {
-            GameManager.Instance.ChangeAndLockAtile(choice.ChangeLocktype);
+            GameManager.Instance.ChangeAndLockAtile(choice.ChangeLocktype, choice.changeTileDegrationValue);
             }
 
     }

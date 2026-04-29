@@ -247,6 +247,32 @@ public class GameManager : MonoBehaviour
            
     }
 
+    public void ChangeAndLockAtile(TileType type, float degration)
+    {
+        int randomTile = Random.Range(0, allTiles.Length);
+        if (allTiles[randomTile].tileType == TileType.Rainforest || allTiles[randomTile].tileType == TileType.Grass)
+        {
+            allTiles[randomTile].GetComponent<TileChanger>().ChangeTileForFree(type);
+            
+            if (degration > 0)
+            {
+                allTiles[randomTile].GetComponent<Tile>().currentDegradation = degration;
+            }
+            
+            if (type != TileType.Grass)
+            {
+                Destroy(allTiles[randomTile].gameObject.GetComponent<Collider>());
+            }   
+        }
+        else
+        {
+            //prøv igen
+            ChangeAndLockAtile(type,degration);
+        }
+
+    }
+
+
     // Automatically register all tiles in the scene
     private void RegisterAllTiles()
     {
