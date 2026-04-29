@@ -43,6 +43,7 @@ public class EventData : ScriptableObject
         //Change/lcok tile Event
         public bool ChangeLockEnable;
         public TileType ChangeLocktype;
+        public float changeTileDegrationValue = 0f;
     }
 
     public ChoiceData choice1;
