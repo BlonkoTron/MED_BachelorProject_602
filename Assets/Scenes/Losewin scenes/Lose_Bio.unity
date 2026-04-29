@@ -1061,13 +1061,6 @@ MonoBehaviour:
       Data3: -1931536999
       Data4: -2123338650
     Path: event:/Music_Menu
-  Main_Music_MS:
-    Guid:
-      Data1: 632928308
-      Data2: 1341426303
-      Data3: -1495179601
-      Data4: -418718003
-    Path: event:/Music
   Hover_sfx:
     Guid:
       Data1: 309530849
@@ -1151,8 +1144,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du har fjernet for mange tiles der passer p\xE5 biodiveriteten hvilket
-    f\xE5et arterne til at flugte fra regnskoven eller har dr\xE6bt dem."
+  m_text: "Du har fjernet for mange tiles, der passer p\xE5 biodiversiteten, hvilket
+    har f\xE5et arterne til at flygte fra regnskoven eller har dr\xE6bt dem."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -1218,7 +1211,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -606.2842, w: -235.35162}
+  m_margin: {x: 0, y: 0, z: -606.2842, w: -280.15475}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
