@@ -9,7 +9,7 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
     public static Eventmanager_NEWSETUP instance { get; private set; }
 
     public List<EventData> allEvents;
-    private List<EventData> usedEvents = new List<EventData>(); // 🔥 track used
+    private List<EventData> usedEvents = new List<EventData>(); // track used
 
     public Tile tilescript;
 
@@ -126,5 +126,12 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         FarmDEGRADATION_Mult = choice.Farmdegradation;
         AgroDEGRADATION_Mult = choice.AggroForestdegradation;
         CowDEGRADATION_Mult = choice.Cowdegradation;
+
+        //Tilelock/change
+        if (choice.ChangeLockEnable)
+            {
+            GameManager.Instance.ChangeAndLockAtile(choice.ChangeLocktype);
+            }
+
     }
 }
