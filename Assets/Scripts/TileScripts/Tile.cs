@@ -42,7 +42,7 @@ public class Tile : MonoBehaviour
     private Material currentDetailMat;
 
     [Header("Degradation")]
-    [SerializeField] private float currentDegradation = 0f;
+    [SerializeField] public float currentDegradation = 0f;
     [SerializeField] private float degradationThreshold = 100f;
     [SerializeField] private GameObject oneTurnWarningPrefab; // Object to spawn when 1 turn til barren
     private bool hasSpawnedWarning = false; // Track if warning was already spawned

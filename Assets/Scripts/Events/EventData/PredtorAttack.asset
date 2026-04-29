@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: PestIssue
+  m_Name: PredtorAttack
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Mindre Skadedyr Udbrud
-  eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
+  eventtitle: "Rovdyr Angriber Kv\xE6gfarmene"
+  eventInfo: "Der er jaguarer der har bev\xE6get sig ud af regnskoven for at finde
+    mad, og har angrebet kv\xE6gfarme"
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: Brug pesticider
-    buttonText: "Betal 150 og det tager l\xE6ngere tid for land at regenerer"
-    moneyLoss: 150
+    choiceText: Skyd Jaguarerne
+    buttonText: Du betaler 100 guld og mister 10 tilfredshed
+    moneyLoss: 100
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
+    HappinessDown: 10
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
@@ -37,19 +38,18 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
   choice2:
-    choiceText: Naturlig kontrol
-    buttonText: "Betal 100 men effektivitet af skovlandbrug og g\xE5rd falder til
-      n\xE6ste uge"
-    moneyLoss: 100
+    choiceText: Forbedre jaguarernes levesteder
+    buttonText: "Koster 250 og L\xE5ser kv\xE6gfarme "
+    moneyLoss: 250
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
-    AggroForestEfficiencymult: 0.75
-    FarmEfficiencymult: 0.75
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 0
+    DisableCowTilesEvent: 1
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
     MineDegradation: 1
@@ -60,15 +60,15 @@ MonoBehaviour:
     ChangeLocktype: 0
   choice3:
     choiceText: Ignorer det
-    buttonText: Landbrug effektivitet falder meget
+    buttonText: "Kv\xE6gfarme mister effektivitet til n\xE6ste uge"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
-    CowEfficiencymult: 1
-    AggroForestEfficiencymult: 0.5
-    FarmEfficiencymult: 0.5
+    CowEfficiencymult: 0.5
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
