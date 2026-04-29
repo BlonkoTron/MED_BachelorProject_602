@@ -10,45 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: GlobalDemand
+  m_Name: AgriculturalInnovation
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: "Global Eftersp\xF8rgsel Stiger"
-  eventInfo: "Der er en pludseligt stigende eftersp\xF8rgsel p\xE5 landbrugsvarer
-    og k\xF8d"
+  eventtitle: "Ny forskning inden for kv\xE6gopdr\xE6t"
+  eventInfo: "Nye metoder inden for kv\xE6gopdr\xE6t er under udvikling"
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: "Opskaler produktionen i landbruget og kv\xE6gfarmene"
-    buttonText: "Landbrug og kv\xE6gfarmene effektivitet stiger til n\xE6ste uge
-      men udpiner landet mere"
-    moneyLoss: 0
+    choiceText: Invester I udviklingen
+    buttonText: "Betal 200 og Kv\xE6gfarme effektivitet stiger til n\xE6ste uge"
+    moneyLoss: 200
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 2
     AggroForestEfficiencymult: 1
-    FarmEfficiencymult: 2
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
     MineDegradation: 1
-    Cowdegradation: 1.5
+    Cowdegradation: 1
     AggroForestdegradation: 1
-    Farmdegradation: 1.5
+    Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Fokuser p\xE5 skovlandbrug"
-    buttonText: "Skovlandbrugsfelters effektivitet stiger til n\xE6ste uge"
-    moneyLoss: 0
+    choiceText: Implementer delvist
+    buttonText: "Betal 100 og Kv\xE6gfarme effektivitet stiger lidt til n\xE6ste
+      uge"
+    moneyLoss: 100
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
-    CowEfficiencymult: 1
-    AggroForestEfficiencymult: 2
+    CowEfficiencymult: 1.5
+    AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
@@ -62,11 +61,11 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "Begr\xE6ns exporten for at stabilisere lokale priser"
-    buttonText: Tilfredhed stiger med 10
+    choiceText: Ignorer det
+    buttonText: 
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 10
+    HappinessUp: 0
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1

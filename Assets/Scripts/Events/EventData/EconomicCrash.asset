@@ -36,9 +36,10 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
     choiceText: "Fokuser p\xE5 at v\xE6re selvforsynende"
-    buttonText: Effektivitet for alle felter falder
+    buttonText: "Effektivitet for alle felter falder til n\xE6ste uge"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -57,10 +58,11 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
     choiceText: Opskaler produktion
-    buttonText: Effektivitet for alle felter stiger men skader landet og tilfredshed
-      falder med 15
+    buttonText: "Effektivitet for alle felter stiger til n\xE6ste uge men skader
+      landet og tilfredshed falder med 15"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -79,3 +81,4 @@ MonoBehaviour:
     Farmdegradation: 2
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0

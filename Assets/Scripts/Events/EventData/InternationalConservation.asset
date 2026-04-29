@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: InternationalConservation
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: 
-  eventInfo: 
+  eventtitle: International Naturbeskyttelsestilskud
+  eventInfo: "En Global organisation tilbyder tilskud for at beskytte \xF8kosystemer."
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: 
-    buttonText: 
+    choiceText: Tag imod det fulde tilskud
+    buttonText: "L\xE5s 10 regnskovstiles og f\xE5 25 guld for hver og f\xE5 20 tilfredshed"
     moneyLoss: 0
-    moneyGain: 0
-    HappinessUp: 0
+    moneyGain: 250
+    HappinessUp: 20
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -36,12 +36,13 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
-    choiceText: 
-    buttonText: 
+    choiceText: "Tag imod det begr\xE6nsede tilskud"
+    buttonText: "L\xE5s 5 regnskovstiles og f\xE5 20 guld for hver f\xE5 10 tilfredshed"
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 10
     HappinessDown: 0
     MineEfficiencymult: 0
     CowEfficiencymult: 0
@@ -57,13 +58,14 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
-    choiceText: 
-    buttonText: 
+    choiceText: Tag ikke imod tilskudet
+    buttonText: 'Du mister 20 tilfredshed '
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
+    HappinessDown: 20
     MineEfficiencymult: 0
     CowEfficiencymult: 0
     AggroForestEfficiencymult: 0
@@ -78,3 +80,4 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
