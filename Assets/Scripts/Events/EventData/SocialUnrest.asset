@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: PestIssue
+  m_Name: SocialUnrest
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Mindre Skadedyr Udbrud
-  eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
+  eventtitle: 'Utilfredshed Blandt Befolkningen '
+  eventInfo: Befolkningen er utilfredse og protesterer
   Scenariosprite: {fileID: 0}
   choice1:
-    choiceText: Brug pesticider
-    buttonText: "Betal 150 og det tager l\xE6ngere tid for land at regenerer"
-    moneyLoss: 150
+    choiceText: "Invester i velf\xE6rd"
+    buttonText: Betal 400 og tilfredshed stiger med 20
+    moneyLoss: 400
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 20
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
@@ -37,17 +37,16 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
   choice2:
-    choiceText: Naturlig kontrol
-    buttonText: "Betal 100 men effektivitet af skovlandbrug og g\xE5rd falder til
-      n\xE6ste uge"
-    moneyLoss: 100
+    choiceText: 'Giv befolkningen midlertidige goder '
+    buttonText: betal 200 og tilfredshed stiger med 10
+    moneyLoss: 200
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 10
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
-    AggroForestEfficiencymult: 0.75
-    FarmEfficiencymult: 0.75
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -60,15 +59,15 @@ MonoBehaviour:
     ChangeLocktype: 0
   choice3:
     choiceText: Ignorer det
-    buttonText: Landbrug effektivitet falder meget
+    buttonText: Tilfredshed falder med 20
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
+    HappinessDown: 20
     MineEfficiencymult: 1
     CowEfficiencymult: 1
-    AggroForestEfficiencymult: 0.5
-    FarmEfficiencymult: 0.5
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
