@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class ForestDecorator : MonoBehaviour
 {
-    
     public GameObject spawnPrefab;
     public Transform spawnLocation;
     public float spawnYOffset = 0f;
     [Range(0, 100)] public float spawnChance = 50f;
 
-
     public LayerMask forestLayer;
     public float searchRadius = 2f;
     public float searchHeight = 5f;
+    public float searchYOffset = 0f;
 
     void Awake()
     {
@@ -20,10 +19,10 @@ public class ForestDecorator : MonoBehaviour
 
     void CheckNeighbors()
     {
-        Vector3 p1 = transform.position + Vector3.up * (searchHeight / 2);
-        Vector3 p2 = transform.position + Vector3.down * (searchHeight / 2);
+        Vector3 searchCenter = transform.position + new Vector3(0, searchYOffset, 0);
 
-        Collider[] hits = Physics.OverlapCapsule(p1, p2, searchRadius, forestLayer);
+        Vector3 halfExtents = new Vector3(searchRadius, searchHeight / 2f, searchRadius);
+        Collider[] hits = Physics.OverlapBox(searchCenter, halfExtents, Quaternion.identity, forestLayer);
 
         int forestCount = 0;
         foreach (var hit in hits)
@@ -36,18 +35,21 @@ public class ForestDecorator : MonoBehaviour
         {
             if (spawnPrefab && spawnLocation)
             {
-               
                 Vector3 finalSpawnPos = spawnLocation.position + new Vector3(0, spawnYOffset, 0);
                 Instantiate(spawnPrefab, finalSpawnPos, Quaternion.identity, spawnLocation);
             }
         }
     }
     /*
-    // Draws a simple cyan box representing the search area in the Scene view
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(transform.position, new Vector3(searchRadius * 2, searchHeight, searchRadius * 2));
+        Vector3 gizmoCenter = transform.position + new Vector3(0, searchYOffset, 0);
+
+        // Drawing the 1:1 Cube representation
+        // We multiply searchRadius by 2 because the wire cube uses total size, not extents
+        Vector3 gizmoSize = new Vector3(searchRadius * 2, searchHeight, searchRadius * 2);
+        Gizmos.DrawWireCube(gizmoCenter, gizmoSize);
     }
     */
 }
