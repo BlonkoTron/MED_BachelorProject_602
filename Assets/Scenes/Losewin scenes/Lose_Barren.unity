@@ -549,10 +549,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98460cab060341949ae294974c075908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Manager
+  Menumusic_MS:
+    Guid:
+      Data1: 1531973232
+      Data2: 1279394355
+      Data3: -1931536999
+      Data4: -2123338650
+    Path: event:/Music_Menu
+  Main_Music_MS:
+    Guid:
+      Data1: 309530849
+      Data2: 1083418881
+      Data3: 387458467
+      Data4: 1482404346
+    Path: event:/Hover
+  Hover_sfx:
+    Guid:
+      Data1: 309530849
+      Data2: 1083418881
+      Data3: 387458467
+      Data4: 1482404346
+    Path: event:/Hover
   sceneNames:
-    MAIN_MENU: MainMenu
+    MAIN_MENU: TitleScreen
     GAME: tHE PLAYAEDEB
-    SETTINGS: 
+    SETTINGS: set
 --- !u!4 &596521321
 Transform:
   m_ObjectHideFlags: 0
@@ -647,6 +668,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1158284503
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6035059566354894209, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_Name
+      value: Audiomanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.20923
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.55259
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.03448
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
 --- !u!1 &1248987353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,9 +1673,6 @@ GameObject:
   - component: {fileID: 1044792497710819733}
   - component: {fileID: 4596345255188947727}
   - component: {fileID: 3343878825991373919}
-  - component: {fileID: 6978999395706655514}
-  - component: {fileID: 2754488865435243750}
-  - component: {fileID: 4505195707074655595}
   m_Layer: 3
   m_Name: Top
   m_TagString: Untagged
@@ -1620,50 +1695,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5112918538729335785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2754488865435243750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073003623733055858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tile
-  tileType: 5
-  addonAttachPoint: {fileID: 8196460995389783787}
-  detailTop: {fileID: 5286451559909260356}
-  currentAddOn: {fileID: 0}
-  barrenAddOnPrefab: {fileID: 4279874373204331172, guid: ff00ed5b4dcd657428eb2163d367030b, type: 3}
-  farmAddOnPrefab: {fileID: 1885747343268361805, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
-  mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
-  cowfieldAddOnPrefab: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-  agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-  rainforestAddOnPrefab: {fileID: 5897402839481660530, guid: 838855dd7e4e5ee48ad70dbc41bca68e, type: 3}
-  grasslandsAddOnPrefab: {fileID: 8084324542173367170, guid: 20f1773368052fc45a48fec02a2a25d0, type: 3}
-  barrenDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  farmDetailMat: {fileID: 2100000, guid: 08843e96473651348befa04d0662d8a2, type: 2}
-  mineDetailMat: {fileID: 2100000, guid: 4775d1e88e6c69b44815de087c80787e, type: 2}
-  cowfieldDetailMat: {fileID: 2100000, guid: 97f1bb7e7a7a844499a88a4170d0d857, type: 2}
-  agroforestDetailMat: {fileID: 2100000, guid: e6e6a6e05ec249b44acaa40bc93e5fdf, type: 2}
-  rainforestDetailmat: {fileID: 2100000, guid: 3a5fe7d792609c848b9b1fb4b816ecc7, type: 2}
-  grasslandsDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  currentDegradation: 0
-  degradationThreshold: 100
-  oneTurnWarningPrefab: {fileID: 1393834243408910948, guid: 2608ff616570e5947a9150ad1fde241f, type: 3}
-  healthyMaterial: {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
-  degradedMaterial: {fileID: 2100000, guid: 872dc64a87e4e374990a7109d4369fad, type: 2}
-  criticalMaterial: {fileID: 2100000, guid: dd9e518c0d13a2e44a437e0edd459600, type: 2}
-  barrenMaterial: {fileID: 2100000, guid: e353d7718e822ab42ad817928b100a3f, type: 2}
-  degradedThreshold: 0.33
-  criticalThreshold: 0.66
-  onMoneyEarned:
-    m_PersistentCalls:
-      m_Calls: []
-  warningHeight: 1
-  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!64 &3343878825991373919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1686,28 +1717,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8201437419870775723, guid: a3c118e94ed680546995faef794228a7, type: 3}
---- !u!95 &4505195707074655595
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073003623733055858}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a29f5eccce898344cb6dd3141f075b29, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &4596345255188947727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1757,28 +1766,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4784141295994762163
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4956293625661135248}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e589150a8581ab84c8374cd325b9ce93, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4956293625661135248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +1777,6 @@ GameObject:
   - component: {fileID: 364587265175076024}
   - component: {fileID: 9136423412883561899}
   - component: {fileID: 8325532794740217750}
-  - component: {fileID: 4784141295994762163}
   m_Layer: 3
   m_Name: Barren Tile Variant
   m_TagString: Untagged
@@ -1833,44 +1819,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6978999395706655514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073003623733055858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
-  highlightObj: {fileID: 0}
-  blankTileUI: {fileID: 0}
-  buildingUI: {fileID: 0}
-  dustPrefab: {fileID: 8052690634479869283, guid: 2bd84bad354325d47a549420ba600ebd, type: 3}
-  ClickSFX_OpenUI:
-    Guid:
-      Data1: -1024100354
-      Data2: 1078082169
-      Data3: 960988848
-      Data4: -1007593164
-    Path: event:/ButtonUI_Open
-  ClickSFX_CloseUI:
-    Guid:
-      Data1: -1543150912
-      Data2: 1276447607
-      Data3: -771114874
-      Data4: -924848983
-    Path: event:/ButtonUI_Close
-  onTileChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  stopfirstsound: 0
-  mineDisabledImage: {fileID: 0}
-  cowDisabledImage: {fileID: 0}
-  agroDisabledImage: {fileID: 0}
-  farmDisabledImage: {fileID: 0}
 --- !u!1001 &7077859128159805156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2074,3 +2022,4 @@ SceneRoots:
   - {fileID: 983549242}
   - {fileID: 1274065212}
   - {fileID: 596521321}
+  - {fileID: 1158284503}

@@ -791,8 +791,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98460cab060341949ae294974c075908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Manager
+  Menumusic_MS:
+    Guid:
+      Data1: 1531973232
+      Data2: 1279394355
+      Data3: -1931536999
+      Data4: -2123338650
+    Path: event:/Music_Menu
+  Main_Music_MS:
+    Guid:
+      Data1: 632928308
+      Data2: 1341426303
+      Data3: -1495179601
+      Data4: -418718003
+    Path: event:/Music
+  Hover_sfx:
+    Guid:
+      Data1: 309530849
+      Data2: 1083418881
+      Data3: 387458467
+      Data4: 1482404346
+    Path: event:/Hover
   sceneNames:
-    MAIN_MENU: MainMenu
+    MAIN_MENU: TitleScreen
     GAME: tHE PLAYAEDEB
     SETTINGS: 
 --- !u!4 &715724663
@@ -810,6 +831,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &893224321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6035059566354894209, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_Name
+      value: Audiomanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1872
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.63615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350408581355724869, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1059465b381c45640b6a960348b4e74b, type: 3}
 --- !u!1 &983549239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,55 +1743,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a243803a4eadab543aa5271d7954078c, type: 3}
   m_PrefabInstance: {fileID: 784963873270442058}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &784963873270442060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a243803a4eadab543aa5271d7954078c, type: 3}
-  m_PrefabInstance: {fileID: 784963873270442058}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1024618496908937973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802460644606791521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06cef2de27d4824dbd04a8fa30074f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tile
-  tileType: 1
-  addonAttachPoint: {fileID: 6466722415770165496}
-  detailTop: {fileID: 7015759053107716695}
-  currentAddOn: {fileID: 784963873270442060}
-  barrenAddOnPrefab: {fileID: 4279874373204331172, guid: ff00ed5b4dcd657428eb2163d367030b, type: 3}
-  farmAddOnPrefab: {fileID: 1885747343268361805, guid: 6157e49a2e4167b439cc9ef30056b97f, type: 3}
-  mineAddOnPrefab: {fileID: 8299831964811510712, guid: 606aa8faa88a8ae479cb35750efd4c85, type: 3}
-  cowfieldAddOnPrefab: {fileID: 1045803523118716513, guid: 68ae34b05cbf02248b494a61f623d7a7, type: 3}
-  agroforestAddOnPrefab: {fileID: 4738688047294473879, guid: 5e625aab826d6ec4e8f60724ac5ec1fd, type: 3}
-  rainforestAddOnPrefab: {fileID: 5897402839481660530, guid: 838855dd7e4e5ee48ad70dbc41bca68e, type: 3}
-  grasslandsAddOnPrefab: {fileID: 8084324542173367170, guid: 20f1773368052fc45a48fec02a2a25d0, type: 3}
-  barrenDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  farmDetailMat: {fileID: 2100000, guid: 08843e96473651348befa04d0662d8a2, type: 2}
-  mineDetailMat: {fileID: 2100000, guid: 4775d1e88e6c69b44815de087c80787e, type: 2}
-  cowfieldDetailMat: {fileID: 2100000, guid: 97f1bb7e7a7a844499a88a4170d0d857, type: 2}
-  agroforestDetailMat: {fileID: 2100000, guid: e6e6a6e05ec249b44acaa40bc93e5fdf, type: 2}
-  rainforestDetailmat: {fileID: 2100000, guid: 3a5fe7d792609c848b9b1fb4b816ecc7, type: 2}
-  grasslandsDetailMat: {fileID: 2100000, guid: 44cab59c70791694c8f7d6c984f5df7b, type: 2}
-  currentDegradation: 0
-  degradationThreshold: 100
-  oneTurnWarningPrefab: {fileID: 1393834243408910948, guid: 2608ff616570e5947a9150ad1fde241f, type: 3}
-  healthyMaterial: {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
-  degradedMaterial: {fileID: 2100000, guid: 872dc64a87e4e374990a7109d4369fad, type: 2}
-  criticalMaterial: {fileID: 2100000, guid: dd9e518c0d13a2e44a437e0edd459600, type: 2}
-  barrenMaterial: {fileID: 2100000, guid: e353d7718e822ab42ad817928b100a3f, type: 2}
-  degradedThreshold: 0.33
-  criticalThreshold: 0.66
-  onMoneyEarned:
-    m_PersistentCalls:
-      m_Calls: []
-  warningHeight: 1
-  MoneyGainUI: {fileID: 423786430900108244, guid: 92010ff78b2f70e41a4acc851dacca2a, type: 3}
 --- !u!95 &1622544632347405176
 Animator:
   serializedVersion: 7
@@ -1837,8 +1866,6 @@ GameObject:
   - component: {fileID: 2773686456173983622}
   - component: {fileID: 1713826054479740188}
   - component: {fileID: 461086849779014220}
-  - component: {fileID: 5249973297474882825}
-  - component: {fileID: 1024618496908937973}
   - component: {fileID: 1622544632347405176}
   m_Layer: 3
   m_Name: Top
@@ -1847,44 +1874,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5249973297474882825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802460644606791521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13137cdfff0c5664997a6b827562ca23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileChanger
-  highlightObj: {fileID: 0}
-  blankTileUI: {fileID: 0}
-  buildingUI: {fileID: 0}
-  dustPrefab: {fileID: 8052690634479869283, guid: 2bd84bad354325d47a549420ba600ebd, type: 3}
-  ClickSFX_OpenUI:
-    Guid:
-      Data1: -1024100354
-      Data2: 1078082169
-      Data3: 960988848
-      Data4: -1007593164
-    Path: event:/ButtonUI_Open
-  ClickSFX_CloseUI:
-    Guid:
-      Data1: -1543150912
-      Data2: 1276447607
-      Data3: -771114874
-      Data4: -924848983
-    Path: event:/ButtonUI_Close
-  onTileChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  stopfirstsound: 0
-  mineDisabledImage: {fileID: 0}
-  cowDisabledImage: {fileID: 0}
-  agroDisabledImage: {fileID: 0}
-  farmDisabledImage: {fileID: 0}
 --- !u!33 &5903527228693220801
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2033,28 +2022,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &7666651820870036896
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838953669085398915}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dfbcda7277f92724bb8f8616aa5d1a20, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7838953669085398915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,8 +2033,6 @@ GameObject:
   - component: {fileID: 3246675527387325099}
   - component: {fileID: 6254053684032340920}
   - component: {fileID: 6596647451193444741}
-  - component: {fileID: 9078355039731833555}
-  - component: {fileID: 7666651820870036896}
   m_Layer: 3
   m_Name: Rainforest 2 Tile Variant
   m_TagString: Untagged
@@ -2092,25 +2057,6 @@ Transform:
   - {fileID: 3408878153361337888}
   m_Father: {fileID: 3246675527387325099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9078355039731833555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838953669085398915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf63f19d8dae8946b50fe53518b27da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tileinfo
-  x: 0
-  y: 0
-  neighbors: []
-  variants:
-  - {fileID: 2100000, guid: 142c35e9edf76c841afca0fe7d605c0d, type: 2}
-  - {fileID: 2100000, guid: 1610e0706bb2dbc4c98f073d2038c61b, type: 2}
-  - {fileID: 2100000, guid: 4c01ce5dc093bcd4b9c3ac5883079573, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2122,3 +2068,4 @@ SceneRoots:
   - {fileID: 3246675527387325099}
   - {fileID: 68083221}
   - {fileID: 715724663}
+  - {fileID: 893224321}
