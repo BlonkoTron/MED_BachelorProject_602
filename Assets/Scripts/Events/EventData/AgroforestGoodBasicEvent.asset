@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: Biodiversiteten vokser!
   eventInfo: "Skovlandbruget oplever at der kommer mere dyrevildt i omr\xE5det"
-  Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
+  Scenariosprite: {fileID: 2800000, guid: dfa8e9c159ef4704097181a46faa5705, type: 3}
   choice1:
     choiceText: "Skovlandbrugtiles inkomst fordobler indtil n\xE6ste uge"
     buttonText: "Ekstra hj\xE6lp ankommer"
@@ -34,6 +34,9 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
     choiceText: "F\xE5 200 guld"
     buttonText: "F\xE5 extra penge fra staten"
@@ -53,6 +56,9 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
     choiceText: Tilfredshed stiger med 20
     buttonText: "Sikre omr\xE5det "
@@ -72,3 +78,6 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
