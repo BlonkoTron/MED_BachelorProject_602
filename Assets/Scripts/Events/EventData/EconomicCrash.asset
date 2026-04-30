@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: "\xD8konomisk Krise"
   eventInfo: 'Det globale marked bruder sammen pludseligt '
-  Scenariosprite: {fileID: 0}
+  Scenariosprite: {fileID: 2800000, guid: 8de5b2be30cf1f0499e81bdab5295aa1, type: 3}
   choice1:
     choiceText: "Statslig st\xF8tte"
     buttonText: Betal 400 og tilfredshed stiger med 15
@@ -36,6 +36,7 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
     choiceText: "Fokuser p\xE5 at v\xE6re selvforsynende"
     buttonText: Effektivitet for alle felter falder
@@ -57,6 +58,7 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
     choiceText: Opskaler produktion
     buttonText: Effektivitet for alle felter stiger men skader landet og tilfredshed
@@ -79,3 +81,4 @@ MonoBehaviour:
     Farmdegradation: 2
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0

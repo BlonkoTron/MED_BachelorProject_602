@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: "Finansiering ikke tilstr\xE6kkligt!"
   eventInfo: Skovlandbruget har brug for flere penge
-  Scenariosprite: {fileID: 2800000, guid: ee05921181267144fbf1a4b70faf49ac, type: 3}
+  Scenariosprite: {fileID: 2800000, guid: 5e71acef9801e234ebf935c45339698b, type: 3}
   choice1:
     choiceText: "Skovlandbrugtiles produktion bliver halveret indtil n\xE6ste uge"
     buttonText: "Arbejd med mindre underst\xF8tte"
@@ -34,6 +34,9 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
     choiceText: Betal 100 guld
     buttonText: "Betal for at uderst\xF8tte skovlandbruget"
@@ -53,6 +56,9 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
     choiceText: "Skovlandbrugtiles kan ikke blive bygget indtil n\xE6ste uge"
     buttonText: "Lad v\xE6r med at st\xF8tte"
@@ -72,3 +78,6 @@ MonoBehaviour:
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
