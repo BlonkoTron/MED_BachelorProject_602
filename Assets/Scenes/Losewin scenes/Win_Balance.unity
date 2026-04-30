@@ -381,7 +381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &241387361
 RectTransform:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1052547843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Du har opn\xE5et balance mellem regnskoven og folket, hvilket har skabt
-    en biodiverse regnskov og en glad befolkning"
+    en biodivers regnskov og en glad befolkning."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du har opn\xE5net harmoni"
+  m_text: "Du har opn\xE5et harmoni"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
