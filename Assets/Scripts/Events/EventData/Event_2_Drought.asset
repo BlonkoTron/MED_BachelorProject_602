@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: LaborShortage
+  m_Name: Event_2_Drought
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Manglende Arbejdskraft
-  eventInfo: "Der er ikke nok medarbejdere til at holde industrien k\xF8rende"
-  Scenariosprite: {fileID: 0}
+  eventtitle: "T\xF8rkes\xE6son"
+  eventInfo: "Mangel p\xE5 vand truer afgr\xF8der og \xF8kosystemet"
+  Scenariosprite: {fileID: 2800000, guid: 709ba6ae957b1cd4292144d52f5eee4b, type: 3}
   choice1:
-    choiceText: "H\xE6v L\xF8nnen"
-    buttonText: "Betal 250 og f\xE5 20 tilfreshed "
-    moneyLoss: 250
+    choiceText: "-500 Penge, +20 Gl\xE6de"
+    buttonText: Importer vand
+    moneyLoss: 500
     moneyGain: 0
     HappinessUp: 20
     HappinessDown: 0
@@ -36,17 +36,18 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
-    choiceText: Opfordre til overarbejde
-    buttonText: Alle tiles effetivitet falder og tilfredshed falder med 20
+    choiceText: "-20 Gl\xE6de,"
+    buttonText: Prioriter industrien
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 20
-    MineEfficiencymult: 0.75
-    CowEfficiencymult: 0.75
-    AggroForestEfficiencymult: 0.75
-    FarmEfficiencymult: 0.75
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -57,9 +58,10 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
-    choiceText: Ignorer det
-    buttonText: Alle tiles effetivitet falder meget og tilfredshed falder med 10
+    choiceText: "-10 Gl\xE6de, Alle tiles effektivitet falder med 50%"
+    buttonText: "Indf\xF8r vand restriktioner"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -78,3 +80,4 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0

@@ -10,41 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: CowGoodBasicEvent
+  m_Name: Event_5_politikpres
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: "Flere k\xF8er!"
-  eventInfo: "Der er blevet f\xF8dt mange nye kalve!"
+  eventtitle: Klima Politik Pres
+  eventInfo: "Internationalt pres p\xE5 at reducere milj\xF8m\xE6ssige \xF8del\xE6ggelser"
   Scenariosprite: {fileID: 2800000, guid: ff15771f8fc9d6b44a725e8617781e5d, type: 3}
   choice1:
-    choiceText: "Kv\xE6gfarmtiles inkomst fordobler indtil n\xE6ste uge"
-    buttonText: Promover de nye kalve
+    choiceText: "+20 Gl\xE6de, Mine effektivitet falder med 50%"
+    buttonText: "Implementer gr\xF8nne politikker "
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 20
     HappinessDown: 0
-    MineEfficiencymult: 1
-    CowEfficiencymult: 2
-    AggroForestEfficiencymult: 1
-    FarmEfficiencymult: 1
-    DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 0
-    DisableAgroTilesEvent: 0
-    DisableFarmTilesEvent: 0
-    MineDegradation: 2
-    Cowdegradation: 1
-    AggroForestdegradation: 1
-    Farmdegradation: 1
-    ChangeLockEnable: 0
-    ChangeLocktype: 0
-    changeTileDegrationValue: 0
-  choice2:
-    choiceText: "F\xE5 150 guld"
-    buttonText: "S\xE6lg dem"
-    moneyLoss: 0
-    moneyGain: 150
-    HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 1
+    MineEfficiencymult: 0.5
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
@@ -59,13 +37,35 @@ MonoBehaviour:
     ChangeLockEnable: 0
     ChangeLocktype: 0
     changeTileDegrationValue: 0
-  choice3:
-    choiceText: Tilfredshed stiger med 10
-    buttonText: "Giv dem v\xE6k til folket"
+  choice2:
+    choiceText: Landbrug effektivitet falder med 50%
+    buttonText: Promover klimavenligt landbrug
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 10
+    HappinessUp: 0
     HappinessDown: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 0.5
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
+  choice3:
+    choiceText: "-20 Gl\xE6de"
+    buttonText: Ignorer
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 0
+    HappinessDown: 20
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1

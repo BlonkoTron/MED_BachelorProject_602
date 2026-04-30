@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: InternationalConservation
+  m_Name: Event_8_Natureprotect
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: 
-  eventInfo: 
-  Scenariosprite: {fileID: 0}
+  eventtitle: International Naturbeskyttelsestilskud
+  eventInfo: "En Global organisation tilbyder tilskud for at beskytte \xF8kosystemer."
+  Scenariosprite: {fileID: 2800000, guid: 5e71acef9801e234ebf935c45339698b, type: 3}
   choice1:
-    choiceText: 
-    buttonText: 
+    choiceText: "+20 Gl\xE6de"
+    buttonText: Tag imod det fulde tilskud
     moneyLoss: 0
     moneyGain: 0
-    HappinessUp: 0
+    HappinessUp: 20
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -36,17 +36,18 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
-    choiceText: 
-    buttonText: 
+    choiceText: "+200 Penge, +10 Gl\xE6de"
+    buttonText: "Tag imod det begr\xE6nsede tilskud"
     moneyLoss: 0
-    moneyGain: 0
-    HappinessUp: 0
+    moneyGain: 200
+    HappinessUp: 10
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -57,17 +58,18 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice3:
-    choiceText: 
-    buttonText: 
+    choiceText: "-20 Gl\xE6de"
+    buttonText: Tag ikke imod tilskudet
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    HappinessDown: 20
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -78,3 +80,4 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0

@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
-  m_Name: PredtorAttack
+  m_Name: Event_3_BioDiversitetTruet
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: "Rovdyr Angriber Kv\xE6gfarmene"
-  eventInfo: "Der er jaguarer der har bev\xE6get sig ud af regnskoven for at finde
-    mad, og har angrebet kv\xE6gfarme"
-  Scenariosprite: {fileID: 0}
+  eventtitle: Biodiversiteten er truet!
+  eventInfo: Biodiversiteten er truet i regnskoven
+  Scenariosprite: {fileID: 2800000, guid: 1037f682eb5221f45942f29eb8f0c2c2, type: 3}
   choice1:
-    choiceText: Skyd Jaguarerne
-    buttonText: Du betaler 100 guld og mister 10 tilfredshed
-    moneyLoss: 100
+    choiceText: "-400 Penge, +20 Gl\xE6de, L\xE5s 4 regnskovstiles"
+    buttonText: Lav naturreservater
+    moneyLoss: 400
     moneyGain: 0
-    HappinessUp: 0
-    HappinessDown: 10
+    HappinessUp: 20
+    HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
@@ -37,19 +36,20 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
   choice2:
-    choiceText: Forbedre jaguarernes levesteder
-    buttonText: "Koster 250 og L\xE5ser kv\xE6gfarme "
-    moneyLoss: 250
-    moneyGain: 0
-    HappinessUp: 0
+    choiceText: "-200 Penge, +10 Gl\xE6de"
+    buttonText: Promover skovlandbrug
+    moneyLoss: 0
+    moneyGain: 200
+    HappinessUp: 10
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 1
+    DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
     MineDegradation: 1
@@ -57,16 +57,17 @@ MonoBehaviour:
     AggroForestdegradation: 1
     Farmdegradation: 1
     ChangeLockEnable: 0
-    ChangeLocktype: 0
+    ChangeLocktype: 4
+    changeTileDegrationValue: 0
   choice3:
-    choiceText: Ignorer det
-    buttonText: "Kv\xE6gfarme mister effektivitet til n\xE6ste uge"
+    choiceText: "-20 Gl\xE6de"
+    buttonText: Ignorer
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
-    HappinessDown: 0
+    HappinessDown: 20
     MineEfficiencymult: 1
-    CowEfficiencymult: 0.5
+    CowEfficiencymult: 1
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
@@ -79,3 +80,4 @@ MonoBehaviour:
     Farmdegradation: 1
     ChangeLockEnable: 0
     ChangeLocktype: 0
+    changeTileDegrationValue: 0
