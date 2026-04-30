@@ -438,10 +438,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Dette viser den n\xE6ste kvote, og hvor lang tid der er tilbage inden
-    den n\xE6ste kvote.\n\nDu skal have nok penge til at betale din kvote."
+    den skal betales.\n\nHvis du ikke har penge til at betale din kvote, bliver folk
+    utilfredse."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -507,7 +508,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &205248762443913840
@@ -1400,8 +1401,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Landbrug\nDyrker afgr\xF8der, blandt andet majs og soja.\nGiver en lille
-    m\xE6ngde penge, men skader ogs\xE5 jorden mindre."
+  m_text: 'Mine
+
+    Graver efter guld og olie.
+
+    Giver flest penge, men skader
+    jorden rigtig hurtigt.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1436,7 +1441,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -1690,10 +1695,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du kan f\xE5 penge ved at opf\xF8re bygninger."
+  m_text: "Du tjener penge ved at opf\xF8re bygninger."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1759,7 +1764,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1450728748811703609
@@ -2036,11 +2041,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dette er dit folks tilfredshed\nHvis du ikke betale kvotaer eller \xF8del\xE6gger
-    naturen bliver de ultilfredse"
+  m_text: "Dette er dit folks tilfredshed.\nHvis du \xF8del\xE6gger naturen eller
+    ikke betaler dine kvoter, bliver de ultilfredse."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2106,7 +2111,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1644731791038118674
@@ -3736,7 +3741,7 @@ MonoBehaviour:
     og hvor lang tid der er, til feltet bliver \xF8de."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3915,7 +3920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519, y: 0}
+  m_AnchoredPosition: {x: 0, y: -360}
   m_SizeDelta: {x: 613.3759, y: 106.3926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4954126516661600441
@@ -4067,7 +4072,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: -10}
+  m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2094653512562703357
 CanvasRenderer:
@@ -4124,7 +4129,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.75
+  m_fontSize: 50.1
   m_fontSizeBase: 64.46
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4637,7 +4642,7 @@ MonoBehaviour:
   m_text: "Tryk p\xE5 et felt for at bygge."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5035,12 +5040,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mine
-
-    Graver efter guld og olie.
-
-    Giver flest penge, men skader
-    jorden rigtig hurtigt.'
+  m_text: "Landbrug\nDyrker afgr\xF8der, blandt andet majs og soja.\nGiver en lille
+    m\xE6ngde penge, men skader ogs\xE5 jorden mindre."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5075,7 +5076,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -5504,7 +5505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Velkommen\nDit job er at finde balance i dette regnskovsomr\xE5de, s\xE5
+  m_text: "Velkommen\n\nDit job er at skabe balance i dette regnskovsomr\xE5de, s\xE5
     dit folk bliver glade, og skoven har det godt."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
@@ -5810,7 +5811,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -6148,8 +6149,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du kan bruge venstre museknap for at trykke p\xE5 felter.\nDu kan bruge
-    WASD for at bev\xE6ge kameraet rundt."
+  m_text: "Brug venstre museknap for at trykke p\xE5 felter.\nBrug WASD eller piletaster
+    for at bev\xE6ge kameraet rundt."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
@@ -7014,10 +7015,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du er nu klar til at pr\xF8ve at skabe balance."
+  m_text: Du er nu klar til at skabe balance.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7283,11 +7284,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bygninger udpiner jorden. St\xE5r de for l\xE6nge, bliver feltet ubrugeligt.
+  m_text: "Bygninger udpiner jorden.\n St\xE5r de for l\xE6nge, bliver feltet ubrugeligt.
     Tomme felter genoprettes over tid og bliver til regnskov igen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7353,7 +7354,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4647082140790594330
@@ -7497,7 +7498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tryk for at Starte
+  m_text: Tryk for at starte
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -7767,7 +7768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e7b8286b3f214784f9e09da27782b39c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d5fb208452004340a02f73efce93dff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8178,6 +8179,143 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &5431271805764236185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6020339312347374264}
+  - component: {fileID: 3325074480881504505}
+  - component: {fileID: 2577881957795332633}
+  m_Layer: 5
+  m_Name: "pr\xF8vigen"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6020339312347374264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431271805764236185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8498883449880591252}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 22, y: -457}
+  m_SizeDelta: {x: 407, y: 85.5036}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3325074480881504505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431271805764236185}
+  m_CullTransparentMesh: 1
+--- !u!114 &2577881957795332633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431271805764236185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Tryk for at g\xE5 videre"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -2.10437, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5599695618124552239
 GameObject:
   m_ObjectHideFlags: 0
@@ -8244,7 +8382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d5fb208452004340a02f73efce93dff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7b8286b3f214784f9e09da27782b39c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9336,6 +9474,7 @@ RectTransform:
   - {fileID: 9187991413507058923}
   - {fileID: 830203449862838204}
   - {fileID: 4750022834890433121}
+  - {fileID: 6020339312347374264}
   m_Father: {fileID: 5329245297818135045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10391,7 +10530,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -10496,7 +10635,7 @@ MonoBehaviour:
   m_text: "Her kan du pause tiden og styre, om tiden skal g\xE5 hurtigere."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11833,7 +11972,7 @@ MonoBehaviour:
     til at bygge bygninger.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12739,11 +12878,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "N\xE5r Denne bar er fuld er det tid til at betale kvota og samtidigt kan
-    der ske begivenheder i verdenen hvor du v\xE6lge hvad der sker ske efterf\xF8lgende"
+  m_text: "N\xE5r Denne bar er fuld er det tid til at betale og samtidigt kan der
+    ske begivenheder i verdenen, hvor du skal tr\xE6ffe vigtige valg."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
-  m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
+  m_sharedMaterial: {fileID: 8727251926464048044, guid: ff159716470d53d4987ccce6c8d4d565, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12809,7 +12948,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9203825985804863804
