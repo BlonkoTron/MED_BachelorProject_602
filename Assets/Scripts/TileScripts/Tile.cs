@@ -249,7 +249,7 @@ public class Tile : MonoBehaviour
         int moneyEarned = GetMoneyPerTick();
         
         // Check if next turn will make it barren (before applying degradation)
-        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren)
+        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren && tileType != TileType.Grass)
         {
             // Check if it will be barren in 2 turns (i.e., 1 turn til barren)
             float degradationAfterNextTurn = currentDegradation + (2 * GetDegradationRate());
