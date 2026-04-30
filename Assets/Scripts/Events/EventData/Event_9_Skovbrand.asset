@@ -22,10 +22,10 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 20
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -44,10 +44,10 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 0
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
@@ -66,10 +66,10 @@ MonoBehaviour:
     moneyGain: 0
     HappinessUp: 0
     HappinessDown: 20
-    MineEfficiencymult: 0
-    CowEfficiencymult: 0
-    AggroForestEfficiencymult: 0
-    FarmEfficiencymult: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
