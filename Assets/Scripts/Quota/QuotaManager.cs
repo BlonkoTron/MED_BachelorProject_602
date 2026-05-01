@@ -8,6 +8,8 @@ public class QuotaManager : MonoBehaviour
     private int currentQuotaAmount;
     private int currentQuotaIndex = 0;
 
+    public int CurrentQuotaIndex => currentQuotaIndex;
+
     public int CurrentQuotaAmount => currentQuotaAmount;
 
     [SerializeField] private GameSettings gameSettings;
