@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
   Scenariosprite: {fileID: 2800000, guid: e8afd5ff0b1f2df4299a6b99d3dfb331, type: 3}
   choice1:
-    choiceText: -100 Penge
+    choiceText: -200 Penge
     buttonText: Brug pesticider
     moneyLoss: 100
     moneyGain: 0
@@ -38,7 +38,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: -40 Penge, Landbrug og Skovlandbrug effektivitet falder med 10%
+    choiceText: "-40 Penge, Landbrug og Skovlandbrug effektivitet falder med 10%
+      indtil n\xE6ste kvote"
     buttonText: Naturlig kontrol
     moneyLoss: 40
     moneyGain: 0
@@ -60,7 +61,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: Landbrug og Skovlandbrug effektivitet falder med 25%
+    choiceText: "Landbrug og Skovlandbrug effektivitet falder med 25% indtil n\xE6ste
+      kvote"
     buttonText: Ignorer
     moneyLoss: 0
     moneyGain: 0

@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: Alt effektivitet falder med 25%
+    choiceText: "Alt effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: Accepter forsinkelser
     moneyLoss: 0
     moneyGain: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "+10 Gl\xE6de, Alt effektivitet falder med 50%"
+    choiceText: "+10 Gl\xE6de, Alt effektivitet falder med 50% indtil n\xE6ste kvote"
     buttonText: "Fokuser p\xE5 det lokale marked"
     moneyLoss: 0
     moneyGain: 0

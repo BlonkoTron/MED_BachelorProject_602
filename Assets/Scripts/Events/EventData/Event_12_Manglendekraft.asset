@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: "Der er ikke nok medarbejdere til at holde industrien k\xF8rende"
   Scenariosprite: {fileID: 2800000, guid: 65274de20bd492541ab291bce6a93d6f, type: 3}
   choice1:
-    choiceText: "-250 Penge, +20 Gl\xE6de,"
+    choiceText: "-250 Penge, +20 Gl\xE6de"
     buttonText: "H\xE6v L\xF8nnen"
     moneyLoss: 250
     moneyGain: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     AggroForestEfficiencymult: 1
     FarmEfficiencymult: 1
     DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 1
+    DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
     MineDegradation: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-20 Gl\xE6de, Alt effektivitet falder med 25% "
+    choiceText: "-20 Gl\xE6de, Alt effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: Opfordre til overarbejde
     moneyLoss: 0
     moneyGain: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-10 Gl\xE6de, Alt effektivitet falder med 50%"
+    choiceText: "-10 Gl\xE6de, Alt effektivitet falder med 50% indtil n\xE6ste kvote"
     buttonText: Ignorer folket
     moneyLoss: 0
     moneyGain: 0
