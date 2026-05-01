@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
     {
         EventMangerGET = Eventmanager_NEWSETUP.instance;
 
-        //Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
+        Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
 
     }
     private void Update()
@@ -197,7 +197,7 @@ public class GameManager : MonoBehaviour
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
             HappinessTicktime = 0;
-            Lose_Warning.Instance.Warning_happy = false;
+            Lose_Warning.Instance.imagewar.gameObject.SetActive(false);
         }
 
         //Rainforestscore Losecheck
@@ -216,6 +216,7 @@ public class GameManager : MonoBehaviour
         {
             RainscoreTicktime = 0;
             Lose_Warning.Instance.Warning_bio = false;
+            Lose_Warning.Instance.imagewar.gameObject.SetActive(false);
         }
 
         //WinCondition!

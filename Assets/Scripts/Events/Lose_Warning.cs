@@ -52,7 +52,7 @@ public class Lose_Warning : MonoBehaviour
     {
         imagewar.sprite = imagewarNOTclicked;
         flashCoroutine = StartCoroutine(FlashRoutine());
-            Warning = Audiomanager.instance.PlaySound(Warning_SFX, transform.position);
+        Warning = Audiomanager.instance.PlaySound(Warning_SFX, transform.position);
     }
     else if (!(Warning_bio || Warning_happy) && flashCoroutine != null)
     {
