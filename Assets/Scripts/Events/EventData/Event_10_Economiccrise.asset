@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Alt effektivitet falder med 25% indtil n\xE6ste kvote"
+    choiceText: "Al effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: "Fokuser p\xE5 at v\xE6re selvforsynende"
     moneyLoss: 0
     moneyGain: 0
@@ -60,8 +60,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-15 Gl\xE6de, Alt effektivitet stiger med 25% indtil n\xE6ste kvote"
-    buttonText: Opskaler produktion
+    choiceText: "-15 Gl\xE6de, Al effektivitet stiger med 25% indtil n\xE6ste kvote"
+    buttonText: Opskaler produktionen
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0

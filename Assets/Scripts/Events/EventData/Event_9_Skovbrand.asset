@@ -17,7 +17,7 @@ MonoBehaviour:
   Scenariosprite: {fileID: 2800000, guid: 8de5b2be30cf1f0499e81bdab5295aa1, type: 3}
   choice1:
     choiceText: "-600 Penge, +20 Gl\xE6de"
-    buttonText: Fuldt krise beredskab
+    buttonText: Fuldt kriseberedskab
     moneyLoss: 600
     moneyGain: 0
     HappinessUp: 20
@@ -39,7 +39,7 @@ MonoBehaviour:
     changeTileDegrationValue: 0
   choice2:
     choiceText: -300 Penge
-    buttonText: Kontrolleret spredelse
+    buttonText: Kontroller spredningen
     moneyLoss: 300
     moneyGain: 0
     HappinessUp: 0

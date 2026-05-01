@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: Event_13_Pestside
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Mindre Skadedyr Udbrud
-  eventInfo: 'Et mindre skadedyrs udbrud rammer landbruget '
+  eventtitle: Skadedyrsudbrud
+  eventInfo: 'Et mindre skadedyrsudbrud rammer landbruget '
   Scenariosprite: {fileID: 2800000, guid: e8afd5ff0b1f2df4299a6b99d3dfb331, type: 3}
   choice1:
     choiceText: -200 Penge
@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-40 Penge, Landbrug og Skovlandbrug effektivitet falder med 10%
+    choiceText: "-40 Penge, Landbrug og Skovlandbrugs effektivitet falder med 10%
       indtil n\xE6ste kvote"
     buttonText: Naturlig kontrol
     moneyLoss: 40
@@ -61,7 +61,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "Landbrug og Skovlandbrug effektivitet falder med 25% indtil n\xE6ste
+    choiceText: "Landbrug og Skovlandbrugs effektivitet falder med 25% indtil n\xE6ste
       kvote"
     buttonText: Ignorer
     moneyLoss: 0
