@@ -17,7 +17,7 @@ MonoBehaviour:
   Scenariosprite: {fileID: 2800000, guid: 5e71acef9801e234ebf935c45339698b, type: 3}
   choice1:
     choiceText: "+20 Gl\xE6de men du kan ikke bygge miner, farme indtil n\xE6ste
-      kovte"
+      kvote"
     buttonText: Tag imod det fulde tilskud
     moneyLoss: 0
     moneyGain: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     changeTileDegrationValue: 0
   choice2:
     choiceText: "+200 Penge, +10 Gl\xE6de kan ikke bygge miner, farme indtil n\xE6ste
-      kovte"
+      kvote"
     buttonText: "Tag imod det begr\xE6nsede tilskud"
     moneyLoss: 0
     moneyGain: 200

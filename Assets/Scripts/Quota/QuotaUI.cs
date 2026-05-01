@@ -17,6 +17,8 @@ public class QuotaUI : MonoBehaviour
 
     [SerializeField] private Animator eventNoticeAnimator;
 
+    [SerializeField] private TMP_Text weekNumberText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,7 @@ public class QuotaUI : MonoBehaviour
     private void UpdateQuotaText()
     {
         quotaAmountText.text = quotaManager.CurrentQuotaAmount.ToString();
+        weekNumberText.text = "Uge " + (quotaManager.CurrentQuotaIndex+1).ToString();
 
     }
     private void Update()

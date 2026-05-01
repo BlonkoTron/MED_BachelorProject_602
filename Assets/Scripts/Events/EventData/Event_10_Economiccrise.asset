@@ -16,7 +16,7 @@ MonoBehaviour:
   eventInfo: 'Det globale marked bryder pludseligt sammen  '
   Scenariosprite: {fileID: 2800000, guid: 15fa5b88c4ca222429603b4290df0adf, type: 3}
   choice1:
-    choiceText: "-400 Penge, +15 Gl\xE6de,"
+    choiceText: "-400 Penge, +15 Gl\xE6de"
     buttonText: "Statslig st\xF8tte"
     moneyLoss: 400
     moneyGain: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Alt effektivitet falder med 25% indtil n\xE6ste kovte"
+    choiceText: "Alt effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: "Fokuser p\xE5 at v\xE6re selvforsynende"
     moneyLoss: 0
     moneyGain: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-15 Gl\xE6de, Alt effektivitet stiger med 25% indtil n\xE6ste kovte"
+    choiceText: "-15 Gl\xE6de, Alt effektivitet stiger med 25% indtil n\xE6ste kvote"
     buttonText: Opskaler produktion
     moneyLoss: 0
     moneyGain: 0
