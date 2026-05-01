@@ -1183,26 +1183,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1270354450262618009, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
-      propertyPath: farmTileScore
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270354450262618009, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
-      propertyPath: mineTileScore
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270354450262618009, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
-      propertyPath: pastureTileScore
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270354450262618009, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
-      propertyPath: agroforestTileScore
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270354450262618009, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
-      propertyPath: rainforestTileScore
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1819149874270219075, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_Name
       value: ManagingObject Variant
