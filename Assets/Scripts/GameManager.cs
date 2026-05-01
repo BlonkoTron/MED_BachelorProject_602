@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
         Lose_Happiness,
         Lose_Bio,
         Lose_Barren,
-        Lose_Money,
         Win_Balance
     }
 
@@ -74,9 +73,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int RainscoreLoseTreshold; //The threshold needed before the player can lose to low bioscore
     [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row before losing
     public int RainscoreTicktime = 0; //Int to count number of rounds
-
-    //Losing condition Money settings
-    [SerializeField] private int MoneyLoseTreshold; //The threshold needed before the player can lose to low bioscore
 
     //Winning the game settings
     [SerializeField] private int WinningThreshold; //How many events the player must survive before they can win
@@ -237,13 +233,6 @@ public class GameManager : MonoBehaviour
             Lose_Warning.Instance.imagewar.gameObject.SetActive(false);
         }
 
-        //Money Losecheck
-
-        if (PointSystem.Instance.CurrentMoney < MoneyLoseTreshold && TileTypeAndAmountUI.Instance.GetTotalMoneyGain() == 0)
-        {
-            LoseNoMoney();
-        }
-
         //WinCondition!
 
         Eventcounter++;
@@ -382,14 +371,6 @@ public class GameManager : MonoBehaviour
         Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
         LoadScene(SceneType.Lose_Happiness);
-    }
-
-    public void LoseNoMoney()
-    {
-        //Stop music and load current scene
-        Audiomanager.instance.StopSound(Main_Music);
-        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no moneypoorfool)");
-        LoadScene(SceneType.Lose_Money);
     }
 
     public void WinPerfectBalance()
