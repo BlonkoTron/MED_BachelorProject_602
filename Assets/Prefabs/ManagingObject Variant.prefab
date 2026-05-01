@@ -2991,6 +2991,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2454952784052488080}
     - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: farmTileScore
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: gradientColor
       value: 
       objectReference: {fileID: 73859354649909027}
@@ -2998,6 +3002,10 @@ PrefabInstance:
       propertyPath: grassFeedback
       value: 
       objectReference: {fileID: 862332391432239756}
+    - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: mineTileScore
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: barrenFeedback
       value: 
@@ -3010,6 +3018,18 @@ PrefabInstance:
       propertyPath: pastureFeedback
       value: 
       objectReference: {fileID: 257015129732935013}
+    - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: pastureTileScore
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: agroforestTileScore
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851543637436058288, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: rainforestTileScore
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4098628789165484884, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: m_fontAsset
       value: 
