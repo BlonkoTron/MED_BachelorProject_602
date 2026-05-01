@@ -39,7 +39,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "+250 Penge, Kv\xE6gfarme kan ikke blive bygget denne tur "
+    choiceText: "-250 Penge, Kv\xE6gfarme kan ikke blive bygget denne tur "
     buttonText: Forbedre jaguarernes levesteder
     moneyLoss: 250
     moneyGain: 0
