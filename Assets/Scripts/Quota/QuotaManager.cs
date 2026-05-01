@@ -45,7 +45,7 @@ public class QuotaManager : MonoBehaviour
         // pay the quota money
         if (pointSystem != null)
         {
-            if (pointSystem.CurrentMoney>currentQuotaAmount)
+            if (pointSystem.CurrentMoney<currentQuotaAmount)
             {
                 // cant pay full, lose happiness
                 Happiness.Instance.DecreaseHappiness(gameManager.gameSettings.HAPPINESS_PENALTY_MISSING_QUOTA_MONEY);
