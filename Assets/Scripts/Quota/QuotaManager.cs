@@ -45,7 +45,7 @@ public class QuotaManager : MonoBehaviour
         // pay the quota money
         if (pointSystem != null)
         {
-            pointSystem.SpendMoney(currentQuotaAmount);
+            pointSystem.LoseMoney(currentQuotaAmount);
         }
 
         // update to new quota
