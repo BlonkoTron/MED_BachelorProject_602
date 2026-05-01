@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: 'Utilfredshed Blandt Befolkningen '
   eventInfo: Befolkningen er utilfredse og protesterer
-  Scenariosprite: {fileID: 0}
+  Scenariosprite: {fileID: 2800000, guid: d7b7ea1aaea435940a814dd9aabf63b1, type: 3}
   choice1:
     choiceText: "-400 Penge, +20 Gl\xE6de,"
     buttonText: "Invester i velf\xE6rd"
