@@ -1435,6 +1435,20 @@ MonoBehaviour:
       m_Calls: []
   rainforestScore: 0
   rainforestScorePercentage: 0
+  rainforestTileScore: 3
+  agroforestTileScore: 2
+  grassTileScore: 1
+  farmTileScore: 0
+  pastureTileScore: -1
+  mineTileScore: -2
+  barrenTileScore: -3
+  rainFeedback: {fileID: 0}
+  agroFeedback: {fileID: 0}
+  farmFeedback: {fileID: 0}
+  pastureFeedback: {fileID: 0}
+  mineFeedback: {fileID: 0}
+  barrenFeedback: {fileID: 0}
+  grassFeedback: {fileID: 0}
 --- !u!1 &1930346344856903852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,15 +3702,16 @@ MonoBehaviour:
   RainscoreLoseTreshold: 50
   RainscoreLoseRoundThreshold: 2
   RainscoreTicktime: 0
+  MoneyLoseTreshold: 150
+  WinningThreshold: 10
   Main_Music_MS:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 632928308
+      Data2: 1341426303
+      Data3: -1495179601
+      Data4: -418718003
+    Path: event:/Music
   BarrentilesLoseTreshold: 60
-  WinningThreshold: 10
   roundProgressValue: 0.5
   clockAnimator: {fileID: 0}
   animationName: ClockSpinning
