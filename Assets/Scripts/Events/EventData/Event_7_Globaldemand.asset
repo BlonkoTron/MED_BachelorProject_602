@@ -15,7 +15,7 @@ MonoBehaviour:
   eventtitle: "Global Eftersp\xF8rgsel Stiger"
   eventInfo: "Der er en pludseligt stigende eftersp\xF8rgsel p\xE5 landbrugsvarer
     og k\xF8d"
-  Scenariosprite: {fileID: 2800000, guid: ff15771f8fc9d6b44a725e8617781e5d, type: 3}
+  Scenariosprite: {fileID: 2800000, guid: 7aea080257ff8ac41a88f1af5afa6d8e, type: 3}
   choice1:
     choiceText: "Landbrug og Kv\xE6gfarm effektivitet stiger med 100%"
     buttonText: "Opskaler produktionen i landbruget og kv\xE6gfarmene"
