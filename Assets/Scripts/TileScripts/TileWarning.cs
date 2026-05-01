@@ -7,12 +7,12 @@ public class TileWarning : MonoBehaviour
     
     void Start()
     {
-
-        GameManager.Instance.onGameTick.AddListener(DestoryThis);   
+        parentTile = GetComponentInParent<Tile>();
+        parentTile.onTileChanged.AddListener(DestroyThis);   
     
     }
     
-    private void DestoryThis()
+    private void DestroyThis(TileType type)
     {
         Destroy(gameObject);
     }
@@ -25,7 +25,7 @@ public class TileWarning : MonoBehaviour
             parentTile.ResetWarningFlag();
         }
 
-        GameManager.Instance.onGameTick.RemoveListener(DestoryThis);
+        parentTile.onTileChanged.RemoveListener(DestroyThis);
 
     }
 }
