@@ -38,6 +38,7 @@ public class GameSettings : ScriptableObject
     [Header("Happiness")]
     [Tooltip("Happiness penalty when changing a rainforest tile to another type")]
     public int HAPPINESS_PENALTY_RAINFOREST_CHANGE = 10;
+    public int HAPPINESS_PENALTY_MISSING_QUOTA_MONEY = 20;
 
     [Header("Quota")]
     public int[] quotaAmounts= { 100,125,150,200,400,500,800,1000};
