@@ -61,7 +61,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "Kv\xE6gfarm effektivitet falder med 25%"
+    choiceText: "Kv\xE6gfarm effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: Ignorer det
     moneyLoss: 0
     moneyGain: 0

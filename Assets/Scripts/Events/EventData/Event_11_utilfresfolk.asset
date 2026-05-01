@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Event_11_utilfresfolk
   m_EditorClassIdentifier: Assembly-CSharp::EventData
   eventtitle: 'Utilfredshed Blandt Befolkningen '
-  eventInfo: Befolkningen er utilfredse og protesterer
+  eventInfo: Befolkningen er utilfreds og protesterer
   Scenariosprite: {fileID: 2800000, guid: d7b7ea1aaea435940a814dd9aabf63b1, type: 3}
   choice1:
-    choiceText: "-400 Penge, +20 Gl\xE6de,"
+    choiceText: "-400 Penge, +20 Gl\xE6de"
     buttonText: "Invester i velf\xE6rd"
     moneyLoss: 400
     moneyGain: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-200 Penge, +10 Gl\xE6de,"
+    choiceText: "-200 Penge, +10 Gl\xE6de"
     buttonText: 'Giv befolkningen midlertidige goder '
     moneyLoss: 200
     moneyGain: 0
