@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-20 Gl\xE6de,"
+    choiceText: "-20 Gl\xE6de"
     buttonText: Prioriter industrien
     moneyLoss: 0
     moneyGain: 0
@@ -60,7 +60,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-10 Gl\xE6de, Alle tiles effektivitet falder med 50%"
+    choiceText: "-10 Gl\xE6de, Alle tiles effektivitet falder med 50% indtil n\xE6ste
+      kvote"
     buttonText: "Indf\xF8r vand restriktioner"
     moneyLoss: 0
     moneyGain: 0

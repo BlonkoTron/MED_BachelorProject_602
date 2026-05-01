@@ -17,7 +17,8 @@ MonoBehaviour:
     ogs\xE5 n\xE6ring til jorden "
   Scenariosprite: {fileID: 2800000, guid: fd13feb127c152742a92c2271dca6c56, type: 3}
   choice1:
-    choiceText: "-250 Penge, +20 Gl\xE6de, Landbrug effektivitet stiger med 50% "
+    choiceText: "-250 Penge, +20 Gl\xE6de, Landbrug og skovlandbrug effektivitet
+      stiger med 50% indtil n\xE6ste kvote"
     buttonText: "Invester i dr\xE6nsystemer"
     moneyLoss: 250
     moneyGain: 0
@@ -25,7 +26,7 @@ MonoBehaviour:
     HappinessDown: 0
     MineEfficiencymult: 1
     CowEfficiencymult: 1
-    AggroForestEfficiencymult: 1
+    AggroForestEfficiencymult: 1.5
     FarmEfficiencymult: 1.5
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
@@ -39,7 +40,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-10 Gl\xE6de, Landbrug effektivitet stiger med 100%"
+    choiceText: "-10 Gl\xE6de, Landbrug og skovlandbrug effektivitet stiger med 100%
+      indtil n\xE6ste kvote"
     buttonText: "Udnyt det ekstra nedb\xF8r"
     moneyLoss: 0
     moneyGain: 0
@@ -47,7 +49,7 @@ MonoBehaviour:
     HappinessDown: 10
     MineEfficiencymult: 1
     CowEfficiencymult: 1
-    AggroForestEfficiencymult: 1
+    AggroForestEfficiencymult: 2
     FarmEfficiencymult: 2
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
@@ -56,7 +58,7 @@ MonoBehaviour:
     MineDegradation: 1
     Cowdegradation: 1
     AggroForestdegradation: 1
-    Farmdegradation: 1
+    Farmdegradation: 1.5
     ChangeLockEnable: 0
     ChangeLocktype: 0
     changeTileDegrationValue: 0

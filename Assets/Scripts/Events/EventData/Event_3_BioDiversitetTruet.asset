@@ -16,8 +16,8 @@ MonoBehaviour:
   eventInfo: Biodiversiteten er truet i regnskoven
   Scenariosprite: {fileID: 2800000, guid: 1037f682eb5221f45942f29eb8f0c2c2, type: 3}
   choice1:
-    choiceText: "-400 Penge, +20 Gl\xE6de, L\xE5s 4 regnskovstiles"
-    buttonText: Lav naturreservater
+    choiceText: "-400 Penge, +20 Gl\xE6de"
+    buttonText: Lav et naturreservat
     moneyLoss: 400
     moneyGain: 0
     HappinessUp: 20
@@ -38,7 +38,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-200 Penge, +10 Gl\xE6de"
+    choiceText: "-200 Penge, +10 Gl\xE6de, Landbrug kan ikke blive bygget indtil
+      n\xE6ste kvote"
     buttonText: Promover skovlandbrug
     moneyLoss: 0
     moneyGain: 200
@@ -51,7 +52,7 @@ MonoBehaviour:
     DisableMineTilesEvent: 0
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
-    DisableFarmTilesEvent: 0
+    DisableFarmTilesEvent: 1
     MineDegradation: 1
     Cowdegradation: 1
     AggroForestdegradation: 1

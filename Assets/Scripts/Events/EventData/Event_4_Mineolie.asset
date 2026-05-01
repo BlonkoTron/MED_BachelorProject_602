@@ -31,7 +31,7 @@ MonoBehaviour:
     DisableCowTilesEvent: 0
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
-    MineDegradation: 1
+    MineDegradation: 1.25
     Cowdegradation: 1
     AggroForestdegradation: 1
     Farmdegradation: 1
