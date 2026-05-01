@@ -379,7 +379,7 @@ public class GameManager : MonoBehaviour
     {
         //Stop music and load current scene
         Audiomanager.instance.StopSound(Main_Music);
-        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (No money poor fool)");
         LoadScene(SceneType.Lose_Happiness);
     }
 
