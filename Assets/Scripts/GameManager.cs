@@ -113,6 +113,10 @@ public class GameManager : MonoBehaviour
         //Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
 
     }
+    private void Update()
+    {
+        UpdateClockUI();
+    }
 
     void FixedUpdate()
     {
@@ -300,6 +304,11 @@ public class GameManager : MonoBehaviour
         int seconds = (int)gameSettings.tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
     }
+    private float TimeTillRoundEnd()
+    {
+        float time = gameSettings.tickInterval * ticksTillRoundEnd - tickTimer;
+        return time;
+    }
     public void SetNewState(GameState state)
     {
         gameState = state;
@@ -308,7 +317,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateClockUI()
     {
-        float currentVal = SecondsTillRoundEnd();
+        float currentVal = TimeTillRoundEnd();
 
         float progress = 1.0f - (Mathf.Clamp(currentVal, 0, secondsLeftAtStart) / secondsLeftAtStart);
 
@@ -319,6 +328,7 @@ public class GameManager : MonoBehaviour
         roundProgressValue = progress;
 
     }
+
 
 
     //Losing conditions

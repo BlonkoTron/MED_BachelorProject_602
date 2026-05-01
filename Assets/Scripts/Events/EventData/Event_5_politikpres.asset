@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
+  m_Name: Event_5_politikpres
+  m_EditorClassIdentifier: Assembly-CSharp::EventData
+  eventtitle: Klima Politik Pres
+  eventInfo: "Internationalt pres p\xE5 at reducere milj\xF8m\xE6ssige \xF8del\xE6ggelser"
+  Scenariosprite: {fileID: 2800000, guid: ff15771f8fc9d6b44a725e8617781e5d, type: 3}
+  choice1:
+    choiceText: "+20 Gl\xE6de, Mine effektivitet falder med 50%"
+    buttonText: "Implementer gr\xF8nne politikker "
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 20
+    HappinessDown: 0
+    MineEfficiencymult: 0.5
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
+  choice2:
+    choiceText: Landbrug effektivitet falder med 50%
+    buttonText: Promover klimavenligt landbrug
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 0
+    HappinessDown: 0
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 0.5
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0
+  choice3:
+    choiceText: "-20 Gl\xE6de"
+    buttonText: Ignorer
+    moneyLoss: 0
+    moneyGain: 0
+    HappinessUp: 0
+    HappinessDown: 20
+    MineEfficiencymult: 1
+    CowEfficiencymult: 1
+    AggroForestEfficiencymult: 1
+    FarmEfficiencymult: 1
+    DisableMineTilesEvent: 0
+    DisableCowTilesEvent: 0
+    DisableAgroTilesEvent: 0
+    DisableFarmTilesEvent: 0
+    MineDegradation: 1
+    Cowdegradation: 1
+    AggroForestdegradation: 1
+    Farmdegradation: 1
+    ChangeLockEnable: 0
+    ChangeLocktype: 0
+    changeTileDegrationValue: 0

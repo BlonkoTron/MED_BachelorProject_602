@@ -35,6 +35,15 @@ public class TileTypeAndAmountUI : MonoBehaviour
     private int mineTileScore = -2;
     private int barrenTileScore = -3;
 
+    //---- D here
+    [Header("Feedback Controllers")]
+    public FeedbackTriangleController rainFeedback;
+    public FeedbackTriangleController agroFeedback;
+    public FeedbackTriangleController farmFeedback;
+    public FeedbackTriangleController pastureFeedback;
+    public FeedbackTriangleController mineFeedback;
+    public FeedbackTriangleController barrenFeedback;
+    public FeedbackTriangleController grassFeedback;
 
 
     private void Awake()
@@ -73,10 +82,28 @@ public class TileTypeAndAmountUI : MonoBehaviour
 
     private void Recalculate()
     {
+        //D was here
+        int oldRain = rainforestTiles;
+        int oldAgro = agroforestTiles;
+        int oldFarm = farmTiles;
+        int oldPasture = pastureTiles;
+        int oldMine = mineTiles;
+        int oldBarren = barrenTiles;
+        int oldGrass = grassTiles;
+
         CountTiles();
         CalculateMoneyGain();
 
         onTileUIUpdate.Invoke();
+        // and here
+        if (rainforestTiles != oldRain) rainFeedback?.TriggerChange(rainforestTiles - oldRain);
+        if (agroforestTiles != oldAgro) agroFeedback?.TriggerChange(agroforestTiles - oldAgro);
+        if (farmTiles != oldFarm) farmFeedback?.TriggerChange(farmTiles - oldFarm);
+        if (pastureTiles!= oldPasture) pastureFeedback?.TriggerChange(pastureTiles - oldPasture);
+        if (mineTiles != oldMine) mineFeedback?.TriggerChange(mineTiles - oldMine);
+        if (barrenTiles != oldBarren) barrenFeedback?.TriggerChange(barrenTiles - oldBarren);
+        if (grassTiles != oldGrass) grassFeedback?.TriggerChange(grassTiles - oldGrass);
+
     }
 
     public void CountTiles()
@@ -140,7 +167,7 @@ public class TileTypeAndAmountUI : MonoBehaviour
         gradientColor.SetValue(rainforestScorePercentage);
         percentageText.text = rainforestScorePercentage.ToString("F1") + "%";
         Debug.Log(rainforestScorePercentage);
-    }
+    }   
 
     public void CalculateMoneyGain()
     {

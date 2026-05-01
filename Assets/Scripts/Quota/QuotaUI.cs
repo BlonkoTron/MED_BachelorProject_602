@@ -15,6 +15,8 @@ public class QuotaUI : MonoBehaviour
 
     [SerializeField] private Animator clockAnimator;
 
+    [SerializeField] private Animator eventNoticeAnimator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +24,8 @@ public class QuotaUI : MonoBehaviour
         gameManager = GameManager.Instance;
 
         quotaManager.OnQuotaUpdated.AddListener(UpdateQuotaText);
+        gameManager.onGameTick.AddListener(UpdateEventNotice);
+        gameManager.onRoundStart.AddListener(UpdateEventNotice);
         UpdateQuotaText();
     }
 
@@ -38,5 +42,16 @@ public class QuotaUI : MonoBehaviour
     private void OnDestroy()
     {
         quotaManager.OnQuotaUpdated.RemoveListener(UpdateQuotaText);
+    }
+    private void UpdateEventNotice()
+    {
+        if (gameManager.TicksTillRoundEnd<=2)
+        {
+            // last tick anim
+            eventNoticeAnimator.SetBool("lastTick", true);
+        } else
+        {
+            eventNoticeAnimator.SetBool("lastTick", false);
+        }
     }
 }
