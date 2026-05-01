@@ -17,7 +17,7 @@ MonoBehaviour:
     guld spreder sig
   Scenariosprite: {fileID: 2800000, guid: a11740be2fc78e44f94f11eada6d57c7, type: 3}
   choice1:
-    choiceText: "-20 Gl\xE6de, Mine effektivitet stiger med 50% "
+    choiceText: "-20 Gl\xE6de, Mine effektivitet stiger med 50% indtil n\xE6ste kvote "
     buttonText: Udvid minerne
     moneyLoss: 0
     moneyGain: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "+20 Gl\xE6de, Mine effektivitet falder med 50%"
+    choiceText: "+20 Gl\xE6de, Mine effektivitet falder med 50% indtil n\xE6ste kvote"
     buttonText: Forbyd udvindingen
     moneyLoss: 0
     moneyGain: 0
