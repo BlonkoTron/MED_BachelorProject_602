@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: Event_6_Cowresearch
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: "Ny forskning inden for kv\xE6gopdr\xE6t "
+  eventtitle: "Ny forskning i kv\xE6gopdr\xE6t "
   eventInfo: "Nye metoder inden for kv\xE6gopdr\xE6t er under udvikling"
   Scenariosprite: {fileID: 2800000, guid: ff15771f8fc9d6b44a725e8617781e5d, type: 3}
   choice1:
-    choiceText: "-200 Penge, Kv\xE6gfarm effektivitet stiger med 100% indtil n\xE6ste
+    choiceText: "-200 Penge, Kv\xE6gfarmes effektivitet stiger med 100% indtil n\xE6ste
       kvote"
     buttonText: Invester I udviklingen
     moneyLoss: 200
@@ -39,7 +39,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-100 Penge, Kv\xE6gfarm effektivitet stiger med 50% indtil n\xE6ste
+    choiceText: "-100 Penge, Kv\xE6gfarmes effektivitet stiger med 50% indtil n\xE6ste
       kvote"
     buttonText: Implementer delvist
     moneyLoss: 100

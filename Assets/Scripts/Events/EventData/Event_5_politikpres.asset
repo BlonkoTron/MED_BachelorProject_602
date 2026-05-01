@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: Event_5_politikpres
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Klima Politik Pres
-  eventInfo: "Internationalt pres p\xE5 at reducere milj\xF8m\xE6ssige \xF8del\xE6ggelser"
+  eventtitle: "Pres p\xE5 Klimapolitik"
+  eventInfo: "Der er et internationalt pres p\xE5 at reducere milj\xF8m\xE6ssige
+    \xF8del\xE6ggelser"
   Scenariosprite: {fileID: 2800000, guid: 33013f849d2e1104f996383b8213ddbd, type: 3}
   choice1:
-    choiceText: "+20 Gl\xE6de, Mine effektivitet falder med 50% indtil n\xE6ste kvote"
+    choiceText: "+20 Gl\xE6de, Miners effektivitet falder med 50% indtil n\xE6ste
+      kvote"
     buttonText: "Implementer gr\xF8nne politikker"
     moneyLoss: 0
     moneyGain: 0
@@ -38,7 +40,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Landbrug effektivitet falder med 50% indtil n\xE6ste kvote, Skovlandbrug
+    choiceText: "Landbrugs effektivitet falder med 50% indtil n\xE6ste kvote, Skovlandbrugs
       effektivitet stiger med 50% indtil n\xE6ste kvote"
     buttonText: Promover klimavenligt landbrug
     moneyLoss: 0

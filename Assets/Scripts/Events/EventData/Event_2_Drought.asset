@@ -60,9 +60,9 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-10 Gl\xE6de, Alle tiles effektivitet falder med 50% indtil n\xE6ste
+    choiceText: "-10 Gl\xE6de, Alle felters effektivitet falder med 50% indtil n\xE6ste
       kvote"
-    buttonText: "Indf\xF8r vand restriktioner"
+    buttonText: "Indf\xF8r vandrestriktioner"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
     AggroForestEfficiencymult: 0.5
     FarmEfficiencymult: 0.5
     DisableMineTilesEvent: 0
-    DisableCowTilesEvent: 0
+    DisableCowTilesEvent: 1
     DisableAgroTilesEvent: 0
     DisableFarmTilesEvent: 0
     MineDegradation: 1

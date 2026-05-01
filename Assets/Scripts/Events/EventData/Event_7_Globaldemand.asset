@@ -17,8 +17,8 @@ MonoBehaviour:
     og k\xF8d"
   Scenariosprite: {fileID: 2800000, guid: 7aea080257ff8ac41a88f1af5afa6d8e, type: 3}
   choice1:
-    choiceText: "Landbrug og Kv\xE6gfarm effektivitet stiger med 100% men udpiner
-      landet mere indtil n\xE6ste kvote"
+    choiceText: "Landbrug og Kv\xE6gfarmes effektivitet stiger med 100%, men udpiner
+      landet 50% mere indtil n\xE6ste kvote"
     buttonText: "Opskaler produktionen i landbruget og kv\xE6gfarmene"
     moneyLoss: 0
     moneyGain: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Skovlandbrug effektivitet stiger med 75% indtil n\xE6ste kvote"
+    choiceText: "Skovlandbrugs effektivitet stiger med 75% indtil n\xE6ste kvote"
     buttonText: "Fokuser p\xE5 skovlandbrug"
     moneyLoss: 0
     moneyGain: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     changeTileDegrationValue: 0
   choice3:
     choiceText: "+10 Gl\xE6de"
-    buttonText: "Begr\xE6ns exporten for at stabilisere lokale priser"
+    buttonText: "Begr\xE6ns eksporten for at stabilisere lokale priser"
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 10

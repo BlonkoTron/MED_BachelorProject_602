@@ -38,8 +38,8 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "-20 Gl\xE6de, Alt effektivitet falder med 25% indtil n\xE6ste kvote"
-    buttonText: Opfordre til overarbejde
+    choiceText: "-20 Gl\xE6de, Al effektivitet falder med 25% indtil n\xE6ste kvote"
+    buttonText: Opfordr til overarbejde
     moneyLoss: 0
     moneyGain: 0
     HappinessUp: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "-10 Gl\xE6de, Alt effektivitet falder med 50% indtil n\xE6ste kvote"
+    choiceText: "-10 Gl\xE6de, Al effektivitet falder med 50% indtil n\xE6ste kvote"
     buttonText: Ignorer folket
     moneyLoss: 0
     moneyGain: 0

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6a66dffa6e7940b4796f03cf1c732, type: 3}
   m_Name: Event_14_Transportforsink
   m_EditorClassIdentifier: Assembly-CSharp::EventData
-  eventtitle: Transport Forsinkelser
+  eventtitle: Transportforsinkelser
   eventInfo: "Der har v\xE6ret forsinkelser i transport af varer til dine felter"
   Scenariosprite: {fileID: 2800000, guid: 9b1b6960050c95944addfc01596fc2c6, type: 3}
   choice1:
     choiceText: -250 Penge
-    buttonText: 'Inverster i ekstra transport '
+    buttonText: 'Invester i ekstra transport '
     moneyLoss: 250
     moneyGain: 0
     HappinessUp: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice2:
-    choiceText: "Alt effektivitet falder med 25% indtil n\xE6ste kvote"
+    choiceText: "Al effektivitet falder med 25% indtil n\xE6ste kvote"
     buttonText: Accepter forsinkelser
     moneyLoss: 0
     moneyGain: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     ChangeLocktype: 0
     changeTileDegrationValue: 0
   choice3:
-    choiceText: "+10 Gl\xE6de, Alt effektivitet falder med 50% indtil n\xE6ste kvote"
+    choiceText: "+10 Gl\xE6de, Al effektivitet falder med 50% indtil n\xE6ste kvote"
     buttonText: "Fokuser p\xE5 det lokale marked"
     moneyLoss: 0
     moneyGain: 0
