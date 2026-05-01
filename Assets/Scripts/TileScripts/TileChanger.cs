@@ -66,6 +66,15 @@ public class TileChanger : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (tile.Type == TileType.Barren)
+        {
+            CloseUI();
+        }
+    }
+
+
     public void OnClick()
     {
         InteractionManager.Instance.closeUI.Invoke();
