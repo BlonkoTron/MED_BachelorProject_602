@@ -84,7 +84,6 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         Debug.Log("ApplyChoice called");
 
         //Money calls
-        int ED_currentmoney = PointSystem.Instance.CurrentMoney;
         if (choice.moneyGain!=0)
         {
             PointSystem.Instance.AddMoney(choice.moneyGain);
@@ -92,19 +91,6 @@ public class Eventmanager_NEWSETUP : MonoBehaviour
         if (choice.moneyLoss!=0)
         {
             PointSystem.Instance.LoseMoney(choice.moneyLoss);
-        }
-
-        if (PointSystem.Instance.CurrentMoney > ED_currentmoney)
-        {
-            // plus money
-        }
-        else if (PointSystem.Instance.CurrentMoney < ED_currentmoney)
-        {
-            // minus money
-        }
-        else
-        {
-            // no change
         }
 
         //Efficientmultiply calls
