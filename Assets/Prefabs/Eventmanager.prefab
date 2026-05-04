@@ -46,13 +46,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eventmanager_NEWSETUP
   allEvents:
   - {fileID: 11400000, guid: ef959914647af514797abfa2be53621e, type: 2}
+  - {fileID: 11400000, guid: da908f79c3c83fc409cb1e97c5243b33, type: 2}
   - {fileID: 11400000, guid: ed5d882ea7288c0459860b78e6466b09, type: 2}
   - {fileID: 11400000, guid: 0ea2f3cde5f48a2429aeb79462846e46, type: 2}
   - {fileID: 11400000, guid: dec717d4b4bec3f4ab0dbec0fa0c431f, type: 2}
-  - {fileID: 11400000, guid: da908f79c3c83fc409cb1e97c5243b33, type: 2}
   - {fileID: 11400000, guid: d3754187c354bb24b88493996297725d, type: 2}
+  - {fileID: 11400000, guid: 7bcd1b0458988f342b8eb005758558c2, type: 2}
   - {fileID: 11400000, guid: f575d4b3aeb93144695cfbb19f443ae4, type: 2}
-  - {fileID: 11400000, guid: 1f9ce6baba971fc4cb47d1b5bf6d9d49, type: 2}
+  - {fileID: 11400000, guid: 133f003f7e865a24eb963a9f234f133b, type: 2}
+  - {fileID: 11400000, guid: b56c74d5700c15642846bc08d6367965, type: 2}
+  - {fileID: 11400000, guid: 89e37c9ce46c0bb468580b445fa14782, type: 2}
+  - {fileID: 11400000, guid: 86acfcac58576564887e7ede040b38f7, type: 2}
+  - {fileID: 11400000, guid: 3e9c3d2f9a2eecd4f89c36d7f50d047e, type: 2}
+  - {fileID: 11400000, guid: f28cad4fc4aab4e4a9acf2ad84ed04ca, type: 2}
+  - {fileID: 11400000, guid: fca29cf9dd8960b4d8032ad704b568b5, type: 2}
+  tilescript: {fileID: 0}
   currentEvent: {fileID: 0}
-  EventMan: {fileID: 0}
+  TileChange: {fileID: 0}
   Test_Triggerevent: 0
+  MineDEGRADATION_Mult: 1
+  CowDEGRADATION_Mult: 1
+  FarmDEGRADATION_Mult: 1
+  AgroDEGRADATION_Mult: 1

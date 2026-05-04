@@ -8,6 +8,8 @@ public class QuotaManager : MonoBehaviour
     private int currentQuotaAmount;
     private int currentQuotaIndex = 0;
 
+    public int CurrentQuotaIndex => currentQuotaIndex;
+
     public int CurrentQuotaAmount => currentQuotaAmount;
 
     [SerializeField] private GameSettings gameSettings;
@@ -43,7 +45,12 @@ public class QuotaManager : MonoBehaviour
         // pay the quota money
         if (pointSystem != null)
         {
-            pointSystem.SpendMoney(currentQuotaAmount);
+            if (pointSystem.CurrentMoney<currentQuotaAmount)
+            {
+                // cant pay full, lose happiness
+                Happiness.Instance.DecreaseHappiness(gameManager.gameSettings.HAPPINESS_PENALTY_MISSING_QUOTA_MONEY);
+            }
+            pointSystem.LoseMoney(currentQuotaAmount);
         }
 
         // update to new quota

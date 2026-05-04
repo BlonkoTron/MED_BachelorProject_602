@@ -1,4 +1,4 @@
-//using NUnit.Framework;
+//Call namespaces
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -8,45 +8,56 @@ using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
+    //Creates instance
     public static GameManager Instance;
 
+    //Calls gamesettings
     public GameSettings gameSettings;
+    //Calls Eventmanager
+    private Eventmanager_NEWSETUP EventMangerGET;
 
+    //Int which tracks how many ticks are left before round ends
     private int ticksTillRoundEnd;
     public int TicksTillRoundEnd => ticksTillRoundEnd;
     public int TicksBetweenRounds => gameSettings.ticksBetweenRounds;
 
-    private Eventmanager_NEWSETUP EventMangerGET;
-
+    //Check tiles
     public Tile[] allTiles;
     public List<Tile> rainforestTiles;
 
+    //Enable/disable tile-bools
     public bool DisableMineTilesGamesetting = false;
     public bool DisableCowTilesGamesetting = false;
     public bool DisableAgroTilesGamesetting = false;
     public bool DisableFarmTilesGamesetting = false;
 
+    //Load scenes
     public enum SceneType
     {
         Lose_Happiness,
         Lose_Bio,
         Lose_Barren,
+        Lose_Money,
         Win_Balance
     }
 
+    //Load scene based on win or loss
     public void LoadScene(SceneType scene)
     {
         SceneManager.LoadScene(scene.ToString());
     }
 
-
+    //Call tick/roundstart/roundend Unityevent
     [Header("Tick Event")]
     [Tooltip("This event is invoked every tick. Subscribe tiles to this event.")]
     public UnityEvent onGameTick;
     public UnityEvent onRoundEnd;
     public UnityEvent onRoundStart;
     
+    //Ticktimer duration
     private float tickTimer = 0f;
+
+    //Gamestate settings
     public enum GameState { normal, Speedx2, speedx3, Paused}
     public GameState gameState = GameState.normal;
     public GameState previousGameState = GameState.normal;
@@ -54,17 +65,23 @@ public class GameManager : MonoBehaviour
     public UnityEvent<GameState> onGameStateChanged;
 
     //Losing condition happiness settings
-    [SerializeField] private int HappinessLoseTreshold; //HOw much happiness is needed to be under threshold
-    [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    public int HappinessTicktime = 0; //Int tto count number of rounds
+    [SerializeField] private int HappinessLoseTreshold; //The threshold needed before the player can lose to happiness
+    [SerializeField] private int HappinessLoseRoundThreshold;// How many rounds it should be in a row before losing
+    public int HappinessTicktime = 0; //Int to count number of rounds
 
 
-    //Losing condition happiness settings
-    [SerializeField] private int RainscoreLoseTreshold; //HOw much happiness is needed to be under threshold
-    [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row befor elosing
-    public int RainscoreTicktime = 0; //Int tto count number of rounds
+    //Losing condition Bioscore settings
+    [SerializeField] private int RainscoreLoseTreshold; //The threshold needed before the player can lose to low bioscore
+    [SerializeField] private int RainscoreLoseRoundThreshold;// How many rounds it should be in a row before losing
+    public int RainscoreTicktime = 0; //Int to count number of rounds
 
-    //music
+    [SerializeField] private int MoneyLoseTreshold; //The threshold needed before the player can lose to no money
+
+    //Winning the game settings
+    [SerializeField] private int WinningThreshold; //How many events the player must survive before they can win
+    private int Eventcounter; //Counter for events
+
+    //music Get instance and refrecne to play
     private EventInstance Main_Music;
     [SerializeField] private EventReference Main_Music_MS;
 
@@ -72,14 +89,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int BarrentilesLoseTreshold;
     public int BarrenTilesLoseThreshold => BarrentilesLoseTreshold;
 
-    //Winning the game settings
-
-    [SerializeField] private int WinningThreshold; //How many events the player must survive before they can win
-    private int Eventcounter; //Counter for events
-
     [Range(0f, 1f)]
     public float roundProgressValue = 0.5f;
 
+    //Get animator
     [Header("Animation")]
     [SerializeField] private Animator clockAnimator;
     [SerializeField] private string animationName = "ClockSpinning";
@@ -87,6 +100,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //Call instance
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -101,17 +115,23 @@ public class GameManager : MonoBehaviour
         }
         ticksTillRoundEnd = TicksBetweenRounds;
         secondsLeftAtStart = SecondsTillRoundEnd();
+        
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
-
-        //Call eventmanager
     }
+
     private void Start()
     {
+        //Get instance
         EventMangerGET = Eventmanager_NEWSETUP.instance;
+        //Play music
+        Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
+    }
 
-        //Main_Music = Audiomanager.instance.PlaySound(Main_Music_MS, transform.position);
-
+    private void Update()
+    {
+        //Update clockui
+        UpdateClockUI();
     }
 
     void FixedUpdate()
@@ -125,7 +145,7 @@ public class GameManager : MonoBehaviour
 
         //Lose checkmarks
 
-        //All barren
+        //If total barren tiles is over the threshold, lose the game
         if (TileTypeAndAmountUI.Instance.barrenTiles > BarrentilesLoseTreshold)
         {
             LoseBarren();
@@ -134,7 +154,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateTickTimer()
     {
-
+        //Updateticktimer, Change the gamespeed based on the UI
         UpdateClockUI();
 
         switch (gameState)
@@ -169,6 +189,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    //End round
     private void EndRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
@@ -193,7 +214,7 @@ public class GameManager : MonoBehaviour
         else if (Happiness.Instance.happinessLevel >= HappinessLoseTreshold)
         {
             HappinessTicktime = 0;
-            Lose_Warning.Instance.Warning_happy = false;
+            Lose_Warning.Instance.imagewar.gameObject.SetActive(false);
         }
 
         //Rainforestscore Losecheck
@@ -212,6 +233,14 @@ public class GameManager : MonoBehaviour
         {
             RainscoreTicktime = 0;
             Lose_Warning.Instance.Warning_bio = false;
+            Lose_Warning.Instance.imagewar.gameObject.SetActive(false);
+        }
+
+        //Money Losecheck
+
+        if (PointSystem.Instance.CurrentMoney < MoneyLoseTreshold && TileTypeAndAmountUI.Instance.GetTotalMoneyGain() == 0)
+        {
+            LoseNoMoney();
         }
 
         //WinCondition!
@@ -224,6 +253,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Start round
     public void StartRound()
     {
         ticksTillRoundEnd = TicksBetweenRounds;
@@ -241,12 +271,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //prøv igen
+            //Try again
             ChangeAndLockAtile(type);
         }
            
     }
-
+    //Change+lock tile function
     public void ChangeAndLockAtile(TileType type, float degration)
     {
         int randomTile = Random.Range(0, allTiles.Length);
@@ -266,7 +296,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //prøv igen
+            //try again
             ChangeAndLockAtile(type,degration);
         }
 
@@ -290,25 +320,33 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Registered {allTiles.Length} tiles to receive tick events");
     }
     
-    // Call this to manually trigger a tick (useful for testing or turn-based gameplay)
+    // Call to manually trigger a tick 
     public void ManualTick()
     {
         ProcessTick();
     }
+    //Sec to round end
     public int SecondsTillRoundEnd()
     {
         int seconds = (int)gameSettings.tickInterval * ticksTillRoundEnd-(int)tickTimer;
         return seconds;
     }
+    //Time till round end
+    private float TimeTillRoundEnd()
+    {
+        float time = gameSettings.tickInterval * ticksTillRoundEnd - tickTimer;
+        return time;
+    }
+    //Next gamestate call
     public void SetNewState(GameState state)
     {
         gameState = state;
         onGameStateChanged.Invoke(state);
     }
-
+    //Update clock UI
     private void UpdateClockUI()
     {
-        float currentVal = SecondsTillRoundEnd();
+        float currentVal = TimeTillRoundEnd();
 
         float progress = 1.0f - (Mathf.Clamp(currentVal, 0, secondsLeftAtStart) / secondsLeftAtStart);
 
@@ -320,10 +358,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-
     //Losing conditions
     public void LoseBarren()
     {
+        //Stop music and load current scene
         Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (alt er fedt)");
         LoadScene(SceneType.Lose_Barren);
@@ -331,6 +369,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseNoBiodiversity()
     {
+        //Stop music and load current scene
         Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU LOSE, YOU LOOOOOOSE (no biodiversity)");
         LoadScene(SceneType.Lose_Bio);
@@ -338,13 +377,23 @@ public class GameManager : MonoBehaviour
 
     public void LoseNoHappiness()
     {
+        //Stop music and load current scene
         Audiomanager.instance.StopSound(Main_Music);
-        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no happy)");
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (No money poor fool)");
         LoadScene(SceneType.Lose_Happiness);
+    }
+
+    public void LoseNoMoney()
+    {
+        //Stop music and load current scene
+        Audiomanager.instance.StopSound(Main_Music);
+        Debug.Log("YOU LOSE, YOU LOOOOOOSE (no moneypoorfool)");
+        LoadScene(SceneType.Lose_Money);
     }
 
     public void WinPerfectBalance()
     {
+        //Stop music and load current scene
         Audiomanager.instance.StopSound(Main_Music);
         Debug.Log("YOU WIN, YOU WIIIIIN (balance baby)");
         LoadScene(SceneType.Win_Balance);

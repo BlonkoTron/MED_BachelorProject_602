@@ -5,18 +5,18 @@ using TMPro;
 public class TileTypeAndAmountUI : MonoBehaviour
 {
     public static TileTypeAndAmountUI Instance { get; private set; }
-    public int rainforestTiles = 0;
-    public int agroforestTiles = 0;
-    public int farmTiles = 0;
-    public int pastureTiles = 0;
-    public int mineTiles = 0;
-    public int grassTiles = 0;
-    public int barrenTiles = 0;
+    [HideInInspector] public int rainforestTiles = 0;
+    [HideInInspector] public int agroforestTiles = 0;
+    [HideInInspector] public int farmTiles = 0;
+    [HideInInspector] public int pastureTiles = 0;
+    [HideInInspector] public int mineTiles = 0;
+    [HideInInspector] public int grassTiles = 0;
+    [HideInInspector] public int barrenTiles = 0;
 
-    public float agroforestMoneyGain;
-    public float farmMoneyGain;
-    public float pastureMoneyGain;
-    public float mineMoneyGain;
+    [HideInInspector] public float agroforestMoneyGain;
+    [HideInInspector] public float farmMoneyGain;
+    [HideInInspector] public float pastureMoneyGain;
+    [HideInInspector] public float mineMoneyGain;
 
     public GameSettings gameSettings;
     public GradientColor gradientColor;
@@ -27,14 +27,23 @@ public class TileTypeAndAmountUI : MonoBehaviour
     public int rainforestScore;
     public float rainforestScorePercentage;
 
-    private int rainforestTileScore = 3;
-    private int agroforestTileScore = 2;
-    private int grassTileScore = 1;
-    private int farmTileScore = 0;
-    private int pastureTileScore = -1;
-    private int mineTileScore = -2;
-    private int barrenTileScore = -3;
+    [SerializeField] private int rainforestTileScore = 3;
+    [SerializeField] private int agroforestTileScore = 2;
+    [SerializeField] private int grassTileScore = 1;
+    [SerializeField] private int farmTileScore = 0;
+    [SerializeField] private int pastureTileScore = -1;
+    [SerializeField] private int mineTileScore = -2;
+    [SerializeField] private int barrenTileScore = -3;
 
+    //---- D here
+    [Header("Feedback Controllers")]
+    public FeedbackTriangleController rainFeedback;
+    public FeedbackTriangleController agroFeedback;
+    public FeedbackTriangleController farmFeedback;
+    public FeedbackTriangleController pastureFeedback;
+    public FeedbackTriangleController mineFeedback;
+    public FeedbackTriangleController barrenFeedback;
+    public FeedbackTriangleController grassFeedback;
 
 
     private void Awake()
@@ -73,10 +82,28 @@ public class TileTypeAndAmountUI : MonoBehaviour
 
     private void Recalculate()
     {
+        //D was here
+        int oldRain = rainforestTiles;
+        int oldAgro = agroforestTiles;
+        int oldFarm = farmTiles;
+        int oldPasture = pastureTiles;
+        int oldMine = mineTiles;
+        int oldBarren = barrenTiles;
+        int oldGrass = grassTiles;
+
         CountTiles();
         CalculateMoneyGain();
 
         onTileUIUpdate.Invoke();
+        // and here
+        if (rainforestTiles != oldRain) rainFeedback?.TriggerChange(rainforestTiles - oldRain);
+        if (agroforestTiles != oldAgro) agroFeedback?.TriggerChange(agroforestTiles - oldAgro);
+        if (farmTiles != oldFarm) farmFeedback?.TriggerChange(farmTiles - oldFarm);
+        if (pastureTiles!= oldPasture) pastureFeedback?.TriggerChange(pastureTiles - oldPasture);
+        if (mineTiles != oldMine) mineFeedback?.TriggerChange(mineTiles - oldMine);
+        if (barrenTiles != oldBarren) barrenFeedback?.TriggerChange(barrenTiles - oldBarren);
+        if (grassTiles != oldGrass) grassFeedback?.TriggerChange(grassTiles - oldGrass);
+
     }
 
     public void CountTiles()
@@ -140,7 +167,7 @@ public class TileTypeAndAmountUI : MonoBehaviour
         gradientColor.SetValue(rainforestScorePercentage);
         percentageText.text = rainforestScorePercentage.ToString("F1") + "%";
         Debug.Log(rainforestScorePercentage);
-    }
+    }   
 
     public void CalculateMoneyGain()
     {

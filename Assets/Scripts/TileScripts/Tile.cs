@@ -61,6 +61,7 @@ public class Tile : MonoBehaviour
     
     // Event that broadcasts when money is earned
     [HideInInspector] public UnityEvent<int> onMoneyEarned = new UnityEvent<int>();
+    [HideInInspector] public UnityEvent<TileType> onTileChanged;
 
     [SerializeField] private float warningHeight = 2f; // Height of the warning animation
     private Renderer tileRenderer;
@@ -96,7 +97,7 @@ public class Tile : MonoBehaviour
         UpdateAddonPrefab(newType);
         UpdateDetailMaterial(newType);
 
-
+        onTileChanged.Invoke(tileType);
     }
     public void SetTileType(TileType newType, int cost)
     {
@@ -114,7 +115,7 @@ public class Tile : MonoBehaviour
             var ui = Instantiate(MoneyGainUI, transform);
             ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(cost*-1);
         }
-
+        onTileChanged.Invoke(tileType);
     }
 
     private void UpdateAddonPrefab(TileType type)
@@ -249,7 +250,7 @@ public class Tile : MonoBehaviour
         int moneyEarned = GetMoneyPerTick();
         
         // Check if next turn will make it barren (before applying degradation)
-        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren)
+        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren && tileType != TileType.Grass)
         {
             // Check if it will be barren in 2 turns (i.e., 1 turn til barren)
             float degradationAfterNextTurn = currentDegradation + (2 * GetDegradationRate());
