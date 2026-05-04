@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 4757720234085910765}
   - component: {fileID: 4513083901459041122}
   - component: {fileID: 8661221219790782962}
-  - component: {fileID: 6748990769917751444}
+  - component: {fileID: 6663704850582360471}
   m_Layer: 5
-  m_Name: MoneyGainWorldSpaceCanvas
+  m_Name: HappinessGainWorldSpaceCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0, y: 0}
-  m_SizeDelta: {x: 150, y: 100}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3207597700308190082
 Canvas:
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2404172009052878030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6177133486b68fe4f822239a5698daf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyGameObject
---- !u!114 &6748990769917751444
+--- !u!114 &6663704850582360471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,10 +163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 423786430900108244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e37a452a66b81b14db4b4442c7ec099d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b39a5d057e66c74b8b23548adb658e4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileMoneyGainUI
-  moneyGainText: {fileID: 7378989728617595837}
+  m_EditorClassIdentifier: Assembly-CSharp::HappinessGainUI
+  happinessGainText: {fileID: 7378989728617595837}
 --- !u!1 &2799550119201205969
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6265885325811195112}
   - component: {fileID: 7378989728617595837}
   m_Layer: 5
-  m_Name: MoneyGainText
+  m_Name: HappinessGainText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +100
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
   m_sharedMaterial: {fileID: 8727251926464048044, guid: 529949a16958ffe45aa6c173dc11c4cc, type: 2}
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278246399
-  m_fontColor: {r: 1, g: 0.85797274, b: 0, a: 1}
+    rgba: 4278198015
+  m_fontColor: {r: 1, g: 0.119365565, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -338,8 +338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 135.12, y: -6.2}
-  m_SizeDelta: {x: 32.54, y: 25.7}
+  m_AnchoredPosition: {x: 124.55, y: -4.399994}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1406398349649492020
 CanvasRenderer:
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18cb3f39e71b08d408d325e74172c74b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29844ab56bea008448906f9eec6d6a4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
