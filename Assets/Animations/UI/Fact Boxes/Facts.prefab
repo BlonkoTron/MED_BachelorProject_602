@@ -940,7 +940,7 @@ PrefabInstance:
         og tr\xE6er i et sammenspil der efterligner regnskovens naturlige struktur.\n\nMan
         gror kombinationsafgr\xF8der som kakao, acai, kaffe og andre afgr\xF8der.\n\nBruges
         til genoprettelse af natur i degraderede jorde og beskytter biodiversiteten.\n\nTip:\nDette
-        felt er b\xE6redygtigt og skader ikke jorden."
+        felt skader jorden minimalt."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_fontSize
