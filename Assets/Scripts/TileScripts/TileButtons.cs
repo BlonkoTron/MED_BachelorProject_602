@@ -25,6 +25,7 @@ public class TileButtons : MonoBehaviour
         pointSystem.onMoneyEarned.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneyLost.AddListener(UpdateButtonInteractability);
         pointSystem.onMoneySpent.AddListener(UpdateButtonInteractability);
+        ParentTile.onTileChanged.AddListener(UpdateButtonInteractability);
         UpdateButtonInteractability(pointSystem.CurrentMoney);
         if (costText!=null)
         {
@@ -36,8 +37,30 @@ public class TileButtons : MonoBehaviour
     {
         ParentTile.ChangeTile(tileType);
     }
+    private void UpdateButtonInteractability()
+    {
+        int targetCost = ParentTile.GetTileCost(tileType);
+        int currentCost = ParentTile.GetTileCost(ParentTile.GetComponent<Tile>().Type);
+        UpdateTextColor();
+        // If downgrading (target is cheaper), always allow it
+        if (targetCost < currentCost)
+        {
+            button.interactable = true;
+        }
+        else
+        {
+            // If upgrading, check if player can afford it
+            button.interactable = ParentTile.CanAffordTileChange(tileType);
+        }
 
-   private void UpdateButtonInteractability(int money)
+        if (tileType == TileType.Barren)
+        {
+            button.interactable = false;
+            return;
+        }
+    }
+
+    private void UpdateButtonInteractability(int money)
    {
     int targetCost = ParentTile.GetTileCost(tileType);
     int currentCost = ParentTile.GetTileCost(ParentTile.GetComponent<Tile>().Type);
@@ -77,6 +100,7 @@ public class TileButtons : MonoBehaviour
         pointSystem.onMoneyEarned.RemoveListener(UpdateButtonInteractability);
         pointSystem.onMoneyLost.RemoveListener(UpdateButtonInteractability);
         pointSystem.onMoneySpent.RemoveListener(UpdateButtonInteractability);
+        ParentTile.onTileChanged.RemoveListener(UpdateButtonInteractability);
     }
 
 
