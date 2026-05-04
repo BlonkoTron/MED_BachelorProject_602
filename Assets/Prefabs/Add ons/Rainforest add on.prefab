@@ -70,14 +70,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ForestDecorator
   spawnPrefab: {fileID: 391132151874798671, guid: 739b08a48019b0d42b85e02bbd3c0aaa, type: 3}
   spawnLocation: {fileID: 5595898814911129086}
-  spawnYOffset: 0
   spawnChance: 40
   forestLayer:
     serializedVersion: 2
     m_Bits: 64
   searchRadius: 2
   searchHeight: 5
-  searchYOffset: 0
 --- !u!114 &1719579630979977772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,16 +88,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbab77aabac90d4b85e645d07ff7ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForestDecorator
-  spawnPrefab: {fileID: 898950078407802731, guid: 73984bb8c7829364faf05264f40e7ed5, type: 3}
+  spawnPrefab: {fileID: 7576244278692735495, guid: 78c1b947f2292b54a9699f839b16bebc, type: 3}
   spawnLocation: {fileID: 5595898814911129086}
-  spawnYOffset: 0.05
-  spawnChance: 17
+  spawnChance: 50
   forestLayer:
     serializedVersion: 2
     m_Bits: 64
   searchRadius: 2
-  searchHeight: 2
-  searchYOffset: 1.6
+  searchHeight: 5
 --- !u!1 &8575442652779494683
 GameObject:
   m_ObjectHideFlags: 0

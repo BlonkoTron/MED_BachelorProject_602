@@ -27,6 +27,13 @@ public class InteractionManager : MonoBehaviour
     private GameObject lastHoveredTile;
     private GameObject lastClickedTile;
 
+
+    Camera cam;
+    Vector3 newPosition;
+    [SerializeField] private float movementTime = 5f;
+    Vector3 dragStartPosition = Vector3.zero;
+    Vector3 dragCurrentPosition = Vector3.zero;
+
     private void Awake()
     {
         if (Instance == null)
@@ -36,12 +43,18 @@ public class InteractionManager : MonoBehaviour
 
         playerInput = GetComponent<PlayerInput>();
 
+        newPosition = transform.position;
+        cam = Camera.main;
+
     }
 
     private void Update()
     {
         hoveredTile = CheckMouseHover();
         hoveringUI = CheckIfUI();
+
+        ApplyMovements();
+
     }
 
     private GameObject CheckMouseHover()
@@ -85,13 +98,30 @@ public class InteractionManager : MonoBehaviour
 
     }
 
-
+    private void ApplyMovements()
+    {
+        cam.transform.position = Vector3.Lerp(cam.transform.position, newPosition, movementTime * Time.deltaTime);
+    }
 
 
     public void OnInteract(CallbackContext action)
     {
-        if (action.performed)
+
+        
+        System.Type vector2Type = Vector2.zero.GetType();
+        if (action.started)
         {
+            Debug.Log("Button Pressed Down Event - called once when button pressed");
+
+            Ray dragStartRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Plane dragStartPlane = new Plane(Vector3.up, Vector3.zero);
+            float dragStartEntry;
+
+            if (dragStartPlane.Raycast(dragStartRay, out dragStartEntry))
+            {
+                dragStartPosition = dragStartRay.GetPoint(dragStartEntry);
+            }
+
             if (!openUI)
             {
                 if (hoveredTile != null && hoveredTile.GetComponent<Tile>().Type != TileType.Barren)
@@ -137,6 +167,22 @@ public class InteractionManager : MonoBehaviour
 
             }
 
+
+        }
+        else if (action.performed)
+        {
+            
+            Debug.Log("Button Hold Down - called continously till the button is pressed");
+
+            Ray dragCurrentRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Plane dragCurrentPlane = new Plane(Vector3.up, Vector3.zero);
+            float dragCurrentEntry;
+
+            if (dragCurrentPlane.Raycast(dragCurrentRay, out dragCurrentEntry))
+            {
+                dragCurrentPosition = dragCurrentRay.GetPoint(dragCurrentEntry);
+                newPosition = cam.transform.position + dragStartPosition - dragCurrentPosition;
+            }
 
         }
 
