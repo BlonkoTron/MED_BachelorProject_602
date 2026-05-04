@@ -2767,6 +2767,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
+      propertyPath: happinessLevel
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304348321502439459, guid: 0d85113d42d8a654a96a83d9faab1b0a, type: 3}
       propertyPath: naturalLowBonus
       value: 1
       objectReference: {fileID: 0}

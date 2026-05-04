@@ -161,19 +161,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277798369521300088, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1277798369521300088, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1277798369521300088, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 1277798369521300088, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 1670808751407784355, guid: fd07e035192638943bffd98525269826, type: 3}
       propertyPath: m_AnchorMax.y
@@ -811,15 +811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5320134073514743294, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.11
+      value: -28.69
       objectReference: {fileID: 0}
     - target: {fileID: 5320134073514743294, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 5320134073514743294, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.21
+      value: 6.18
       objectReference: {fileID: 0}
     - target: {fileID: 5320134073514743294, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: m_LocalRotation.w
@@ -850,6 +850,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
+      propertyPath: moveSpeed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: xLimits.x
       value: -34
       objectReference: {fileID: 0}
@@ -867,15 +871,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: Starposition.x
-      value: -30
+      value: -30.5
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: Starposition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6048632609874168716, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
       propertyPath: Starposition.z
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
