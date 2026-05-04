@@ -1650,6 +1650,7 @@ MonoBehaviour:
   cowDisabledImage: {fileID: 2751946212725179677}
   agroDisabledImage: {fileID: 7428976513087882351}
   farmDisabledImage: {fileID: 1383545437679402187}
+  happinessUIPrefab: {fileID: 423786430900108244, guid: 4feee2b99e9c5954daf145bac7ba61fd, type: 3}
 --- !u!114 &1384247732302900432
 MonoBehaviour:
   m_ObjectHideFlags: 0

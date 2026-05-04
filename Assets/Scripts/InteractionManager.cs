@@ -20,6 +20,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] float interactionDistance = 100f;
 
     private bool hoveringUI;
+    private bool canInteract = true;
     private PlayerInput playerInput;
 
 
@@ -37,11 +38,27 @@ public class InteractionManager : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
 
     }
+    private void Start()
+    {
+        GameManager.Instance.onRoundEnd.AddListener(DisableInteraction);
+        GameManager.Instance.onRoundStart.AddListener(EnableInteraction);
+    }
+    private void EnableInteraction()
+    {
+        canInteract = true;
+    }
+    private void DisableInteraction()
+    {
+        canInteract = false;
+    }
 
     private void Update()
     {
-        hoveredTile = CheckMouseHover();
-        hoveringUI = CheckIfUI();
+        if (canInteract)
+        {
+            hoveredTile = CheckMouseHover();
+            hoveringUI = CheckIfUI();
+        }
     }
 
     private GameObject CheckMouseHover()
@@ -90,7 +107,7 @@ public class InteractionManager : MonoBehaviour
 
     public void OnInteract(CallbackContext action)
     {
-        if (action.performed)
+        if (action.performed && canInteract)
         {
             if (!openUI)
             {
