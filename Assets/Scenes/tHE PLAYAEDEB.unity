@@ -1770,25 +1770,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2710704225074493932, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
-      propertyPath: m_text
-      value: "Skovlandbrug er en b\xE6redygtig landbrugsmetode, der kombinere afgr\xF8der
-        og tr\xE6er i et sammenspil der efterligner regnskovens naturlige struktur.\n\nMan
-        gror kombinationsafgr\xF8der som kakao, acai, kaffe og andre afgr\xF8der.\n\nBruges
-        til genoprettelse af natur i degraderede jord og beskytte biodiversiteten.\n\n\nTip:\nDette
-        felt skader jorden minimalt"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919846919666168579, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 3289650
-      objectReference: {fileID: 0}
     - target: {fileID: 6283865408178534559, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
       propertyPath: m_Name
       value: Facts
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130844882336167526, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 3289650
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
