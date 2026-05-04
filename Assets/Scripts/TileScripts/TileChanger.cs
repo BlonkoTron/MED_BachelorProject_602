@@ -43,6 +43,8 @@ public class TileChanger : MonoBehaviour
     [SerializeField] private GameObject agroDisabledImage;
     [SerializeField] private GameObject farmDisabledImage;
 
+    [SerializeField] private GameObject happinessUIPrefab;
+
     private TileType tileType_toChange;
     private int actualCostForUI; // Tracks actual money change for visual display
 
@@ -148,6 +150,11 @@ public class TileChanger : MonoBehaviour
                 {
                     int happinessPenalty = gameSettings.HAPPINESS_PENALTY_RAINFOREST_CHANGE;
                     Happiness.Instance.DecreaseHappiness(happinessPenalty);
+                    if (happinessUIPrefab != null)
+                    {
+                        var ui = Instantiate(happinessUIPrefab, transform);
+                        ui.GetComponent<HappinessGainUI>().SetHappinessGainUI(-happinessPenalty);
+                    }
                 }
             }
             
