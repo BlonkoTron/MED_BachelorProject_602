@@ -133,14 +133,14 @@ public class TileChanger : MonoBehaviour
             return false;
         }
 
-        tileCollider.enabled = false;
+        
 
         if (CanAffordTileChange(type))
         {
             Debug.Log("Changing tile to " + type);
             Tileflip = Audiomanager.instance.PlaySound(Tileflip_SFX, transform.position);
 
-            
+            tileCollider.enabled = false;
 
             if (tile.Type == TileType.Rainforest && type != TileType.Rainforest)
             {
