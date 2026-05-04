@@ -106,8 +106,9 @@ public class InteractionManager : MonoBehaviour
 
     public void OnInteract(CallbackContext action)
     {
-        System.Type vector2Type = Vector2.zero.GetType();
 
+        
+        System.Type vector2Type = Vector2.zero.GetType();
         if (action.started)
         {
             Debug.Log("Button Pressed Down Event - called once when button pressed");
@@ -171,18 +172,17 @@ public class InteractionManager : MonoBehaviour
         else if (action.performed)
         {
             
-                Debug.Log("Button Hold Down - called continously till the button is pressed");
+            Debug.Log("Button Hold Down - called continously till the button is pressed");
 
-                Ray dragCurrentRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-                Plane dragCurrentPlane = new Plane(Vector3.up, Vector3.zero);
-                float dragCurrentEntry;
+            Ray dragCurrentRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Plane dragCurrentPlane = new Plane(Vector3.up, Vector3.zero);
+            float dragCurrentEntry;
 
-                if (dragCurrentPlane.Raycast(dragCurrentRay, out dragCurrentEntry))
-                {
-                    dragCurrentPosition = dragCurrentRay.GetPoint(dragCurrentEntry);
-                    newPosition = cam.transform.position + dragStartPosition - dragCurrentPosition;
-                }
-            
+            if (dragCurrentPlane.Raycast(dragCurrentRay, out dragCurrentEntry))
+            {
+                dragCurrentPosition = dragCurrentRay.GetPoint(dragCurrentEntry);
+                newPosition = cam.transform.position + dragStartPosition - dragCurrentPosition;
+            }
 
         }
 
