@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Losewin scenes/Lose_Happiness.unity
     guid: a34f335ce7d4a44418d35fc011108742
   - enabled: 1
+    path: Assets/Scenes/Losewin scenes/Lose_Money.unity
+    guid: dd0428e37448aec4bb16c55a3c599ef4
+  - enabled: 1
     path: Assets/Scenes/Losewin scenes/Win_Balance.unity
     guid: 16e9de562c0033f4a97e937472decb2f
   m_configObjects:
