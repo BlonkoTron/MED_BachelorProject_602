@@ -886,6 +886,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a151e58f4c47d3c4790e2d3358e39345, type: 3}
+--- !u!224 &854837415 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+  m_PrefabInstance: {fileID: 5618508502713338538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &855137251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +948,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0de4f63e5b72043972f3166b003a62, type: 3}
+--- !u!224 &954442939 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6295876813494824949, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+  m_PrefabInstance: {fileID: 1783874322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1248497295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1438,7 +1448,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6295876813494824949, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854837415}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
 --- !u!1001 &1888911780
@@ -1669,6 +1682,119 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb80b6b27cdc8c044a1f0f5ad5286d23, type: 3}
+--- !u!1001 &5618508502713338538
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 954442939}
+    m_Modifications:
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.50000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.4999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 367.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1046.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 183.51013
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -523.15027
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456780033946072398, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710704225074493932, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_text
+      value: "Skovlandbrug er en b\xE6redygtig landbrugsmetode, der kombinere afgr\xF8der
+        og tr\xE6er i et sammenspil der efterligner regnskovens naturlige struktur.\n\nMan
+        gror kombinationsafgr\xF8der som kakao, acai, kaffe og andre afgr\xF8der.\n\nBruges
+        til genoprettelse af natur i degraderede jord og beskytte biodiversiteten.\n\n\nTip:\nDette
+        felt skader jorden minimalt"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919846919666168579, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3289650
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283865408178534559, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_Name
+      value: Facts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130844882336167526, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3289650
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e0380cb3ec98614e8b1ec39531d7382, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
