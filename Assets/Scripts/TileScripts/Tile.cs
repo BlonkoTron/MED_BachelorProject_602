@@ -237,7 +237,7 @@ public class Tile : MonoBehaviour
             case TileType.Rainforest:
                 return gameSettings.DEGRADATION_NATURAL_REGEN; // Natural regeneration
             case TileType.Barren:
-                GameManager.Instance.FirstBarren();
+                
                 return gameSettings.DEGRADATION_NONE; // Already barren
             default:
                 return gameSettings.DEGRADATION_NONE;
@@ -309,6 +309,7 @@ public class Tile : MonoBehaviour
         {
             if (barrenMaterial != null)
             {
+                GameManager.Instance.FirstBarren();
                 tileRenderer.material = barrenMaterial;
             }
             return;

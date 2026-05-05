@@ -406,6 +406,7 @@ public class GameManager : MonoBehaviour
     {
         if (!hasBarren)
         {
+            SetNewState(GameState.Paused);
             hasBarren = true;
             BarrenUI.SetActive(true);
 
