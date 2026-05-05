@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public bool DisableAgroTilesGamesetting = false;
     public bool DisableFarmTilesGamesetting = false;
 
+    [SerializeField] private GameObject BarrenUI;
+    private bool hasBarren = false;
     //Load scenes
     public enum SceneType
     {
@@ -118,6 +120,7 @@ public class GameManager : MonoBehaviour
         
         // Find all tiles in the scene and subscribe them to the tick event
         RegisterAllTiles();
+        hasBarren = false;
     }
 
     private void Start()
@@ -398,5 +401,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("YOU WIN, YOU WIIIIIN (balance baby)");
         LoadScene(SceneType.Win_Balance);
     }
+
+    public void FirstBarren()
+    {
+        if (!hasBarren)
+        {
+            hasBarren = true;
+            BarrenUI.SetActive(true);
+
+        }
+    }
+
 
 }
