@@ -80,7 +80,7 @@ PrefabInstance:
         n\xE6ringsstoffer over tid. Selvom jorden har v\xE6ret skadet, kan den n\xE5
         langt ved egen hj\xE6lp.\r\n\r\nUden tr\xE6er til at give skygge f\xF8rer
         gr\xE6sland dog til lokal opvarmning og t\xF8rke, hvilket modvirker regnskovens
-        behov og i vores levetid vil v\xE6re en permanent forandring af landskabet.\n\nTip:\nLad
+        behov og vil kunne medf\xF8re en permanent forandring af landskabet.\n\nTip:\nLad
         feltet hvile lidt, s\xE5 bliver jorden bedre med tid. \nKan blive til regnskov
         igen med nok tid."
       objectReference: {fileID: 0}
@@ -506,11 +506,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "Dette felt repr\xE6senterer ekstrem skade og udt\xF8rring. Jorden er
         udpint, n\xE6ringsstofferne er v\xE6k, og omr\xE5det er blevet til en t\xF8r
-        savanne, hvor intet fra regnskoven kan leve.\r\n\r\nFor meget \xF8det land
+        savanne, hvor intet fra regnskoven kan leve.\r\n\r\nFor meget \xF8de land
         kan bringe regnskoven ud af balance og udl\xF8se et \"tipping point\", hvor
-        den ikke kan overleve og risikerer at t\xF8rre helt ud.\n\n\nTip:\nDit folk
-        vil blive sure, hvis der er meget \xF8det land.\n\xD8det land kan ikke bruges
-        l\xE6ngere.\n\n"
+        den ikke l\xE6ngere kan overleve og risikerer at t\xF8rre helt ud.\n\n\nTip:\nDit
+        folk vil blive sure, hvis der er meget \xF8de land.\n\xD8de land kan ikke
+        bruges l\xE6ngere."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_fontSize
@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_text
-      value: "Skovlandbrug er en b\xE6redygtig landbrugsmetode, der kombinere afgr\xF8der
+      value: "Skovlandbrug er en b\xE6redygtig landbrugsmetode, der kombinerer afgr\xF8der
         og tr\xE6er i et sammenspil der efterligner regnskovens naturlige struktur.\n\nMan
         gror kombinationsafgr\xF8der som kakao, acai, kaffe og andre afgr\xF8der.\n\nBruges
         til genoprettelse af natur i degraderede jorde og beskytter biodiversiteten.\n\nTip:\nDette
@@ -1362,11 +1362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_text
-      value: "Regnskoven er en af de mest biodiverse omr\xE5de p\xE5 kloden og er
+      value: "Regnskoven er en af de mest biodiverse omr\xE5der p\xE5 kloden og er
         reservoir for n\xE6ringstoffer, vand og tonsvis af carbon.\n\nSt\xF8rstedelen
         af n\xE6ringsstofferne sidder i plante og dyrelivet og ikke i jorden.\n\nRegnskoven
         har en hurtig n\xE6ringstofsscyklus.\n\nTips:\nDit folk bliver sure, hvis
-        du fjerner skov.\n\nDette felt skader ikke jorden.\n\n\n\n \n"
+        du fjerner skov.\n\nDette felt skader ikke jorden."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_fontSize
@@ -1777,10 +1777,10 @@ PrefabInstance:
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_text
       value: "Opdr\xE6ttelse af kv\xE6g til billig k\xF8dproduktion er en stor industri
-        i sydamerika. \n\nStore omr\xE5de af Regnskoven i Amazonas er blevet ryddet
-        kun til gr\xE6sning af kv\xE6g.\n\nKv\xE6genes tunge v\xE6gt presser jordpartiklerne
+        i Sydamerika. \n\nStore omr\xE5der af Regnskoven i Amazonas er blevet ryddet
+        kun til gr\xE6sning af kv\xE6g.\n\nKv\xE6gets tunge v\xE6gt presser jordpartiklerne
         t\xE6t sammen, s\xE5 luft og vand ikke kan tr\xE6nge igennem. Dette kaldes
-        jordpakning og jorden uegnet til b\xE5de afgr\xF8der og andet planteliv.\n\nTip:\nDette
+        jordpakning og g\xF8r jorden uegnet til b\xE5de afgr\xF8der og andet planteliv.\n\nTip:\nDette
         felt skader jorden meget."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
@@ -2203,12 +2203,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_text
-      value: "Til at gro afgr\xF8der bliver regnskoven ryddet til familielandbrug
-        eller storskala industri (majs, soja, palmeolie, kaffe og kakao).\r\n\r\nIndustrielt
+      value: "Regnskoven bliver ryddet til fordel for familielandbrug og industrilandbrug,
+        der gror afrg\xF8der som majs, soja, palmeolie, kaffe og kakao.\r\n\r\nIndustrielt
         landbrug og kunstg\xF8dning forstyrrer skovens kredsl\xF8b og udpiner jorden
-        hurtigere.\r\n\r\nDele af skoven br\xE6ndes af for at udnytte asken som g\xF8dning
-        fordi det ofte er billigere, herefter bruges jorden helt til den er t\xF8mt
-        for n\xE6ring.\n\nTip:\nDette felt skader jorden moderat"
+        hurtigere.\r\n\r\nDele af skoven br\xE6ndes ofte af for at udnytte asken
+        som billigt alternativ til g\xF8dning. Herefter bruges jorden helt til den
+        er t\xF8mt for n\xE6ring.\n\nTip:\nDette felt skader jorden moderat."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_fontSize
@@ -2630,12 +2630,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_text
-      value: "Mineudgravning i amazonas regnskov er en int\xE6gtskilder der er meget
-        destruktiv i regnskoven. \n\nMetoderne involvere ofte store landskabs\xE6ndringer
-        der permanent skader lokalmilj\xF8et og \xF8del\xE6gger alt liv der var i
-        jorden. Udviningen bruger ofte kviks\xF8lv som er meget giftigt og bliver.\n\nDer
-        bliver fundet alt fra guld til olie dybt i skoven.\n\nTip:\nDette felt skader
-        jorden i en ekstrem grad"
+      value: "Mineudgravning i Amazonas regnskov er en indt\xE6gtskilde der er meget
+        destruktiv. \n\nMetoderne involverer ofte store landskabs\xE6ndringer, der
+        permanent skader lokalmilj\xF8et og \xF8del\xE6gger alt liv der er i jorden.
+        Udvindingen bruger ofte kviks\xF8lv som er meget giftigt og bliver i jorden.\n\nDer
+        bliver fundet alt fra guld til olie dybt i regnskoven.\n\nTip:\nDette felt
+        skader jorden i en ekstrem grad."
       objectReference: {fileID: 0}
     - target: {fileID: 1570929352044036052, guid: daadc54180a44064dbcbc655a13a4e4b, type: 3}
       propertyPath: m_fontSize
