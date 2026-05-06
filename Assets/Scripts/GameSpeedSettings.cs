@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameSpeedSettings : MonoBehaviour
 {
     private GameManager gameManager;
+    
 
     [SerializeField] private Button normalSpeedButton;
     [SerializeField] private Button x2SpeedButton;
@@ -55,6 +57,35 @@ public class GameSpeedSettings : MonoBehaviour
                 break;
         }
     }
+
+    //Spacebar PUASE HERE
+    private void Update()
+    {
+
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+
+            if (TutorialManager.instance == null)
+            {
+                TogglePauseAndNormal();
+            }
+        }
+    }
+
+    private void TogglePauseAndNormal()
+    {
+        if (gameManager.gameState == GameManager.GameState.Paused)
+        {
+            SetGameStateNormal(); 
+        }
+        else
+        {
+            SetGameStatePaused(); 
+        }
+    }
+
+    //Spacebar PUASE End HERE
+
     public void SetGameStateNormal()
     {
         gameManager.SetNewState(GameManager.GameState.normal);
