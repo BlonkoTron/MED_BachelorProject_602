@@ -1433,14 +1433,60 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121452576231263801, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "At efterlade jorden som gr\xE6sland hj\xE6lper den med at hele og genvinde
+        n\xE6ringsstoffer over tid. Selvom jorden har v\xE6ret skadet, kan den n\xE5
+        langt ved egen hj\xE6lp.\n\nTip:\nLad feltet hvile lidt, s\xE5 bliver jorden
+        bedre med tid. \nKan blive til regnskov igen med nok tid."
+      objectReference: {fileID: 0}
+    - target: {fileID: 250231199734989367, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133288496519313109, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Dette felt repr\xE6senterer ekstrem skade og udt\xF8rring. Jorden er
+        udpint, n\xE6ringsstofferne er v\xE6k, og omr\xE5det er blevet til en t\xF8r
+        savanne, hvor intet fra regnskoven kan leve.\r\n\nHvis skovrydning og global
+        opvarmning forts\xE6tter kan det udl\xF8se et vendepunkt hvor at skoven ikke
+        l\xE6ngere kan overleve og risikerer at t\xF8rre helt ud.\n\nTip:\nDit folk
+        vil blive sure, hvis der er meget \xF8de land.\n\xD8de land kan ikke bruges
+        l\xE6ngere."
+      objectReference: {fileID: 0}
     - target: {fileID: 1819149874270219075, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_Name
       value: ManagingObject Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819149874270219075, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407120371931827004, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Skovlandbrug er en landbrugsmetode, der kombinere afgr\xF8der og tr\xE6er
+        i et sammenspil.  \n\nSkovlandbrug er ofte bedre for biodiversiteten end
+        traditionelt landbrug.\n\nMan gror kombinationsafgr\xF8der som kakao, acai,
+        kaffe og andre afgr\xF8der.\n\nTip:\nDette felt skader jorden minimalt."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858806931287477747, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127464040312281374, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: BarrenUI
       value: 
       objectReference: {fileID: 941270021}
+    - target: {fileID: 6170953546059058183, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259459706256425427, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Regnskoven er en af de mest biodiverse omr\xE5der p\xE5 kloden. \n\nDet
+        er et reservoir for n\xE6ringstoffer, vand og tonsvis af carbon.\n\nTip:\nDit
+        folk bliver sure, hvis du fjerner regnskoven.\n\nDette felt skader ikke jorden."
+      objectReference: {fileID: 0}
     - target: {fileID: 7321038990257164188, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 810.1591
@@ -1480,6 +1526,26 @@ PrefabInstance:
     - target: {fileID: 7321038990257164188, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960463897459930491, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Mineudgravning i Amazonas regnskov er en indt\xE6gtskilde der er meget
+        destruktiv. \n\nMetoderne involverer ofte store landskabs\xE6ndringer og
+        udvindingen bruger ofte kviks\xF8lv som forurener jord, luft og vand, og
+        i sidste tilf\xE6lde ogs\xE5 lokalbefolkningen.  \n\nDer bliver udvundet
+        f.eks. guld og olie\n\nTip:\nDette felt skader jorden i en ekstrem grad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180349510509935377, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Store omr\xE5der af Regnskoven i Amazonas er blevet ryddet kun til
+        gr\xE6sning af kv\xE6g. \n\nKv\xE6gfarme er skyld i omkring 80% af skovrydningen
+        i Amazonas \n\nTip:\nDette felt skader jorden meget."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183357866938534921, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
+      propertyPath: m_text
+      value: "Dele af Amazonas regnskove bliver ryddet til fordel for landbrug, hvor
+        der gror afgr\xF8der som f.eks. majs og soja. \r\n\nTip:\nDette felt skader
+        jorden moderat."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
