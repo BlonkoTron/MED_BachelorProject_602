@@ -1464,10 +1464,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407120371931827004, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_text
-      value: "Skovlandbrug er en landbrugsmetode, der kombinere afgr\xF8der og tr\xE6er
-        i et sammenspil.  \n\nSkovlandbrug er ofte bedre for biodiversiteten end
-        traditionelt landbrug.\n\nMan gror kombinationsafgr\xF8der som kakao, acai,
-        kaffe og andre afgr\xF8der.\n\nTip:\nDette felt skader jorden minimalt."
+      value: "Skovlandbrug er en landbrugsmetode, der kombinere tr\xE6er og afgr\xF8der
+        eller dyr i et sammenspil.  \n\nSkovlandbrug er ofte bedre for biodiversiteten
+        end traditionelt landbrug.\n\nMan gror kombinationsafgr\xF8der som kakao,
+        acai, kaffe og andre afgr\xF8der.\n\nTip:\nDette felt skader jorden minimalt."
       objectReference: {fileID: 0}
     - target: {fileID: 4858806931287477747, guid: 619328810a6171043bcdd91f83f939e3, type: 3}
       propertyPath: m_IsActive
