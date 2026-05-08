@@ -107,12 +107,11 @@ public class TileTypeAndAmountUI : MonoBehaviour
     }
 
     public void CountTiles()
-    {         // Find all tiles
+    {   
+        // Find all tiles
         Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
 
         if (allTiles.Length == 0) return;
-
-
 
         mineTiles = 0;
         pastureTiles = 0;
@@ -166,7 +165,8 @@ public class TileTypeAndAmountUI : MonoBehaviour
         rainforestScorePercentage = (float)(rainforestScore - minRainforestScore) / (maxRainforestScore - minRainforestScore) * 100;
         gradientColor.SetValue(rainforestScorePercentage);
         percentageText.text = rainforestScorePercentage.ToString("F1") + "%";
-        Debug.Log(rainforestScorePercentage);
+
+        // Debug.Log(rainforestScorePercentage);
     }   
 
     public void CalculateMoneyGain()

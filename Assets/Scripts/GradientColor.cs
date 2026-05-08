@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI; // Remove if using SpriteRenderer
+using UnityEngine.UI;
 
 public class GradientColor : MonoBehaviour
 {
@@ -9,12 +9,10 @@ public class GradientColor : MonoBehaviour
     public Gradient gradient;
 
     private Image img;
-    // private SpriteRenderer sr;
 
     void Awake()
     {
         img = GetComponent<Image>();
-        // sr = GetComponent<SpriteRenderer>();
 
         UpdateColor();
     }
@@ -32,6 +30,5 @@ public class GradientColor : MonoBehaviour
         Color color = gradient.Evaluate(t);
 
         img.color = color;
-        // sr.color = color;
     }
 }
