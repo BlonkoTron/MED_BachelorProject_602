@@ -20,8 +20,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private GameObject addonAttachPoint;
     [SerializeField] private GameObject detailTop;
 
-    //Public so ForestSwapper can see it (mostly for start of game) D was here
-    [SerializeField] public GameObject currentAddOn;
+    public GameObject currentAddOn;
 
     [Header("Tile Types")]
     [SerializeField] private GameObject barrenAddOnPrefab;
@@ -245,33 +244,16 @@ public class Tile : MonoBehaviour
     }
 
     // Call this each turn/cycle to generate money and degrade the tile
-    // This method is triggered by the Unity event from another script
+    // This method is triggered by the Unity event from GameManager script
     public void OnTick()
-    {   
-        int moneyEarned = GetMoneyPerTick();
-        
-        // Check if next turn will make it barren (before applying degradation)
-        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren && tileType != TileType.Grass)
-        {
-            // Check if it will be barren in 2 turns (i.e., 1 turn til barren)
-            float degradationAfterNextTurn = currentDegradation + (2 * GetDegradationRate());
-            if (degradationAfterNextTurn >= degradationThreshold && GetDegradationRate() > 0)
-            {
-                // Instantiate warning object
-                var warning = Instantiate(oneTurnWarningPrefab,transform);
-                warning.transform.localPosition = Vector3.up * warningHeight;
-                warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
-                warning.transform.localScale = Vector3.one;
-                hasSpawnedWarning = true;
-            }
-        }
-        
+    {
         // Apply degradation
         currentDegradation += GetDegradationRate();
         // Check if tile should become barren
         if (currentDegradation >= degradationThreshold && tileType != TileType.Barren)
         {
             SetTileType(TileType.Barren);
+            return;
         }
         // Natural regeneration for grass/rainforest
         else if (currentDegradation <= 0)
@@ -281,24 +263,45 @@ public class Tile : MonoBehaviour
             if (tileType == TileType.Grass)
             {
                 SetTileType(TileType.Rainforest);
+                return;
             }
         }
-        
         // Update material based on current degradation
         UpdateMaterial();
-        
+
+        // Check if next turn will make it barren 
+        if (!hasSpawnedWarning && oneTurnWarningPrefab != null && tileType != TileType.Barren && tileType != TileType.Grass)
+        {
+            if (GetTurnsUntilBarren()<=1 && GetDegradationRate() > 0)
+            {
+                SpawnWarningSign();
+            }
+        }
         // Broadcast the money earned to any listeners (like PointSystem)
+        int moneyEarned = GetMoneyPerTick();
         if (moneyEarned > 0)
         {
             onMoneyEarned?.Invoke(moneyEarned);
-            if (MoneyGainUI!=null)
-            {
-                var ui=Instantiate(MoneyGainUI,transform);
-                ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(moneyEarned);
-            }
+            SpawnMoneyGainUI(moneyEarned);
         }
     }
-
+    private void SpawnMoneyGainUI(int moneyGain)
+    {
+        if (MoneyGainUI != null)
+        {
+            var ui = Instantiate(MoneyGainUI, transform);
+            ui.GetComponent<TileMoneyGainUI>().SetMoneyGainUI(moneyGain);
+        }
+    }
+    private void SpawnWarningSign() 
+    {
+        // Instantiate warning object
+        var warning = Instantiate(oneTurnWarningPrefab, transform);
+        warning.transform.localPosition = Vector3.up * warningHeight;
+        warning.transform.localRotation = Quaternion.Euler(0, -90, 0);
+        warning.transform.localScale = Vector3.one;
+        hasSpawnedWarning = true;
+    }
     // Update the tile's material based on current degradation level
     private void UpdateMaterial()
     {

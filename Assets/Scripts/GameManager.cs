@@ -309,7 +309,6 @@ public class GameManager : MonoBehaviour
     // Automatically register all tiles in the scene
     private void RegisterAllTiles()
     {
-        // when generating the world we should already know where the tiles are, removing the need to find them.
         // Clear any existing listeners to prevent duplicates
         onGameTick.RemoveAllListeners();
         
